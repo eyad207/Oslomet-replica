@@ -1,0 +1,25 @@
+:root {
+  --header: #ffd500;
+}
+header {
+  background-color: var(--header);
+}
+.header-layout {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  width: 1080px;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+.left-section {
+  display: flex;
+}
+.icons {
+  display: block;
+}
+body {
+  margin: 0;
+}

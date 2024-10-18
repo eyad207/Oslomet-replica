@@ -1,0 +1,140 @@
+body {
+  font-family: 'Playfair Display', serif; /*Må bruke /* i stilarket for å kommentere*/
+}
+
+#startside { 
+  background-image: url(space.jpg);
+  background-repeat:no-repeat; /*Med lengre sider vil jeg ikke at bakgrunnen skal gjenta seg flere ganger*/
+  background-size: 100%; /*Slik at bakgrunnen passer uansett hvilken maskin man er på*/
+  color: white;
+  text-align: center;
+}
+#hovedtittel {
+  padding: 10px;
+  background-color: #000055;
+  border: 10px solid #000000;
+  color: #999900;
+}
+#menybackground {
+  background-color: hsla(350, 50%, 20%, 0.8); /*Enklere å gjøre fargen den mørkere her uten at den blir mer gråtonet*/
+  margin: auto; /*Den skal være i midten av skjermen*/
+  padding: 1%; 
+  width: 50%;
+}
+a {
+  color: #037eb6;
+  text-decoration-color: #a6dbf8; /*Fargen til andre deler av linken enn selve teksten (som understrek)*/
+}
+a:visited {
+  color: #a1b031;
+}
+a:hover {
+  color: #f6ff00;
+  text-decoration-color: #cccccc;
+}
+a:active {
+  text-decoration: none;
+}
+a:focus {
+  color: #EB5940;
+  text-decoration-color: #cccccc;      
+}
+#meny {
+  color: #777777;
+  background-color: #bbbb33;
+  border: 5px solid #000000;
+  border-radius: 20%;
+  font-size:30px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#priser {
+  text-align: center;
+  color: #ffffff;
+  background-color: #303030;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 150%;
+  border: 1px solid #292929;
+  border-radius: 10px;     
+}
+
+#varer {
+  text-align: center;
+}
+#hoved {
+  padding: 10px;
+  background-color: #000000;
+  border: 10px solid #550000;
+  color: #ffffff;
+}
+
+.Menu {
+  overflow: hidden; /*Gjemmer den delen av menyen som ikke skal bli vist til vanlig*/
+  background-color: #99aacc; 
+}
+#MovingMenu { /* Sørger for at menyen holder seg langs toppen når man scroller*/
+  top: 0;
+  position: sticky;
+}
+.Menu a { /*Linkene innenfor menyen*/
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+.SubMenu { 
+  float: left;
+  overflow: hidden;
+}
+.SubMenu .SubMenubtn { /*Dette gjelder alle med SUbMenubtn innenfor SubMenu*/
+  font-size: 16px;  
+  border: none;
+  outline: none; /*Vil ikke ha noee unødvendig utenfor border*/
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor:pointer; /*Endrer musepekeren til pointer når man hover over elementene med både SubMenu og SubMenubtn*/
+}
+.Menu a:hover, .SubMenu:hover .SubMenubtn { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+  background-color: red;
+}
+
+.SubMenu-content {
+  display: none; /*SKal ikke være synelig*/
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1; /*Skal komme forran objekter med mindre verdi i z-index (de som er ubetegnet er 0)*/
+}
+
+.SubMenu-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.SubMenu-content a:hover { 
+  background-color: #eee;
+  color: black;
+}
+
+.SubMenu:hover .SubMenu-content {
+  display: block; /*Viser det som et block-element, altså at den skal ta en egen linje*/
+}
+.sticky {
+  position: fixed; /*Posisjonen kan ikke bli påvirket, for eksempel via skrolling*/
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px; 
+}

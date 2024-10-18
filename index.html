@@ -1,31 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <title>Oslomet-Replica- Juneed er best</title>
-  </head>
-  <body>
-    <header>
-      <div class="header-layout">
-        <div class="left-section">
-          <img class="icons" src="images/oslomet_logo.png" alt="" />
-        </div>
-        <div class="right-section">
-          <img src="images/search_icon.png" alt="" />
-          <img src="images/menu_logo.png" alt="" />
-        </div>
+<!doctype html> 
+
+<html lang="no"> <!--Viser søkemotoren at dette er skrevet på Norsk viktig for universell utforming-->
+
+<head> 
+    <title> Techstar </title> 
+    <meta charset="utf-8"> 
+    <link href='styles.css' rel='stylesheet'> <!--Linker dette til stilarket vårt-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet"> <!--Henter en font-type fra denne nettsiden-->
+</head>
+
+<body id ="startside"> 
+  <div id="MovingMenu"> <!--Alt innenfor denne div-elementet skal bevege på seg-->
+      <div class="Menu"> 
+        <a href="HomeMarked.html">Hjem</a>
+        <div class="SubMenu"> <!--Dette er en undermeny som bare vises når man hover over knappen under-->
+          <button class="SubMenubtn">Info </button> <!--Dette er knappen-->
+          <div class="SubMenu-content"> <!--Dette er innholdet i undermenyen-->
+            <a href="TechstarNettsideinfo.html">Techstar og Nettsiden</a> 
+            <a href="Grunnlegger.html">Grunnleggeren</a>
+          </div>
+      </div> 
+      <div class="SubMenu"> <!--Samme gjelder alt innenfor denne div (for de har samme class)-->
+          <button class="SubMenubtn">Marked </button>
+          <div class="SubMenu-content">
+            <a href="AirPods.html">AirPods</a>
+            <a href="PC.html">Laptop</a>
+            <a href="Phone.html">Telefon</a>
+          </div>
+      </div> 
+      <div class="SubMenu"> <!--Og denne-->
+          <button class="SubMenubtn">Bakgrunn </button>
+          <div class="SubMenu-content">
+            <button class="SubMenu SubMenubtn" type="button" onclick="myFunctionBlack()">Galaksen</button> <!--Når man trykker på denne knappen med navn "Galaksen", iverksetter man funksjonen "myFunctionBlack"-->
+            <button class="SubMenu SubMenubtn" type="button" onclick="myFunctionWhite()">Nordlys</button>
+            <button class="SubMenu SubMenubtn" type="button" onclick="myFunctionTan()">Fyrverkeri</button>
+            <button class="SubMenu SubMenubtn" type="button" onclick="myFunctionBlue()">Glimt</button>
+            <button class="SubMenu SubMenubtn" type="button" onclick="myFunctionRed()">Månelys</button>
+            <button class="SubMenu SubMenubtn" type="button" onclick="myFunctionPink()">Simpel</button>
+          </div>
       </div>
-      <div class="header-layout">
-        <div class="left-section">
-          <img class="icons" src="images/oslomet_logo.png" alt="" />
-        </div>
-        <div class="right-section">
-          <img src="images/search_icon.png" alt="" />
-          <img src="images/menu_logo.png" alt="" />
-        </div>
-      </div>
-    </header>
-  </body>
+      <a href="KontaktTechstar.html">Kontakt</a>
+    </div>
+  </div>
+  
+    <div id="hovedtittel">
+        <h1> Techstar's marked </h1> <!--Hvis jeg hadde bare gitt h1-elementet denne id-en hadde bare overskriften fått attributtene fra css-koden, men hvis jeg lager en div rundt den blir området større-->
+    </div>
+
+    <div id="menybackground">
+
+        <img src="Techstar.jpg" width="600" height="300" alt="TechstarLogo">
+
+        <h3><u>Velkommen til Techstar!</u></h3>
+
+        <h3 id="meny">Her er utvalget:</h3>
+    
+        <h3><a href="AirPods.html">Airpods</a> 1000-2000kr</h3> <!--Sender link til AirPods filen min når den blir trukket på-->
+    
+        <h3><a href="PC.html">Laptop</a> 7200kr</h3>
+    
+        <h3><a href="Phone.html">Telefon</a> 10000kr</h3>
+
+    </div> 
+
+    <script> //nå må jeg bruke dobbelslash for å kommentere siden dette bruker JavaScript, noe jeg lærte litt om i ungdomskolen
+
+      function myFunctionBlack(){   //Denne funksjonen aktiveres når man bruker knappen fra tidligere
+        document.body.style.backgroundImage = "url('space.jpg')";
+        document.body.style.color="white";
+      } //Den er ganske simpel, den gjør om bakgrunnensbildet til space.jpg, og tekstskriften til hvit 
+      function myFunctionWhite() {
+        document.body.style.backgroundImage = "url('aurora.jpg')";
+        document.body.style.color="white";
+      }
+      function myFunctionTan() {
+        document.body.style.backgroundImage = "url('fireworks.jpg')";
+        document.body.style.color="white";
+      }
+      function myFunctionBlue() {
+        document.body.style.backgroundImage = "url('blackandwhite.jpg')";
+        document.body.style.color="white";
+      }
+      function myFunctionRed() {
+        document.body.style.backgroundImage = "url('moon.jpg')";
+        document.body.style.color="white";
+      }
+      function myFunctionPink() { //I tilfelle noen har konsentrasjonsvansker eller sensetiv til mange detaljer, tok jeg med denne i tilegg. Det er en simpel svart bakgrunn med hviit skrift 
+        document.body.style.backgroundImage = "url('simple.jpg')";
+        document.body.style.color="white";
+      }
+    </script>
+</body> 
 </html>

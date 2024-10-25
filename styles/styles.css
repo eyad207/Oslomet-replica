@@ -43,6 +43,7 @@ header, footer {
 
 main {counter-reset: h2counter;}
 
+
 main h2::before {
   counter-increment: h2counter;
   content: counter(h2counter) " ";

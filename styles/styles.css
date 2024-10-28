@@ -33,7 +33,6 @@ a:hover{
   text-decoration-color: black;
 }
 
-/* flex, menu */
 header {
   display: flex;
   justify-content: space-between;
@@ -49,7 +48,6 @@ menu {
   }
 }
 
-/** purely visual, not flex-related **/
 body {
   margin: 0;
 }
@@ -58,18 +56,20 @@ h1, h2 {
   text-align: left;
 }
 h1{
-  font-size: 3rem;
+  font-size: 3em;
   margin-bottom: .5rem;
   font-weight: 700;
   font-family: 'SF Pro Rounded', Geneva, Arial, sans-serif;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 h2{
   margin-top: 0;
-  font-size: 1.5rem;
+  font-size: 2em;
   font-weight: 550;
 }
-
+h3{
+  font-size: 1.4rem;
+}
 header, footer {
   padding-top: 1em;
   padding-left: 2em;
@@ -89,6 +89,9 @@ nav li {
   list-style-type: none;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
   margin-right: 1.6vw;
+}
+li{
+  font-size: 1.3em;
 }
 table {
   margin-top: 1em;
@@ -110,6 +113,6 @@ th {
 th, td {
   padding-left: 1em;
   padding-right: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.75em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
 }

@@ -1,5 +1,3 @@
-/** FLEX — the important part **/
-/* flex, main */
 :root{
   --maincolor: #ffd500;
 }
@@ -8,15 +6,31 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
-
 }
 
 section {
   width: max(586px);
-  margin: 1em;
+  margin: 1.5em;
   padding: 1em;
-  background-color: antiquewhite;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s;
+  border-style: solid;
+}
+section:hover{
+  box-shadow: 0px 0px 8px black;
+}
+p{
+  font-size: 1.125rem;
+}
+a{
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: var(--maincolor);
+  transition: text-decoration-color 0.3s;
+}
+a:hover{
+  cursor: pointer;
+  text-decoration-color: black;
 }
 
 /* flex, menu */
@@ -29,7 +43,7 @@ menu {
   display: flex;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   menu {
       flex-direction: column;
   }

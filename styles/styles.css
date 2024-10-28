@@ -1,6 +1,12 @@
 :root{
   --maincolor: #ffd500;
 }
+header{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 main {
   margin-top: 5em;
   display: flex;
@@ -85,7 +91,7 @@ main h3::before {
   content: counter(h3counter) " ";
 }
 
-nav li {
+li {
   list-style-type: none;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
   margin-right: 1.6vw;

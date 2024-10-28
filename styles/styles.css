@@ -9,39 +9,51 @@ main {
   section {
     width: max(60vw);
     margin: 1em;
-    padding: 1em;
-    background-color: antiquewhite;
+
   }
 
   /* disse under er for "Studenthistorier" i html, de må få mer optimal css, men må snakke med teamet */
-  .historier-container {
-    margin: 1em;
-    width: 70vw;
-    }
   
-  .historier-container section {
-    margin: 0;
-    padding: 1em;
-    width: auto;
-    height: auto;
+  .historier-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .historier-container img {
-    width: 100%;
+  .historier-info{
+    padding: 2em;
+    background-color: antiquewhite;
   }
 
-  .historier-container h2 {
-    font-size: 2em;
+  .historier-container img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
   }
   
   .historier-container h3, p {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
-  .underline {
-    text-decoration: underline;
+  h2 {
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+
+
+  @media only screen and (max-width: 1000px) {
+    .historier-container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    h2{
+      font-size: 1.5em;
+    }
+    .historier-container h3, p {
+      font-size: 1em;
+    }
   }
 
 
@@ -60,11 +72,13 @@ main {
     menu {
         flex-direction: column;
     }
+    
   }
   
   /** purely visual, not flex-related **/
   body {
     margin: 0;
+    padding: 0;
   }
   
   header, footer {

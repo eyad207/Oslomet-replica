@@ -1,3 +1,7 @@
+:root{
+  --maincolor: #ffd500;
+}
+
 main {
   margin-top: 5em;
   display: flex;

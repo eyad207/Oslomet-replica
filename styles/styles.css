@@ -1,3 +1,71 @@
+
+:root{
+  --maincolor: #ffd500;
+}
+
+main {
+  margin-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  menu {
+      flex-direction: column;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2 {
+  width: max(1300px);
+}
+h1{
+  font-size: 3em;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-family: 'SF Pro Rounded', Geneva, Arial, sans-serif;
+  letter-spacing: 0.05em;
+}
+h2{
+  margin-top: 0;
+  font-size: 2em;
+  font-weight: 550;
+}
+h3{
+  font-size: 1.4rem;
+}
+
+table {
+  margin-top: 1em;
+  width: max(1300px);
+  border-collapse: collapse;
+  border: solid black 1px;
+  margin-bottom: 5em;
+}
+
+tr {
+  border: solid black 1.7px;
+}
+
+th {
+  text-align: left;
+  border: dashed black 1.7px;
+}
+
+th, td {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+}
+
 /** FLEX — the important part **/
 /* flex, main */
 main {
@@ -99,3 +167,4 @@ footer{
     background-color: antiquewhite;
     width: 100%;
     height: 150px;
+

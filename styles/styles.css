@@ -1,29 +1,60 @@
-:root {
-  --header-color: #ffd500;
-}
-header {
-  background-color: var(--header-color);
-}
-.header-layout {
+/** FLEX — the important part **/
+/* flex, main */
+main {
   display: flex;
-  height: 80px;
-  justify-content: space-between;
-  width: 1080px;
-  margin-left: 200px;
-}
-.header-top {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
-.left-section {
+
+section {
+  text-align: center;
+  flex-grow: 1;
+  margin: 0.6em;
+  padding: 1em;
+  background-color: #F9EBD8;
+  color: black;
+  box-sizing: border-box;
+}
+
+
+
+/* flex, menu */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+menu {
   display: flex;
 }
-.right-section {
-  margin-top: 5px;
+
+@media (max-width: 800px) {
+  menu {
+      flex-direction: column;
+  }
 }
-.icons {
-  height: 80px;
-}
+
+/** purely visual, not flex-related **/
 body {
   margin: 0;
+}
+
+header, footer {
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-bottom: 1.4em;
+  background-color: #ffd500;
+}
+
+main {counter-reset: h2counter;}
+
+main h2::before {
+  counter-increment: h2counter;
+  content: counter(h2counter) " ";
+}
+
+nav li {
+  list-style-type: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+  margin-right: 1.6vw;
 }

@@ -7,17 +7,22 @@ main {
 }
 
 section {
-  text-align: center;
+  min-width: 30em;
+  max-width: 60em;
   flex-grow: 1;
   margin: 0.6em;
   padding: 1em;
-  background-color: #F9EBD8;
+  background-color: #f6ecdf;
   color: black;
+  border-color: black;
+  border-style: solid;
   box-sizing: border-box;
 }
 
 
-
+h2{
+  text-align: center;
+}
 /* flex, menu */
 header {
   display: flex;
@@ -34,7 +39,6 @@ menu {
   }
 }
 
-/** purely visual, not flex-related **/
 body {
   margin: 0;
 }
@@ -46,12 +50,7 @@ header, footer {
   background-color: #ffd500;
 }
 
-main {counter-reset: h2counter;}
 
-main h2::before {
-  counter-increment: h2counter;
-  content: counter(h2counter) " ";
-}
 
 nav li {
   list-style-type: none;

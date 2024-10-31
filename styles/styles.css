@@ -1,59 +1,59 @@
-/** FLEX — the important part **/
-/* flex, main */
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
-section {
-  min-width: 30em;
-  max-width: 60em;
-  flex-grow: 1;
-  margin: 0.6em;
-  padding: 1em;
-  background-color: #f6ecdf;
-  color: black;
-  border-color: black;
-  border-style: solid;
-  box-sizing: border-box;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
 }
-
-
-h2{
-  text-align: center;
+header, footer {
+  padding: 1em 2em;
+  background-color: #ffd500;
 }
-/* flex, menu */
 header {
   display: flex;
   justify-content: space-between;
 }
-
 menu {
   display: flex;
 }
-
 @media (max-width: 800px) {
   menu {
       flex-direction: column;
   }
 }
-
-body {
-  margin: 0;
-}
-
-header, footer {
-  padding-top: 1em;
-  padding-left: 2em;
-  padding-bottom: 1.4em;
-  background-color: #ffd500;
-}
-
-
-
 nav li {
   list-style-type: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
   margin-right: 1.6vw;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section {
+  width: 100%;
+  max-width: 60em;
+  margin: 0.6em 0;
+  padding: 1em;
+  background-color: #f6ecdf;
+  color: black;
+  border: solid 1px black;
+  box-sizing: border-box;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.5em;
+  border: 0.1em solid #ccc;
+  text-align: left;
+  background-color: white;
+}
+h2 {
+  text-align: center;
+}
+.page {
+  display: none;
+}
+input[type="radio"]:checked + .page {
+  display: block;
 }

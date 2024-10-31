@@ -6,53 +6,81 @@ main {
   margin-top: 5em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 @media (max-width: 600px) {
-  menu {
-      flex-direction: column;
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Sentrerer elementene vertikalt */
+    align-items: center; /* Sentrerer elementene horisontalt */
+  }
+
+  h1, h2, table {
+    width: 90%; /* Tilpasser bredden for mindre skjermer */
+    text-align: center; /* Sentrerer teksten */
   }
 }
 
 body {
   margin: 0;
+  margin-bottom: 100px;
 }
 
 h1, h2 {
-  width: max(1300px);
+  display: block;
+  width: 50%;
+  justify-content: center;
+  text-align: left;
+  
 }
-h1{
-  font-size: 3em;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  font-family: 'SF Pro Rounded', Geneva, Arial, sans-serif;
-  letter-spacing: 0.05em;
+h1 {
+  font-size: 3rem;                   /* Size for the main heading */
+  font-weight: 700;                  /* Bold weight */
+  margin: 0.5em 0;                   /* Space above and below */
+  text-align: center;                /* Center align the text */
+  letter-spacing: 0.05em;            /* Slight letter spacing */
 }
-h2{
-  margin-top: 0;
-  font-size: 2em;
-  font-weight: 550;
+h2 {
+  font-size: 2.5rem;                 /* Size for secondary headings */
+  font-weight: 600;                  /* Semi-bold weight */
+  color: #333;                       /* Dark grey for better contrast */
+  margin: 0.4em 0;                   /* Space above and below */
+  text-align: center;                /* Center align the text */
+  border-bottom: 2px solid #ccc;     /* Optional: underline with border */
+  padding-bottom: 0.2em;             /* Space below the text */
 }
-h3{
-  font-size: 1.4rem;
+h3 {
+  font-size: 1.75rem;                  /* Font size for h3 */
+  font-weight: 500;                    /* Medium weight */
+  margin: auto;                 /* Center the heading with auto margin */
+  text-align: center;                  /* Center align the text */
+  max-width: 50rem;                  /* Limit max width for better readability (600px ≈ 37.5rem) */
+  line-height: 1.2;                    /* Adjust line height for readability */
+  word-wrap: break-word;               /* Ensure long words break correctly */
 }
+
 
 table {
   margin-top: 1em;
-  width: max(1300px);
+  width: 50%;
   border-collapse: collapse;
-  border: solid black 1px;
-  margin-bottom: 5em;
+  border: solid black 0.2rem;
+  margin-bottom: 5em;  
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 tr {
-  border: solid black 1.7px;
+  border: solid black 0.2rem;
 }
 
 th {
-  text-align: left;
-  border: dashed black 1.7px;
+  border: solid black 0.2rem;
+  font-weight: 500;  
 }
 
 th, td {
@@ -60,8 +88,50 @@ th, td {
   padding-right: 1em;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
-  font-size: 1.5rem;
-  font-weight: 600;
+}
 
+td{
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+caption {
+  font-size: 1.6rem;                /* Font size for the caption */
+  font-weight: bold;                /* Make caption text bold */
+  padding: 1em;                     /* Add padding for spacing */
+  text-align: center;               /* Center the caption text */
+  margin-bottom: 1em;               /* Add space below the caption */
+  font-family: 'Arial', sans-serif; /* Use a clean sans-serif font */
+}
+
+/* Media query for tablets */
+@media (max-width: 48rem) { /* 768px is approximately 48rem */
+  table {
+    width: 80%; /* Reduce table width to fit better on tablets */
+  }
+  h1, h2 {
+    width: 80%; /* Center align and shrink heading width */
+    margin: 0 auto; /* Center the headings */
+  }
+}
+
+/* Media query for phones and very small screens */
+@media (max-width: 30rem) { /* 480px is approximately 30rem */
+  body {
+    font-size: 0.875rem; /* Base font size of 14px converted to rem */
+  }
+  
+  table {
+    width: 90%; /* Full width on small screens */
+    font-size: 1.2rem; /* Adjust font size to fit content */
+  }
+  
+  h1 {
+    font-size: 1.875rem; /* Smaller heading size (30px) */
+  }
+  
+  h2 {
+    font-size: 1.125rem; /* Smaller subheading size (18px) */
+  }
 }
 

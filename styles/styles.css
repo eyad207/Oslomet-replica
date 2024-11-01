@@ -35,10 +35,7 @@ nav li {
 header {
   padding: 5em;
 }
-h1 {
-  padding: 1em;
-  text-align: center;
-}
+
 nav button {
   font-size:x-large;
   font-weight:bold;
@@ -90,44 +87,41 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+
 }
 
+
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
 }
 
-h1, h2 {
-  display: block;
-  width: 50%;
-  justify-content: center;
-  text-align: left;
+p{
+  font-size: 1.2em;
 }
 
+
 h1 {
-  font-size: 3rem;                   
+  font-size: 2.5rem;                   
   font-weight: 700;                  
   margin: 0.5em 0;                   
-  text-align: center;                
   letter-spacing: 0.05em;            
 }
 
 h2 {
-  font-size: 2.5rem;                 
+  font-size: 2.2rem;                 
   font-weight: 600;                 
   color: #333;                       
   margin: 0.4em 0;                
-  text-align: center;               
   border-bottom: 2px solid #ccc;     
   padding-bottom: 0.2em;             
 }
 
 h3 {
-  font-size: 1.75rem;                  
+  font-size: 1.7rem;                  
   font-weight: 500;                   
   margin: auto;                 
-  text-align: center;                  
   max-width: 50rem;            
-  line-height: 1.2;                   
   word-wrap: break-word;              
 }
 
@@ -168,7 +162,6 @@ caption {
   padding: 1em;                    
   text-align: center;              
   margin-bottom: 1em;              
-  font-family: 'Arial', sans-serif;
 }
 
 @media (max-width: 48rem) {
@@ -200,50 +193,27 @@ caption {
   }
 }
 
-main {
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
-  }
 
-header, footer {
-  padding-top: 1em;
-  padding-left: 2em;
-  padding-bottom: 1.4em;
-  background-color: orangered;
+section {
+  width: max(60vw);
+  margin: 1em;
 }
 
-  section {
-    width: max(60vw);
-    margin: 1em;
-  }
-  
-  .historier-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.historier-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-  .historier-info{
-    padding: 2em;
-    background-color: antiquewhite;
-  }
+.historier-info{
+  padding: 2em;
+  background-color: antiquewhite;
+}
 
-  .historier-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .historier-container h3, p {
-    font-size: 1.3em;
-  }
+.historier-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  h2 {
-    font-size: 2em;
-    font-weight: 600;
-  }
+
   
-  body {
-    margin: 0;
-    padding: 0;
-  }

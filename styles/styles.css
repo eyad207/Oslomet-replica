@@ -17,7 +17,6 @@ nav {
 }
 
 button {
-  border: none;
   outline: none; /*Vil ikke ha noee unødvendig utenfor border*/
   background-color: inherit;
   font-family: inherit;
@@ -27,6 +26,15 @@ button {
   margin: 0;
   cursor:pointer; /*Endrer musepekeren til pointer når man hover over elementene med både SubMenu og SubMenubtn*/
 }
+
+button:focus + .sub-menu, .meny-hover:hover .sub-menu {
+  transition: 1s;
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.8em;
+  width: 70%;
+}
+
 nav li {
   list-style-type: none;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
@@ -65,12 +73,18 @@ nav button:nth-child(2) {
   padding-top: -10em;
   margin-bottom: -2em; /* Har med denne slik at man ikke slutter å hovere over menyen når man går ned mot sub-menyen */
 }
-.meny-hover:hover .sub-menu {
+button:focus + .sub-menu, .meny-hover:hover .sub-menu {
   transition: 1s;
   display: flex;
   flex-direction: row;
   margin-top: 0.8em;
   width: 70%
+}
+button:focus {
+  background-color: rgb(252, 255, 203);
+  border-top: 3px dotted black;
+  border-left: 3px dotted black;
+  border-right: 3px dotted black;
 }
 .meny-hover:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
   background-color: rgb(252, 255, 203);

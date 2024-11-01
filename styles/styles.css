@@ -1,3 +1,4 @@
+
 /** FLEX — the important part **/
 /* flex, main */
 nav, footer {
@@ -30,6 +31,7 @@ nav li {
   list-style-type: none;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
+ 
 header {
   padding: 5em;
 }
@@ -81,7 +83,6 @@ nav button:nth-child(2) {
 :root{
   --maincolor: #ffd500;
 }
-
 
 main {
   margin-top: 5em;
@@ -199,12 +200,19 @@ caption {
   }
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+=======
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
   }
-  
+
+header, footer {
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-bottom: 1.4em;
+  background-color: orangered;
+}
+
   section {
     width: max(60vw);
     margin: 1em;

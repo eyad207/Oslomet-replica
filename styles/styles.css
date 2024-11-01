@@ -66,6 +66,7 @@ nav button:nth-child(2) {
   margin-bottom: -2em; /* Har med denne slik at man ikke slutter å hovere over menyen når man går ned mot sub-menyen */
 }
 .meny-hover:hover .sub-menu {
+  transition: 1s;
   display: flex;
   flex-direction: row;
   margin-top: 0.8em;
@@ -78,6 +79,7 @@ nav button:nth-child(2) {
   border-right: 3px dotted black;
 }
 .sub-menu li:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+  transition: 1s;
   background-color: rgb(218, 204, 53);
 }
 :root{

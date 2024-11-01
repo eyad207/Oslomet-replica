@@ -3,14 +3,6 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif
 }
-header, footer {
-  padding: 1em 2em;
-  background-color: #ffd500;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-}
 menu {
   display: flex;
 }
@@ -38,22 +30,29 @@ section {
   border: solid 1px black;
   box-sizing: border-box;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
+  margin: 2em 0;
 }
 th, td {
+  border: 0.1em solid #ddd;
   padding: 0.5em;
-  border: 0.1em solid #ccc;
   text-align: left;
-  background-color: white;
 }
-h2 {
+th {
+  background-color: #f2f2f2;
+}
+
+.semester {
+  background-color: rgb(244, 244, 192);
+  font-weight: bold;
+}
+h2,h3 {
   text-align: center;
 }
-.page {
-  display: none;
-}
+
 input[type="radio"]:checked + .page {
   display: block;
 }

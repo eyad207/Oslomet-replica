@@ -1,10 +1,11 @@
+:root{
+  --maincolor: #ffd500;
+}
 
-/** FLEX — the important part **/
-/* flex, main */
 nav, footer {
   padding-top: 1em;
   padding-bottom: 1em;
-  background-color: yellow;
+  background-color: var(--maincolor);
 }
 nav {
   display: flex;
@@ -76,9 +77,6 @@ nav button:nth-child(2) {
 }
 .sub-menu li:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
   background-color: rgb(218, 204, 53);
-}
-:root{
-  --maincolor: #ffd500;
 }
 
 main {

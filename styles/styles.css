@@ -1,18 +1,87 @@
-:root{
-  --maincolor: #ffd500;
+
+/** FLEX — the important part **/
+/* flex, main */
+nav, footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: yellow;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  top: 0;
+  position: sticky;
+  padding-left: 10em;
+}
+
+button {
+  border: none;
+  outline: none; /*Vil ikke ha noee unødvendig utenfor border*/
+  background-color: inherit;
+  font-family: inherit;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0;
+  cursor:pointer; /*Endrer musepekeren til pointer når man hover over elementene med både SubMenu og SubMenubtn*/
+}
+nav li {
+  list-style-type: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
  
 header {
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
-  }
-
-header, footer {
-  padding-top: 1em;
-  padding-left: 2em;
-  padding-bottom: 1.4em;
-  background-color: orangered;
+  padding: 5em;
+}
+h1 {
+  padding: 1em;
+  text-align: center;
+}
+nav button {
+  font-size:x-large;
+  font-weight:bold;
+}
+nav button:nth-child(2) {
+  margin-left: 5em;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: rgb(252, 255, 203);
+  border-bottom: 2px solid rgb(188, 193, 42);
+  border-left: 2px solid rgb(188, 193, 42);
+  border-right: 2px solid rgb(188, 193, 42);
+  margin-top: 0em;
+  margin-left: -2.4em; /* Minuser med 11em for å gjøre delvis opp for padding-left i nav */
+  z-index: 1;
+}
+.sub-menu li {
+  cursor: pointer;
+  padding: 1em;
+}
+.meny-hover{
+  padding-top: -10em;
+  margin-bottom: -2em; /* Har med denne slik at man ikke slutter å hovere over menyen når man går ned mot sub-menyen */
+}
+.meny-hover:hover .sub-menu {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.8em;
+  width: 70%
+}
+.meny-hover:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+  background-color: rgb(252, 255, 203);
+  border-top: 3px dotted black;
+  border-left: 3px dotted black;
+  border-right: 3px dotted black;
+}
+.sub-menu li:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+  background-color: rgb(218, 204, 53);
+}
+:root{
+  --maincolor: #ffd500;
 }
 
 main {
@@ -76,9 +145,6 @@ tr {
   border: solid black 0.2rem;
 }
 
-th {
-
-}
 
 th, td {
   padding-left: 1em;
@@ -137,11 +203,18 @@ caption {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
   }
-  
+
+header, footer {
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-bottom: 1.4em;
+  background-color: orangered;
+}
+
   section {
     width: max(60vw);
     margin: 1em;
@@ -171,10 +244,6 @@ main {
     font-size: 2em;
     font-weight: 600;
   }
-  
-  menu {
-    display: flex;
-  }  
   
   body {
     margin: 0;

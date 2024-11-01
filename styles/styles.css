@@ -101,6 +101,7 @@ p{
   font-size: 1.2em; 
 }
 
+
 h1 {
   font-size: 2.5rem;                   
   font-weight: 700;                  
@@ -114,12 +115,11 @@ h2 {
   color: #333;                       
   margin: 0.4em 0;                
   border-bottom: 2px solid #ccc;     
-  text-align: center;               
   padding-bottom: 0.2em;             
 }
 
 h3 {
-  font-size: 1.7rem;                  
+  font-size: 1.5rem;                  
   font-weight: 500;                   
   margin: auto;                 
   max-width: 50rem;            

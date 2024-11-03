@@ -5,6 +5,82 @@
 header, footer {
   background-color: var(--maincolor);
 }
+nav, footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: var(--maincolor);
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  top: 0;
+  position: sticky;
+  padding-left: 10em;
+}
+
+button {
+  border: none;
+  outline: none; /*Vil ikke ha noee unødvendig utenfor border*/
+  background-color: inherit;
+  font-family: inherit;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0;
+  cursor:pointer; /*Endrer musepekeren til pointer når man hover over elementene med både SubMenu og SubMenubtn*/
+}
+nav li {
+  list-style-type: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+ 
+header {
+  padding: 5em;
+}
+
+nav button {
+  font-size:x-large;
+  font-weight:bold;
+}
+nav button:nth-child(2) {
+  margin-left: 5em;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: rgb(252, 255, 203);
+  border-bottom: 2px solid rgb(188, 193, 42);
+  border-left: 2px solid rgb(188, 193, 42);
+  border-right: 2px solid rgb(188, 193, 42);
+  margin-top: 0em;
+  margin-left: -2.4em; /* Minuser med 11em for å gjøre delvis opp for padding-left i nav */
+  z-index: 1;
+}
+.sub-menu li {
+  cursor: pointer;
+  padding: 1em;
+}
+.meny-hover{
+  padding-top: -10em;
+  margin-bottom: -2em; /* Har med denne slik at man ikke slutter å hovere over menyen når man går ned mot sub-menyen */
+}
+.meny-hover:hover .sub-menu {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.8em;
+  width: 70%
+}
+.meny-hover:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+  background-color: rgb(252, 255, 203);
+  border-top: 3px dotted black;
+  border-left: 3px dotted black;
+  border-right: 3px dotted black;
+}
+.sub-menu li:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+  background-color: rgb(218, 204, 53);
+}
 
 main {
   margin-top: 5em;
@@ -12,16 +88,14 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;  
+  align-items: center;
+
 }
+
 
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  margin-bottom: 100px;
-}
-
-h1, h2 {
-  display: block;
-  width: 50%;
   justify-content: center;
   text-align: left;
 }
@@ -51,11 +125,39 @@ h3 {
   line-height: 1.2;                   
   word-wrap: break-word;
   margin-bottom: 3rem;        
+p{
+  font-size: 1.2em; 
+}
+
+
+h1 {
+  font-size: 2.5rem;                   
+  font-weight: 700;                  
+  margin: 0.5em 0;                   
+  letter-spacing: 0.05em;   
+  text-align: center;         
+}
+
+h2 {
+  font-size: 2.2rem;                 
+  font-weight: 600;                 
+  color: #333;                       
+  margin: 0.4em 0;                
+  border-bottom: 2px solid #ccc;     
+  padding-bottom: 0.2em;             
+}
+
+h3 {
+  font-size: 1.5rem;                  
+  font-weight: 500;                   
+  margin: auto;                 
+  max-width: 50rem;            
+  word-wrap: break-word;              
 }
 
 table {
   margin-top: 1em;
-  width: 50%;
+  width: 80%;
   border-collapse: collapse;
   border: solid black 0.2rem;
   margin-bottom: 6rem;  
@@ -213,6 +315,68 @@ a:hover{
 }
 
 
+td{
+  font-weight: 600;
+  text-decoration: underline;
+  border: solid black 0.2rem;
+  font-weight: 500;
+}
+thead :td:nth-child(){
+  justify-content: center;
+}
+
+caption {
+  font-size: 1.6rem;               
+  font-weight: bold;               
+  padding: 1em;                    
+  text-align: center;              
+  margin-bottom: 1em;              
+}
+
+section, h1 {
+  width: max(70vw);
+  margin-bottom: 2em;
+}
+
+.historier-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.historier-info{
+  padding: 2em;
+  background-color: antiquewhite;
+}
+
+.historier-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 62em) {
+
+  table{
+    width: 60%;
+  }
+
+  .historier-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  h1{
+    font-size: 2em;
+  }
+  h2{
+    font-size: 1.7em;
+  }
+  h3{
+    font-size: 1.2em;
+  }
+  p{
+    font-size: 1.1em;
+  }
+}
 
 
   

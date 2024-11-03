@@ -5,12 +5,8 @@
 header, footer {
   background-color: var(--maincolor);
 }
-nav, footer {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: var(--maincolor);
-}
-nav {
+
+header>nav {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -18,20 +14,23 @@ nav {
   top: 0;
   position: sticky;
   padding-left: 10em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: var(--maincolor);
 }
 
 button {
   border: none;
-  outline: none; /*Vil ikke ha noee unødvendig utenfor border*/
+  outline: none;
   background-color: inherit;
   font-family: inherit;
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
   margin: 0;
-  cursor:pointer; /*Endrer musepekeren til pointer når man hover over elementene med både SubMenu og SubMenubtn*/
+  cursor:pointer;
 }
-nav li {
+header>nav>li {
   list-style-type: none;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
@@ -40,11 +39,11 @@ header {
   padding: 5em;
 }
 
-nav button {
+header>nav>button {
   font-size:x-large;
   font-weight:bold;
 }
-nav button:nth-child(2) {
+header>nav>button:nth-child(2) {
   margin-left: 5em;
 }
 .sub-menu {
@@ -55,7 +54,7 @@ nav button:nth-child(2) {
   border-left: 2px solid rgb(188, 193, 42);
   border-right: 2px solid rgb(188, 193, 42);
   margin-top: 0em;
-  margin-left: -2.4em; /* Minuser med 11em for å gjøre delvis opp for padding-left i nav */
+  margin-left: -2.4em;
   z-index: 1;
 }
 .sub-menu li {
@@ -64,7 +63,7 @@ nav button:nth-child(2) {
 }
 .meny-hover{
   padding-top: -10em;
-  margin-bottom: -2em; /* Har med denne slik at man ikke slutter å hovere over menyen når man går ned mot sub-menyen */
+  margin-bottom: -2em;
 }
 .meny-hover:hover .sub-menu {
   display: flex;
@@ -72,13 +71,13 @@ nav button:nth-child(2) {
   margin-top: 0.8em;
   width: 70%
 }
-.meny-hover:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+.meny-hover:hover {
   background-color: rgb(252, 255, 203);
   border-top: 3px dotted black;
   border-left: 3px dotted black;
   border-right: 3px dotted black;
 }
-.sub-menu li:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+.sub-menu li:hover {
   background-color: rgb(218, 204, 53);
 }
 
@@ -182,10 +181,6 @@ th, td {
   font-weight: 550;  
   text-align: center;
 
-}
-
-.studieinformasjon{
-  text-align: center;
 }
 
 main {
@@ -311,10 +306,10 @@ a{
   font-size: 1rem;
   font-family: Arial, sans-serif;
 }
+
 a:hover{
   border-bottom: 0.15rem solid #000;
 }
-
 
 td{
   font-weight: 600;
@@ -322,6 +317,7 @@ td{
   border: solid black 0.2rem;
   font-weight: 500;
 }
+
 thead :td:nth-child(){
   justify-content: center;
 }
@@ -355,12 +351,10 @@ section, h1 {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 62em) {
-
+@media only screen and (max-width: 62rem) {
   table{
     width: 60%;
   }
-
   .historier-container{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;

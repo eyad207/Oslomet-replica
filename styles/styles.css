@@ -206,6 +206,7 @@ section{
 
 .historier-info h2{
   border: 0;
+  text-align: left;
 }
 .historier-info h3{
   text-decoration: underline;

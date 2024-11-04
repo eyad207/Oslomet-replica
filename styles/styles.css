@@ -354,9 +354,6 @@ a:hover{
     margin: 0;
     margin-top: 2rem;
   }
-  footer div{
-    flex-direction: row;
-  }
 
   footer> section, div{
     max-width: 60rem;
@@ -373,4 +370,19 @@ a:hover{
     padding-left: 2em;
   }
 
+}
+
+@media (max-width: 768px) {
+  .firstpicture{
+    width: 80%;
+  }
+  footer div{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer address, nav, aside, ul{
+    padding: 0;
+    margin-bottom: 1rem;
+  }
 }

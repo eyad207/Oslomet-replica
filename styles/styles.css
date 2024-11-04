@@ -76,7 +76,7 @@ header nav button:nth-child(2) {
 }
 
 main {
-  margin-top: 5em;
+  margin-top: 2em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -92,24 +92,32 @@ body {
   justify-content: center;
 }
 
+.firstpicture{
+  width: 81.25rem;
+  margin-bottom: 5em;
+  border-radius: 0.625rem;
+}
 
 h1 {
-  font-size: 2.5rem;                   
-  font-weight: 700;                  
+  font-size: 2.5rem;
+  font-weight: 700;
   margin: 0.5em 0;                   
   letter-spacing: 0.05em;   
   text-align: center;
-
+  width: 50%;
 }
 
 h2 {
-  font-size: 1.8rem;                 
-  font-weight: 600;                 
-  margin: 0.4em 0;                
-  border-bottom: 2px solid #ccc;     
-  padding-bottom: 0.3em;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.4em 0;
+  border-bottom: 2px solid #b3b3b3;
+  padding-bottom: 0.5em;
   line-height: 1.2em;
+  width: 50%; 
+  text-align: center;
 }
+
 
 h3 {
   font-size: 1.2rem;                  
@@ -132,10 +140,10 @@ p{
 
 table {
   margin-top: 1em;
-  width: max(60vw);
+  width: max(50vw);
   border-collapse: collapse;
   border: solid black 0.2rem;
-  margin-bottom: 6rem;  
+  margin-bottom: 4rem;  
   font-size: 1.5rem;
   text-align: left;
 }
@@ -167,7 +175,7 @@ main .smaller-section{
   width: max(40vw);
 }
 
-main section, table, h1{
+main section{
   width: max(60vw);
 }
 
@@ -331,79 +339,51 @@ a:hover{
 
 
 @media (max-width: 768px) {
-  main {
-      margin-top: 3em;
-      padding: 0 1em;
-      align-items: flex-start;
-  }
 
-  h1, h2 {
-      text-align: center;
-      width: 100%;
-  }
 
-  h1 {
-      font-size: 2rem;
-      margin: 0.4em 0;
-  }
 
-  h2 {
-      font-size: 1.5rem;
-      padding-bottom: 0.1em;
-      margin: 0.4em 0;
-  }
-
-  h3 {
-      font-size: 1rem;
-  }
-
-  p {
-      font-size: 1em;
-      line-height: 1.4em;
-      margin: 0.5em 0;
-  }
-
-  table {
-      width: 100%;
-      font-size: 1.2rem;
-      margin-bottom: 3rem;
-  }
-
-  th, td {
-      padding: 0.5em;
-      text-align: left;
-      font-size: 1rem;
-  }
-
-  .intro-informasjon p {
-      font-size: 1.2em;
-      text-align: left;
-  }
-
-  main .smaller-section,
-  main section, 
-  table,
-  .historier-container {
-      width: 100%;
-      margin-bottom: 1em;
-  }
-
-  .historier-container {
-      grid-template-columns: 1fr;
-  }
-
-  .historier-info {
-      padding: 1em;
-  }
-
-  .historier-container img {
-      width: 100%;
-      height: auto;
-  }
 }
 
 
 @media (max-width: 768px) {
+  
+  h1, h2 {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0.4em 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding-bottom: 0.1em;
+    margin: 0.4em 0;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4em;
+    margin: 0.5em 0;
+}
+
+table {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1rem;
+}
   footer {
       padding-top: 2em;
       padding-bottom: 0;
@@ -472,4 +452,41 @@ a:hover{
   li {
       font-size: 1rem;
   }
+  .firstpicture {
+    width: 100%; 
+    margin-bottom: 2em; 
+    border-radius: 0.5rem;
+  }
+  main {
+    margin-top: 3em;
+    padding: 0 1em;
+    align-items: flex-start;
+}
+
+
+.intro-informasjon p {
+    font-size: 1.2em;
+    text-align: left;
+}
+
+main .smaller-section,
+main section, 
+table,
+.historier-container {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.historier-container {
+    grid-template-columns: 1fr;
+}
+
+.historier-info {
+    padding: 1em;
+}
+
+.historier-container img {
+    width: 100%;
+    height: auto;
+}
 }

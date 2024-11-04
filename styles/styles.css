@@ -339,176 +339,38 @@ a:hover{
   border-bottom: 0.15rem solid #000;
 }
 
-@media(max-width: 1300px){
-  footer {
-    padding-top: 2em;
-    padding-bottom: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-bottom: 0;
-}
-
-footer > section {
+@media(max-width: 1350px){
+  .firstpicture{
+    width: 70%;
+    justify-content: center;
+  }
+  footer section{
     flex-direction: column;
+  }
+  footer> section> h3{
     text-align: center;
-    margin-bottom: 1.5em;
-    padding-bottom: 1.5em;
-}
-
-section > button {
-    margin-left: 0;
-    margin-top: 1em;
-    padding: 0.8em 1.2em;
-    font-size: 1rem;
-    align-items: center;
-}
-
-}
-
-
-@media (max-width: 768px) {
-  
-  h1, h2 {
-    text-align: center;
-    width: 100%;
-}
-
-h1 {
-    font-size: 2rem;
-    margin: 0.4em 0;
-}
-
-h2 {
-    font-size: 1.5rem;
-    padding-bottom: 0.1em;
-    margin: 0.4em 0;
-
-}
-
-h3 {
-    font-size: 1rem;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.4em;
-    margin: 0.5em 0;
-}
-
-table {
-    width: 100%;
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-}
-
-th, td {
-    padding: 10em;
-    text-align: center;
-    font-size: 1rem;
-}
-  footer {
-      padding-top: 2em;
-      padding-bottom: 0;
-      margin-bottom: 0;
+  }
+  footer button{
+    margin: 0;
+    margin-top: 2rem;
+  }
+  footer div{
+    flex-direction: row;
   }
 
-  footer > section {
-      flex-direction: column;
-      text-align: center;
-      margin-bottom: 1.5em;
-      padding-bottom: 1.5em;
+  footer> section, div{
+    max-width: 60rem;
+    justify-content: space-between;
   }
-
-  section > button {
-      margin-left: 0;
-      margin-top: 1em;
-      padding: 0.8em 1.2em;
-      font-size: 1rem;
-  }
-
-  footer > div {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  address, nav, aside {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 1em;
-  }
-
-  aside > ul {
-      margin-right: 0;
-      display: flex;
-      justify-content: center;
-      gap: 1em;
-      flex-wrap: wrap;
-  }
-
-  aside > ul > li {
-      margin-bottom: 0;
-      font-size: 0.9rem;
-  }
-
-  nav > ul {
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5em;
-  }
-
-  nav > ul > li {
-      font-size: 0.9rem;
-      font-weight: 500;
-  }
-
-  section > h3 {
-      font-size: 1.5rem;
-  }
-
-  address > h3 {
-      font-size: 1.3rem;
-  }
-
-  li {
-      font-size: 1rem;
-  }
-  .firstpicture {
-    width: 100%; 
-    margin-bottom: 2em; 
-    border-radius: 0.5rem;
-  }
-  main {
-    margin-top: 3em;
-    padding: 0 1em;
-    align-items: flex-start;
 }
 
+@media(max-width: 1050px){
+  footer ul{
+    margin-right: 0;
+    padding-right: 2em;
+  }
+  footer address{
+    padding-left: 2em;
+  }
 
-.intro-informasjon p {
-    font-size: 1.2em;
-    text-align: left;
-}
-
-main .smaller-section,
-main section, 
-table,
-.historier-container {
-    width: 100%;
-    margin-bottom: 1em;
-}
-
-.historier-container {
-    grid-template-columns: 1fr;
-}
-
-.historier-info {
-    padding: 1em;
-}
-
-.historier-container img {
-    width: 100%;
-    height: auto;
-}
 }

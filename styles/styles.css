@@ -169,12 +169,16 @@ th, td {
 }
 
 .intro-informasjon p{
-  font-size: 1.6em;
+  font-size: 1.4em;
   text-align: center;
 }
 
+.smaller-section{
+  width: max(40vw);
+}
+
 section, table, h1{
-  width: max(65vw);
+  width: max(60vw);
 }
 
 section, .historier-container{
@@ -345,7 +349,7 @@ thead :td:nth-child(){
 
 
 
-@media only screen and (max-width: 62em) {
+@media only screen and (max-width: 950px) {
   table{
     width: 60%;
   }
@@ -365,5 +369,35 @@ thead :td:nth-child(){
   }
   p{
     font-size: 1.2em;
+    line-height: 1.4em;
+  }
+  section, .smaller-section {
+    width: 70vw;/
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+
+  h1 {
+      font-size: 1.8rem; 
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  h3 {
+      font-size: 1.1rem; 
+  }
+
+  p {
+      font-size: 1em; 
+
+  }
+
+  section, .smaller-section {
+      width: 77vw; 
   }
 }

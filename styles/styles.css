@@ -122,23 +122,26 @@ h2 {
   text-align: center;
 }
 
+h3, h4, p{
+  font-size: 1.2em;
+}
+
 h3 {
-  font-size: 1.2rem;                  
   font-weight: 600;                   
   margin: auto;                 
 }
 
+
 p{
-  font-size: 1.2em; 
   line-height: 1.5em;
 }
 
-h1, h2, h3 {
-  color: #111;                       
+h1, h2, h3, h4 {
+  color: #222;                       
 }
 
-p{
-  color: #222;
+p, li{
+  color: #333;
 }
 
 table {
@@ -174,7 +177,7 @@ th, td {
   text-align: center;
 }
 
-.smaller-section{
+.mindre-section{
   width: max(40vw);
 }
 
@@ -190,6 +193,48 @@ section{
   margin-bottom: 2em;
 }
 
+.flere-studier-section ul li{
+  margin-bottom: 1.3em;
+  margin-top: 0.5em;
+  font-size: 0.8em;
+}
+
+.studie-container {
+  z-index: -10;
+  position: relative;
+}
+
+.studie-container::after {
+  content: '\203A';
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-70%);
+}
+
+.studie-container::after, .studie-info li{
+  color: #666;
+
+}
+
+.studie-container h4{
+  margin: 0;
+}
+
+.studie-info li{
+  display: inline-block;
+  font-size: 1em;
+}
+
+.studie-info li:not(:last-child){
+  padding-right: 1em;
+  border-right: 1px solid #222;
+}
+.studie-info li:not(:first-child){
+  padding-left: 1em;
+}
+
 .historier-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -201,7 +246,7 @@ section{
 }
 
 .historier-container p{
-  font-weight: 500; /* Make text slightly bolder if needed */
+  font-weight: 500;
 }
 
 .historier-info h2{
@@ -351,7 +396,7 @@ thead :td:nth-child(){
 
 
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1100px) {
   table{
     width: 60%;
   }
@@ -373,13 +418,13 @@ thead :td:nth-child(){
     font-size: 1.2em;
     line-height: 1.4em;
   }
-  section, .smaller-section {
+  section, .mindre-section {
     width: 70vw;/
   }
 
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
 
 
   h1 {
@@ -399,7 +444,7 @@ thead :td:nth-child(){
 
   }
 
-  section, .smaller-section {
-      width: 77vw; 
+  section, .mindre-section {
+      width: 90vw; 
   }
 }

@@ -94,6 +94,7 @@ main {
 }
 
 
+/* vi bruker font family mange steder, kanskje unødvendig?? */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;

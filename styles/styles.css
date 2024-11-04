@@ -7,7 +7,7 @@ header, footer {
   background-color: var(--maincolor);
 }
 
-header {
+header nav {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -24,12 +24,12 @@ header button {
   font-family: inherit;
   cursor:pointer;
 }
-header>nav li {
+header nav li {
   list-style-type: none;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
  
-header {
+headeR {
   padding: 3em;
 }
 
@@ -40,6 +40,7 @@ header nav button {
 header nav button:nth-child(2) {
   margin-left: 5em;
 }
+
 .sub-menu {
   display: none;
   position: absolute;
@@ -51,6 +52,7 @@ header nav button:nth-child(2) {
   margin-left: -2.4em;
   z-index: 1;
 }
+
 .sub-menu li {
   cursor: pointer;
   padding: 1em;

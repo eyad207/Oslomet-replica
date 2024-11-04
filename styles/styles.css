@@ -255,7 +255,6 @@ footer> section, div{
 footer>div{
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: space-between;
 }
 
@@ -376,6 +375,10 @@ section, h1 {
   }
   p{
     font-size: 1.1em;
+  }
+  div{
+    display: flex;
+    flex-direction: column;
   }
 }
 

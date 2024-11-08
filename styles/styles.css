@@ -29,7 +29,7 @@ header nav li {
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
  
-headeR {
+header {
   padding: 3em;
 }
 
@@ -87,7 +87,6 @@ main {
 }
 
 
-/* vi bruker font family mange steder, kanskje unødvendig?? */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -95,7 +94,7 @@ body {
 }
 
 .firstpicture{
-  width: 81.25rem;
+  width: 80vw;
   margin-bottom: 3em;
   border-radius: 0.625rem;
 }
@@ -116,31 +115,28 @@ h2 {
   border-bottom: 2px solid #b3b3b3;
   padding-bottom: 0.5em;
   line-height: 1.2em;
-
+  width: 50%; 
   text-align: center;
-}
-
-h3, h4, p{
-  font-size: 1.2em;
 }
 
 
 h3 {
+  font-size: 1.2rem;                  
   font-weight: 600;                   
   margin: auto;                 
 }
 
-
 p{
+  font-size: 1.2em; 
   line-height: 1.5em;
 }
 
-h1, h2, h3, h4 {
-  color: #222;                       
+h1, h2, h3 {
+  color: #111;                       
 }
 
-p, li{
-  color: #333;
+p{
+  color: #222;
 }
 
 table {
@@ -176,16 +172,19 @@ th, td {
   text-align: center;
 }
 
-
 main .smaller-section{
   width: max(40vw);
 }
 
 main section{
   width: max(60vw);
-  margin-bottom: 2em;
-
+    margin-bottom: 2em;
 }
+
+main section, .historier-container{
+  margin: 0;
+}
+
 
 .flere-studier-section ul li{
   margin-bottom: 1.3em;
@@ -196,6 +195,10 @@ main section{
 .studie-container {
   z-index: -10;
   position: relative;
+}
+
+.studie-container h4{
+  margin: 0;
 }
 
 .studie-container::after {
@@ -209,11 +212,6 @@ main section{
 
 .studie-container::after, .studie-info li{
   color: #666;
-
-}
-
-.studie-container h4{
-  margin: 0;
 }
 
 .studie-container > ul li{
@@ -235,7 +233,7 @@ main section{
 }
 
 .historier-container p{
-  font-weight: 500;
+  font-weight: 500; /* Make text slightly bolder if needed */
 }
 
 .historier-container img {
@@ -251,7 +249,6 @@ main section{
 
 .historier-container > div h2{
   border: 0;
-  text-align: left;
 }
 
 .historier-container > div h3{
@@ -382,24 +379,12 @@ a:hover{
   border-bottom: 0.15rem solid #000;
 }
 
-
-/* Det ligger to td i css, en for tabellen oppe, og en her. tror denne overkjører litt fra den første så kan sikkert fjerne kode her. */
-td{
-  font-weight: 600;
-  text-decoration: underline;
-  border: solid black 0.2rem;
-  font-weight: 500;
-}
-
-thead :td:nth-child(){
-  justify-content: center;
-}
-
 @media(max-width: 1350px){
   .firstpicture{
     width: 70%;
     justify-content: center;
   }
+
   p{
     font-size: 1.2em;
     line-height: 1.4em;
@@ -431,18 +416,30 @@ thead :td:nth-child(){
       width: 100%;
   }
 
-  h1, h2, p {
-      width: 100%;
-      text-align: center;
-  }
-  h1{
-    font-size: 2em;
-  }
 
-  table {
-      width: 60%;
-      font-size: 1rem;
-  }
+.historier-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historier-info, .historier-container img {
+    width: 100%;
+}
+
+.firstpicture {
+    width: 100%;
+}
+
+h1, h2, p {
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    font-size: 1rem;
+}
   footer ul{
     margin-right: 0;
     padding-right: 2em;
@@ -450,16 +447,14 @@ thead :td:nth-child(){
   footer address{
     padding-left: 2em;
   }
-
-  section, .smaller-section {
-    width: 90vw; 
+  h1{
+    font-size: 1rem;
   }
 
   .historier-container{
     grid-template-columns: 1fr;
   }
-} 
-
+}
 
 @media (max-width: 768px) {
   .firstpicture{

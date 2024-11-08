@@ -1,17 +1,221 @@
-<!doctype html> <!--avklarer html-->
-<html lang="no"> <!--start tag-->
-<head> <!--informasjon om nettstedet-->
-    <title> Hamburger </title> <!--tittelet til nettisden-->
-    <meta charset="utf-8"> <!--viser at vi bruker utf-8 for flere tegn (som ÆØÅ)-->
-</head>
-<body> <!--alt som skal synes er her-->
-    
-    <div id="hoved">
-    <h1> Accessibility </h1> <!--headline / overskrift-->
-    </div>
-    <p>Hamburger passer alltid, og her er hvorfor</p>
-    <p> Hamburger er en oksekarbonade lagt mellom for eksempel brødstykker, ofte med ketchup, sennep, løk, salat med mer. På hele 1900-tallet har hamburger vært en typisk amerikansk matrett. Populær i Norge fra 1960-årene og omsettes særlig av internasjonale gatekjøkkenkjeder.Å lage hamburger selv tar ca 2 minutter mer enn hvis du bruker kjøpeburger. Det handler rett og slett bare om tiden det tar å forme noen boller som du trykker litt flate. Hjemme hos oss står blåmuggost ganske høyt oppe på favorittlisten, så vi voksne liker å bruke litt blåmugg i burgerne våre også. Da deler jeg bare den ferdig formede burgeren i to, bretter ut – og smører litt smørbar blåmuggost på snittflatene før hamburgeren skal stekes. Så bretter jeg den sammen igjen og trykker den sammen igjen. DET er godt det! For ikke å snakke om denne blåmuggostdressingen. Den kan også i aller høyeste grad brukes. Mamma lager verdens enkleste dressing, hun blander litt ketchup og ørlitegranne sukker i lettrømme, og vips så har du en fresh dressing. Som smaker digg! Vil du bake burgerbrødene selv, så finner du en god oppskrift her. Burgerbrød skal være myke, men hvis alternativet er butikkburgerbrød kan det være vel så godt å bruke f.eks. halvstekte ciabatta som du steker i 10 minutter selv, eller noen annen type rundstykke eller lignende som er nystekte.   </p>
-    
-</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-boxes</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-</html> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="meny-hover">
+                <button> Menu </button>
+                <ul class="sub-menu">
+                    <li>Sub-menu1</li>
+                    <li>Sub-menu2</li>
+                    <li>Sub-menu3</li>
+                    <li>Sub-menu1</li>
+                    <li>Sub-menu2</li>
+                    <li>Sub-menu3</li>
+                    <li>Sub-menu1</li>
+                    <li>Sub-menu2</li>
+                    <li>Sub-menu3</li>
+                </ul>
+            </div>
+            <button> Søk </button>
+        </nav>
+    </header>
+
+    <main>
+        <img class="firstpicture" src="images/firstpicture.png" alt="">
+        <h1>Matematisk modellering og datavitenskap &#8722; ingeniør</h1>
+        <h2>Bachelorprogram</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Studieinformasjon:</th>
+                </tr>
+                <tr>
+                    <th scope="col">Studiested:</th>
+                    <td scope="row">Pilestredet i Oslo</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Varighet:</th>
+                    <td>3 år</td>
+                </tr>
+                <tr>
+                    <th scope="row">Omfang:</th>
+                    <td>Heltid</td>
+                </tr>
+                <tr>
+                    <th scope="row">Studiepoeng:</th>
+                    <td>180</td>
+                </tr>
+                <tr>
+                    <th scope="row">Studiestart:</th>
+                    <td>August</td>
+                </tr>
+                <tr>
+                    <th scope="row">Undervisningsspråk:</th>
+                    <td>Norsk og Engelsk</td>
+                </tr>
+                <tr>
+                    <th scope="row">Studieplasser:</th>
+                    <td>40</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section class="intro-informasjon mindre-section">
+            <p>Få innsikt i matematiske modeller og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.</p>
+        </section>
+
+        <section class="mindre-section">
+            <h2>Opptakskrav og poeng</h2>
+            <p>
+                For å søke på dette programmet må du ha
+                generell studiekompetanse (samordnaopptak.no) eller oppfylle kravene til realkompetanse
+                matematikk R1 og R2
+                fysikk 1
+                Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.
+                Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.
+            </p>        
+        </section>
+
+        <section class="mindre-section flere-studier-section">
+            <h2>Du er kanskje også interessert i disse?</h2>
+            <ul>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/anvendt-datateknologi">
+                        <div class="studie-container">
+                            <h4>Anvendt datateknologi</h4>
+                            <ul class="studie-info">
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior">
+                        <div class="studie-container">
+                            <h4>Bioteknologi- og kjemiingeniør</h4>
+                            <ul class="studie-info">
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/byggingenior">
+                        <div class="studie-container">
+                            <h4>Byggingeniør</h4>
+                            <ul class="studie-info">
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/dataingenior">
+                        <div class="studie-container">
+                            <h4>Dataingeniør</h4>
+                            <ul class="studie-info">
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/elektronikkingenior">
+                        <div class="studie-container">
+                            <h4>Elektronikkingeniør</h4>
+                            <ul class="studie-info">
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <section class>
+            <h2> Studenthistorier</h2>
+            <div class="historier-container">
+                <div class="historier-info">
+                    <h3>Teknologi og design</h3>
+                    <h2>Spå fremtiden med matematikk og datavitenskap</h2>
+                    <p>Har du lyst til å finne ut hva som vil skje i fremtiden? Lær å bruke verktøy for å forutsi alt fra været til strømprisene i utviklingen i boligmarkedet.</p>
+                </div>
+                <img src="images/studenhistorier.jpg" alt="">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h3>Hold deg oppdatert på hva som skjer på OsloMet.</h3>
+            <button>Abonner på vårt nyhetsbrev!</button>
+        </section>
+        <div>
+            <address>
+                <h3>OSLO METROPOLITAN UNIVERSITY <br><span>STORBYUNIVERSITETET</span> </h3>
+                <ul>
+                    <li>Postboks 4, St. Olavs plass<br>0130 Oslo</li>
+                    <li>Tlf.: 67 23 50 00</li>
+                    <li><a href="#">Kontakt oss</a></li>
+                </ul>
+            </address>
+    
+            <nav>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Ansatteoversikt</a></li>
+                    <li><a href="#">Arrangementoversikt</a></li>
+                    <li><a href="#">For ansatte</a></li>
+                    <li><a href="#">For studenter</a></li>
+                    <li><a href="#">Ledige stillinger</a></li>
+                    <li><a href="#">Personvernerklæring og informasjonskapslar</a></li>
+                    <li><a href="#">Pressekontakt</a></li>
+                    <li><a href="#">Tilgjengelegheitserklæring</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </nav>
+    
+            <aside>
+                <ul>
+                    <li><img src="images/facebook-icon.png" alt=""><a href="#">Facebook</a></li>
+                    <li><img src="images/x-twitter.png" alt=""> <a href="#">X (Twitter)</a></li>
+                    <li><img src="images/linkedin-icon.png" alt=""><a href="#">LinkedIn</a></li>
+                    <li><img src="images/instagram-icon.png" alt=""><a href="#">Instagram</a></li>
+                </ul>
+            </aside>
+        </div>
+    </footer>
+</body>
+</html>

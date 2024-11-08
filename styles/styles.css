@@ -115,7 +115,6 @@ h2 {
   border-bottom: 2px solid #b3b3b3;
   padding-bottom: 0.5em;
   line-height: 1.2em;
-  width: 50%; 
   text-align: center;
 }
 
@@ -178,12 +177,9 @@ main .smaller-section{
 
 main section{
   width: max(60vw);
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
-main section, .historier-container{
-  margin: 0;
-}
 
 
 .flere-studier-section ul li{
@@ -205,7 +201,7 @@ main section, .historier-container{
   content: '\203A';
   font-size: 2em;
   position: absolute;
-  right: -1em;
+  right: 0;
   top: 50%;
   transform: translateY(-70%);
 }
@@ -295,7 +291,6 @@ section>h3{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 2.1rem;
-  max-width: 37.5rem;
 }
 
 section>button:hover{
@@ -416,30 +411,29 @@ a:hover{
       width: 100%;
   }
 
+  .historier-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 
-.historier-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  .historier-info, .historier-container img {
+      width: 100%;
+  }
 
-.historier-info, .historier-container img {
-    width: 100%;
-}
+  .firstpicture {
+      width: 100%;
+  }
 
-.firstpicture {
-    width: 100%;
-}
+  h1, h2, p {
+      width: 100%;
+      text-align: center;
+  }
 
-h1, h2, p {
-    width: 100%;
-    text-align: center;
-}
-
-table {
-    width: 80%;
-    font-size: 1rem;
-}
+  table {
+      width: 80%;
+      font-size: 1rem;
+  }
   footer ul{
     margin-right: 0;
     padding-right: 2em;
@@ -460,6 +454,11 @@ table {
   .firstpicture{
     width: 80%;
   }
+
+  section, .mindre-section {
+    width: 80vw; 
+  }
+
   footer div{
     flex-direction: column;
     align-items: center;
@@ -478,5 +477,11 @@ table {
   h3, p{
     font-size: 1.1rem;
   }
-}
 
+  .studie-container > ul li{
+    font-size: 0.9rem;
+  }
+
+  .studie-container::after {
+    content: '';
+}

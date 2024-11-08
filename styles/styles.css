@@ -6,8 +6,15 @@ nav, footer {
   padding-bottom: 1em;
   background-color: yellow;
 }
+
+header {
+  position: sticky;
+  top: 0;
+}
+
 nav {
   display: flex;
+  width: 100vw;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -237,12 +244,6 @@ main {
    width: 100%;
   }
 
-header, footer {
-  padding-top: 1em;
-  padding-left: 2em;
-  padding-bottom: 1.4em;
-  background-color: orangered;
-}
 
   section {
     width: max(60vw);

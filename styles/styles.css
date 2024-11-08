@@ -29,7 +29,7 @@ header nav li {
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
  
-headeR {
+header {
   padding: 3em;
 }
 
@@ -178,14 +178,53 @@ main .smaller-section{
 
 main section{
   width: max(60vw);
+    margin-bottom: 2em;
 }
 
 main section, .historier-container{
   margin: 0;
 }
 
-main section{
-  margin-bottom: 2em;
+
+.flere-studier-section ul li{
+  margin-bottom: 1.3em;
+  margin-top: 0.5em;
+  font-size: 0.8em;
+}
+
+.studie-container {
+  z-index: -10;
+  position: relative;
+}
+
+.studie-container h4{
+  margin: 0;
+}
+
+.studie-container::after {
+  content: '\203A';
+  font-size: 2em;
+  position: absolute;
+  right: -1em;
+  top: 50%;
+  transform: translateY(-70%);
+}
+
+.studie-container::after, .studie-info li{
+  color: #666;
+}
+
+.studie-container > ul li{
+  display: inline-block;
+  font-size: 1em;
+}
+
+.studie-container > ul li:not(:last-child){
+  padding-right: 1em;
+  border-right: 1px solid #222;
+}
+.studie-container > ul li:not(:first-child){
+  padding-left: 1em;
 }
 
 .historier-container{
@@ -193,20 +232,8 @@ main section{
   grid-template-columns: 1fr 1fr;
 }
 
-.historier-info{
-  padding: 2em;
-  background-color: var(--maincolor);
-}
-
 .historier-container p{
   font-weight: 500; /* Make text slightly bolder if needed */
-}
-
-.historier-info h2{
-  border: 0;
-}
-.historier-info h3{
-  text-decoration: underline;
 }
 
 .historier-container img {
@@ -214,6 +241,20 @@ main section{
   height: 100%;
   object-fit: cover;
 }
+
+.historier-container > div{
+  padding: 2em;
+  background-color: var(--maincolor);
+}
+
+.historier-container > div h2{
+  border: 0;
+}
+
+.historier-container > div h3{
+  text-decoration: underline;
+}
+
 
 footer{
   padding-top: 3em;
@@ -343,12 +384,15 @@ a:hover{
     width: 70%;
     justify-content: center;
   }
-  footer section{
-    flex-direction: column;
+
+  p{
+    font-size: 1.2em;
+    line-height: 1.4em;
   }
-  footer> section> h3{
-    text-align: center;
+  section, .mindre-section {
+    width: 70vw; 
   }
+  
   footer button{
     margin: 0;
     margin-top: 2rem;
@@ -358,20 +402,20 @@ a:hover{
     max-width: 60rem;
     justify-content: space-between;
   }
-}
-@media (max-width: 900px) {
-
-}
-
-
-@media(max-width: 1200px){
-  body {
-    overflow-x: hidden;
+  footer section{
+    flex-direction: column;
+  }
+  footer> section> h3{
+    text-align: center;
+  }
 }
 
-main {
-    max-width: 100%;
-}
+
+@media only screen and (max-width: 1100px) {
+  .firstpicture {
+      width: 100%;
+  }
+
 
 .historier-container {
     display: flex;
@@ -406,8 +450,9 @@ table {
   h1{
     font-size: 1rem;
   }
-  main{
-    width: 100%;
+
+  .historier-container{
+    grid-template-columns: 1fr;
   }
 }
 
@@ -424,4 +469,14 @@ table {
     padding: 0;
     margin-bottom: 1rem;
   }
+  h1 {
+    font-size: 1.6rem; 
+  }
+  h2{
+    font-size: 1.4rem;
+  }
+  h3, p{
+    font-size: 1.1rem;
+  }
 }
+

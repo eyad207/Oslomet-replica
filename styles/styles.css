@@ -1,7 +1,7 @@
-:root{
+
+  :root{
   --maincolor: #ffd500;
 }
-
 
 header, footer {
   background-color: var(--maincolor);

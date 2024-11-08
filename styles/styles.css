@@ -400,20 +400,6 @@ thead :td:nth-child(){
   justify-content: center;
 }
 
-
-
-@media only screen and (max-width: 1100px) {
-  table{
-    width: 60%;
-  }
-
-  .historier-container{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  h1{
-    font-size: 2em;
-  }
 @media(max-width: 1350px){
   .firstpicture{
     width: 70%;
@@ -444,37 +430,16 @@ thead :td:nth-child(){
     justify-content: space-between;
   }
 }
-@media (max-width: 900px) {
-
-}
-
 
 @media(max-width: 1200px){
+
+}
+
+
+
+@media only screen and (max-width: 1100px) {
   body {
     overflow-x: hidden;
-}
-
-main {
-    max-width: 100%;
-}
-
-
-@media only screen and (max-width: 600px) {
-
-
-  h1 {
-      font-size: 1.8rem; 
-  }
-  
-@media(max-width: 1050px){
-  .historier-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .historier-info, .historier-container img {
-      width: 100%;
   }
 
   .firstpicture {
@@ -485,9 +450,12 @@ main {
       width: 100%;
       text-align: center;
   }
+  h1{
+    font-size: 2em;
+  }
 
   table {
-      width: 80%;
+      width: 60%;
       font-size: 1rem;
   }
   footer ul{
@@ -497,16 +465,16 @@ main {
   footer address{
     padding-left: 2em;
   }
-  h1{
-    font-size: 1rem;
-  }
-  main{
-    width: 100%;
-  }
+
   section, .smaller-section {
     width: 90vw; 
   }
-}
+
+  .historier-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+} 
 
 
 @media (max-width: 768px) {
@@ -522,4 +490,8 @@ main {
     padding: 0;
     margin-bottom: 1rem;
   }
+  h1 {
+    font-size: 1.8rem; 
+  }
 }
+

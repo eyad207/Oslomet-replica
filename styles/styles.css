@@ -42,7 +42,9 @@ nav > button {
 }
 
 nav button:nth-of-type(2) {
+  margin-left: auto;
   padding: 0;
+  margin-right: 5em;
 }
 nav button a {
   display: block;
@@ -208,6 +210,14 @@ caption {
 @media (max-width: 48rem) {
   table {
     width: 80%;
+  }
+  nav > button {
+    margin-left: 1em;
+  }
+  nav button:nth-of-type(2) {
+    margin-left: auto;
+    padding: 0;
+    margin-right: 4em;
   }
   .sub-menu {
     left: 3em;

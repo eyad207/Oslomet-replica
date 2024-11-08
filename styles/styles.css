@@ -414,6 +414,7 @@ thead :td:nth-child(){
   h1{
     font-size: 2em;
   }
+}
 @media(max-width: 1350px){
   .firstpicture{
     width: 70%;
@@ -453,7 +454,7 @@ thead :td:nth-child(){
   body {
     overflow-x: hidden;
 }
-
+}
 main {
     max-width: 100%;
 }
@@ -465,7 +466,7 @@ main {
   h1 {
       font-size: 1.8rem; 
   }
-  
+} 
 @media(max-width: 1050px){
   .historier-container {
       display: flex;

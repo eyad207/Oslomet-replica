@@ -8,96 +8,107 @@ nav, footer {
 }
 nav {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  top: 0;
+  padding: 0;
+  background-color: yellow;
+  padding-left: 0;
   position: sticky;
-  padding-left: 10em;
+  top: 0;
 }
 
-button {
-  outline: none; /*Vil ikke ha noee unødvendig utenfor border*/
-  background-color: inherit;
+nav > button {
+  margin-left: 2em;
+  border: 5px outset black;
+  background-color: rgb(252, 255, 203);
+  outline: none;
   font-family: inherit;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin: 0;
-  cursor:pointer; /*Endrer musepekeren til pointer når man hover over elementene med både SubMenu og SubMenubtn*/
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: bold;
 }
 
-button:focus + .sub-menu, .meny-hover:hover .sub-menu {
-  transition: 1s;
-  display: flex;
-  flex-direction: row;
-  margin-top: 0.8em;
-  width: 70%;
+nav button:nth-of-type(2) {
+  padding: 0;
+}
+nav button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Fjerner understrek på linken */
+  color: inherit; /* Gjør at linken arver fargen til knappen */
+  padding: 0.5em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
+  text-align: center; /* Sentrerer teksten i linken */
 }
 
-nav li {
-  list-style-type: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+nav img {
+  justify-content: flex-end;
+  height: 3em;
+  width: 7.5em;
 }
- 
-header {
-  padding: 5em;
-}
-h1 {
-  padding: 1em;
-  text-align: center;
-}
-nav button {
-  font-size:x-large;
-  font-weight:bold;
-}
-nav button:nth-child(2) {
-  margin-left: 5em;
-}
+
 .sub-menu {
   display: none;
   position: absolute;
   background-color: rgb(252, 255, 203);
-  border-bottom: 2px solid rgb(188, 193, 42);
-  border-left: 2px solid rgb(188, 193, 42);
-  border-right: 2px solid rgb(188, 193, 42);
-  margin-top: 0em;
-  margin-left: -2.4em; /* Minuser med 11em for å gjøre delvis opp for padding-left i nav */
+  border: 3px ridge rgb(188, 193, 42);
+  border-top: none;
+  padding: 0;
+  margin: 0;
+  width: 70%;
+  left: 8em;
+  top: 6em;
   z-index: 1;
 }
+
 .sub-menu li {
+  list-style-type: none;
   cursor: pointer;
-  padding: 1em;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
-.meny-hover{
-  padding-top: -10em;
-  margin-bottom: -2em; /* Har med denne slik at man ikke slutter å hovere over menyen når man går ned mot sub-menyen */
+
+.sub-menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Fjerner understrek på linken */
+  color: inherit; /* Gjør at linken arver fargen til knappen */
+  padding: 1em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
+  text-align: center; /* Sentrerer teksten i linken */
+  z-index: 2;
 }
-button:focus + .sub-menu, .meny-hover:hover .sub-menu {
-  transition: 1s;
+
+nav:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
   display: flex;
   flex-direction: row;
-  margin-top: 0.8em;
-  width: 70%
-}
-button:focus {
-  background-color: rgb(252, 255, 203);
-  border-top: 3px dotted black;
-  border-left: 3px dotted black;
-  border-right: 3px dotted black;
-}
-.meny-hover:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
-  background-color: rgb(252, 255, 203);
-  border-top: 3px dotted black;
-  border-left: 3px dotted black;
-  border-right: 3px dotted black;
-}
-.sub-menu li:hover { /*Alt innenfor Menu skal ha rød bakgrunnsfarge når det blir hover*/
+  flex-wrap: wrap;
   transition: 1s;
-  background-color: rgb(218, 204, 53);
 }
+.sub-menu:hover { 
+  background-color: rgb(223, 225, 181);
+}
+
+button:focus {
+  background-color: rgb(150, 150, 77);
+  border: 5px inset black;
+}
+
+.sub-menu li:hover {
+  background-color: rgb(141, 147, 96);
+  transition: 1s;
+}
+
 :root{
-  --maincolor: #ffd500;
+  --maincolor: #f2d857;
 }
 
 main {
@@ -189,6 +200,10 @@ caption {
 
 @media (max-width: 48rem) {
   table {
+    width: 80%;
+  }
+  .sub-menu {
+    left: 3em;
     width: 80%;
   }
   h1, h2 {

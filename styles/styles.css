@@ -475,13 +475,13 @@ thead :td:nth-child(){
     margin-bottom: 1rem;
   }
   h1 {
-    font-size: 1.8rem; 
+    font-size: 1.6rem; 
   }
-
-  .historier-container{
-    width: 70vw;
+  h2{
+    font-size: 1.4rem;
   }
-
-
+  h3, p{
+    font-size: 1.1rem;
+  }
 }
 

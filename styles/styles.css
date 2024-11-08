@@ -193,10 +193,10 @@ h3 {
   margin: auto;                 
 }
 
-p{
+/* p{
   font-size: 1.2em; 
   line-height: 1.5em;
-}
+} */
 
 h1, h2, h3 {
   color: #111;                       
@@ -206,7 +206,7 @@ p{
   color: #222;
 }
 
-table {
+/* table {
   margin-top: 1em;
   width: max(50vw);
   border-collapse: collapse;
@@ -232,7 +232,7 @@ th, td {
   font-weight: 550;  
   text-align: center;
 
-}
+} */
 
 .intro-informasjon p{
   font-size: 1.4em;

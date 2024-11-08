@@ -183,15 +183,8 @@ main .smaller-section{
 
 main section{
   width: max(60vw);
-}
-
-
-main section, .historier-container{
-  margin: 0;
-}
-
-main section{
   margin-bottom: 2em;
+
 }
 
 .flere-studier-section ul li{
@@ -209,7 +202,7 @@ main section{
   content: '\203A';
   font-size: 2em;
   position: absolute;
-  right: 0;
+  right: -1em;
   top: 50%;
   transform: translateY(-70%);
 }
@@ -223,16 +216,16 @@ main section{
   margin: 0;
 }
 
-.studie-info li{
+.studie-container > ul li{
   display: inline-block;
   font-size: 1em;
 }
 
-.studie-info li:not(:last-child){
+.studie-container > ul li:not(:last-child){
   padding-right: 1em;
   border-right: 1px solid #222;
 }
-.studie-info li:not(:first-child){
+.studie-container > ul li:not(:first-child){
   padding-left: 1em;
 }
 
@@ -241,21 +234,8 @@ main section{
   grid-template-columns: 1fr 1fr;
 }
 
-.historier-info{
-  padding: 2em;
-  background-color: var(--maincolor);
-}
-
 .historier-container p{
   font-weight: 500;
-}
-
-.historier-info h2{
-  border: 0;
-  text-align: left;
-}
-.historier-info h3{
-  text-decoration: underline;
 }
 
 .historier-container img {
@@ -263,6 +243,21 @@ main section{
   height: 100%;
   object-fit: cover;
 }
+
+.historier-container > div{
+  padding: 2em;
+  background-color: var(--maincolor);
+}
+
+.historier-container > div h2{
+  border: 0;
+  text-align: left;
+}
+
+.historier-container > div h3{
+  text-decoration: underline;
+}
+
 
 footer{
   padding-top: 3em;
@@ -405,13 +400,6 @@ thead :td:nth-child(){
     width: 70%;
     justify-content: center;
   }
-  footer section{
-    flex-direction: column;
-  }
-  footer> section> h3{
-    text-align: center;
-  }
-
   p{
     font-size: 1.2em;
     line-height: 1.4em;
@@ -429,19 +417,16 @@ thead :td:nth-child(){
     max-width: 60rem;
     justify-content: space-between;
   }
+  footer section{
+    flex-direction: column;
+  }
+  footer> section> h3{
+    text-align: center;
+  }
 }
-
-@media(max-width: 1200px){
-
-}
-
 
 
 @media only screen and (max-width: 1100px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .firstpicture {
       width: 100%;
   }
@@ -472,7 +457,6 @@ thead :td:nth-child(){
 
   .historier-container{
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
   }
 } 
 
@@ -493,5 +477,11 @@ thead :td:nth-child(){
   h1 {
     font-size: 1.8rem; 
   }
+
+  .historier-container{
+    width: 70vw;
+  }
+
+
 }
 

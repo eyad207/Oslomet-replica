@@ -94,7 +94,7 @@ body {
 }
 
 .firstpicture{
-  width: 80vw;
+  width: 70vw;
   margin-bottom: 3em;
   border-radius: 0.625rem;
 }
@@ -108,11 +108,10 @@ h1 {
   width: 67.5rem;
 }
 
-h2 {
+main>h2 {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0.4em 0;
-  border-bottom: 2px solid #b3b3b3;
   padding-bottom: 0.5em;
   line-height: 1.2em;
   text-align: center;

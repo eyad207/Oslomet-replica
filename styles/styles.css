@@ -306,6 +306,7 @@ footer>div{
   width: 100%;
   justify-content: space-between;
   height: fit-content;
+  margin-bottom: 3rem;
 }
 
 address, nav, aside{
@@ -326,17 +327,21 @@ span{
 aside{
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+aside>ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vw;
 }
 
 ul{
   padding: 0;
-  margin: 0;
   height: fit-content;
 }
 
-aside>ul{
-  margin-right: 10rem;
-}
 
 li{
   font-size: larger;

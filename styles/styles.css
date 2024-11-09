@@ -475,4 +475,12 @@ a:hover{
   .studie-container::after {
     content: '';
 }
+footer aside ul{
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+footer nav {
+  margin-left: 0;
+}
 }

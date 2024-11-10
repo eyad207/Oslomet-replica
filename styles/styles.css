@@ -257,11 +257,14 @@ footer{
   padding-bottom: 2rem;
 }
 
+footer> section, div{
+  width: 80vw;
+}
+
 footer>section{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: fit-content;
   margin-bottom: 20px;
   padding-bottom: 3rem; 
   border-bottom: 2px solid #000;
@@ -272,7 +275,6 @@ section>button{
   padding-right: 1.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-left: 20em;
   background-color: black;
   color: white;
   border-radius: 0.5rem;
@@ -303,7 +305,6 @@ footer> section, div{
 footer>div{
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: space-between;
   height: fit-content;
   margin-bottom: 3rem;

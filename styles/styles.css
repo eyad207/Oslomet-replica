@@ -249,11 +249,10 @@ main section{
 
 
 footer{
-  padding-top: 3em;
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
+  padding-top: 3em;
   padding-bottom: 2rem;
 }
 
@@ -267,18 +266,17 @@ footer>section{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  padding-bottom: 3rem; 
   border-bottom: 2px solid #000;
+  padding-bottom: 3rem;
 }
 
 section>button{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1em;
   background-color: black;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
+  border-width: 0.1rem;
+  border-color: #000;
   font-size: 1.2rem;
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
@@ -291,7 +289,7 @@ section>button:hover{
   cursor: pointer;
 }
 
-section>h3{
+footer>section>h3{
   margin: 0;
   height: fit-content;
   font-family: Arial, Helvetica, sans-serif;

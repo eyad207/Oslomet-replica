@@ -291,25 +291,20 @@ section>button:hover{
 
 footer>section>h3{
   margin: 0;
-  height: fit-content;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 2.1rem;
-}
-
-footer> section, div{
-  max-width: 81.25rem;
 }
 
 footer>div{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: fit-content;
   margin-bottom: 3rem;
 }
 
-address, nav, aside{
+footer address
+,footer nav{
   height: fit-content;
   width: fit-content;
 }

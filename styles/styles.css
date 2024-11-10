@@ -303,26 +303,19 @@ footer>div{
   margin-bottom: 3rem;
 }
 
-footer address
-,footer nav{
-  height: fit-content;
-  width: fit-content;
-}
-
-address>h3{
+footer address>h3{
   margin: 0;
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
-span{
-  font-weight: 400;
+
+footer ul{
+  padding: 0;
 }
 
-footer>ul{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+footer address span{
+  font-weight: 400;
 }
 
 footer>ul{
@@ -332,18 +325,13 @@ footer>ul{
   width: 50vw;
 }
 
-footer ul{
-  padding: 0;
-}
-
-
 footer li{
   font-size: larger;
   font-weight: 550;
   margin-top: 1.1rem;
   list-style-type: none;
   padding: 0;
-  align-items: center; 
+  align-items: center;
 }
 
 footer>ul>li {

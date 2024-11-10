@@ -37,9 +37,6 @@ header nav button {
   font-size:x-large;
   font-weight:bold;
 }
-header nav button:nth-child(2) {
-  margin-left: 5em;
-}
 
 .sub-menu {
   display: none;
@@ -254,6 +251,7 @@ footer{
   align-items: center;
   padding-top: 3em;
   padding-bottom: 2rem;
+  width: 100%;
 }
 
 footer> section,
@@ -423,12 +421,29 @@ a:hover{
   footer>ul>li {
     margin-right: 2rem;
   }
+  footer> ul{
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+  footer nav {
+    margin-left: 0;
+  }
+  footer div{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer address, nav, aside, ul{
+    padding: 0;
+    margin-bottom: 1rem;
+  }
 
 }
 
 @media (max-width: 768px) {
 
-  section, .mindre-section {
+  .mindre-section {
     width: 80vw; 
   }
 
@@ -457,13 +472,6 @@ a:hover{
 
   .studie-container::after {
     content: '';
-}
-footer> ul{
-  flex-direction: column;
-  align-items: center;
-  width: fit-content;
-}
-footer nav {
-  margin-left: 0;
-}
+  }
+
 }

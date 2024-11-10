@@ -257,8 +257,9 @@ footer{
   padding-bottom: 2rem;
 }
 
-footer> section, div{
-  width: 80vw;
+footer> section,
+footer>div{
+  width: 75vw;
 }
 
 footer>section{
@@ -343,7 +344,7 @@ footer ul{
 }
 
 
-li{
+footer li{
   font-size: larger;
   font-weight: 550;
   margin-top: 1.1rem;

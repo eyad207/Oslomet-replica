@@ -27,7 +27,7 @@ nav {
   top: 0;
 }
 
-nav > button {
+nav button {
   margin-left: 2em;
   border: 5px outset black;
   background-color: rgb(252, 255, 203);
@@ -96,7 +96,8 @@ nav img {
   z-index: 2;
 }
 
-nav:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
+nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
+  /* Disse sørger for at sub-menyen vises når man fokuserer på meny-knappen med enten piltrykk eller tab*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

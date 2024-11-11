@@ -1,48 +1,17 @@
 
-  :root{
-  --maincolor: #ffd500;
+/** FLEX — the important part **/
+/* flex, main */
+nav, footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: yellow;
 }
 
-
-header, footer {
-  background-color: var(--maincolor);
-}
-
-header nav {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin: 0;
-  top: 0;
-}
 header {
   position: sticky;
   top: 0;
 }
 
-header button {
-  border: none;
-  outline: none;
-  background-color: inherit;
-  font-family: inherit;
-  cursor:pointer;
-}
-header nav li {
-  list-style-type: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-}
- 
-headeR {
-  padding: 3em;
-}
-
-header nav button {
-  font-size:x-large;
-  font-weight:bold;
-}
-header nav button:nth-child(2) {
-  margin-left: 5em;
-}
 nav {
   display: flex;
   width: 100vw;
@@ -73,7 +42,9 @@ nav > button {
 }
 
 nav button:nth-of-type(2) {
+  margin-left: auto;
   padding: 0;
+  margin-right: 5em;
 }
 nav button a {
   display: block;
@@ -103,7 +74,6 @@ nav img {
   width: 70%;
   left: 8em;
   top: 6em;
-
   z-index: 1;
 }
 
@@ -112,11 +82,6 @@ nav img {
   cursor: pointer;
   padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-}
-
-.meny-hover{
-  padding-top: -10em;
-  margin-bottom: -2em;
 }
 
 .sub-menu li a {
@@ -137,17 +102,6 @@ nav:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
   flex-wrap: wrap;
   transition: 1s;
 }
-
-.meny-hover:hover {
-  background-color: rgb(252, 255, 203);
-  border-top: 3px dotted black;
-  border-left: 3px dotted black;
-  border-right: 3px dotted black;
-}
-.sub-menu li:hover {
-  background-color: rgb(218, 204, 53);
-}
-
 .sub-menu:hover { 
   background-color: rgb(223, 225, 181);
 }
@@ -166,79 +120,59 @@ button:focus {
   --maincolor: #f2d857;
 }
 
-
 main {
-  margin-top: 2em;
+  margin-top: 5em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;  
-
+  align-items: center;
 }
 
-
-/* vi bruker font family mange steder, kanskje unødvendig?? */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  justify-content: center;
 }
 
-.firstpicture{
-  width: 81.25rem;
-  margin-bottom: 3em;
-  border-radius: 0.625rem;
+h1, h2 {
+  display: block;
+  width: 50%;
+  justify-content: center;
+  text-align: left;
 }
 
 h1 {
-  font-size: 3.125rem;
-  font-weight: 700;
+  font-size: 3rem;                   
+  font-weight: 700;                  
   margin: 0.5em 0;                   
-  letter-spacing: 0.05em;   
-  text-align: center;
-  width: 67.5rem;
+  text-align: center;                
+  letter-spacing: 0.05em;            
 }
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0.4em 0;
-  border-bottom: 2px solid #b3b3b3;
-  padding-bottom: 0.5em;
-  line-height: 1.2em;
-
-  text-align: center;
+  font-size: 2.5rem;                 
+  font-weight: 600;                 
+  color: #333;                       
+  margin: 0.4em 0;                
+  text-align: center;               
+  border-bottom: 2px solid #ccc;     
+  padding-bottom: 0.2em;             
 }
-
-h3, h4, p{
-  font-size: 1.2em;
-}
-
 
 h3 {
-  font-weight: 600;                   
+  font-size: 1.75rem;                  
+  font-weight: 500;                   
   margin: auto;                 
-}
-
-
-p{
-  line-height: 1.5em;
-}
-
-h1, h2, h3, h4 {
-  color: #222;                       
-}
-
-p, li{
-  color: #333;
+  text-align: center;                  
+  max-width: 50rem;            
+  line-height: 1.2;                   
+  word-wrap: break-word;              
 }
 
 table {
   margin-top: 1em;
-  width: max(50vw);
+  width: 50%;
   border-collapse: collapse;
   border: solid black 0.2rem;
-  margin-bottom: 4rem;  
+  margin-bottom: 5em;  
   font-size: 1.5rem;
   text-align: left;
 }
@@ -249,6 +183,7 @@ tr {
 
 th {
   border: solid black 0.2rem;
+  font-weight: 500;  
 }
 
 th, td {
@@ -256,115 +191,33 @@ th, td {
   padding-right: 1em;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
-  font-weight: 550;  
-  text-align: center;
-
 }
 
-.intro-informasjon p{
-  font-size: 1.4em;
-  text-align: center;
-}
-
-
-main .smaller-section{
-  width: max(40vw);
-}
-
-main section{
-  width: max(60vw);
-}
-
-
-main section, .historier-container{
-  margin: 0;
-}
-
-main section{
-  margin-bottom: 2em;
-}
-
-.flere-studier-section ul li{
-  margin-bottom: 1.3em;
-  margin-top: 0.5em;
-  font-size: 0.8em;
-}
-
-.studie-container {
-  z-index: -10;
-  position: relative;
-}
-
-.studie-container::after {
-  content: '\203A';
-  font-size: 2em;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-70%);
-}
-
-.studie-container::after, .studie-info li{
-  color: #666;
-
-}
-
-.studie-container h4{
-  margin: 0;
-}
-
-.studie-info li{
-  display: inline-block;
-  font-size: 1em;
-}
-
-.studie-info li:not(:last-child){
-  padding-right: 1em;
-  border-right: 1px solid #222;
-}
-.studie-info li:not(:first-child){
-  padding-left: 1em;
-}
-
-.historier-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.historier-info{
-  padding: 2em;
-  background-color: var(--maincolor);
-}
-
-.historier-container p{
-  font-weight: 500;
-}
-
-.historier-info h2{
-  border: 0;
-  text-align: left;
-}
-.historier-info h3{
+td{
+  font-weight: 600;
   text-decoration: underline;
 }
 
-.historier-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+caption {
+  font-size: 1.6rem;               
+  font-weight: bold;               
+  padding: 1em;                    
+  text-align: center;              
+  margin-bottom: 1em;              
+  font-family: 'Arial', sans-serif;
 }
 
-footer{
-  padding-top: 3em;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 2rem;
-}
 @media (max-width: 48rem) {
   table {
     width: 80%;
+  }
+  nav > button {
+    margin-left: 1em;
+  }
+  nav button:nth-of-type(2) {
+    margin-left: auto;
+    padding: 0;
+    margin-right: 4em;
   }
   .sub-menu {
     left: 3em;
@@ -376,254 +229,63 @@ footer{
   }
 }
 
-footer>section{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: fit-content;
-  margin-bottom: 20px;
-  padding-bottom: 3rem; 
-  border-bottom: 2px solid #000;
-}
-
-section>button{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-left: 20em;
-  background-color: black;
-  color: white;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
-}
-
-section>h3{
-  margin: 0;
-  height: fit-content;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  font-size: 2.1rem;
-  max-width: 37.5rem;
-}
-
-section>button:hover{
-  box-shadow: 0 0 0.5rem black;
-  background-color: aliceblue;
-  color: black;
-  cursor: pointer;
-}
-
-footer> section, div{
-  max-width: 81.25rem;
-}
-
-footer>div{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  height: fit-content;
-}
-
-address, nav, aside{
-  height: fit-content;
-  width: fit-content;
-}
-
-address>h3{
-  margin: 0;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-span{
-  font-weight: 400;
-}
-
-aside{
-  display: flex;
-  flex-direction: column;
-}
-
-ul{
-  padding: 0;
-  margin: 0;
-  height: fit-content;
-}
-
-aside>ul{
-  margin-right: 10rem;
-}
-
-li{
-  font-size: larger;
-  font-weight: 550;
-  margin-top: 1.1rem;
-  list-style-type: none;
-  padding: 0;
-  align-items: center; 
-}
-
-aside>ul>li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.3rem;
-}
-
-aside>ul>li>img {
-  width: 2rem;
-  margin-right: 0.5rem;
-}
-
-a{
-  color: #000;
-  transition: text-decoration 0.4s;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Arial, sans-serif;
-}
-
-a:hover{
-  border-bottom: 0.15rem solid #000;
-}
-
-
-/* Det ligger to td i css, en for tabellen oppe, og en her. tror denne overkjører litt fra den første så kan sikkert fjerne kode her. */
-td{
-  font-weight: 600;
-  text-decoration: underline;
-  border: solid black 0.2rem;
-  font-weight: 500;
-}
-
-thead :td:nth-child(){
-  justify-content: center;
-}
-
-
-
-@media only screen and (max-width: 1100px) {
-  table{
-    width: 60%;
-  }
-
-  .historier-container{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  h1{
-    font-size: 2em;
-  }
-}
-@media(max-width: 1350px){
-  .firstpicture{
-    width: 70%;
-    justify-content: center;
-  }
-  footer section{
-    flex-direction: column;
-  }
-  footer> section> h3{
-    text-align: center;
-  }
-
-  p{
-    font-size: 1.2em;
-    line-height: 1.4em;
-  }
-  section, .mindre-section {
-    width: 70vw; 
+@media (max-width: 30rem) {
+  body {
+    font-size: 0.875rem;
   }
   
-  footer button{
-    margin: 0;
-    margin-top: 2rem;
-  }
-
-  footer> section, div{
-    max-width: 60rem;
-    justify-content: space-between;
-  }
-}
-@media (max-width: 900px) {
-
-}
-
-
-@media(max-width: 1200px){
-  body {
-    overflow-x: hidden;
-}
-}
-main {
-    max-width: 100%;
-}
-
-
-@media only screen and (max-width: 600px) {
-
-
-  h1 {
-      font-size: 1.8rem; 
-  }
-} 
-@media(max-width: 1050px){
-  .historier-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .historier-info, .historier-container img {
-      width: 100%;
-  }
-
-  .firstpicture {
-      width: 100%;
-  }
-
-  h1, h2, p {
-      width: 100%;
-      text-align: center;
-  }
-
   table {
-      width: 80%;
-      font-size: 1rem;
+    width: 90%;
+    font-size: 1.2rem;
   }
-  footer ul{
-    margin-right: 0;
-    padding-right: 2em;
+  
+  h1 {
+    font-size: 1.875rem;
   }
-  footer address{
-    padding-left: 2em;
+  
+  h2 {
+    font-size: 1.125rem;
   }
-  h1{
-    font-size: 1rem;
+}
+
+main {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
   }
-  main{
+
+
+  section {
+    width: max(60vw);
+    margin: 1em;
+  }
+  
+  .historier-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .historier-info{
+    padding: 2em;
+    background-color: antiquewhite;
+  }
+
+  .historier-container img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  section, .smaller-section {
-    width: 90vw; 
+  
+  .historier-container h3, p {
+    font-size: 1.3em;
   }
-}
 
-
-@media (max-width: 768px) {
-  .firstpicture{
-    width: 80%;
+  h2 {
+    font-size: 2em;
+    font-weight: 600;
   }
-  footer div{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  footer address, nav, aside, ul{
+  
+  body {
+    margin: 0;
     padding: 0;
-    margin-bottom: 1rem;
   }
-}

@@ -290,3 +290,10 @@ main {
     margin: 0;
     padding: 0;
   }
+
+  /*GITHUB SIDE*/
+  .firstpicture {
+    max-width: 60%;
+    max-height: 80vh;
+    margin: auto;
+}

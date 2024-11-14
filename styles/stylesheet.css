@@ -13,12 +13,14 @@ body {
 }
 
 header {
+  width: inherit; /* Arver fra body/html sin bredde */
   position: sticky;
   top: 0;
+  padding: 0;
 }
-nav {
+header nav {
   display: flex;
-  width: 90vw;
+  width: inherit; /* Arver fra header sin bredde som videre arver fra body/html sin bredde */
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -29,6 +31,7 @@ nav {
   padding-left: 0;
   position: sticky;
   top: 0;
+  border-bottom: 2px ridge black;
 }
 nav button {
   margin-left: 2em;
@@ -372,7 +375,7 @@ footer>ul>li>img {
   margin-right: 0.5rem;
 }
 
-main a{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
+main a, footer a{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
   color: #000;
   transition: text-decoration 0.4s;
   text-decoration: none;
@@ -380,7 +383,7 @@ main a{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linke
   font-family: Arial, sans-serif;
 }
 
-main:a:hover{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
+main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
   border-bottom: 0.15rem solid #000;
 }
 
@@ -521,7 +524,7 @@ main:a:hover{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine
     align-items: center;
     text-align: center;
   }
-  footer address, nav, aside, ul{
+  footer address, footer nav, aside, ul{
     padding: 0;
     margin-bottom: 1rem;
   }

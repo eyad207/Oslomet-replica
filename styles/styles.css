@@ -487,3 +487,39 @@ a:hover{
   }
 
 }
+/*GITHUB SIDE*/
+.firstpicture {
+  width: 70%;
+  max-height: 35em;
+  margin: auto;
+}
+/*Grid*/
+.gridcontainer{
+  width: 70vw;
+  display: grid;
+  grid-template-rows: 500px;
+  grid-template-columns: 4fr 3fr;
+  column-gap: 1em;
+  row-gap: 2em;
+  justify-items: start;
+  align-items: center;
+  margin: 3em;
+}
+.gridcontainer img{
+  max-width: 100%;
+  height: 100%;
+}
+.git_bilder{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  height: auto;
+  gap: 2em;
+  justify-content: center;
+  object-fit: cover;
+}
+.git_bilder img{
+  height: 30vw;
+  width: auto;
+}

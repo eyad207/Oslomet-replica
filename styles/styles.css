@@ -296,6 +296,7 @@ footer>div{
   padding-top: 1rem;
 }
 
+
 footer address>h3{
   margin: 0;
   font-size: 1.4rem;
@@ -351,7 +352,14 @@ a:hover{
   border-bottom: 0.15rem solid #000;
 }
 
-
+@media(max-width: 1500px){
+  footer>div{
+    gap: 5vw;
+  }
+  footer>div>nav>li{
+    width: 10rem;
+  }
+}
 
 @media(max-width: 1350px){
   .firstpicture{
@@ -399,13 +407,11 @@ a:hover{
   footer> section> h3{
     text-align: center;
   }
-  footer nav{
-    margin-left: 2rem;
-  }
+
 }
 
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
 
   .historier-container {
       display: flex;
@@ -435,8 +441,6 @@ a:hover{
     width: 60%;
   }
 
-
-
   .historier-container{
     grid-template-columns: 1fr;
   }
@@ -444,7 +448,7 @@ a:hover{
     margin-right: 2rem;
   }
   footer> ul{
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: fit-content;
   }
@@ -458,9 +462,10 @@ a:hover{
   }
   footer address, nav, aside, ul{
     padding: 0;
-    margin-bottom: 1rem;
   }
-
+  footer>div{
+    gap: 0;
+  }
 }
 
 @media (max-width: 768px) {

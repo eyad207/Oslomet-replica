@@ -293,7 +293,23 @@ main {
 
   /*GITHUB SIDE*/
   .firstpicture {
-    max-width: 60%;
-    max-height: 80vh;
+    width: 70%;
+    max-height: 35em;
     margin: auto;
 }
+  /*Grid*/
+  .container{
+    width: 70vw;
+    display: grid;
+    grid-template-rows: 500px;
+    grid-template-columns: 4fr 3fr;
+    column-gap: 1em;
+    row-gap: 2em;
+    justify-items: start;
+    align-items: center;
+    margin: 3em;
+  }
+  .container img{
+    max-width: 100%;
+    height: 100%;
+  }

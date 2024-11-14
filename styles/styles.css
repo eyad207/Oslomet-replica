@@ -31,7 +31,7 @@ section {
   box-sizing: border-box;
 }
 
-table {
+/* table {
   width: 100%;
   border-collapse: collapse;
   margin: 2em 0;
@@ -50,13 +50,13 @@ tr{
 }
 
 .semester {
-  background-color: rgb(244, 244, 192);
+  background-color: beige;
   font-weight: bold;
 }
 .emnegruppe{
 font-weight: bold;
 font-size: 1.05em;
-}
+} */
 h2,h3 {
   text-align: center;
 }
@@ -206,7 +206,7 @@ p{
   color: #222;
 }
 
-/* table {
+table {
   margin-top: 1em;
   width: max(50vw);
   border-collapse: collapse;
@@ -232,7 +232,8 @@ th, td {
   font-weight: 550;  
   text-align: center;
 
-} */
+}
+
 
 .intro-informasjon p{
   font-size: 1.4em;

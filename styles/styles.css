@@ -1,102 +1,489 @@
-/** FLEX — the important part **/
-/* flex, main */
+:root{
+  --maincolor: #ffd500;
+}
+
+header, footer {
+  background-color: var(--maincolor);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  top: 0;
+  position: sticky;
+  padding-left: 10em;
+}
+
+header button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  cursor:pointer;
+}
+header nav li {
+  list-style-type: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+ 
+header {
+  padding: 3em;
+}
+
+header nav button {
+  font-size:x-large;
+  font-weight:bold;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: rgb(252, 255, 203);
+  border-bottom: 2px solid rgb(188, 193, 42);
+  border-left: 2px solid rgb(188, 193, 42);
+  border-right: 2px solid rgb(188, 193, 42);
+  margin-top: 0em;
+  margin-left: -2.4em;
+  z-index: 1;
+}
+
+.sub-menu li {
+  cursor: pointer;
+  padding: 1em;
+}
+.meny-hover{
+  padding-top: -10em;
+  margin-bottom: -2em;
+}
+.meny-hover:hover .sub-menu {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.8em;
+  width: 70%
+}
+.meny-hover:hover {
+  background-color: rgb(252, 255, 203);
+  border-top: 3px dotted black;
+  border-left: 3px dotted black;
+  border-right: 3px dotted black;
+}
+.sub-menu li:hover {
+  background-color: rgb(218, 204, 53);
+}
+
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  section {
-    width: max(60vw);
-    margin: 1em;
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;  
+}
 
-  }
+.firstpicture{
+  width: 70vw;
+  margin-bottom: 3em;
+  border-radius: 0.625rem;
+}
 
-  /* disse under er for "Studenthistorier" i html, de må få mer optimal css, men må snakke med teamet */
-  
-  .historier-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+h1, h2, h3 {
+  color: #111;                       
+}
 
-  .historier-info{
-    padding: 2em;
-    background-color: antiquewhite;
-  }
+p{
+  color: #222;
+}
 
-  .historier-container img {
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5em 0;         
+  letter-spacing: 0.01em;
+  text-align: center;
+  width: 67.5vw;
+}
 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-  }
-  
-  .historier-container h3, p {
-    font-size: 1.3em;
-  }
-
-  h2 {
-    font-size: 2em;
-    font-weight: 600;
-  }
-
+main>h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.4em 0;
+  padding-bottom: 0.5em;
+  line-height: 1.2em;
+  text-align: center;
+}
 
 
-  @media only screen and (max-width: 1000px) {
-    .historier-container{
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-    }
-    h2{
-      font-size: 1.5em;
-    }
-    .historier-container h3, p {
-      font-size: 1em;
-    }
-  }
+main>p{
+  font-size: 1.5em;
+  line-height: 1.3em;
+  text-align: center;
+  font-weight: 400;
+  width: 40vw;
+}
 
+table {
+  margin-top: 1em;
+  width: max(50vw);
+  border-collapse: collapse;
+  border: solid black 0.2rem;
+  margin-bottom: 4rem;  
+  font-size: 1.5rem;
+  text-align: left;
+}
 
+tr {
+  border: solid black 0.2rem;
+}
 
-  /* flex, menu */
-  header {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  menu {
-    display: flex;
-  }
-  
-  @media (max-width: 800px) {
-    menu {
-        flex-direction: column;
-    }
-    
-  }
-  
-  /** purely visual, not flex-related **/
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  header, footer {
-    padding-top: 1em;
-    padding-left: 2em;
-    padding-bottom: 1.4em;
-    background-color: orangered;
-  }
-  
-  
-  nav li {
-    list-style-type: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    margin-right: 1.6vw;
-  }
+th {
+  border: solid black 0.2rem;
+}
+
+th, td {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  font-weight: 550;  
+  text-align: center;
+}
+
+.intro-informasjon p{
+  font-size: 1.4em;
+  text-align: center;
+}
+
+main .smaller-section{
+  width: max(40vw);
+}
+
+main section{
+  width: max(60vw);
+  margin-bottom: 2em;
+}
+
+.flere-studier-section ul li{
+  margin-bottom: 1.3em;
+  margin-top: 0.5em;
+  font-size: 0.8em;
+}
+
+.studie-container {
+  z-index: -10;
+  position: relative;
+}
+
+.studie-container h4{
+  margin: 0;
+}
+
+.studie-container::after {
+  content: '\203A';
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-70%);
+}
+
+.studie-container::after, .studie-info li{
+  color: #666;
+}
+
+.studie-container > ul li{
+  display: inline-block;
+  font-size: 1em;
+}
+
+.studie-container > ul li:not(:last-child){
+  padding-right: 1em;
+  border-right: 1px solid #222;
+}
+.studie-container > ul li:not(:first-child){
+  padding-left: 1em;
+}
+
+.historier-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.historier-container p{
+  font-weight: 500; /* Make text slightly bolder if needed */
+}
+
+.historier-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.historier-container > div{
+  padding: 2em;
+  background-color: var(--maincolor);
+}
+
+.historier-container > div h2{
+  border: 0;
+}
+
+.historier-container > div h3{
+  text-decoration: underline;
+}
+
 
 footer{
-    background-color: antiquewhite;
-    width: 100%;
-    height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3em;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+footer>section,
+footer>div{
+  width: 75vw;
+}
+
+footer>section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3rem;
+}
+
+section>button{
+  padding: 1em;
+  background-color: black;
+  color: white;
+  border-radius: 0.6rem;
+  border-width: 0.1rem;
+  border-color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+section>button:hover{
+  box-shadow: 0 0 0.5rem black;
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+}
+
+footer>section>h3{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+}
+
+footer>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+footer address>h3{
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+footer ul{
+  padding: 0;
+}
+
+footer address span{
+  font-weight: 400;
+}
+
+footer>ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+footer li{
+  font-size: larger;
+  font-weight: 550;
+  margin-top: 1.1rem;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
+footer>ul>li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+footer>ul>li>img {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+a{
+  color: #000;
+  transition: text-decoration 0.4s;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+a:hover{
+  border-bottom: 0.15rem solid #000;
+}
+
+@media(max-width: 1350px){
+  .firstpicture{
+    width: 80vw;
+    justify-content: center;
+  }
+  h1{
+    font-size: 2.5rem;
+    width: 70%;
+    align-items: center;
+  }
+  h2{
+    font-size: 1.7rem;
+  }
+  main>p{
+    font-size: 1.3em;
+    width: 50%;
+  }
+
+  main>table{
+    font-size: 1.3rem;
+    width: 60%;
+  }
+
+  section p{
+    font-size: 1.1rem;
+  }
+  
+  main>section, .mindre-section {
+    width: 70vw; 
+  }
+  
+  footer button{
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  footer> section, div{
+    max-width: 60rem;
+    justify-content: space-between;
+  }
+  footer section{
+    flex-direction: column;
+  }
+  footer> section> h3{
+    text-align: center;
+  }
+  footer nav{
+    margin-left: 2rem;
+  }
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+  .historier-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .historier-info, .historier-container img {
+      width: 100%;
+  }
+
+  table {
+      width: 50%;
+      font-size: 0.6rem;
+  }
+
+  h1{
+    font-size: 2.2rem;
+    width: 60%;
+    align-items: center;
+  }
+  h2{
+    font-size: 1.2rem;
+  }
+  main>p{
+    font-size: 1.3em;
+    width: 60%;
+  }
+
+
+
+  .historier-container{
+    grid-template-columns: 1fr;
+  }
+  footer>ul>li {
+    margin-right: 2rem;
+  }
+  footer> ul{
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+  footer nav {
+    margin-left: 0;
+  }
+  footer div{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer address, nav, aside, ul{
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .mindre-section {
+    width: 80vw; 
+  }
+  table{
+    font-size: 1rem;
+    width: 40%;
+  }
+  main>h3, main>p, 
+  main td, main th{
+    font-size: 1.2rem;
+  }
+  main>h1 {
+    font-size: 1.8rem; 
+  }
+  main>h2{
+    font-size: 1.4rem;
+  }
+
+  .studie-container > ul li{
+    font-size: 0.9rem;
+  }
+
+  .studie-container::after {
+    content: '';
+  }
+
 }

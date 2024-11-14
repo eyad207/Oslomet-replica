@@ -1,10 +1,5 @@
-
-/** FLEX — the important part **/
-/* flex, main */
-nav, footer {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: yellow;
+:root{
+  --maincolor: #ffd500;
 }
 
 header, footer {
@@ -19,24 +14,18 @@ body {
 
 header nav {
   display: flex;
-  width: 100vw;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-direction: row;
   list-style: none;
   margin: 0;
-  padding: 0;
-  background-color: yellow;
-  padding-left: 0;
-  position: sticky;
   top: 0;
+  position: sticky;
+  padding-left: 10em;
 }
 
-nav button {
-  margin-left: 2em;
-  border: 5px outset black;
-  background-color: rgb(252, 255, 203);
+header button {
+  border: none;
   outline: none;
+  background-color: inherit;
   font-family: inherit;
   cursor:pointer;
 }
@@ -49,72 +38,49 @@ header {
   padding: 3em;
 }
 
-nav button:nth-of-type(2) {
-  margin-left: auto;
-  padding: 0;
-  margin-right: 5em;
+header nav button {
+  font-size:x-large;
+  font-weight:bold;
 }
 
 .sub-menu {
   display: none;
   position: absolute;
   background-color: rgb(252, 255, 203);
-  border: 3px ridge rgb(188, 193, 42);
-  border-top: none;
-  padding: 0;
-  margin: 0;
-  width: 70%;
-  left: 8em;
-  top: 6em;
+  border-bottom: 2px solid rgb(188, 193, 42);
+  border-left: 2px solid rgb(188, 193, 42);
+  border-right: 2px solid rgb(188, 193, 42);
+  margin-top: 0em;
+  margin-left: -2.4em;
   z-index: 1;
 }
 
 .sub-menu li {
-  list-style-type: none;
   cursor: pointer;
-  padding: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+  padding: 1em;
 }
-
-.sub-menu li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none; /* Fjerner understrek på linken */
-  color: inherit; /* Gjør at linken arver fargen til knappen */
-  padding: 1em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
-  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
-  text-align: center; /* Sentrerer teksten i linken */
-  z-index: 2;
+.meny-hover{
+  padding-top: -10em;
+  margin-bottom: -2em;
 }
-
-nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
-  /* Disse sørger for at sub-menyen vises når man fokuserer på meny-knappen med enten piltrykk eller tab*/
+.meny-hover:hover .sub-menu {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  transition: 1s;
+  margin-top: 0.8em;
+  width: 70%
 }
-.sub-menu:hover { 
-  background-color: rgb(223, 225, 181);
+.meny-hover:hover {
+  background-color: rgb(252, 255, 203);
+  border-top: 3px dotted black;
+  border-left: 3px dotted black;
+  border-right: 3px dotted black;
 }
-
-button:focus {
-  background-color: rgb(150, 150, 77);
-  border: 5px inset black;
-}
-
 .sub-menu li:hover {
-  background-color: rgb(141, 147, 96);
-  transition: 1s;
-}
-
-:root{
-  --maincolor: #f2d857;
+  background-color: rgb(218, 204, 53);
 }
 
 main {
-  margin-top: 5em;
+  margin-top: 2em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -164,10 +130,10 @@ main>p{
 
 table {
   margin-top: 1em;
-  width: 50%;
+  width: max(50vw);
   border-collapse: collapse;
   border: solid black 0.2rem;
-  margin-bottom: 5em;  
+  margin-bottom: 4rem;  
   font-size: 1.5rem;
   text-align: left;
 }
@@ -178,7 +144,6 @@ tr {
 
 th {
   border: solid black 0.2rem;
-  font-weight: 500;  
 }
 
 th, td {
@@ -190,65 +155,9 @@ th, td {
   text-align: center;
 }
 
-td{
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-caption {
-  font-size: 1.6rem;               
-  font-weight: bold;               
-  padding: 1em;                    
-  text-align: center;              
-  margin-bottom: 1em;              
-  font-family: 'Arial', sans-serif;
-}
-
-@media (max-width: 48rem) {
-  table {
-    width: 80%;
-  }
-  nav > button {
-    margin-left: 1em;
-  }
-  nav button:nth-of-type(2) {
-    margin-left: auto;
-    padding: 0;
-    margin-right: 4em;
-  }
-  .sub-menu {
-    left: 3em;
-    width: 80%;
-  }
-  h1, h2 {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 30rem) {
-  body {
-    font-size: 0.875rem;
-  }
-  
-  table {
-    width: 90%;
-    font-size: 1.2rem;
-  }
-  
-  h1 {
-    font-size: 1.875rem;
-  }
-  
-  h2 {
-    font-size: 1.125rem;
-  }
-}
-
-main {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.intro-informasjon p{
+  font-size: 1.4em;
+  text-align: center;
 }
 
 main .smaller-section{
@@ -339,7 +248,7 @@ footer{
   width: 100%;
 }
 
-footer>section,
+footer> section,
 footer>div{
   width: 75vw;
 }
@@ -362,6 +271,7 @@ section>button{
   border-color: #000;
   font-size: 1.2rem;
   font-weight: 600;
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
 section>button:hover{
@@ -377,11 +287,8 @@ footer>section>h3{
   font-weight: 600;
   font-size: 2.1rem;
 }
-.container img{
-  max-width: 100%;
-  height: 100%;
-}
-.git_bilder{
+
+footer>div{
   display: flex;
   flex-direction: row;
   justify-content: space-between;

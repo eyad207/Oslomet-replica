@@ -12,71 +12,26 @@ body {
   justify-content: center;
 }
 
+header {
+  width: inherit; /* Arver fra body/html sin bredde */
+  position: sticky;
+  top: 0;
+  padding: 0;
+}
 header nav {
   display: flex;
-  flex-direction: row;
+  width: inherit; /* Arver fra header sin bredde som videre arver fra body/html sin bredde */
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  top: 0;
-  position: sticky;
-  padding-left: 10em;
-}
-
-header button {
-  border: none;
-  outline: none;
+  padding: 0;
   background-color: inherit;
-  font-family: inherit;
-  cursor:pointer;
-}
-header nav li {
-  list-style-type: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-}
- 
-header {
-  padding: 3em;
-}
-
-header nav button {
-  font-size:x-large;
-  font-weight:bold;
-}
-
-.sub-menu {
-  display: none;
-  position: absolute;
-  background-color: rgb(252, 255, 203);
-  border-bottom: 2px solid rgb(188, 193, 42);
-  border-left: 2px solid rgb(188, 193, 42);
-  border-right: 2px solid rgb(188, 193, 42);
-  margin-top: 0em;
-  margin-left: -2.4em;
-  z-index: 1;
-}
-
-.sub-menu li {
-  cursor: pointer;
-  padding: 1em;
-}
-.meny-hover{
-  padding-top: -10em;
-  margin-bottom: -2em;
-}
-.meny-hover:hover .sub-menu {
-  display: flex;
-  flex-direction: row;
-  margin-top: 0.8em;
-  width: 70%
-}
-.meny-hover:hover {
-  background-color: rgb(252, 255, 203);
-  border-top: 3px dotted black;
-  border-left: 3px dotted black;
-  border-right: 3px dotted black;
-}
-.sub-menu li:hover {
-  background-color: rgb(218, 204, 53);
+  padding-left: 0;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px ridge black;
 }
 
 main {
@@ -128,6 +83,40 @@ main>p{
   width: 40vw;
 }
 
+nav button {
+  margin-left: 2em;
+  border: 5px outset black;
+  background-color: rgba(252, 255, 203, 0.5);
+  outline: none;
+  font-family: inherit;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: bold;
+}
+nav button:nth-of-type(2) {
+  margin-left: auto;
+  padding: 0;
+  margin-right: 5em;
+}
+nav button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Fjerner understrek på linken */
+  color: inherit; /* Gjør at linken arver fargen til knappen */
+  padding: 0.5em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
+  text-align: center; /* Sentrerer teksten i linken */
+}
+nav img {
+  justify-content: flex-end;
+  height: 3em;
+  width: 7.5em;
+}
+
 table {
   margin-top: 1em;
   width: max(50vw);
@@ -154,6 +143,20 @@ th, td {
   font-weight: 550;  
   text-align: center;
 }
+
+button:focus {
+  background-color: rgb(40, 40, 40);
+  color: var(--maincolor);
+  border: 5px inset black;
+}
+nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
+  /* Disse sørger for at sub-menyen vises når man fokuserer på meny-knappen med enten piltrykk eller tab*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: 1s;
+}
+
 
 .intro-informasjon p{
   font-size: 1.4em;
@@ -340,7 +343,7 @@ footer>ul>li>img {
   margin-right: 0.5rem;
 }
 
-a{
+main a, footer a{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
   color: #000;
   transition: text-decoration 0.4s;
   text-decoration: none;
@@ -348,8 +351,43 @@ a{
   font-family: Arial, sans-serif;
 }
 
-a:hover{
+main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
   border-bottom: 0.15rem solid #000;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--maincolor);
+  border: 3px ridge black;
+  border-top: none;
+  padding: 0;
+  margin: 0;
+  left: 8em;
+  top: 6.2em;
+  z-index: 1;
+}
+.sub-menu li {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+.sub-menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Fjerner understrek på linken */
+  color: inherit; /* Gjør at linken arver fargen til knappen */
+  padding: 1em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
+  text-align: center; /* Sentrerer teksten i linken */
+  z-index: 2;
+}
+.sub-menu li:hover {
+  background-color: black;
+  color: var(--maincolor);
+  transition: 0.5s;
 }
 
 @media(max-width: 1500px){
@@ -414,18 +452,18 @@ a:hover{
 @media only screen and (max-width: 1200px) {
 
   .historier-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .historier-info, .historier-container img {
-      width: 100%;
+    width: 100%;
   }
 
   table {
-      width: 50%;
-      font-size: 0.6rem;
+    width: 50%;
+    font-size: 0.6rem;
   }
 
   h1{
@@ -436,7 +474,43 @@ a:hover{
   h2{
     font-size: 1.2rem;
   }
-  main>p{
+  
+  h1 {
+    font-size: 1.875rem;
+  }
+  
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  section {
+    width: max(60vw);
+    margin: 1em;
+  }
+  
+  .historier-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .historier-info{
+    padding: 2em;
+    background-color: antiquewhite;
+  }
+
+  .historier-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .historier-container h3, p {
     font-size: 1.3em;
     width: 60%;
   }
@@ -460,7 +534,7 @@ a:hover{
     align-items: center;
     text-align: center;
   }
-  footer address, nav, aside, ul{
+  footer address, footer nav, aside, ul{
     padding: 0;
   }
   footer>div{
@@ -469,6 +543,20 @@ a:hover{
 }
 
 @media (max-width: 768px) {
+  
+  nav > button {
+    margin-left: 1em;
+  }
+  nav button:nth-of-type(2) {
+    margin-left: auto;
+    padding: 0;
+    margin-right: 1em;
+  }
+  .sub-menu {
+    left: 3em;
+    width: 80%;
+  }
+
   .mindre-section {
     width: 80vw; 
   }

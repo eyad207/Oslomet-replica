@@ -13,15 +13,15 @@ body {
 }
 
 header {
-  width: inherit; /* Arver fra body/html sin bredde */
+  width: inherit;
   position: sticky;
   top: 0;
-  padding: 0;
   z-index: 1;
 }
+
 header nav {
   display: flex;
-  width: inherit; /* Arver fra header sin bredde som videre arver fra body/html sin bredde */
+  width: inherit;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -40,7 +40,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
 .firstpicture{
@@ -49,48 +49,38 @@ main {
   border-radius: 0.625rem;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p{
   color: #111;                       
 }
 
 p{
-  color: #222;
+  font-size: 1em;
 }
 
 h1 {
   font-size: 3rem;
   font-weight: 700;
-  margin: 0.5em 0;         
-  letter-spacing: 0.01em;
-  text-align: center;
-  width: 67.5vw;
+  text-align: center; /**/
+  width: 75vw;
 }
 
 main>h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0.4em 0;
-  padding-bottom: 0.5em;
-  line-height: 1.2em;
-  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
-
 main>p{
-  font-size: 1.5em;
-  line-height: 1.3em;
-  text-align: center;
+  font-size: 1.5rem;
+  text-align: center; /**/
   font-weight: 400;
   width: 40vw;
 }
+
 #accessibility-text  > p, #accessibility-text > h1{
   width: 80vw;
 }
-#accessibility-text {
-  font-size: 1em;
-}
 
-#accessibility-text p a { /* Vil gjøre denne tydelig uavhengig av historikken med lenken ^*/
+#accessibility-text p a {
   color: blue;
   font-size: 1em;
 }
@@ -100,7 +90,6 @@ nav button, nav > a {
   border: 5px outset black;
   background-color: rgba(252, 255, 203, 0.5);
   outline: none;
-  font-family: inherit;
   margin-top: 1em;
   margin-bottom: 0.5em;
   padding: 0.5em;
@@ -108,47 +97,22 @@ nav button, nav > a {
   font-size: x-large;
   font-weight: bold;
 }
+
 nav > a {
   margin-left: auto;
   padding: 0;
   margin-right: 5em;
-  text-decoration: none; /* Fjerner understrek på linken */
-  color: inherit; /* Gjør at linken arver fargen til knappen */
-  padding: 0.5em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
-  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
-  text-align: center; /* Sentrerer teksten i linken */
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
 }
+
 nav img {
   justify-content: flex-end;
   height: 3em;
   width: 7.5em;
-}
-
-table {
-  margin-top: 1em;
-  width: max(50vw);
-  border-collapse: collapse;
-  border: solid black 0.2rem;
-  margin-bottom: 4rem;  
-  font-size: 1.5rem;
-  text-align: left;
-}
-
-tr {
-  border: solid black 0.2rem;
-}
-
-th {
-  border: solid black 0.2rem;
-}
-
-th, td {
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
-  font-weight: 550;  
-  text-align: center;
 }
 
 button:focus {
@@ -157,21 +121,31 @@ button:focus {
   border: 5px inset black;
 }
 nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
-  /* Disse sørger for at sub-menyen vises når man fokuserer på meny-knappen med enten piltrykk eller tab*/
+ 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   transition: 1s;
 }
 
-
-.intro-informasjon p{
-  font-size: 1.4em;
-  text-align: center;
+table {
+  margin-top: 1em;
+  width: max(60vw);
+  border-collapse: collapse;
+  margin-bottom: 4rem;  
+  font-size: 1.3rem;
+  text-align: left;
 }
 
-main .smaller-section{
-  width: max(40vw);
+tr, th {
+  border: solid #111 0.1rem;
+}
+
+th, td {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: 500;  
+  text-align: center; /**/
 }
 
 main section{
@@ -182,7 +156,7 @@ main section{
 .flere-studier-section ul li{
   margin-bottom: 1.3em;
   margin-top: 0.5em;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .studie-container {
@@ -203,19 +177,15 @@ main section{
   transform: translateY(-70%);
 }
 
-.studie-container::after, .studie-info li{
-  color: #666;
-}
-
 .studie-container > ul li{
   display: inline-block;
-  font-size: 1em;
 }
 
 .studie-container > ul li:not(:last-child){
   padding-right: 1em;
   border-right: 1px solid #222;
 }
+
 .studie-container > ul li:not(:first-child){
   padding-left: 1em;
 }
@@ -226,7 +196,7 @@ main section{
 }
 
 .historier-container p{
-  font-weight: 500; /* Make text slightly bolder if needed */
+  font-weight: 500;
 }
 
 .historier-container img {
@@ -240,22 +210,16 @@ main section{
   background-color: var(--maincolor);
 }
 
-.historier-container > div h2{
-  border: 0;
-}
-
 .historier-container > div h3{
   text-decoration: underline;
 }
 
-
 footer{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /**/
   padding-top: 3em;
   padding-bottom: 2rem;
-  width: 100%;
 }
 
 footer>section,
@@ -265,9 +229,9 @@ footer>div{
 
 footer>section{
   display: flex;
-  align-items: center;
+  align-items: center; /**/
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   border-bottom: 2px solid #000;
   padding-bottom: 3rem;
 }
@@ -350,7 +314,7 @@ footer>ul>li>img {
   margin-right: 0.5rem;
 }
 
-main a, footer a{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
+main a, footer a{
   color: #000;
   transition: text-decoration 0.4s;
   text-decoration: none;
@@ -358,7 +322,7 @@ main a, footer a{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen 
   font-family: Arial, sans-serif;
 }
 
-main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
+main a:hover, footer a:hover{
   border-bottom: 0.15rem solid #000;
 }
 
@@ -384,11 +348,11 @@ main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påviri
   display: block;
   width: 100%;
   height: 100%;
-  text-decoration: none; /* Fjerner understrek på linken */
-  color: inherit; /* Gjør at linken arver fargen til knappen */
-  padding: 1em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
-  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
-  text-align: center; /* Sentrerer teksten i linken */
+  text-decoration: none;
+  color: inherit;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
   z-index: 2;
 }
 .sub-menu li:hover {
@@ -592,13 +556,7 @@ main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påviri
 
 }
 section {
-  width: 100%;         
-  max-width: 100%;        
-  box-sizing: border-box;   
-  padding: 1em;            
-  margin: 0 auto;           
-  overflow: hidden;  
-  box-sizing: border-box;
+  border: solid #000 2px ;
 }
 
 

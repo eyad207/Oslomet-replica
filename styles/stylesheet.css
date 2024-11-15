@@ -184,6 +184,14 @@ main section{
   border-radius: 6px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
+.ikoner {
+  display: inline block;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
 
 .flere-studier-section ul li{
   margin-bottom: 1.3em;

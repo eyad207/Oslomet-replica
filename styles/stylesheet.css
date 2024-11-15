@@ -532,6 +532,7 @@ main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påviri
     flex-direction: row;
     align-items: center;
     width: fit-content;
+    flex-wrap: wrap;
   }
   footer nav {
     margin-left: 0;

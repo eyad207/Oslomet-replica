@@ -175,6 +175,37 @@ main .smaller-section{
   width: max(40vw);
 }
 
+.ikoner {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.studieår ul {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+
+.studieår ul li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  align-items: center;
+}
+
+.studieår ul li strong {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+
+.studieår ul li span {
+  white-space: nowrap;
+}
+
+
 main section{
   width: max(60vw);
   margin-bottom: 2em;

@@ -6,12 +6,6 @@ header, footer {
   background-color: var(--maincolor);
 }
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  justify-content: center;
-}
-
 header {
   width: inherit; /* Arver fra body/html sin bredde */
   position: sticky;
@@ -34,6 +28,13 @@ header nav {
   top: 0;
   border-bottom: 2px ridge black;
 }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+}
+
 
 main {
   margin-top: 2em;
@@ -406,54 +407,6 @@ main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påviri
   }
 }
 
-@media(max-width: 1350px){
-  .firstpicture{
-    width: 80vw;
-    justify-content: center;
-  }
-  h1{
-    font-size: 2.5rem;
-    width: 70%;
-    align-items: center;
-  }
-  h2{
-    font-size: 1.7rem;
-  }
-  main>p{
-    font-size: 1.3em;
-    width: 50%;
-  }
-
-  main>table{
-    font-size: 1.3rem;
-    width: 60%;
-  }
-
-  section p{
-    font-size: 1.1rem;
-  }
-  
-  main>section, .mindre-section {
-    width: 70vw; 
-  }
-  
-  footer button{
-    margin: 0;
-    margin-top: 2rem;
-  }
-
-  footer> section, div{
-    max-width: 60rem;
-    justify-content: space-between;
-  }
-  footer section{
-    flex-direction: column;
-  }
-  footer> section> h3{
-    text-align: center;
-  }
-
-}
 
 
 @media only screen and (max-width: 1200px) {
@@ -468,9 +421,9 @@ main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påviri
     width: 100%;
   }
 
-  table {
-    width: 50%;
-    font-size: 0.6rem;
+  .firstpicture{
+    width: 80vw;
+    justify-content: center;
   }
 
   h1{
@@ -481,14 +434,6 @@ main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påviri
   h2{
     font-size: 1.2rem;
   }
-  
-  h1 {
-    font-size: 1.875rem;
-  }
-  
-  h2 {
-    font-size: 1.125rem;
-  }
 
   main {
     display: flex;
@@ -496,9 +441,23 @@ main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påviri
     width: 100%;
   }
 
+  main>p{
+    font-size: 1.3em;
+    width: 50%;
+  }
+
+  main>table{
+    font-size: 1.3rem;
+    width: 60%;
+  }
+
   section {
     width: max(60vw);
     margin: 1em;
+  }
+
+  section p{
+    font-size: 1.1rem;
   }
   
   .historier-container{
@@ -525,6 +484,27 @@ main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påviri
   .historier-container{
     grid-template-columns: 1fr;
   }
+
+  main>section, .mindre-section {
+    width: 70vw; 
+  }
+  
+  footer button{
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  footer> section, div{
+    max-width: 60rem;
+    justify-content: space-between;
+  }
+  footer section{
+    flex-direction: column;
+  }
+  footer> section> h3{
+    text-align: center;
+  }
+
   footer>ul>li {
     margin-right: 2rem;
   }

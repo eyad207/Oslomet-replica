@@ -378,6 +378,10 @@ main a, footer a{
   transition: text-decoration 0.4s;
   text-decoration: none;
 }
+main a:hover h4{
+  text-decoration: underline;
+  color: #5f5f70;
+}
 
 main a:hover, footer a:hover{
   border-bottom: 0.15rem solid #111;
@@ -542,5 +546,3 @@ main a:hover, footer a:hover{
   }
 
 }
-
-

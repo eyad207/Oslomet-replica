@@ -599,8 +599,6 @@ section {
   margin: 0 auto;           
   overflow: hidden;  
   box-sizing: border-box;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  background-color: #f4f4f4;
 }
 
 

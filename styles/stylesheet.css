@@ -86,6 +86,12 @@ main>p{
 #accessibility-text  > p, #accessibility-text > h1{
   width: 80vw;
 }
+#accessibility-text > p{
+  margin-bottom: 0;
+}
+#accessibility-text > h2{
+  margin-top: 3em;
+}
 #accessibility-text {
   font-size: 1em;
 }

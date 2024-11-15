@@ -100,8 +100,6 @@ header nav button, header nav > a {
   border: 2px outset black;
   border-radius: 10px;
   background-color: rgba(252, 255, 203, 0.5);
-  outline: none;
-  font-family: inherit;
   margin-top: 1em;
   margin-bottom: 0.5em;
   padding: 0.2em;
@@ -115,8 +113,6 @@ nav > a {
   text-decoration: none; /* Fjerner understrek på linken */
   color: inherit; /* Gjør at linken arver fargen til knappen */
   padding: 0.2em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
-  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
-  text-align: center; /* Sentrerer teksten i linken */
 }
 nav img {
   margin-left: 4em;
@@ -152,16 +148,10 @@ th, td {
   text-align: center;
 }
 
-button:focus {
+button:focus, button:hover {
   background-color: rgb(40, 40, 40);
   color: var(--maincolor);
   border: 5px inset black;
-}
-
-button:hover {
-  transform: translateY(0.1rem);
-  transform: scale(1.1);
-  transition: 1s;
 }
 
 nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {

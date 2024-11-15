@@ -1,35 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Flex-boxes</title>
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header>
         <nav>
-            <div class="meny-hover">
-                <button> Menu </button>
-                <ul class="sub-menu">
-                    <li>Sub-menu1</li>
-                    <li>Sub-menu2</li>
-                    <li>Sub-menu3</li>
-                    <li>Sub-menu1</li>
-                    <li>Sub-menu2</li>
-                    <li>Sub-menu3</li>
-                    <li>Sub-menu1</li>
-                    <li>Sub-menu2</li>
-                    <li>Sub-menu3</li>
-                </ul>
-            </div>
-            <button> Søk </button>
+            <img class="meny-rad" src="images/logo.jpg" alt="OsloMet logo"> <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.svg -->
+            <button tabindex="2" class="meny-rad"> Menu </button>
+            <ul class="sub-menu">
+                <li> <a tabindex="3" href="https://www.oslomet.no/studier"> Studier </a></li>
+                <li> <a tabindex="4" href="OtherSites/Accessibility.html"> Accessibility </a></li>
+                <li> <a tabindex="5" href="OtherSites/GitSamarbeid.html"> GitSamarbeid </a></li>
+                <li> <a tabindex="6" href="OtherSites/Activity.html"> Activity </a></li>
+            </ul>   
+            <a href="https://www.oslomet.no/s?q="> Søkeside </a> 
         </nav>
     </header>
 
     <main>
-        <img class="firstpicture" src="images/firstpicture.png" alt="">
+        <img class="firstpicture" src="images/firstpicture.png" alt="Illustrative image related to the program">
         <h1>Matematisk modellering og datavitenskap &#8722; ingeniør</h1>
         <h2>Bachelorprogram</h2>
         <table>
@@ -44,48 +39,35 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Varighet:</th>
+                    <th>Varighet:</th>
                     <td>3 år</td>
                 </tr>
                 <tr>
-                    <th scope="row">Omfang:</th>
+                    <th>Omfang:</th>
                     <td>Heltid</td>
                 </tr>
                 <tr>
-                    <th scope="row">Studiepoeng:</th>
+                    <th>Studiepoeng:</th>
                     <td>180</td>
                 </tr>
                 <tr>
-                    <th scope="row">Studiestart:</th>
+                    <th>Studiestart:</th>
                     <td>August</td>
                 </tr>
                 <tr>
-                    <th scope="row">Undervisningsspråk:</th>
+                    <th>Undervisningsspråk:</th>
                     <td>Norsk og Engelsk</td>
                 </tr>
                 <tr>
-                    <th scope="row">Studieplasser:</th>
+                    <th>Studieplasser:</th>
                     <td>40</td>
                 </tr>
             </tbody>
         </table>
 
-        <section class="intro-informasjon smaller-section">
-            <p>Få innsikt i matematiske modeller og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.</p>
-        </section>
-
-        <section>
-            <h3>Opptakskrav og poeng</h3>
             <p>
-                For å søke på dette programmet må du ha
-                generell studiekompetanse (samordnaopptak.no) eller oppfylle kravene til realkompetanse
-                matematikk R1 og R2
-                fysikk 1
-                Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.
-                Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.
-            </p>        
-        </section>
-
+                Få innsikt i matematiske modeller og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.
+            </p>
         <section>
             <h3>Slik søker du</h3>
             <p>Du søker på Samordna opptak med studiekode 215 503 </p>
@@ -280,16 +262,91 @@
             <h3> Videre studiemuligheter ved OsloMet</h3>
             <h1>Anvendt Data- og Informasjonsteknologi (ACIT)</h1> <p>Masterprogram 2 år<br>Pilestredet i Oslo<br>Heltid </p>
         </section>
+        <section class="mindre-section flere-studier-section">
+            <h2>Du er kanskje også interessert i disse?</h2>
+            <ul>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/anvendt-datateknologi">
+                        <div class="studie-container">
+                            <h4>Anvendt datateknologi</h4>
+                            <ul>
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior">
+                        <div class="studie-container">
+                            <h4>Bioteknologi- og kjemiingeniør</h4>
+                            <ul>
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/byggingenior">
+                        <div class="studie-container">
+                            <h4>Byggingeniør</h4>
+                            <ul>
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/dataingenior">
+                        <div class="studie-container">
+                            <h4>Dataingeniør</h4>
+                            <ul>
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.oslomet.no/studier/tkd/elektronikkingenior">
+                        <div class="studie-container">
+                            <h4>Elektronikkingeniør</h4>
+                            <ul>
+                                <li>Bachelorprogram</li>
+                                <li>3 år</li>
+                                <li>Pilestredet Oslo</li>
+                                <li>Heltid</li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
 
         <section class>
-            <h3 class="bold-tittel"> Studenthistorier</h3>
+            <h2> Studenthistorier</h2>
             <div class="historier-container">
-                <div class="historier-info">
+                <div>
                     <h3>Teknologi og design</h3>
                     <h2>Spå fremtiden med matematikk og datavitenskap</h2>
                     <p>Har du lyst til å finne ut hva som vil skje i fremtiden? Lær å bruke verktøy for å forutsi alt fra været til strømprisene i utviklingen i boligmarkedet.</p>
                 </div>
-                <img src="images/studenhistorier.jpg" alt="">
+                <img src="images/studenhistorier.jpg" alt="Students discussing technology and design">
             </div>
         </section>
         
@@ -306,35 +363,44 @@
                 <ul>
                     <li>Postboks 4, St. Olavs plass<br>0130 Oslo</li>
                     <li>Tlf.: 67 23 50 00</li>
-                    <li><a href="#">Kontakt oss</a></li>
+                    <li><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></li>
                 </ul>
             </address>
     
             <nav>
                 <ul>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Alumni</a></li>
-                    <li><a href="#">Ansatteoversikt</a></li>
-                    <li><a href="#">Arrangementoversikt</a></li>
-                    <li><a href="#">For ansatte</a></li>
-                    <li><a href="#">For studenter</a></li>
-                    <li><a href="#">Ledige stillinger</a></li>
-                    <li><a href="#">Personvernerklæring og informasjonskapslar</a></li>
-                    <li><a href="#">Pressekontakt</a></li>
-                    <li><a href="#">Tilgjengelegheitserklæring</a></li>
+                    <li><a href="https://www.oslomet.no/en">English</a></li>
+                    <li><a href="https://www.oslomet.no/alumni">Alumni</a></li>
+                    <li><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></li>
+                    <li><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <li><a href="https://www.oslomet.no/om/for-ansatte">For ansatte</a></li>
+                <li><a href="https://www.oslomet.no/om/for-studenter">For studenter</a></li>
+                <li><a href="https://www.oslomet.no/om/ledige-stillinger">Ledige stillinger</a></li>
+            </nav>
+            <nav>
+                <ul>
+
+                    <li><a href="https://www.oslomet.no/om/personvernerklering-informasjonskapslar">Personvernerklæring og informasjonskapslar</a></li>
+                    <li><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></li>
+                    <li><a href="https://www.oslomet.no/om/tilgjengelegheitserklering">Tilgjengelegheitserklæring</a></li>
                     <li><a href="#">Admin</a></li>
                 </ul>
             </nav>
-    
-            <aside>
-                <ul>
-                    <li><img src="images/facebook-icon.png" alt=""><a href="#">Facebook</a></li>
-                    <li><img src="images/x-twitter.png" alt=""> <a href="#">X (Twitter)</a></li>
-                    <li><img src="images/linkedin-icon.png" alt=""><a href="#">LinkedIn</a></li>
-                    <li><img src="images/instagram-icon.png" alt=""><a href="#">Instagram</a></li>
-                </ul>
-            </aside>
         </div>
+            <ul>
+                
+                <li><img src="images/icon-facebook.svg" alt="Facebook icon"><a href="https://www.facebook.com/oslomet/">Facebook</a></li>
+                <li><img src="images/icon-twitter.svg" alt="Twitter icon"><a href="https://x.com/i/flow/login?redirect_after_login=%2Foslomet">X (Twitter)</a></li>
+                <li><img src="images/icon-linkedin.svg" alt="LinkedIn icon"><a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a></li>
+                <li><img src="images/icon-instagram.svg" alt="Instagram icon"><a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a></li>
+                <!-- Kilde: https://www.oslomet.no/build/images/icon-facebook.svg --> 
+                <!-- Kilde: https://www.oslomet.no/build/images/icon-twitter.svg -->
+                <!-- Kilde: https://www.oslomet.no/build/images/icon-linkedin.svg -->
+                <!-- Kilde: https://www.oslomet.no/build/images/icon-instagram.svg -->
+            </ul>
     </footer>
 </body>
 </html>

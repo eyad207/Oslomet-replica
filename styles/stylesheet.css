@@ -1,0 +1,653 @@
+:root{
+  --maincolor: #ffd500;
+}
+
+header, footer {
+  background-color: var(--maincolor);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+}
+
+header {
+  width: inherit; /* Arver fra body/html sin bredde */
+  position: sticky;
+  top: 0;
+  padding: 0;
+  z-index: 1;
+}
+header nav {
+  display: flex;
+  width: inherit; /* Arver fra header sin bredde som videre arver fra body/html sin bredde */
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  padding-left: 0;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px ridge black;
+}
+
+main {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.firstpicture{
+  width: 70vw;
+  margin-bottom: 3em;
+  border-radius: 0.625rem;
+}
+
+h1, h2, h3 {
+  color: #111;                       
+}
+
+p{
+  color: #222;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5em 0;         
+  letter-spacing: 0.01em;
+  text-align: center;
+  width: 67.5vw;
+}
+
+main>h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.4em 0;
+  padding-bottom: 0.5em;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+
+main>p{
+  font-size: 1.5em;
+  line-height: 1.3em;
+  text-align: center;
+  font-weight: 400;
+  width: 40vw;
+}
+#accessibility-text  > p, #accessibility-text > h1{
+  width: 80vw;
+}
+#accessibility-text {
+  font-size: 1em;
+}
+
+#accessibility-text p a { /* Vil gjøre denne tydelig uavhengig av historikken med lenken ^*/
+  color: blue;
+  font-size: 1em;
+}
+
+nav button, nav > a {
+  margin-left: 2em;
+  border: 5px outset black;
+  background-color: rgba(252, 255, 203, 0.5);
+  outline: none;
+  font-family: inherit;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: bold;
+}
+nav > a {
+  margin-left: auto;
+  padding: 0;
+  margin-right: 5em;
+  text-decoration: none; /* Fjerner understrek på linken */
+  color: inherit; /* Gjør at linken arver fargen til knappen */
+  padding: 0.5em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
+  text-align: center; /* Sentrerer teksten i linken */
+}
+nav img {
+  justify-content: flex-end;
+  height: 3em;
+  width: 7.5em;
+}
+
+table {
+  margin-top: 1em;
+  width: max(50vw);
+  border-collapse: collapse;
+  border: solid black 0.2rem;
+  margin-bottom: 4rem;  
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+tr {
+  border: solid black 0.2rem;
+}
+
+th {
+  border: solid black 0.2rem;
+}
+
+th, td {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  font-weight: 550;  
+  text-align: center;
+}
+
+button:focus {
+  background-color: rgb(40, 40, 40);
+  color: var(--maincolor);
+  border: 5px inset black;
+}
+nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
+  /* Disse sørger for at sub-menyen vises når man fokuserer på meny-knappen med enten piltrykk eller tab*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: 1s;
+}
+
+
+.intro-informasjon p{
+  font-size: 1.4em;
+  text-align: center;
+}
+
+main .smaller-section{
+  width: max(40vw);
+}
+
+main section{
+  width: max(60vw);
+  margin-bottom: 2em;
+}
+
+.flere-studier-section ul li{
+  margin-bottom: 1.3em;
+  margin-top: 0.5em;
+  font-size: 0.8em;
+}
+
+.studie-container {
+  z-index: -10;
+  position: relative;
+}
+
+.studie-container h4{
+  margin: 0;
+}
+
+.studie-container::after {
+  content: '\203A';
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-70%);
+}
+
+.studie-container::after, .studie-info li{
+  color: #666;
+}
+
+.studie-container > ul li{
+  display: inline-block;
+  font-size: 1em;
+}
+
+.studie-container > ul li:not(:last-child){
+  padding-right: 1em;
+  border-right: 1px solid #222;
+}
+.studie-container > ul li:not(:first-child){
+  padding-left: 1em;
+}
+
+.historier-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.historier-container p{
+  font-weight: 500; /* Make text slightly bolder if needed */
+}
+
+.historier-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.historier-container > div{
+  padding: 2em;
+  background-color: var(--maincolor);
+}
+
+.historier-container > div h2{
+  border: 0;
+}
+
+.historier-container > div h3{
+  text-decoration: underline;
+}
+
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3em;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+footer>section,
+footer>div{
+  width: 75vw;
+}
+
+footer>section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3rem;
+}
+
+section>button{
+  padding: 1em;
+  background-color: black;
+  color: white;
+  border-radius: 0.6rem;
+  border-width: 0.1rem;
+  border-color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+section>button:hover{
+  box-shadow: 0 0 0.5rem black;
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+}
+
+footer>section>h3{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+}
+
+footer>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+}
+
+
+footer address>h3{
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer ul{
+  padding: 0;
+  margin-top: 0;
+}
+
+footer address span{
+  font-weight: 400;
+}
+
+footer>ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+footer li{
+  font-size: larger;
+  font-weight: 550;
+  margin-bottom: 1.1rem;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
+footer>ul>li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+footer>ul>li>img {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+main a, footer a{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
+  color: #000;
+  transition: text-decoration 0.4s;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+main a:hover, footer a:hover{ /* Fra Juneed: enda til "main:a" siden den påvirirket menyen sine linker, men burde ikke" */
+  border-bottom: 0.15rem solid #000;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--maincolor);
+  border: 3px ridge black;
+  border-top: none;
+  padding: 0;
+  margin: 0;
+  left: 8em;
+  top: 6.2em;
+  z-index: 10;
+}
+.sub-menu li {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+.sub-menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Fjerner understrek på linken */
+  color: inherit; /* Gjør at linken arver fargen til knappen */
+  padding: 1em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  box-sizing: border-box; /* Sørger for at padding fungerer sammen med 100% bredde og høyde */
+  text-align: center; /* Sentrerer teksten i linken */
+  z-index: 2;
+}
+.sub-menu li:hover {
+  background-color: black;
+  color: var(--maincolor);
+  transition: 0.5s;
+}
+
+@media(max-width: 1500px){
+  footer>div{
+    gap: 5vw;
+  }
+  footer>div>nav>li{
+    width: 10rem;
+  }
+}
+
+@media(max-width: 1350px){
+  .firstpicture{
+    width: 80vw;
+    justify-content: center;
+  }
+  h1{
+    font-size: 2.5rem;
+    width: 70%;
+    align-items: center;
+  }
+  h2{
+    font-size: 1.7rem;
+  }
+  main>p{
+    font-size: 1.3em;
+    width: 50%;
+  }
+
+  main>table{
+    font-size: 1.3rem;
+    width: 60%;
+  }
+
+  section p{
+    font-size: 1.1rem;
+  }
+  
+  main>section, .mindre-section {
+    width: 70vw; 
+  }
+  
+  footer button{
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  footer> section, div{
+    max-width: 60rem;
+    justify-content: space-between;
+  }
+  footer section{
+    flex-direction: column;
+  }
+  footer> section> h3{
+    text-align: center;
+  }
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+  .historier-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .historier-info, .historier-container img {
+    width: 100%;
+  }
+
+  table {
+    width: 50%;
+    font-size: 0.6rem;
+  }
+
+  h1{
+    font-size: 2.2rem;
+    width: 60%;
+    align-items: center;
+  }
+  h2{
+    font-size: 1.2rem;
+  }
+  
+  h1 {
+    font-size: 1.875rem;
+  }
+  
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  section {
+    width: max(60vw);
+    margin: 1em;
+  }
+  
+  .historier-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .historier-info{
+    padding: 2em;
+    background-color: antiquewhite;
+  }
+
+  .historier-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .historier-container h3, p {
+    font-size: 1.3em;
+    width: 60%;
+  }
+
+  .historier-container{
+    grid-template-columns: 1fr;
+  }
+  footer>ul>li {
+    margin-right: 2rem;
+  }
+  footer> ul{
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    flex-wrap: wrap;
+  }
+  footer nav {
+    margin-left: 0;
+  }
+  footer div{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer address, footer nav, aside, ul{
+    padding: 0;
+  }
+  footer>div{
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  nav > button, nav > a {
+    margin-left: 1em;
+  }
+  nav > a {
+    margin-left: auto;
+    margin-right: 1em;
+  }
+  .sub-menu {
+    left: 3em;
+    width: 80%;
+  }
+
+  .mindre-section {
+    width: 80vw; 
+  }
+  table{
+    font-size: 1rem;
+    width: 40%;
+  }
+  main>h3, main>p, 
+  main td, main th{
+    font-size: 1.2rem;
+  }
+  main>h1 {
+    font-size: 1.8rem; 
+  }
+  main>h2{
+    font-size: 1.4rem;
+  }
+
+  .studie-container > ul li{
+    font-size: 0.9rem;
+  }
+
+  .studie-container::after {
+    content: '';
+  }
+
+}
+section {
+  width: 100%;         
+  max-width: 100%;        
+  box-sizing: border-box;   
+  padding: 1em;            
+  margin: 0 auto;           
+  overflow: hidden;  
+  box-sizing: border-box;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f4f4f4;
+}
+
+
+
+.ikoner {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.studieår ul {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+
+.studieår ul li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  align-items: center;
+}
+
+.studieår ul li strong {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+
+.studieår ul li span {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  ul li {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 0.9rem;
+  }
+
+  body, section {
+      padding: 0.5rem;
+  }
+
+  h2, h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-boxes</title>
+    <link rel="stylesheet" href="../styles/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="meny-rad" src="../images/logo.jpg" alt=""> <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.svg -->
+            <button tabindex="2" class="meny-rad"> Menu </button>
+            <ul class="sub-menu">
+                <li> <a tabindex="3" href="https://www.oslomet.no/studier"> Studier </a></li>
+                <li> <a tabindex="4" href="../index.html"> Hjem-side </a></li>
+                <li> <a tabindex="5" href="GitSamarbeid.html"> GitSamarbeid </a></li>
+                <li> <a tabindex="6" href="Activity.html"> Activity </a></li>
+            </ul>
+            <a href="https://www.oslomet.no/s?q="> Søkeside </a>
+        </nav>
+    </header>
+
+
+    <main id="accessibility-text">
+        <h1> Kort om tilgjengelighet for denne siden </h1>
+        <p> 
+            Tilgjengelighet / universell utforming er et viktig konsept som går ut på at flest mulig kan kunne utnytte alt. 
+            På nettsteder er det derfor viktig at du gir muligheten for personer med hemmede sanser eller funksjoner ha muligheten til å navigere og hente informasjon fra nettsiden din. 
+            Forhåpentligvis er det da tydelig at vi har tatt flere grep for å gjøre denne nettsiden mer universell utformet, for det har vi gjort! <br>
+            Vi validerte koden flere ganger <a href="https://validator.w3.org/#validate_by_upload"> her </a>, og en gang til slutt etter å ha merga de med main. 
+            Vi fikk opp et par feil som var uforventet for koden vår, men etter å ha jobbet med dem fikk vi overkommet dem. 
+            Her er en liste over kodevalg vi gjorde for å gjøre koden vår mer tilgjengelig innenfor spesifikke kategorier. 
+        </p>
+        <h2> Bilder: </h2>
+        <p> 
+            Bildetekst 
+        </p>
+        <h2> Fargebruk: </h2>
+        <p> 
+            Fargetekst 
+        </p>
+        <h2> 
+            Interaktivitet: 
+        </h2>
+        <p> 
+            Knapper og lenker er en del av det vi kaller interaktive elementer, og for en universell utformet side burde disse være oversiktlige lett å trykke på. 
+            Etter valideringen fikk vi opp en feil under dette, hvor vi hadde en link inni en button i menyen. 
+            Først reflekterte vi over hvorfor det var feil siden det ikke var åpenbart for oss med det første, men så forstod vi at det generelt er dårlig praksis for nettlesere og brukeropplevelsen. 
+        </p>
+        <h2> Funksjonalitet: </h2>
+        <p> Funksjontekst </p>
+
+        <p>
+            Oppsummert har vi gjort våres beste for å få flest mulig til å kunne bruke nettsiden vår effektivt. 
+            Dette er noen av mange feil vi har rettet opp, og vi har lært masse av de 😊.
+
+        </p>
+
+    </main>
+    <footer>
+        <section>
+            <h3>Hold deg oppdatert på hva som skjer på OsloMet.</h3>
+            <button>Abonner på vårt nyhetsbrev!</button>
+        </section>
+        <div>
+            <address>
+                <h3>OSLO METROPOLITAN UNIVERSITY <br><span>STORBYUNIVERSITETET</span> </h3>
+                <ul>
+                    <li>Postboks 4, St. Olavs plass<br>0130 Oslo</li>
+                    <li>Tlf.: 67 23 50 00</li>
+                    <li><a href="#">Kontakt oss</a></li>
+                </ul>
+            </address>
+    
+            <nav>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Ansatteoversikt</a></li>
+                    <li><a href="#">Arrangementoversikt</a></li>
+                    <li><a href="#">For ansatte</a></li>
+                    <li><a href="#">For studenter</a></li>
+                    <li><a href="#">Ledige stillinger</a></li>
+                    <li><a href="#">Personvernerklæring og informasjonskapslar</a></li>
+                    <li><a href="#">Pressekontakt</a></li>
+                    <li><a href="#">Tilgjengelegheitserklæring</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </nav>
+    
+            <aside>
+                <ul>
+                    <li><img src="images/facebook-icon.png" alt=""><a href="#">Facebook</a></li>
+                    <li><img src="images/x-twitter.png" alt=""> <a href="#">X (Twitter)</a></li>
+                    <li><img src="images/linkedin-icon.png" alt=""><a href="#">LinkedIn</a></li>
+                    <li><img src="images/instagram-icon.png" alt=""><a href="#">Instagram</a></li>
+                </ul>
+            </aside>
+        </div>
+    </footer>
+</body>
+</html>

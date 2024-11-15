@@ -49,8 +49,10 @@ main {
   border-radius: 0.625rem;
 }
 
-h1, h2, h3, p{
-  color: #111;                       
+main>h1, main>h2, main>h3, main>p{
+  color: #111;
+  text-align: left; /**/
+  width: 65vw;                   
 }
 
 p{
@@ -61,20 +63,26 @@ p{
 h1 {
   font-size: 3rem;
   font-weight: 700;
-  text-align: center; /**/
-  width: 75vw;
+
 }
 
 main>h2 {
   font-size: 1.7rem;
   font-weight: 500;
+  margin-bottom: 2rem;
+
+}
+
+main h3{
+  font-size: 2rem;
+}
+main p{
+
 }
 
 main>p{
   font-size: 1.5rem;
-  text-align: center; /**/
   font-weight: 400;
-  width: 60%; /**/
 }
 
 #accessibility-text  > p, #accessibility-text > h1{
@@ -113,33 +121,6 @@ nav img {
   margin-right: 2em;
 }
 
-table {
-  margin-top: 1em;
-  width: max(50vw);
-  border-collapse: collapse;
-  border: solid black 0.2rem;
-  margin-bottom: 4rem;  
-  font-size: 1.5rem;
-  text-align: left;
-}
-
-tr {
-  border: solid black 0.2rem;
-}
-
-th {
-  border: solid black 0.2rem;
-}
-
-th, td {
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
-  font-weight: 550;  
-  text-align: center;
-}
-
 button:focus, button:hover, nav>a:hover {
   background-color: white;
   color: #111;
@@ -155,23 +136,28 @@ nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-me
 }
 
 table {
-  margin-top: 1em;
-  width: max(60vw);
-  border-collapse: collapse;
+  width: 68vw;
   margin-bottom: 4rem;  
   font-size: 1.3rem;
   text-align: left;
+  border-radius: 20px;
+  background-color: var(--maincolor);
+  box-shadow: 0 0 0.2rem black;
+
 }
 
-tr, th {
-  border: solid #111 0.1rem;
-}
+th{
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
 
-th, td {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  font-weight: 500;  
-  text-align: center; /**/
+  text-align: center;
+  border-bottom: solid 0.01rem gray ;
+
+}
+td {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 main section{
@@ -279,6 +265,7 @@ main section{
 }
 
 .historier-container > div h3{
+  font-size: 1.5rem;
   text-decoration: underline;
 }
 
@@ -335,9 +322,11 @@ footer>div, footer>ul{
   display: flex; /**/
   flex-direction: row; /**/
   justify-content: space-between; /**/
+  margin-bottom: 2rem;
 }
 
 footer address>h3{
+  font-size: 1.3rem;
   margin: 0;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -441,15 +430,16 @@ main a:hover, footer a:hover{
     font-size: 1.7rem;
   }
 
-  main>table{
-    font-size: 1.3rem;
-    width: 80vw;
-  }
 
   section p{
     font-size: 1.1rem;
   }
-  
+
+  table th, table, table td{
+    table-layout: fixed;
+
+  }
+
   main>section{
     width: 70vw; 
   }

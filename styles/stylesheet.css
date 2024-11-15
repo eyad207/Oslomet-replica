@@ -74,7 +74,7 @@ main>p{
   font-size: 1.5rem;
   text-align: center; /**/
   font-weight: 400;
-  width: 100%; /**/
+  width: 60%; /**/
 }
 
 #accessibility-text  > p, #accessibility-text > h1{
@@ -179,34 +179,44 @@ main section{
   margin-bottom: 2em;
 }
 
-.ikoner {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 1em;
-}
-
 .studieår ul {
   list-style: none;
   padding-left: 0.5rem;
 }
 
 .studieår ul li {
-  display: flex; /**/
+  display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
-  font-size: 1rem;
-  align-items: center; /**/
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  align-items: center;
+  margin-bottom: 0.9rem; /* Mellomrom mellom elementene */
 }
 
 .studieår ul li strong {
   font-size: 1rem;
   margin-top: 0.8rem;
+  color: #CCAA00;
 }
 
 .studieår ul li span {
   white-space: nowrap;
 }
+.studieår section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+.ikoner {
+  display: inline block;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
 
 .flere-studier-section ul li{
   margin-bottom: 1.3em;

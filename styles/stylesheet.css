@@ -36,11 +36,11 @@ header nav {
 }
 
 main {
-  margin-top: 2em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  margin-top: 2em;
 }
 
 .firstpicture{
@@ -81,6 +81,7 @@ main h3{
 main>p{
   font-size: 1.4rem;
   font-weight: 400;
+  margin-bottom: 4rem;
 }
 
 #accessibility-text  > p, #accessibility-text > h1{
@@ -136,25 +137,23 @@ nav > button:focus + .sub-menu {
 }
 
 
-main>div {
+.studieinfo-div {
   width: 65vw;
-  align-items: center;
   margin-top: 1.5rem;
   margin-bottom: 3.5rem;
 }
 
 
-main>div ul {
+.studieinfo-div ul {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  list-style-type: none;
   margin: 0;
   gap: 1rem;
 }
 
 
-main>div li {
+.studieinfo-div li {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
@@ -166,18 +165,18 @@ main>div li {
   margin-top: 0.5rem;
 }
 
-main>div li span:first-child {
+.studieinfo-div li span:first-child {
   font-weight: bold;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
 
-main>div li span:last-child {
+.studieinfo-div li span:last-child {
   color: #444;
 }
 
-main>div span{
+.studieinfo-div span{
   font-size: 1.2rem;
 }
 
@@ -187,8 +186,8 @@ main > section {
   align-items: center;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 8px 1rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
 }
 
 main > section:hover {
@@ -199,13 +198,10 @@ main > section:hover {
 
 main > section h3 {
   font-size: 2rem;
-  color: #333;
   margin-bottom: 20px;
-  text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border-bottom: 2px solid #ddd;
   padding-bottom: 10px;
 }
 
@@ -214,41 +210,62 @@ main > section p {
   font-size: 1.2rem;
   color: #555;
   line-height: 1.8;
-  margin-bottom: 20px;
-  text-align: justify;
+  margin-bottom: 1.1rem;
 }
 
 
 main > section ul {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
 }
 
-main > section ul li {
-  font-size: 1.2rem;
-  color: #444;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  padding-left: 25px;
-  position: relative;
-}
-
-main > section ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  font-size: 1.5rem;
-  color: #007acc;
-}
-
-
-main > section ul li a,
-main > section p a {
-  text-decoration: none;
-  font-weight: 600;
+main a{
+  font-weight: 500;
+  border-bottom: solid 0.15rem #ffd500;
   transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 3rem;
+  width: 70%;
+}
+
+
+.info-section > section {
+  flex: 1;
+  border-radius: 10px;
+  transition: transform 0.3s , box-shadow 0.3s ;
+  overflow: hidden;
+  display: flex;
+  padding: 3rem;
+
+  flex-direction: column;
+}
+.info-section>section:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.info-section > section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+
+.info-section > section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 0;
 }
 
 
@@ -259,11 +276,8 @@ main > section p a {
 }
 
 .studieår ul li {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
   font-size: 0.95rem;
-  align-items: center;
+  align-items: left;
   margin-bottom: 0.9rem;
 }
 
@@ -273,20 +287,34 @@ main > section p a {
   color: #CCAA00;
 }
 
-.studieår ul li span {
-  white-space: nowrap;
+
+.studieår {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3rem;
 }
+
 .studieår section {
+  width: 100%;
   margin-bottom: 1.5rem;
-  padding: 1rem;
   background: #fff;
   border-radius: 6px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
+.studieår section h4 {
+  text-align: center;
+}
+
 .ikoner {
-  display: inline block;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
   gap: 1rem;
   font-size: 0.85rem;
+  text-align: left;
   color: #666;
   margin-bottom: 1rem;
 }
@@ -588,6 +616,10 @@ main a:hover, footer a:hover{
 
   main>div li {
     padding: 1.1rem;
+}
+.info-section {
+  width: 65%;
+  flex-direction: column;
 }
 
 }

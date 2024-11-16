@@ -182,6 +182,7 @@ main section{
   margin-bottom: 2em;
 }
 
+/*fjerner style på liste elementet på både studie oppbygning seksjonnen og studie anbefaliner*/
 .studieår ul, .flere-studier-section ul {
   list-style: none;
   padding-left: 0.5rem;
@@ -211,6 +212,7 @@ main section{
   background: #fff;
   border-radius: 6px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
 }
 .ikoner {
   display: inline block;
@@ -543,9 +545,6 @@ main a:hover, footer a:hover{
 
   main>section{
     width: 87vw; 
-  }
-  main>section>section{
-    width: 80vw;
   }
 
   .studie-container > ul li{

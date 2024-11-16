@@ -109,9 +109,9 @@ header nav button, header nav > a {
 nav > a {
   position: absolute;
   right: 6em;
-  text-decoration: none; /* Fjerner understrek på linken */
-  color: inherit; /* Gjør at linken arver fargen til knappen */
-  padding: 0.2em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  text-decoration: none;
+  color: inherit;
+  padding: 0.2em;
 }
 
 nav img {
@@ -135,35 +135,146 @@ nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-me
   flex-wrap: wrap;
 }
 
-table {
-  width: 68vw;
-  margin-bottom: 4rem;  
-  font-size: 1.3rem;
-  text-align: left;
-  border-radius: 20px;
-  background-color: var(--maincolor);
-  box-shadow: 0 0 0.2rem black;
+
+main>div {
+  width: 65vw;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
 }
 
-th{
-  padding-top: 2rem;
-  padding-bottom: 0.5rem;
 
+main>div ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  gap: 1rem;
+}
+
+
+main>div li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border-top: solid 0.1rem #111;
+  border-bottom: solid 0.1rem #111;
+
+  min-width: 150px;
+  margin-top: 1rem;
   text-align: center;
-  border-bottom: solid 0.01rem gray ;
-
 }
-td {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+
+
+main>div li span:first-child {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+
+main>div li span:last-child {
+  color: #444;
+}
+
+
+main>div span{
+  font-size: 1.2rem;
+}
+
+
+
+
+
+/* Styling for sekjonen */
+main > section {
+  width: 70%;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom right, #ffffff, #f7f9fc);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main > section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Styling for overskriften */
+main > section h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
   text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
 }
 
-main section{
-  width: max(60vw);
-  margin-bottom: 2em;
+/* Styling for paragrafene */
+main > section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
 }
+
+/* Styling for listen */
+main > section ul {
+  list-style-type: none; /* Fjern standard punkter */
+  padding: 0;
+  margin: 0;
+}
+
+main > section ul li {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  padding-left: 25px;
+  position: relative;
+}
+
+main > section ul li::before {
+  content: "✔"; /* Bruk et ikon eller symbol */
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 1.5rem;
+  color: #007acc;
+}
+
+/* Styling for lenkene */
+main > section ul li a,
+main > section p a {
+  color: #007acc; /* Blå farge for lenker */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+main > section ul li a:hover,
+main > section p a:hover {
+  text-decoration: underline; /* Understrek ved hover */
+  color: #005fa3; /* Mørkere blå farge */
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+
+}
+
 
 .studieår ul {
   list-style: none;
@@ -176,7 +287,7 @@ main section{
   gap: 0.4rem;
   font-size: 0.95rem;
   align-items: center;
-  margin-bottom: 0.9rem; /* Mellomrom mellom elementene */
+  margin-bottom: 0.9rem;
 }
 
 .studieår ul li strong {
@@ -300,9 +411,7 @@ section>button{
   border-color: #111;
   font-size: 1rem;
   font-weight: 600;
-  transition: box-shadow 0.3s;
-  transition: background-color 0.3s;
-  transition: color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
 section>button:hover{
@@ -414,7 +523,7 @@ main a:hover, footer a:hover{
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 
   .firstpicture{
     width: 80vw;
@@ -435,13 +544,12 @@ main a:hover, footer a:hover{
     font-size: 1.1rem;
   }
 
-  table th, table, table td{
-    table-layout: fixed;
-
-  }
-
   main>section{
     width: 70vw; 
+  }
+
+  main>div ul{
+    gap: 3rem;
   }
 
   .historier-container{
@@ -497,6 +605,9 @@ main a:hover, footer a:hover{
 }
 
 @media (max-width: 768px) {
+  .firstpicture{
+    width: 95%;
+  }
   
   nav > button, nav > a {
     margin-left: 1em;
@@ -512,10 +623,13 @@ main a:hover, footer a:hover{
   }
 
   main>h1 {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
+    width: 90vw; 
   }
   main>h2{
     font-size: 1.4rem;
+    width: 90vw; 
+
   }
 
   main>h3, main>p, 
@@ -530,7 +644,33 @@ main a:hover, footer a:hover{
   .studie-container::after {
     content: '';
   }
+  main>div{
+    padding-top: 0;
+    margin-top: 0;
+  }
+  main > section {
+    width: 90%; /* Tilpass bredden for små skjermer */
+    padding: 20px;
+}
+
+  main > section h3 {
+    font-size: 1.8rem;
+  }
+
+  main > section p,
+  main > section ul li {
+    font-size: 1rem;
+  }
+  main>div ul {
+    flex-wrap: wrap;
+  }
+
+  main>div li {
+   width: 140px;
+   font-size: 0.5rem;
+  }
 
 }
+
 
 

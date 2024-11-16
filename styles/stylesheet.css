@@ -579,6 +579,22 @@ main a:hover, footer a:hover{
   footer>div{
     gap: 0;
   }
+  
+  main>div{
+    width: 80%;
+  }
+
+  main>div ul {
+    justify-content: center;
+    flex-direction: row;
+}
+
+  main>div li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
 
 }
 
@@ -632,6 +648,7 @@ main a:hover, footer a:hover{
     align-items: center;
   }
   main>div ul {
+    justify-content: center;
     flex-direction: row;
     padding: 0;
 }

@@ -49,9 +49,10 @@ main {
   border-radius: 0.625rem;
 }
 
-main>h1, main>h2, main>h3, main>p{
+main>h1, main>h2,
+main>h3, main>p{
   color: #111;
-  text-align: left; /**/
+  text-align: left; 
   width: 65vw;                   
 }
 
@@ -76,12 +77,9 @@ main>h2 {
 main h3{
   font-size: 2rem;
 }
-main p{
-
-}
 
 main>p{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 
@@ -106,7 +104,7 @@ header nav button, header nav > a {
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
-nav > a {
+nav>a {
   position: absolute;
   right: 6em;
   text-decoration: none;
@@ -121,15 +119,17 @@ nav img {
   margin-right: 2em;
 }
 
-button:focus, button:hover, nav>a:hover {
+button:focus, 
+button:hover, nav>a:hover {
   background-color: white;
   color: #111;
   border: solid #111 0.1rem;
   cursor: pointer;
 }
 
-nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
- 
+nav button:focus-within .sub-menu,
+.sub-menu:hover,
+nav > button:focus + .sub-menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -139,18 +139,14 @@ nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-me
 main>div {
   width: 65vw;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
 
 main>div ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
   padding: 0;
   list-style-type: none;
   margin: 0;
@@ -162,15 +158,13 @@ main>div li {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border-top: solid 0.1rem #111;
   border-bottom: solid 0.1rem #111;
-
-  min-width: 150px;
-  margin-top: 1rem;
+  min-width: 10rem;
   text-align: center;
+  margin-top: 0.5rem;
 }
-
 
 main>div li span:first-child {
   font-weight: bold;
@@ -183,23 +177,17 @@ main>div li span:last-child {
   color: #444;
 }
 
-
 main>div span{
   font-size: 1.2rem;
 }
 
 
-
-
-
-/* Styling for sekjonen */
 main > section {
-  width: 70%;
-  margin: 30px auto;
-  padding: 25px;
-  border-radius: 15px;
-  background: linear-gradient(to bottom right, #ffffff, #f7f9fc);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 65vw;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 1rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -208,7 +196,7 @@ main > section:hover {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Styling for overskriften */
+
 main > section h3 {
   font-size: 2rem;
   color: #333;
@@ -221,7 +209,7 @@ main > section h3 {
   padding-bottom: 10px;
 }
 
-/* Styling for paragrafene */
+
 main > section p {
   font-size: 1.2rem;
   color: #555;
@@ -230,9 +218,9 @@ main > section p {
   text-align: justify;
 }
 
-/* Styling for listen */
+
 main > section ul {
-  list-style-type: none; /* Fjern standard punkter */
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
@@ -247,7 +235,7 @@ main > section ul li {
 }
 
 main > section ul li::before {
-  content: "✔"; /* Bruk et ikon eller symbol */
+  content: "✔";
   position: absolute;
   left: 0;
   top: 5px;
@@ -255,10 +243,10 @@ main > section ul li::before {
   color: #007acc;
 }
 
-/* Styling for lenkene */
+
 main > section ul li a,
 main > section p a {
-  color: #007acc; /* Blå farge for lenker */
+  color: #007acc;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease, text-decoration 0.3s ease;
@@ -266,13 +254,8 @@ main > section p a {
 
 main > section ul li a:hover,
 main > section p a:hover {
-  text-decoration: underline; /* Understrek ved hover */
-  color: #005fa3; /* Mørkere blå farge */
-}
-
-/* Responsiv styling */
-@media (max-width: 768px) {
-
+  text-decoration: underline;
+  color: #005fa3;
 }
 
 
@@ -548,9 +531,7 @@ main a:hover, footer a:hover{
     width: 70vw; 
   }
 
-  main>div ul{
-    gap: 3rem;
-  }
+
 
   .historier-container{
     grid-template-columns: 1fr;
@@ -629,7 +610,9 @@ main a:hover, footer a:hover{
   main>h2{
     font-size: 1.4rem;
     width: 90vw; 
-
+  }
+  main>p{
+    width: 90%;
   }
 
   main>h3, main>p, 
@@ -645,11 +628,25 @@ main a:hover, footer a:hover{
     content: '';
   }
   main>div{
-    padding-top: 0;
-    margin-top: 0;
+    width: 100%;
+    align-items: center;
   }
+  main>div ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+  main>div li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
   main > section {
-    width: 90%; /* Tilpass bredden for små skjermer */
+    width: 90%;
     padding: 20px;
 }
 
@@ -660,14 +657,6 @@ main a:hover, footer a:hover{
   main > section p,
   main > section ul li {
     font-size: 1rem;
-  }
-  main>div ul {
-    flex-wrap: wrap;
-  }
-
-  main>div li {
-   width: 140px;
-   font-size: 0.5rem;
   }
 
 }

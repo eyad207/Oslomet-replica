@@ -78,13 +78,16 @@ main>p{
 }
 
 #accessibility-text  > p, #accessibility-text > h1{
-  width: 80vw;
+  width: 70vw;
 }
 
 #accessibility-text p a {
   color: blue;
-  font-size: 1em;
 }
+
+#accessibility-text p, #accesibility-text a{
+  font-size: 1.1em;
+} 
 
 header nav button, header nav > a {
   padding: 0.6em;
@@ -179,7 +182,7 @@ main section{
   margin-bottom: 2em;
 }
 
-.studieår ul {
+.studieår ul, .flere-studier-section ul {
   list-style: none;
   padding-left: 0.5rem;
 }
@@ -227,6 +230,7 @@ main section{
   padding: 0;
 }
 
+/*negativ z-index for å unngå overlap problemer med header.*/
 .studie-container {
   z-index: -10;
   position: relative;
@@ -236,6 +240,7 @@ main section{
   margin: 0;
 }
 
+/*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
 .studie-container::after {
   content: '\203A';
   font-size: 2em;
@@ -249,14 +254,16 @@ main section{
   display: inline-block;
 }
 
+/*---------*/
+/*disse er for å style listen under studie anbefalingene*/
 .studie-container > ul li:not(:last-child){
   padding-right: 1em;
   border-right: 1px solid #222;
 }
-
 .studie-container > ul li:not(:first-child){
   padding-left: 1em;
 }
+/*---------*/
 
 .historier-container{
   display: grid;
@@ -458,12 +465,9 @@ main a:hover, footer a:hover{
     width: 70vw; 
   }
 
+  /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
   .historier-container{
     grid-template-columns: 1fr;
-  }
-
-  .historier-info, .historier-container img {
-    width: 100%;
   }
 
   .historier-container h3, p {
@@ -537,10 +541,18 @@ main a:hover, footer a:hover{
     font-size: 1.2rem;
   }
 
-  .studie-container > ul li{
-    font-size: 0.9rem;
+  main>section{
+    width: 87vw; 
+  }
+  main>section>section{
+    width: 80vw;
   }
 
+  .studie-container > ul li{
+    font-size: 0.8rem;
+  }
+
+  /*fjerner pilen på slutten av studie anbefalingene, slik at det er mer plass for tekst*/
   .studie-container::after {
     content: '';
   }

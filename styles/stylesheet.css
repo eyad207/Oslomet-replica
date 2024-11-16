@@ -246,17 +246,11 @@ main > section ul li::before {
 
 main > section ul li a,
 main > section p a {
-  color: #007acc;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-main > section ul li a:hover,
-main > section p a:hover {
-  text-decoration: underline;
-  color: #005fa3;
-}
 
 
 .studieår ul {
@@ -462,6 +456,7 @@ main a, footer a{
 
 main a:hover, footer a:hover{
   border-bottom: 0.15rem solid #111;
+  transform: translateY(0.1rem);
 }
 
 .sub-menu {
@@ -561,12 +556,14 @@ main a:hover, footer a:hover{
     text-align: center;
   }
 
-  footer>ul>li {
-    margin-right: 2rem;
-  }
   footer> ul{
+    width: fit-content;
     flex-direction: column;
     align-items: center;
+  }
+
+  footer li{
+    width: 100%;
   }
   footer nav {
     margin-left: 0;
@@ -589,6 +586,9 @@ main a:hover, footer a:hover{
   .firstpicture{
     width: 95%;
   }
+  main{
+    margin-top: 1rem;
+  }
   
   nav > button, nav > a {
     margin-left: 1em;
@@ -604,12 +604,12 @@ main a:hover, footer a:hover{
   }
 
   main>h1 {
-    font-size: 1.8rem;
-    width: 90vw; 
+    font-size: 1.6rem;
+    width: 90%; 
   }
   main>h2{
     font-size: 1.4rem;
-    width: 90vw; 
+    width: 90%; 
   }
   main>p{
     width: 90%;
@@ -633,8 +633,6 @@ main a:hover, footer a:hover{
   }
   main>div ul {
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     padding: 0;
 }
 

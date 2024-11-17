@@ -198,7 +198,7 @@ main section{
 .studieår ul li strong {
   font-size: 1rem;
   margin-top: 0.8rem;
-  color: #CCAA00;
+  color: #806b00;
 }
 
 .studieår ul li span {
@@ -405,7 +405,7 @@ main a:hover, footer a:hover{
   border-top: 1px solid #111;
   padding: 0;
   padding-left: 16%;
-  width: 84%;
+  width: 84%; /* Er 84% siden padding-left tar opp plassen for de resterende 14% */
   margin: 0;
   left: 0em;
   top: 5.6em;

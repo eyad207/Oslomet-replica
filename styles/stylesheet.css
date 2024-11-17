@@ -75,6 +75,7 @@ main>p{
   text-align: center; /**/
   font-weight: 400;
   width: 60%; /**/
+  margin-bottom: 3em;
 }
 
 #accessibility-text  > p, #accessibility-text > h1{

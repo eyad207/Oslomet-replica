@@ -150,7 +150,6 @@ button:focus, button:hover, nav>a:not(:first-child):hover {
 }
 
 nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
- 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

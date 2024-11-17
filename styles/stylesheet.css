@@ -182,23 +182,19 @@ nav > button:focus + .sub-menu {
 
 
 main > section {
+  display: flex;
+  flex-direction: column;
   width: 65vw;
-  align-items: center;
   padding: 1.5rem;
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
 }
 
-main > section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
-
 
 main > section h3 {
+  margin-top: 0;
   font-size: 2rem;
-  margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -210,7 +206,9 @@ main > section p {
   font-size: 1.2rem;
   color: #555;
   line-height: 1.8;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
 }
 
 
@@ -223,51 +221,6 @@ main a{
   border-bottom: solid 0.15rem #ffd500;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-
-.info-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 3rem;
-  width: 70%;
-}
-
-
-.info-section > section {
-  flex: 1;
-  border-radius: 10px;
-  transition: transform 0.3s , box-shadow 0.3s ;
-  overflow: hidden;
-  display: flex;
-  padding: 3rem;
-
-  flex-direction: column;
-}
-.info-section>section:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
-
-
-.info-section > section h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
-  text-align: center;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
-}
-
-
-.info-section > section p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 0;
-}
-
 
 
 .studieår ul {

@@ -397,7 +397,6 @@ main a:hover, footer a:hover{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
   opacity: 0;
   font-size: 0;
   position: absolute;
@@ -405,6 +404,8 @@ main a:hover, footer a:hover{
   border-bottom: 1px solid #111;
   border-top: 1px solid #111;
   padding: 0;
+  padding-left: 16%;
+  width: 84%;
   margin: 0;
   left: 0em;
   top: 5.6em;

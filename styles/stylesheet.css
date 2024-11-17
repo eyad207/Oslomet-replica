@@ -221,6 +221,11 @@ main a{
   border-bottom: solid 0.15rem #ffd500;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
+.studiets-oppbygging{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 
 .studieår ul {
@@ -247,6 +252,7 @@ main a{
   justify-content: center;
   flex-direction: row;
   gap: 3rem;
+  width: 100%;
 }
 
 .studieår section {
@@ -255,7 +261,6 @@ main a{
   background: #fff;
   border-radius: 6px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  text-align: left;
 }
 .studieår section h4 {
   text-align: center;
@@ -265,11 +270,12 @@ main a{
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 1.3rem;
   font-size: 0.85rem;
   text-align: left;
   color: #666;
   margin-bottom: 1rem;
+  padding-left: 0;
 }
 
 

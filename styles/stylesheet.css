@@ -149,9 +149,16 @@ button:focus, button:hover, nav>a:not(:first-child):hover {
   cursor: pointer;
 }
 
-nav button:focus-within + .sub-menu, .sub-menu:focus-within, nav > button:focus + .sub-menu {
+nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
   /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
   Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
+  opacity: 1;
+  font-size: inherit;
+  transition: 0.1s;
+}
+.sub-menu:focus-within { 
+  /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
+  man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
   opacity: 1;
   font-size: inherit;
 }

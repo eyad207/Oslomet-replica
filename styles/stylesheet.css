@@ -149,10 +149,11 @@ button:focus, button:hover, nav>a:not(:first-child):hover {
   cursor: pointer;
 }
 
-nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+nav button:focus-within + .sub-menu, .sub-menu:focus-within, nav > button:focus + .sub-menu {
+  /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
+  Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
+  opacity: 1;
+  font-size: inherit;
 }
 
 table {
@@ -393,8 +394,12 @@ main a:hover, footer a:hover{
 }
 
 .sub-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
-  display: none;
+  opacity: 0;
+  font-size: 0;
   position: absolute;
   background-color: var(--maincolor);
   border-bottom: 1px solid #111;

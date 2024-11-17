@@ -218,8 +218,9 @@ main > section ul {
 
 main a{
   font-weight: 500;
-  text-decoration:  underline #ffd500 0.1rem;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition: color 0.3s;
+  text-decoration: none;
+  border-bottom: solid 0.15rem #ffd500;
 }
 .studiets-oppbygging{
   display: flex;
@@ -239,6 +240,7 @@ main a{
   font-size: 1.1rem;
   margin-bottom: 0.9rem;
 }
+
 
 .studieår ul li strong {
   font-size: 1rem;
@@ -420,6 +422,8 @@ footer ul{
 }
 
 footer address span{
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
 }
 
@@ -446,11 +450,11 @@ footer>ul>li>img {
 
 main a, footer a{
   color: #111;
-  transition: text-decoration 0.4s;
+  text-decoration: none;
 }
 
 main a:hover, footer a:hover{
-  text-decoration:  underline #111 0.15rem;
+  border-bottom: solid #111;
 }
 
 .sub-menu {

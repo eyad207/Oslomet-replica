@@ -218,7 +218,7 @@ main > section ul {
 
 main a{
   font-weight: 500;
-  border-bottom: solid 0.15rem #ffd500;
+  text-decoration:  underline #ffd500 0.1rem;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 .studiets-oppbygging{
@@ -234,8 +234,9 @@ main a{
 }
 
 .studieår ul li {
-  font-size: 0.95rem;
-  align-items: left;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
   margin-bottom: 0.9rem;
 }
 
@@ -249,7 +250,6 @@ main a{
 .studieår {
   display: flex;
   align-items: stretch;
-  justify-content: center;
   flex-direction: row;
   gap: 3rem;
   width: 100%;
@@ -258,12 +258,21 @@ main a{
 .studieår section {
   width: 100%;
   margin-bottom: 1.5rem;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: rgb(240, 240, 240) ;
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+
 }
+.studieår section:hover{
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5rem);
+}
+
 .studieår section h4 {
   text-align: center;
+  font-size: 1.4rem;
 }
 
 .ikoner {
@@ -438,12 +447,10 @@ footer>ul>li>img {
 main a, footer a{
   color: #111;
   transition: text-decoration 0.4s;
-  text-decoration: none;
 }
 
 main a:hover, footer a:hover{
-  border-bottom: 0.15rem solid #111;
-  transform: translateY(0.1rem);
+  text-decoration:  underline #111 0.15rem;
 }
 
 .sub-menu {

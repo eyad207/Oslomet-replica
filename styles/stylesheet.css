@@ -24,7 +24,6 @@ header {
 header nav {
   display: flex;
   width: inherit;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
@@ -88,20 +87,11 @@ main>p{
   margin-bottom: 3em;
 }
 
-#accessibility-text  > p, #accessibility-text > h1{
+#accessibility  > p, #accessibility > h1{
   width: 70vw;
 }
 
-#accessibility-text p a {
-  color: blue;
-  text-decoration-color: blue;
-}
-#accessibility-text p a:visited {
-  color: rgb(78, 17, 169);
-  text-decoration-color: rgb(78, 17, 169);
-}
-
-#accessibility-text p, #accesibility-text a{
+#accessibility p, #accesibility a{
   font-size: 1.1em;
 } 
 
@@ -116,6 +106,9 @@ header nav button, header nav > a:not(:first-child) {
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
+nav>a:not(:first-child):hover, nav>a:not(:first-child):focus, nav li a:hover, nav li a:focus {
+  text-decoration: underline;
+}
 
 nav > a:not(:first-child) {
   position: absolute;
@@ -124,6 +117,7 @@ nav > a:not(:first-child) {
   color: inherit; /* Gjør at linken arver fargen til knappen */
   padding: 0.2em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
   border: solid #111 0.1rem;
+  text-decoration-color: #000;
 }
 
 nav img {
@@ -214,13 +208,12 @@ main > section {
   margin-bottom: 2rem;
 }
 
-/* Overskrift i seksjoner */
-main > section h3 {
+
+main > section>h3 {
   margin-top: 0;
   font-size: 2rem;
   font-weight: 700;
-  text-transform: uppercase; /* Gjør teksten store bokstaver */
-  letter-spacing: 1.5px; /* Øker avstanden mellom bokstaver */
+  letter-spacing: 1.5px;
   padding-bottom: 10px;
 }
 
@@ -241,8 +234,8 @@ main > section ul {
   margin: 0.5rem 0;
 }
 
-/* Lenker innenfor main*/
-main a {
+
+#mat-mod a{
   font-weight: 500;
   transition: color 0.3s; /* Glatt overgang for fargeendring */
   text-decoration: none; /* Fjerner understrek */
@@ -275,7 +268,7 @@ main a {
 .studieår ul li strong {
   font-size: 1.1rem;
   margin-top: 0.8rem;
-  color: #9b8100; /* Fremhevet gullfarge */
+  color: #746301;
 }
 
 /* Layout for studieår div */
@@ -333,7 +326,6 @@ main a {
 
 .flere-studier-section ul li{
   margin-bottom: 1.3em;
-  margin-top: 0.5em;
   list-style: none;
 
 }
@@ -347,12 +339,14 @@ main a {
   position: relative;
 }
 
-.studie-container h4{
+.studie-container h3{
+  font-size: 1em;
   margin: 0;
+  padding: 0;
 }
 
 .studie-container ul{
-  padding-left: 0.3rem;
+  padding-left: 0;
 }
 
 /*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
@@ -400,8 +394,9 @@ main a {
   background-color: var(--maincolor);
 }
 
-.historier-container > div h3{
+.historier-container > div span{
   text-decoration: underline;
+  font-weight: 600;
 }
 
 /*Footer*/
@@ -505,19 +500,19 @@ footer>ul>li>img {
   margin-right: 0.5rem;
 }
 
-main a, footer a{
+#mat-mod a, footer a{
   color: #111;
   text-decoration: none;
 }
 footer a:hover{
   border-bottom: solid 0.1rem #111;
 }
-main a:hover h4{
+#mat-mod a:hover h4{
   text-decoration: underline;
   color: #5f5f70;
 }
 
-main a:hover{
+#mat-mod a:hover{
   border-bottom: 0.15rem solid #111;
 }
 
@@ -561,6 +556,17 @@ main a:hover{
   text-decoration-color: var(--maincolor);
   color: var(--maincolor);
   transition: 0.5s;
+}
+
+#accessibility > p >a {
+  color: blue;
+  text-decoration-color: blue;
+  border-bottom: 0; /* Den er default satt pga. "main a" sitt attributt */
+}
+#accessibility > p > a:visited {
+  color: rgb(78, 17, 169);
+  text-decoration-color: rgb(78, 17, 169);
+  border-bottom: 0; /* Den er default satt pga. "main a" sitt attributt */
 }
 
 /*GITHUB SIDE*/

@@ -548,11 +548,7 @@ main a:hover{
 }
 
 /*GITHUB SIDE*/
-.firstpicture {
-  width: 70%;
-  max-height: 35em;
-  margin: auto;
-}
+
 /*Grid*/
 .container{
   width: 70vw;
@@ -577,10 +573,10 @@ main a:hover{
   gap: 2em;
   justify-content: center;
   object-fit: cover;
+  
 }
 .git_bilder img{
   height: 30vw;
-  width: auto;
 }
 
 

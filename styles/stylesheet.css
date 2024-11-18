@@ -24,7 +24,6 @@ header {
 header nav {
   display: flex;
   width: inherit;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
@@ -116,6 +115,9 @@ header nav button, header nav > a:not(:first-child) {
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
+nav>a:not(:first-child):hover, nav>a:not(:first-child):focus, nav li a:hover, nav li a:focus {
+  text-decoration: underline;
+}
 
 nav > a:not(:first-child) {
   position: absolute;
@@ -124,6 +126,7 @@ nav > a:not(:first-child) {
   color: inherit; /* Gjør at linken arver fargen til knappen */
   padding: 0.2em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
   border: solid #111 0.1rem;
+  text-decoration-color: #000;
 }
 
 nav img {
@@ -530,6 +533,7 @@ main a:hover{
   margin: 0;
   left: 0em;
   top: 5.6em;
+  text-decoration-color: yellow;
   z-index: 2;
 }
 .sub-menu li {

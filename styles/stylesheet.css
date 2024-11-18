@@ -87,20 +87,11 @@ main>p{
   margin-bottom: 3em;
 }
 
-#accessibility-text  > p, #accessibility-text > h1{
+#accessibility  > p, #accessibility > h1{
   width: 70vw;
 }
 
-#accessibility-text p a {
-  color: blue;
-  text-decoration-color: blue;
-}
-#accessibility-text p a:visited {
-  color: rgb(78, 17, 169);
-  text-decoration-color: rgb(78, 17, 169);
-}
-
-#accessibility-text p, #accesibility-text a{
+#accessibility p, #accesibility a{
   font-size: 1.1em;
 } 
 
@@ -245,7 +236,7 @@ main > section ul {
 }
 
 
-main a{
+#mat-mod a{
   font-weight: 500;
   transition: color 0.3s;
   text-decoration: none;
@@ -501,19 +492,19 @@ footer>ul>li>img {
   margin-right: 0.5rem;
 }
 
-main a, footer a{
+#mat-mod a, footer a{
   color: #111;
   text-decoration: none;
 }
 footer a:hover{
   border-bottom: solid 0.1rem #111;
 }
-main a:hover h4{
+#mat-mod a:hover h4{
   text-decoration: underline;
   color: #5f5f70;
 }
 
-main a:hover{
+#mat-mod a:hover{
   border-bottom: 0.15rem solid #111;
 }
 
@@ -533,7 +524,6 @@ main a:hover{
   margin: 0;
   left: 0em;
   top: 5.6em;
-  text-decoration-color: yellow;
   z-index: 2;
 }
 .sub-menu li {
@@ -558,6 +548,17 @@ main a:hover{
   text-decoration-color: var(--maincolor);
   color: var(--maincolor);
   transition: 0.5s;
+}
+
+#accessibility > p >a {
+  color: blue;
+  text-decoration-color: blue;
+  border-bottom: 0; /* Den er default satt pga. "main a" sitt attributt */
+}
+#accessibility > p > a:visited {
+  color: rgb(78, 17, 169);
+  text-decoration-color: rgb(78, 17, 169);
+  border-bottom: 0; /* Den er default satt pga. "main a" sitt attributt */
 }
 
 /*GITHUB SIDE*/

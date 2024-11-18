@@ -232,6 +232,7 @@ main > section ul {
   margin: 0;
 }
 
+
 main a{
   font-weight: 500;
   transition: color 0.3s;
@@ -436,10 +437,13 @@ footer>div, footer>ul{
   justify-content: space-between; /**/
 }
 
-footer address>h3{
+footer>div>section>h3{
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-weight: 600;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 footer ul{
@@ -447,7 +451,7 @@ footer ul{
   margin-top: 0;
 }
 
-footer address span{
+footer>div>section span{
   font-weight: 400;
 }
 

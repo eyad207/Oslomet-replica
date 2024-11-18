@@ -50,7 +50,9 @@ main {
 }
 
 h1, h2, h3, p{
-  color: #111;                       
+  color: #111;
+  text-align: left;
+  width: 60vw;
 }
 
 p{
@@ -61,8 +63,6 @@ p{
 h1 {
   font-size: 3rem;
   font-weight: 700;
-  text-align: center; /**/
-  width: 75vw;
 }
 
 main>h2 {
@@ -72,9 +72,7 @@ main>h2 {
 
 main>p{
   font-size: 1.5rem;
-  text-align: center; /**/
   font-weight: 400;
-  width: 60%; /**/
   margin-bottom: 3em;
 }
 
@@ -153,7 +151,7 @@ nav a:hover, nav a:focus, nav li a:hover, nav li a:focus {
 
 
 .studieinfo-div {
-  width: 65vw;
+  width: 60vw;
   margin-top: 1.5rem;
   margin-bottom: 3.5rem;
 }
@@ -175,7 +173,7 @@ nav a:hover, nav a:focus, nav li a:hover, nav li a:focus {
   border-radius: 0.313rem;
   border-top: solid 0.1rem #111;
   border-bottom: solid 0.1rem #111;
-  min-width: 10rem;
+  width: 9rem;
   text-align: center;
   margin-top: 0.5rem;
 }

@@ -115,6 +115,10 @@ nav img {
   width: 7.5em;
   margin-right: 2em;
 }
+nav img:hover {
+  transform: scale(1.4);
+  transition: 0.2s;
+}
 
 table {
   margin-top: 1em;
@@ -157,6 +161,11 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
   font-size: inherit;
   transition: 0.1s;
 }
+nav a:hover, nav a:focus, nav li a:hover, nav li a:focus {
+  text-decoration: underline;
+}
+
+
 .sub-menu:focus-within { 
   /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
   man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
@@ -417,6 +426,7 @@ main a:hover, footer a:hover{
   margin: 0;
   left: 0em;
   top: 5.6em;
+  text-decoration-color: yellow;
   z-index: 2;
 }
 .sub-menu li {
@@ -438,6 +448,7 @@ main a:hover, footer a:hover{
 }
 .sub-menu li:hover {
   background-color: black;
+  text-decoration-color: var(--maincolor);
   color: var(--maincolor);
   transition: 0.5s;
 }

@@ -1,15 +1,16 @@
+/*
+List of contents:
+  -Header
+  -Main body
+*/
+
 :root{
   --maincolor: #ffd500;
 }
 
+/*HEADER*/
 header, footer {
   background-color: var(--maincolor);
-}
-
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  justify-content: center;
 }
 
 header {
@@ -35,6 +36,13 @@ header nav {
   background-color: inherit;
   position: sticky;
   top: 0;
+}
+
+/*Main body*/
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
 }
 
 main {
@@ -210,7 +218,7 @@ main > section h3 {
 
 main > section p {
   font-size: 1.2rem;
-  color: #555;
+  color: #222222;
   line-height: 1.8;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -220,7 +228,7 @@ main > section p {
 main > section ul {
   margin: 0;
   font-size: 1rem;
-  color: #555;
+  color: #222222;
   line-height: 1.8;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -253,7 +261,6 @@ main a{
   margin-bottom: 0.9rem;
 
 }
-
 
 .studieår ul li strong {
   margin-top: 0.8rem;
@@ -378,10 +385,11 @@ main a{
   text-decoration: underline;
 }
 
+/*Footer*/
 footer{
   display: flex;
   flex-direction: column;
-  align-items: center; /**/
+  align-items: center; 
   padding-top: 3em;
   padding-bottom: 2rem;
 }
@@ -393,7 +401,7 @@ footer>div{
 
 footer>section{
   display: flex;
-  align-items: center; /**/
+  align-items: center; 
   justify-content: space-between;
   margin-bottom: 1.25rem;
   border-bottom: 2px solid #000;

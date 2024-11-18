@@ -580,7 +580,6 @@ main a:hover{
   gap: 2em;
   justify-content: center;
   object-fit: cover;
-  
 }
 .git_bilder img{
   height: 30vw;
@@ -671,6 +670,22 @@ main a:hover{
   footer>div{
     gap: 0;
   }
+
+  .container{
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: medium;
+  }
+  .git_bilder{
+    gap: 1em;
+    flex-wrap:wrap;
+  }
+
+  .git_bilder img{
+    height: 60vw;
+  }
+
 
 }
 

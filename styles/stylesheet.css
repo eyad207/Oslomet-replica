@@ -157,160 +157,168 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
   font-size: inherit;
 }
 
-
+/* Egenskaper for studieinfo-div */
 .studieinfo-div {
   width: 65vw;
   margin-top: 1.5rem;
   margin-bottom: 3.5rem;
 }
 
-
+/* Listeinnhold i "studieinfo-div" */
 .studieinfo-div ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* Gjør listen fleksibel for enklere layout */
+  flex-wrap: wrap; /* Tillater bryting til flere rader */
   padding: 0;
   margin: 0;
-  gap: 1rem;
+  gap: 1rem; /* Avstand mellom listeelementer */
 }
 
-
+/* Listeelementer i "studieinfo-div" */
 .studieinfo-div li {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Vertikal struktur for innholdet */
   padding: 1.5rem;
-  border-radius: 0.313rem;
+  border-radius: 0.313rem; /* Runde hjørner */
   border-top: solid 0.1rem #111;
   border-bottom: solid 0.1rem #111;
-  min-width: 10rem;
+  min-width: 10rem; /* Minimum bredde for konsistent størrelse */
   text-align: center;
   margin-top: 0.5rem;
 }
 
+/* Første span i hvert listeelement innenfor studieinfo-div */
 .studieinfo-div li span:first-child {
   font-weight: bold;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
-
+/* Siste span i hvert listeelement innenfor studieinfo-div */
 .studieinfo-div li span:last-child {
   color: #444;
 }
 
-.studieinfo-div span{
+/* Generell tekststørrelse for span-elementer innenfor studieinfo-div*/
+.studieinfo-div span {
   font-size: 1.2rem;
 }
 
-
+/* Sections selementer i main */
 main > section {
   display: flex;
-  flex-direction: column;
-  width: 65vw;
+  flex-direction: column; /* Vertikal struktur */
+  width: 65vw; /* Bredde som tilpasses visningsområdet (65vw)*/
   padding: 1.5rem;
   border-radius: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Glatte overganger */
   margin-bottom: 2rem;
 }
 
-
+/* Overskrift i seksjoner */
 main > section h3 {
   margin-top: 0;
   font-size: 2rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  text-transform: uppercase; /* Gjør teksten store bokstaver */
+  letter-spacing: 1.5px; /* Øker avstanden mellom bokstaver */
   padding-bottom: 10px;
 }
 
-
+/* Avsnitt i seksjoner */
 main > section p {
   font-size: 1.2rem;
   color: #222222;
-  line-height: 1.8;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  line-height: 1.8; /* Øker linjeavstanden for bedre lesbarhet */
+  margin: 0.5rem 0;
 }
 
-
+/* Lister i seksjoner innenfor main */
 main > section ul {
   margin: 0;
   font-size: 1rem;
   color: #222222;
   line-height: 1.8;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
 }
 
-
-main a{
+/* Lenker innenfor main*/
+main a {
   font-weight: 500;
-  transition: color 0.3s;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #ffd500;
+  transition: color 0.3s; /* Glatt overgang for fargeendring */
+  text-decoration: none; /* Fjerner understrek */
+  border-bottom: solid 0.15rem #ffd500; /* Marker lenker med en gul linje */
 }
-.studiets-oppbygging{
+
+/* Struktur for studiets-oppbygging section */
+.studiets-oppbygging {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Sentraliserer innhold vertikalt */
+  justify-content: space-between; /* Fordeler innhold horisontalt */
 }
 
-
+/* Liste innstillinger i"studieår-seksjonen */
 .studieår ul {
-  list-style: none;
+  list-style: none; /* Fjerner standard listepunkter */
   padding-left: 0.5rem;
   text-align: left;
 }
 
+/* Liste elementer i"studieår */
 .studieår ul li {
   display: flex;
   flex-direction: column;
   font-size: 1.1rem;
   margin-bottom: 0.9rem;
-
 }
 
+/* Listeelementer sin tekst innenfor studieår */
 .studieår ul li strong {
   font-size: 1.1rem;
   margin-top: 0.8rem;
-  color: #9b8100;
+  color: #9b8100; /* Fremhevet gullfarge */
 }
 
-
+/* Layout for studieår div */
 .studieår {
   display: flex;
   align-items: stretch;
   flex-direction: row;
-  gap: 3rem;
+  gap: 3rem; /* Avstand mellom seksjoner */
   width: 100%;
 }
 
+/* Seksjoner i studieår */
 .studieår section {
   width: 100%;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1); /* Myk skygge */
   text-align: center;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s; /* Overgangseffekter */
 }
 
-.studieår section:hover{
-  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-0.5rem);
+/* Hover-effekt for studieår seksjoner */
+.studieår section:hover {
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1); /* Økt skygge ved hover */
+  transform: translateY(-0.5rem); /* Løfter seksjonen litt */
 }
 
+/* Overskrifter i studieår seksjoner */
 .studieår section h4 {
   text-align: center;
   font-size: 1.4rem;
 }
 
-.studieår span:first-child{
+/* Første span i studieår - fremhevet tekst */
+.studieår span:first-child {
   font-weight: bold;
   color: #222;
   margin-bottom: 0.5rem;
 }
 
+/* Ikonliste */
 .ikoner {
-  list-style-type: none;
+  list-style-type: none; /* Fjerner standard listepunkter */
   display: flex;
   flex-direction: row;
   gap: 1.3rem;
@@ -320,6 +328,7 @@ main a{
   margin-bottom: 1rem;
   padding-left: 0;
 }
+
 
 
 .flere-studier-section ul li{
@@ -408,17 +417,17 @@ footer>section,
 footer>div{
   width: 75vw;
 }
-
+/* Styling for seksjon i footer */
 footer>section{
   display: flex;
-  align-items: center; 
+  align-items: center;  /* Vertikal oppsett */
   justify-content: space-between;
   margin-bottom: 1.25rem;
   border-bottom: 2px solid #000;
   padding-bottom: 3rem;
 }
-
-section>button{
+/* Knapper i footer */
+footer button{
   padding: 0.8em;
   background-color: #111;
   color: white;
@@ -427,12 +436,10 @@ section>button{
   border-color: #111;
   font-size: 1rem;
   font-weight: 600;
-  transition: box-shadow 0.3s;
-  transition: background-color 0.3s;
-  transition: color 0.3s;
+  transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
 }
-
-section>button:hover{
+/* Hover-effekt for knapper */
+footer button:hover{
   box-shadow: 0 0 0.5rem #111; 
   background-color: white;
   color: #111;

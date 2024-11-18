@@ -58,7 +58,11 @@ main {
   margin-bottom: 3em;
   border-radius: 0.625rem;
 }
-
+main>h1, main>h2, 
+main>h3, main>p{
+  width: 65vw;
+  align-items: left;
+} 
 
 p{
   font-size: 1em;
@@ -67,12 +71,15 @@ p{
 
 h1 {
   font-size: 3rem;
-  text-align: center; /**/
 }
 
 main>h2 {
   font-size: 1.7rem;
   font-weight: 500;
+}
+main>h3{
+  font-size: 2rem;
+  text-align: center;
 }
 
 main>p{

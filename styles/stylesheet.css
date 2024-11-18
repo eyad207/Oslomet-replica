@@ -17,19 +17,21 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
+  border-bottom: solid 0.1rem #111;
 }
 
 header nav {
   display: flex;
   width: inherit;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
   padding-bottom: 1.3em;
   padding-top: 1.3em;
-  padding-left: 6em;
+  padding-left: 4em;
+  padding-right: 1rem;
   background-color: inherit;
   position: sticky;
   top: 0;
@@ -67,21 +69,28 @@ main>h2 {
 
 main>p{
   font-size: 1.5rem;
-  text-align: center; /**/
   font-weight: 400;
-  width: 60%; /**/
+  margin-bottom: 3em;
 }
 
 #accessibility-text  > p, #accessibility-text > h1{
-  width: 80vw;
+  width: 70vw;
 }
 
 #accessibility-text p a {
   color: blue;
-  font-size: 1em;
+  text-decoration-color: blue;
+}
+#accessibility-text p a:visited {
+  color: rgb(78, 17, 169);
+  text-decoration-color: rgb(78, 17, 169);
 }
 
-header nav button, header nav > a {
+#accessibility-text p, #accesibility-text a{
+  font-size: 1.1em;
+} 
+
+header nav button, header nav > a:not(:first-child) {
   padding: 0.6em;
   background-color: #111;
   color: white;
@@ -93,121 +102,208 @@ header nav button, header nav > a {
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
-nav > a {
+nav > a:not(:first-child) {
   position: absolute;
   right: 6em;
   text-decoration: none; /* Fjerner understrek på linken */
   color: inherit; /* Gjør at linken arver fargen til knappen */
   padding: 0.2em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  border: solid #111 0.1rem;
 }
 
 nav img {
-  justify-content: flex-end;
   height: 3em;
   width: 7.5em;
   margin-right: 2em;
 }
-
-table {
-  margin-top: 1em;
-  width: max(50vw);
-  border-collapse: collapse;
-  border: solid black 0.2rem;
-  margin-bottom: 4rem;  
-  font-size: 1.5rem;
-  text-align: left;
+nav img:hover {
+  transform: scale(1.4);
+  transition: 0.2s;
 }
 
-tr {
-  border: solid black 0.2rem;
-}
-
-th {
-  border: solid black 0.2rem;
-}
-
-th, td {
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
-  font-weight: 550;  
-  text-align: center;
-}
-
-button:focus, button:hover, nav>a:hover {
+button:focus, button:hover, nav>a:not(:first-child):hover {
   background-color: white;
   color: #111;
-  border: solid #111 0.1rem;
   cursor: pointer;
 }
 
-nav button:focus-within .sub-menu, .sub-menu:hover, nav > button:focus + .sub-menu {
- 
+nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
+  /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
+  Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
+  opacity: 1;
+  font-size: inherit;
+  transition: 0.1s;
+}
+
+.sub-menu:focus-within { 
+  /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
+  man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
+  opacity: 1;
+  font-size: inherit;
+}
+
+
+.studieinfo-div {
+  width: 65vw;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+
+.studieinfo-div ul {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
 }
 
-table {
-  margin-top: 1em;
-  width: max(60vw);
-  border-collapse: collapse;
-  margin-bottom: 4rem;  
-  font-size: 1.3rem;
-  text-align: left;
+
+.studieinfo-div li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 0.313rem;
+  border-top: solid 0.1rem #111;
+  border-bottom: solid 0.1rem #111;
+  min-width: 10rem;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
-tr, th {
-  border: solid #111 0.1rem;
+.studieinfo-div li span:first-child {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
-th, td {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  font-weight: 500;  
-  text-align: center; /**/
+
+.studieinfo-div li span:last-child {
+  color: #444;
 }
 
-main section{
-  width: max(60vw);
-  margin-bottom: 2em;
+.studieinfo-div span{
+  font-size: 1.2rem;
 }
+
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+
+main > section h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 10px;
+}
+
+
+main > section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+
+main > section ul {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+
+main a{
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+  border-bottom: solid 0.15rem #ffd500;
+}
+.studiets-oppbygging{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .studieår ul {
   list-style: none;
   padding-left: 0.5rem;
+  text-align: left;
 }
 
 .studieår ul li {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  align-items: center;
-  margin-bottom: 0.9rem; /* Mellomrom mellom elementene */
+  flex-direction: column;
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+
 }
+
 
 .studieår ul li strong {
   margin-top: 0.8rem;
   color: #CCAA00;
 }
 
-.studieår ul li span {
-  white-space: nowrap;
+
+.studieår {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  gap: 3rem;
+  width: 100%;
 }
+
 .studieår section {
+  width: 100%;
   margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
+
+.studieår section:hover{
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5rem);
+}
+
+.studieår section h4 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.studieår span:first-child{
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
 .ikoner {
-  display: inline block;
-  gap: 1rem;
-  font-size: 0.85rem;
-  color: #666;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #444;
   margin-bottom: 1rem;
+  padding-left: 0;
 }
 
 
@@ -220,6 +316,7 @@ main section{
   padding: 0;
 }
 
+/*negativ z-index for å unngå overlap problemer med header.*/
 .studie-container {
   z-index: -10;
   position: relative;
@@ -229,6 +326,11 @@ main section{
   margin: 0;
 }
 
+.studie-container ul{
+  padding-left: 0.3rem;
+}
+
+/*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
 .studie-container::after {
   content: '\203A';
   position: absolute;
@@ -241,14 +343,16 @@ main section{
   display: inline-block;
 }
 
+/*---------*/
+/*disse er for å style listen under studie anbefalingene*/
 .studie-container > ul li:not(:last-child){
   padding-right: 1em;
   border-right: 1px solid #222;
 }
-
 .studie-container > ul li:not(:first-child){
   padding-left: 1em;
 }
+/*---------*/
 
 .historier-container{
   display: grid;
@@ -329,10 +433,13 @@ footer>div, footer>ul{
   justify-content: space-between; /**/
 }
 
-footer address>h3{
+footer>div>section>h3{
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-weight: 600;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 footer ul{
@@ -340,12 +447,20 @@ footer ul{
   margin-top: 0;
 }
 
-footer address span{
+footer>div>section span{
   font-weight: 400;
 }
 
 footer>ul{
-  width: 50vw;
+  margin-top: 5rem;
+  width: 40vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer>ul>li{
+  margin-right: 0;
+
 }
 
 footer li{
@@ -367,29 +482,36 @@ footer>ul>li>img {
 
 main a, footer a{
   color: #111;
-  transition: text-decoration 0.4s;
   text-decoration: none;
+}
+footer a:hover{
+  border-bottom: solid 0.1rem #111;
 }
 main a:hover h4{
   text-decoration: underline;
   color: #5f5f70;
 }
 
-main a:hover, footer a:hover{
+main a:hover{
   border-bottom: 0.15rem solid #111;
 }
 
 .sub-menu {
-  width: 100%;
-  display: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  opacity: 0;
+  font-size: 0;
   position: absolute;
   background-color: var(--maincolor);
   border-bottom: 1px solid #111;
   border-top: 1px solid #111;
   padding: 0;
+  padding-left: 16%;
+  width: 84%; /* Er 84% siden padding-left tar opp plassen for de resterende 14% */
   margin: 0;
   left: 0em;
-  top: 5.65em;
+  top: 5.6em;
   z-index: 2;
 }
 .sub-menu li {
@@ -411,6 +533,7 @@ main a:hover, footer a:hover{
 }
 .sub-menu li:hover {
   background-color: black;
+  text-decoration-color: var(--maincolor);
   color: var(--maincolor);
   transition: 0.5s;
 }
@@ -449,13 +572,13 @@ main a:hover, footer a:hover{
   main>section{
     width: 70vw; 
   }
-
-  .historier-container{
-    grid-template-columns: 1fr;
+  .studieår{
+    flex-direction: column;
   }
 
-  .historier-info, .historier-container img {
-    width: 100%;
+  /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
+  .historier-container{
+    grid-template-columns: 1fr;
   }
 
   .historier-container h3, p {
@@ -479,7 +602,7 @@ main a:hover, footer a:hover{
   }
 
   footer>ul>li {
-    margin-right: 2rem;
+    width: 100%;
   }
   footer> ul{
     flex-direction: column;
@@ -503,13 +626,9 @@ main a:hover, footer a:hover{
 }
 
 @media (max-width: 768px) {
-  
-  nav > button, nav > a {
-    margin-left: 1em;
-  }
-  nav > a {
-    margin-left: auto;
-    margin-right: 1em;
+
+  header nav {
+    padding-left: 1em;
   }
 
   table{
@@ -527,10 +646,18 @@ main a:hover, footer a:hover{
     font-size: 1.2rem;
   }
 
-  .studie-container > ul li{
-    font-size: 0.9rem;
+  main>section{
+    width: 87vw; 
+  }
+  main>section>section{
+    width: 80vw;
   }
 
+  .studie-container > ul li{
+    font-size: 0.8rem;
+  }
+
+  /*fjerner pilen på slutten av studie anbefalingene, slik at det er mer plass for tekst*/
   .studie-container::after {
     content: '';
   }

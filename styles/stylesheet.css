@@ -560,6 +560,9 @@ main a:hover, footer a:hover{
   main>section{
     width: 70vw; 
   }
+  .studieår{
+    flex-direction: column;
+  }
 
   /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
   .historier-container{

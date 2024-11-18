@@ -23,6 +23,7 @@ header {
 header nav {
   display: flex;
   width: inherit;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
@@ -633,13 +634,7 @@ main a:hover, footer a:hover{
 }
 
 @media (max-width: 768px) {
-  
-  nav > button, nav > a:not(:first-child) {
-    margin-left: 1em;
-  }
-  nav > a:not(:first-child) {
-    right: 3em;
-  }
+
   header nav {
     padding-left: 1em;
   }

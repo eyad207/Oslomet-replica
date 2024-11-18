@@ -60,7 +60,6 @@ main {
 main>h1, main>h2, 
 main>h3, main>p{
   width: 65vw;
-  align-items: left;
 } 
 
 p{
@@ -418,7 +417,6 @@ section>button{
   color: white;
   border-radius: 0.6rem;
   border-width: 0.1rem;
-  border-color: #111;
   font-size: 1rem;
   font-weight: 600;
   transition: box-shadow 0.3s;

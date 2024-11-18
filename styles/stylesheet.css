@@ -28,10 +28,10 @@ header nav {
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
   padding-bottom: 1.3em;
   padding-top: 1.3em;
-  padding-left: 6em;
+  padding-left: 4em;
+  padding-right: 1rem;
   background-color: inherit;
   position: sticky;
   top: 0;
@@ -112,6 +112,7 @@ nav > a:not(:first-child) {
   text-decoration: none; /* Fjerner understrek på linken */
   color: inherit; /* Gjør at linken arver fargen til knappen */
   padding: 0.2em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
+  border: solid #111 0.1rem;
 }
 
 nav img {
@@ -127,7 +128,6 @@ nav img:hover {
 button:focus, button:hover, nav>a:not(:first-child):hover {
   background-color: white;
   color: #111;
-  border: solid #111 0.1rem;
   cursor: pointer;
 }
 
@@ -138,10 +138,6 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
   font-size: inherit;
   transition: 0.1s;
 }
-nav a:hover, nav a:focus, nav li a:hover, nav li a:focus {
-  text-decoration: underline;
-}
-
 
 .sub-menu:focus-within { 
   /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
@@ -492,15 +488,17 @@ footer>ul>li>img {
 
 main a, footer a{
   color: #111;
-  transition: text-decoration 0.4s;
   text-decoration: none;
+}
+footer a:hover{
+  border-bottom: solid 0.1rem #111;
 }
 main a:hover h4{
   text-decoration: underline;
   color: #5f5f70;
 }
 
-main a:hover, footer a:hover{
+main a:hover{
   border-bottom: 0.15rem solid #111;
 }
 

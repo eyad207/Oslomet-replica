@@ -84,6 +84,11 @@ main>p{
 
 #accessibility-text p a {
   color: blue;
+  text-decoration-color: blue;
+}
+#accessibility-text p a:visited {
+  color: rgb(78, 17, 169);
+  text-decoration-color: rgb(78, 17, 169);
 }
 
 #accessibility-text p, #accesibility-text a{
@@ -426,7 +431,6 @@ main a:hover, footer a:hover{
   margin: 0;
   left: 0em;
   top: 5.6em;
-  text-decoration-color: yellow;
   z-index: 2;
 }
 .sub-menu li {

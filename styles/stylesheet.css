@@ -59,7 +59,7 @@ main {
   border-radius: 0.625rem;
 }
 main>h1, main>h2, 
-main>h3{
+main>h3, main>p{
   width: 65vw;
   align-items: left;
 } 
@@ -597,10 +597,14 @@ main a:hover{
 @media (max-width: 1200px) {
 
   .firstpicture{
-    width: 80vw;
+    width: 90vw;
     justify-content: center;
+    margin-bottom: 1rem;
+
   }
-  
+  main>h1, main>h2, main>p, main>section{
+    width: 90vw;
+  }
   h1{
     font-size: 2.2rem;
     align-items: center;
@@ -609,19 +613,15 @@ main a:hover{
   h2{
     font-size: 1.7rem;
   }
-
-  main>table{
-    font-size: 1.3rem;
-    width: 80vw;
+  .studieinfo-div ul{
+    justify-content: center;
+    width: fit-content;
   }
 
   section p{
     font-size: 1.1rem;
   }
   
-  main>section{
-    width: 70vw; 
-  }
   .studieår{
     flex-direction: column;
   }
@@ -657,6 +657,8 @@ main a:hover{
   footer> ul{
     flex-direction: column;
     align-items: center;
+    width: fit-content;
+    margin-top: 2rem;
   }
   footer nav {
     margin-left: 0;

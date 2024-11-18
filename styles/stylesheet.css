@@ -125,33 +125,6 @@ nav img:hover {
   transition: 0.2s;
 }
 
-table {
-  margin-top: 1em;
-  width: max(50vw);
-  border-collapse: collapse;
-  border: solid black 0.2rem;
-  margin-bottom: 4rem;  
-  font-size: 1.5rem;
-  text-align: left;
-}
-
-tr {
-  border: solid black 0.2rem;
-}
-
-th {
-  border: solid black 0.2rem;
-}
-
-th, td {
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
-  font-weight: 550;  
-  text-align: center;
-}
-
 button:focus, button:hover, nav>a:not(:first-child):hover {
   background-color: white;
   color: #111;
@@ -178,67 +151,163 @@ nav a:hover, nav a:focus, nav li a:hover, nav li a:focus {
   font-size: inherit;
 }
 
-table {
-  margin-top: 1em;
-  width: max(60vw);
-  border-collapse: collapse;
-  margin-bottom: 4rem;  
-  font-size: 1.3rem;
-  text-align: left;
+
+.studieinfo-div {
+  width: 65vw;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
-tr, th {
-  border: solid #111 0.1rem;
+
+.studieinfo-div ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
 }
 
-th, td {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  font-weight: 500;  
-  text-align: center; /**/
+
+.studieinfo-div li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 0.313rem;
+  border-top: solid 0.1rem #111;
+  border-bottom: solid 0.1rem #111;
+  min-width: 10rem;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
-main section{
-  width: max(60vw);
-  margin-bottom: 2em;
+.studieinfo-div li span:first-child {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
-.studieår ul, .flere-studier-section ul {
+
+.studieinfo-div li span:last-child {
+  color: #444;
+}
+
+.studieinfo-div span{
+  font-size: 1.2rem;
+}
+
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+
+main > section h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 10px;
+}
+
+
+main > section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
+}
+
+
+main > section ul {
+  margin: 0;
+}
+
+main a{
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+  border-bottom: solid 0.15rem #ffd500;
+}
+.studiets-oppbygging{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.studieår ul {
   list-style: none;
   padding-left: 0.5rem;
 }
 
 .studieår ul li {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  font-size: 0.95rem;
-  align-items: center;
-  margin-bottom: 0.9rem; /* Mellomrom mellom elementene */
+  flex-direction: column;
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
 }
+
 
 .studieår ul li strong {
   font-size: 1rem;
   margin-top: 0.8rem;
-  color: #806b00;
+  color: #CCAA00;
 }
 
-.studieår ul li span {
-  white-space: nowrap;
+
+.studieår {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  gap: 3rem;
+  width: 100%;
 }
+
 .studieår section {
+  width: 100%;
   margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: rgb(240, 240, 240) ;
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+
 }
+.studieår section:hover{
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5rem);
+}
+
+.studieår section h4 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.studieår span:first-child{
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
 .ikoner {
-  display: inline block;
-  gap: 1rem;
-  font-size: 0.85rem;
-  color: #666;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #444;
   margin-bottom: 1rem;
+  padding-left: 0;
 }
 
 

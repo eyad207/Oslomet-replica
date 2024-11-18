@@ -263,8 +263,9 @@ main a{
 }
 
 .studieår ul li strong {
+  font-size: 1.1rem;
   margin-top: 0.8rem;
-  color: #CCAA00;
+  color: #9b8100;
 }
 
 

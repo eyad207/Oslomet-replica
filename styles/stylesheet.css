@@ -450,7 +450,13 @@ footer address span{
 }
 
 footer>ul{
-  width: 50vw;
+  width: fit-content;
+  align-items: center;
+}
+
+footer>ul>li{
+  margin-right: 0;
+
 }
 
 footer li{
@@ -590,7 +596,7 @@ main a:hover, footer a:hover{
   }
 
   footer>ul>li {
-    margin-right: 2rem;
+    width: 100%;
   }
   footer> ul{
     flex-direction: column;

@@ -184,7 +184,7 @@ nav > button:focus + .sub-menu {
 main > section {
   display: flex;
   flex-direction: column;
-  width: 65vw;
+  width: 60vw;
   padding: 1.5rem;
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -277,14 +277,20 @@ main a{
   font-size: 1.4rem;
 }
 
+.studieår span:first-child{
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
 .ikoner {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   gap: 1.3rem;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   text-align: left;
-  color: #666;
+  color: #444;
   margin-bottom: 1rem;
   padding-left: 0;
 }
@@ -523,10 +529,12 @@ main a:hover, footer a:hover{
   }
 
   main>section{
-    width: 70vw; 
+    width: 60%;
   }
 
-
+  .studieår{
+    flex-direction: column;
+  }
 
   .historier-container{
     grid-template-columns: 1fr;

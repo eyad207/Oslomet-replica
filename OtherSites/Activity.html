@@ -1,65 +1,97 @@
-<!doctype html> <!--avklarer html-->
-<html lang="no"> <!--start tag-->
-<head> <!--informasjon om nettstedet-->
-    <title> Hamburger </title> <!--tittelet til nettisden-->
-    <meta charset="utf-8"> <!--viser at vi bruker utf-8 for flere tegn (som ÆØÅ)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-boxes</title>
+    <link rel="stylesheet" href="../styles/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
-<body> <!--alt som skal synes er her-->
-    <header></header>
-    <main>
-        <div id="hoved">
-        <h1> Accessibility </h1> <!--headline / overskrift-->
-        </div>
-        <p>Hamburger passer alltid, og her er hvorfor</p>
-        <p> Hamburger er en oksekarbonade lagt mellom for eksempel brødstykker, ofte med ketchup, sennep, løk, salat med mer. På hele 1900-tallet har hamburger vært en typisk amerikansk matrett. Populær i Norge fra 1960-årene og omsettes særlig av internasjonale gatekjøkkenkjeder.Å lage hamburger selv tar ca 2 minutter mer enn hvis du bruker kjøpeburger. Det handler rett og slett bare om tiden det tar å forme noen boller som du trykker litt flate. Hjemme hos oss står blåmuggost ganske høyt oppe på favorittlisten, så vi voksne liker å bruke litt blåmugg i burgerne våre også. Da deler jeg bare den ferdig formede burgeren i to, bretter ut – og smører litt smørbar blåmuggost på snittflatene før hamburgeren skal stekes. Så bretter jeg den sammen igjen og trykker den sammen igjen. DET er godt det! For ikke å snakke om denne blåmuggostdressingen. Den kan også i aller høyeste grad brukes. Mamma lager verdens enkleste dressing, hun blander litt ketchup og ørlitegranne sukker i lettrømme, og vips så har du en fresh dressing. Som smaker digg! Vil du bake burgerbrødene selv, så finner du en god oppskrift her. Burgerbrød skal være myke, men hvis alternativet er butikkburgerbrød kan det være vel så godt å bruke f.eks. halvstekte ciabatta som du steker i 10 minutter selv, eller noen annen type rundstykke eller lignende som er nystekte.   </p>
-    </main>
-    
-    <div>
-        <section>
-            <h3>Oslo metropolitioan university<span>storbyuniversitetet</span></h3>
-            <ul>
-                <li>Postboks 4, St. Olavs plass<br>0130 Oslo</li>
-                <li>Tlf.: 67 23 50 00</li>
-                <li><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></li>
+<body>
+    <header>
+        <nav>
+            <img class="meny-rad" src="../images/logo.jpg" alt=""> <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.svg -->
+            <button tabindex="2" class="meny-rad"> Menu </button>
+            <ul class="sub-menu">
+                <li> <a tabindex="3" href="https://www.oslomet.no/studier"> Studier </a></li>
+                <li> <a tabindex="4" href="../index.html"> Hjem-side </a></li>
+                <li> <a tabindex="5" href="GitSamarbeid.html"> GitSamarbeid </a></li>
+                <li> <a tabindex="6" href="Activity.html"> Activity </a></li>
             </ul>
+            <a href="https://www.oslomet.no/s?q="> Søkeside </a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ACTIVITY</h1>
+        <section>
+            <h2>Ting 1</h2>
+            <img src=#>
         </section>
 
-        <nav>
-            <ul>
-                <li><a href="https://www.oslomet.no/en">English</a></li>
-                <li><a href="https://www.oslomet.no/alumni">Alumni</a></li>
-                <li><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></li>
-                <li><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
-                <li><a href="https://www.oslomet.no/om/for-ansatte">For ansatte</a></li>
-                <li><a href="https://www.oslomet.no/om/for-studenter">For studenter</a></li>
-                <li><a href="https://www.oslomet.no/om/ledige-stillinger">Ledige stillinger</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
+        <section>
+            <h2>Ting 2</h2>
+            <img src=#>
+        </section>
 
-                <li><a href="https://www.oslomet.no/om/personvernerklering-informasjonskapslar">Personvernerklæring og informasjonskapslar</a></li>
-                <li><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></li>
-                <li><a href="https://www.oslomet.no/om/tilgjengelegheitserklering">Tilgjengelegheitserklæring</a></li>
-                <li><a href="#">Admin</a></li>
-            </ul>
-        </nav>
-    </div>
-        <ul>
-            <li><img src="../images/icon-facebook.svg" alt="Facebook icon"><a href="https://www.facebook.com/oslomet/">Facebook</a></li>
-            <li><img src="../images/icon-twitter.svg" alt="Twitter icon"><a href="https://x.com/i/flow/login?redirect_after_login=%2Foslomet">X (Twitter)</a></li>
-            <li><img src="../images/icon-linkedin.svg" alt="LinkedIn icon"><a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a></li>
-            <li><img src="../images/icon-instagram.svg" alt="Instagram icon"><a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a></li>
-            <!-- Kilde: https://www.oslomet.no/build/images/icon-facebook.svg --> 
-            <!-- Kilde: https://www.oslomet.no/build/images/icon-twitter.svg -->
-            <!-- Kilde: https://www.oslomet.no/build/images/icon-linkedin.svg -->
-            <!-- Kilde: https://www.oslomet.no/build/images/icon-instagram.svg -->
-        </ul>
-</footer>
+        <section>
+            <h2>Ting 3</h2>
+            <img src=#>
+        </section>
+        <section>
+            <h2>Ting 4</h2>
+            <img src=#>
+        </section>
+        <a> Link 1</a>
+        <a> Link 2</a>
+        <a> Link 3</a>
+        <a> Link 4</a>
+        <a> Link 5</a>
+        <a> Link 6</a>
+
+
+    </main>
+    <footer>
+        <section>
+            <h3>Hold deg oppdatert på hva som skjer på OsloMet.</h3>
+            <button>Abonner på vårt nyhetsbrev!</button>
+        </section>
+        <div>
+            <address>
+                <h3>OSLO METROPOLITAN UNIVERSITY <br><span>STORBYUNIVERSITETET</span> </h3>
+                <ul>
+                    <li>Postboks 4, St. Olavs plass<br>0130 Oslo</li>
+                    <li>Tlf.: 67 23 50 00</li>
+                    <li><a href="#">Kontakt oss</a></li>
+                </ul>
+            </address>
+    
+            <nav>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Ansatteoversikt</a></li>
+                    <li><a href="#">Arrangementoversikt</a></li>
+                    <li><a href="#">For ansatte</a></li>
+                    <li><a href="#">For studenter</a></li>
+                    <li><a href="#">Ledige stillinger</a></li>
+                    <li><a href="#">Personvernerklæring og informasjonskapslar</a></li>
+                    <li><a href="#">Pressekontakt</a></li>
+                    <li><a href="#">Tilgjengelegheitserklæring</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </nav>
+    
+            <aside>
+                <ul>
+                    <li><img src="../images/icon-facebook.svg" alt=""><a href="#">Facebook</a></li>
+                    <li><img src="../images/icon-twitter.svg" alt=""> <a href="#">X (Twitter)</a></li>
+                    <li><img src="../images/icon-linkedin.svg" alt=""><a href="#">LinkedIn</a></li>
+                    <li><img src="../images/icon-instagram.svg" alt=""><a href="#">Instagram</a></li>
+                </ul>
+            </aside>
+        </div>
+    </footer>
 </body>
-
-</html> 
+</html>

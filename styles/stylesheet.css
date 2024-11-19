@@ -231,7 +231,7 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 }
 
 
-main > section {
+article {
   display: flex;
   flex-direction: column;
   width: 65vw;
@@ -242,7 +242,7 @@ main > section {
 }
 
 
-main > section>h3 {
+article h3 {
   margin-top: 0;
   font-size: 1.4rem;
   font-weight: 700;
@@ -252,7 +252,7 @@ main > section>h3 {
 }
 
 
-main > section p {
+article p {
   font-size: 1.2rem;
   color: #222222;
   line-height: 1.8;
@@ -261,7 +261,7 @@ main > section p {
 }
 
 
-main > section ul {
+article > section ul {
   margin: 0;
   font-size: 1rem;
   color: #222222;

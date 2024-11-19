@@ -646,7 +646,7 @@ footer a:hover{
     margin-bottom: 1rem;
 
   }
-  main>h1, main>h2, main>p, main>section{
+  main>h1, main>h2, main>p, #accessibility main>section{
     width: 90vw;
   }
   h1{
@@ -753,7 +753,7 @@ footer a:hover{
     font-size: 1.2rem;
   }
 
-  main>section{
+  #mat-mod main>section{
     width: 87vw; 
   }
   main>section>section{
@@ -767,6 +767,14 @@ footer a:hover{
   /*fjerner pilen på slutten av studie anbefalingene, slik at det er mer plass for tekst*/
   .studie-container::after {
     content: '';
+  }
+
+  #accessibility img {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.7em;
   }
 
 }

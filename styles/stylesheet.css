@@ -1,7 +1,17 @@
 /*
 List of contents:
-  -Header
-  -Main body
+  HOVED CSS
+    -Header
+    -Main body
+    -Footer
+
+  CSS spesielt for de andre nettsidene
+    -Accessibility
+    -Git Samarabeid
+    -Activity
+    
+  Media scaling
+  
 */
 
 :root{
@@ -36,8 +46,64 @@ header nav {
   position: sticky;
   top: 0;
 }
+header nav button, header nav > a:not(:first-child) {
+  padding: 0.6em;
+  background-color: #111;
+  color: white;
+  border-radius: 0.4rem;
+  border-width: 0.1rem;
+  border-color: #000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+nav>a:not(:first-child):hover, nav>a:not(:first-child):focus, nav li a:hover, nav li a:focus {
+  text-decoration: underline;
+}
 
-/*Main body*/
+nav > a:not(:first-child) {
+  position: absolute;
+  right: 6em;
+  text-decoration: none; 
+  color: inherit;
+  padding: 0.2em; 
+  border: solid #111 0.1rem;
+  text-decoration-color: #000;
+}
+
+nav img {
+  height: 3em;
+  width: 7.5em;
+  margin-right: 2em;
+}
+nav img:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+button:focus, button:hover, nav>a:not(:first-child):hover {
+  background-color: white;
+  color: #111;
+  cursor: pointer;
+}
+
+nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
+  /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
+  Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
+  opacity: 1;
+  font-size: inherit;
+  transition: 0.1s;
+}
+
+.sub-menu:focus-within { 
+  /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
+  man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
+  opacity: 1;
+  font-size: inherit;
+}
+
+
+/*Body, main og andre hoved-elementer*/
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -81,31 +147,6 @@ main>p{
   margin-bottom: 3em;
 }
 
-#accessibility  p, #accessibility h1, #accessibility h2{
-  width: 70vw;
-}
-#accessibility > p, #accessibility > h2{
-  margin-bottom: 0.5em;
-}
-
-#accessibility p:last-child{
-  margin-bottom: 4em;
-}
-#accessibility h2, #accessibility h3{
-  margin-top: 2em;
-}
-
-#accessibility p, #accesibility a{
-  font-size: 1.1em;
-} 
-#accessibility h3 {
-  font-size: medium;
-}
-#accessibility img {
-  width: 70%;
-  margin-bottom: 2em;
-}
-
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -129,63 +170,6 @@ th:nth-child(3), td:nth-child(3) {
   font-weight: bold;
   color: #9ebd04
 }
-
-header nav button, header nav > a:not(:first-child) {
-  padding: 0.6em;
-  background-color: #111;
-  color: white;
-  border-radius: 0.4rem;
-  border-width: 0.1rem;
-  border-color: #000;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
-}
-nav>a:not(:first-child):hover, nav>a:not(:first-child):focus, nav li a:hover, nav li a:focus {
-  text-decoration: underline;
-}
-
-nav > a:not(:first-child) {
-  position: absolute;
-  right: 6em;
-  text-decoration: none; /* Fjerner understrek på linken */
-  color: inherit; /* Gjør at linken arver fargen til knappen */
-  padding: 0.2em; /* Flytter padding til <a> for å sikre at klikkområdet fyller knappen */
-  border: solid #111 0.1rem;
-  text-decoration-color: #000;
-}
-
-nav img {
-  height: 3em;
-  width: 7.5em;
-  margin-right: 2em;
-}
-nav img:hover {
-  transform: scale(1.03);
-  transition: 0.2s;
-}
-
-button:focus, button:hover, nav>a:not(:first-child):hover {
-  background-color: white;
-  color: #111;
-  cursor: pointer;
-}
-
-nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
-  /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
-  Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
-  opacity: 1;
-  font-size: inherit;
-  transition: 0.1s;
-}
-
-.sub-menu:focus-within { 
-  /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
-  man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
-  opacity: 1;
-  font-size: inherit;
-}
-
 
 .studieinfo-div {
   width: 65vw;
@@ -391,16 +375,16 @@ main > section ul {
   display: inline-block;
 }
 
-/*---------*/
+
 /*disse er for å style listen under studie anbefalingene*/
-.studie-container > ul li:not(:last-child){
-  padding-right: 1em;
-  border-right: 1px solid #222;
-}
-.studie-container > ul li:not(:first-child){
-  padding-left: 1em;
-}
-/*---------*/
+  .studie-container > ul li:not(:last-child){
+    padding-right: 1em;
+    border-right: 1px solid #222;
+  }
+  .studie-container > ul li:not(:first-child){
+    padding-left: 1em;
+  }
+/*******************************************************/
 
 .historier-container{
   display: grid;
@@ -518,12 +502,12 @@ footer li{
   font-weight: 600;
   margin-bottom: 1rem;
   list-style-type: none;
-  align-items: center; /**/
+  align-items: center; 
 }
 
 footer>ul>li {
-  display: flex; /**/
-  align-items: center; /**/
+  display: flex; 
+  align-items: center; 
 }
 
 footer>ul>li>img {
@@ -588,7 +572,31 @@ footer a:hover{
   color: var(--maincolor);
   transition: 0.5s;
 }
+/*Accessibility*/
+#accessibility  p, #accessibility h1, #accessibility h2{
+  width: 70vw;
+}
+#accessibility > p, #accessibility > h2{
+  margin-bottom: 0.5em;
+}
 
+#accessibility p:last-child{
+  margin-bottom: 4em;
+}
+#accessibility h2, #accessibility h3{
+  margin-top: 2em;
+}
+
+#accessibility p, #accesibility a{
+  font-size: 1.1em;
+} 
+#accessibility h3 {
+  font-size: medium;
+}
+#accessibility img {
+  width: 70%;
+  margin-bottom: 2em;
+}
 #accessibility > p >a {
   color: blue;
   text-decoration-color: blue;
@@ -602,7 +610,7 @@ footer a:hover{
 
 /*GITHUB SIDE*/
 
-/*Grid*/
+/*Grid container, endrer utseende på grid og sørger for at alt er plassert riktig og riktig størrelse*/
 .container{
   width: 70vw;
   display: grid;
@@ -630,6 +638,7 @@ footer a:hover{
 .git_bilder img{
   height: 30vw;
 }
+
 /*Activity page*/
 .mainact{
   background-image: url('../images/pattern.jpg');
@@ -637,16 +646,20 @@ footer a:hover{
   margin: 0;
 }
 .activity{
-  background-color: white; /* White background for contrast */
-  padding: 15px; /* Inner spacing */
-  margin: 20px auto; /* Add space around the sections */
-  border-radius: 10px; /* Rounded corners for better aesthetics */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  background-color: white; 
+  padding: 15px; 
+  margin: 20px auto; 
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 .activity h1{
   text-align: center;
 }
 
+
+/*Media scaling*/
+
+/*Endrer utseende etter skjermstørrelse fra 1500px bred, 1200px bred eller 768px bred*/
 @media(max-width: 1500px){
   footer>div{
     gap: 5vw;

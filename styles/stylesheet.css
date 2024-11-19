@@ -792,4 +792,8 @@ footer a:hover{
     font-size: 0.7em;
   }
 
+  .activity{
+    width: 85%;
+  }
+
 }

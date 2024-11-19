@@ -120,7 +120,6 @@ td, th {
   border: 3px solid #000000;
   text-align: left;
   padding: 8px;
-  white-space: pre-wrap;
 }
 
 tr:nth-child(even) {

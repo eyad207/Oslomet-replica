@@ -161,7 +161,7 @@ nav img {
   margin-right: 2em;
 }
 nav img:hover {
-  transform: scale(1.4);
+  transform: scale(1.03);
   transition: 0.2s;
 }
 
@@ -630,7 +630,22 @@ footer a:hover{
 .git_bilder img{
   height: 30vw;
 }
-
+/*Activity page*/
+.mainact{
+  background-image: url('../images/pattern.jpg');
+  background-repeat: repeat;
+  margin: 0;
+}
+.activity{
+  background-color: white; /* White background for contrast */
+  padding: 15px; /* Inner spacing */
+  margin: 20px auto; /* Add space around the sections */
+  border-radius: 10px; /* Rounded corners for better aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+.activity h1{
+  text-align: center;
+}
 
 @media(max-width: 1500px){
   footer>div{

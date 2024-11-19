@@ -41,7 +41,6 @@ header nav {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  justify-content: center;
 }
 
 main {
@@ -86,13 +85,55 @@ main>p{
   margin-bottom: 3em;
 }
 
-#accessibility  > p, #accessibility > h1{
+#accessibility  p, #accessibility h1, #accessibility h2{
   width: 70vw;
+}
+#accessibility > p, #accessibility > h2{
+  margin-bottom: 0.5em;
+}
+
+#accessibility p:last-child{
+  margin-bottom: 4em;
+}
+#accessibility h2, #accessibility h3{
+  margin-top: 2em;
 }
 
 #accessibility p, #accesibility a{
   font-size: 1.1em;
 } 
+#accessibility h3 {
+  font-size: medium;
+}
+#accessibility img {
+  width: 70%;
+  margin-bottom: 2em;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  align-self: flex-start;
+}
+
+td, th {
+  border: 3px solid #000000;
+  text-align: left;
+  padding: 8px;
+  white-space: pre-wrap;
+}
+
+tr:nth-child(even) {
+  background-color: #e2dfe3;
+}
+th:nth-child(2), td:nth-child(2) {
+  font-weight: bold;
+  color: #bb8600;
+}
+th:nth-child(3), td:nth-child(3) {
+  font-weight: bold;
+  color: #9ebd04
+}
 
 header nav button, header nav > a:not(:first-child) {
   padding: 0.6em;
@@ -150,167 +191,160 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
   font-size: inherit;
 }
 
-/* Egenskaper for studieinfo-div */
+
 .studieinfo-div {
   width: 65vw;
   margin-top: 1.5rem;
   margin-bottom: 3.5rem;
 }
 
-/* Listeinnhold i "studieinfo-div" */
+
 .studieinfo-div ul {
-  display: flex; /* Gjør listen fleksibel for enklere layout */
-  flex-wrap: wrap; /* Tillater bryting til flere rader */
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  gap: 1rem; /* Avstand mellom listeelementer */
+  gap: 1rem;
 }
 
-/* Listeelementer i "studieinfo-div" */
+
 .studieinfo-div li {
   display: flex;
-  flex-direction: column; /* Vertikal struktur for innholdet */
+  flex-direction: column;
   padding: 1.5rem;
-  border-radius: 0.313rem; /* Runde hjørner */
+  border-radius: 0.313rem;
   border-top: solid 0.1rem #111;
   border-bottom: solid 0.1rem #111;
-  min-width: 10rem; /* Minimum bredde for konsistent størrelse */
+  min-width: 10rem;
   text-align: center;
   margin-top: 0.5rem;
 }
 
-/* Første span i hvert listeelement innenfor studieinfo-div */
 .studieinfo-div li span:first-child {
   font-weight: bold;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
-/* Siste span i hvert listeelement innenfor studieinfo-div */
+
 .studieinfo-div li span:last-child {
   color: #444;
 }
 
-/* Generell tekststørrelse for span-elementer innenfor studieinfo-div*/
-.studieinfo-div span {
+.studieinfo-div span{
   font-size: 1.2rem;
 }
 
-/* Sections selementer i main */
+
 main > section {
   display: flex;
-  flex-direction: column; /* Vertikal struktur */
-  width: 65vw; /* Bredde som tilpasses visningsområdet (65vw)*/
+  flex-direction: column;
+  width: 65vw;
   padding: 1.5rem;
   border-radius: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Glatte overganger */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
 }
 
 
-main > section>h3 {
+main > section h3 {
   margin-top: 0;
   font-size: 2rem;
   font-weight: 700;
+  text-transform: uppercase;
   letter-spacing: 1.5px;
   padding-bottom: 10px;
 }
 
-/* Avsnitt i seksjoner */
+
 main > section p {
   font-size: 1.2rem;
   color: #222222;
-  line-height: 1.8; /* Øker linjeavstanden for bedre lesbarhet */
-  margin: 0.5rem 0;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-/* Lister i seksjoner innenfor main */
+
 main > section ul {
   margin: 0;
   font-size: 1rem;
   color: #222222;
   line-height: 1.8;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 
 #mat-mod a{
   font-weight: 500;
-  transition: color 0.3s; /* Glatt overgang for fargeendring */
-  text-decoration: none; /* Fjerner understrek */
-  border-bottom: solid 0.15rem #ffd500; /* Marker lenker med en gul linje */
+  transition: color 0.3s;
+  text-decoration: none;
+  border-bottom: solid 0.15rem #ffd500;
 }
-
-/* Struktur for studiets-oppbygging section */
-.studiets-oppbygging {
+.studiets-oppbygging{
   display: flex;
-  align-items: center; /* Sentraliserer innhold vertikalt */
-  justify-content: space-between; /* Fordeler innhold horisontalt */
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Liste innstillinger i"studieår-seksjonen */
+
 .studieår ul {
-  list-style: none; /* Fjerner standard listepunkter */
+  list-style: none;
   padding-left: 0.5rem;
   text-align: left;
 }
 
-/* Liste elementer i"studieår */
 .studieår ul li {
   display: flex;
   flex-direction: column;
   font-size: 1.1rem;
   margin-bottom: 0.9rem;
+
 }
 
-/* Listeelementer sin tekst innenfor studieår */
 .studieår ul li strong {
   font-size: 1.1rem;
   margin-top: 0.8rem;
   color: #746301;
 }
 
-/* Layout for studieår div */
+
 .studieår {
   display: flex;
   align-items: stretch;
   flex-direction: row;
-  gap: 3rem; /* Avstand mellom seksjoner */
+  gap: 3rem;
   width: 100%;
 }
 
-/* Seksjoner i studieår */
 .studieår section {
   width: 100%;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1); /* Myk skygge */
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: box-shadow 0.3s, transform 0.3s; /* Overgangseffekter */
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
-/* Hover-effekt for studieår seksjoner */
-.studieår section:hover {
-  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1); /* Økt skygge ved hover */
-  transform: translateY(-0.5rem); /* Løfter seksjonen litt */
+.studieår section:hover{
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5rem);
 }
 
-/* Overskrifter i studieår seksjoner */
 .studieår section h4 {
   text-align: center;
   font-size: 1.4rem;
 }
 
-/* Første span i studieår - fremhevet tekst */
-.studieår span:first-child {
+.studieår span:first-child{
   font-weight: bold;
   color: #222;
   margin-bottom: 0.5rem;
 }
 
-/* Ikonliste */
 .ikoner {
-  list-style-type: none; /* Fjerner standard listepunkter */
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   gap: 1.3rem;
@@ -322,9 +356,9 @@ main > section ul {
 }
 
 
-
 .flere-studier-section ul li{
   margin-bottom: 1.3em;
+  margin-top: 0.5em;
   list-style: none;
 
 }
@@ -338,14 +372,12 @@ main > section ul {
   position: relative;
 }
 
-.studie-container h3{
-  font-size: 1em;
+.studie-container h4{
   margin: 0;
-  padding: 0;
 }
 
 .studie-container ul{
-  padding-left: 0;
+  padding-left: 0.3rem;
 }
 
 /*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
@@ -393,9 +425,8 @@ main > section ul {
   background-color: var(--maincolor);
 }
 
-.historier-container > div span{
+.historier-container > div h3{
   text-decoration: underline;
-  font-weight: 600;
 }
 
 /*Footer*/
@@ -411,17 +442,17 @@ footer>section,
 footer>div{
   width: 75vw;
 }
-/* Styling for seksjon i footer */
+
 footer>section{
   display: flex;
-  align-items: center;  /* Vertikal oppsett */
+  align-items: center; 
   justify-content: space-between;
   margin-bottom: 1.25rem;
   border-bottom: 2px solid #000;
   padding-bottom: 3rem;
 }
-/* Knapper i footer */
-footer button{
+
+section>button{
   padding: 0.8em;
   background-color: #111;
   color: white;
@@ -429,10 +460,12 @@ footer button{
   border-width: 0.1rem;
   font-size: 1rem;
   font-weight: 600;
-  transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
+  transition: box-shadow 0.3s;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
 }
-/* Hover-effekt for knapper */
-footer button:hover{
+
+section>button:hover{
   box-shadow: 0 0 0.5rem #111; 
   background-color: white;
   color: #111;
@@ -710,18 +743,13 @@ footer a:hover{
     padding-left: 1em;
   }
 
-  table{
-    font-size: 1rem;
-    width: 40%;
-  }
 
   main>h1 {
     font-size: 1.8rem; 
   }
 
 
-  main>h3, main>p, 
-  main td, main th{
+  main>h3, main>p {
     font-size: 1.2rem;
   }
 

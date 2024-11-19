@@ -641,7 +641,7 @@ footer a:hover{
 
 /*Activity page*/
 .mainact{
-  background-image: url('../images/pattern.jpg');
+  background-image: url('../images/pattern.jpg'); /*Bilde fra: https://www.istockphoto.com/tr/vektör/kar-taneleri-ile-iskandinav-örme-kazak-vektör-illüstrasyon-gm1288832665-384677676*/
   background-repeat: repeat;
   margin: 0;
 }

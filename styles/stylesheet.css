@@ -56,9 +56,9 @@ main {
   margin-bottom: 3em;
   border-radius: 0.625rem;
 }
-main>h1, main>h2, 
-main>h3, main>p{
+main>h1, main h2, main>p{
   width: 65vw;
+  text-align: left;
 } 
 
 p{
@@ -70,13 +70,9 @@ h1 {
   font-size: 3rem;
 }
 
-main>h2 {
+main h2 {
   font-size: 1.7rem;
   font-weight: 500;
-}
-main>h3{
-  font-size: 1.5rem;
-  text-align: center;
 }
 
 main>p{
@@ -246,9 +242,9 @@ main > section {
 }
 
 
-main > section h3 {
+main > section>h3 {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -315,6 +311,8 @@ main > section ul {
   flex-direction: row;
   gap: 3rem;
   width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
 .studieår section {
@@ -424,8 +422,11 @@ main > section ul {
   background-color: var(--maincolor);
 }
 
-.historier-container > div h3{
+.historier-container > div span{
   text-decoration: underline;
+}
+.historier-container h3{
+  margin-top: 1rem;
 }
 
 /*Footer*/

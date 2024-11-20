@@ -76,7 +76,7 @@ nav img {
   width: 7.5em;
 }
 nav > a:first-child {
-  margin-right: 2em;
+  margin-right: 1em;
 }
 
 nav img:hover {
@@ -107,7 +107,12 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 
 
 /*Body, main og andre hoved-elementer*/
-body {
+
+html, body {
+  /*Hindrer side scrolling på lavere oppløsninger*/
+    max-width: 100%;
+    overflow-x: hidden;
+    
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -766,8 +771,8 @@ footer a:hover{
   header nav {
     padding-left: 1em;
   }
-  nav img{
-    margin-right: 1em;
+  nav > a:first-child {
+    margin-right: 0;
   }
   main>h1 {
     font-size: 1.8rem; 

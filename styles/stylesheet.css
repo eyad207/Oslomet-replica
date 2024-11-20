@@ -63,7 +63,7 @@ nav>a:not(:first-child):hover, nav>a:not(:first-child):focus, nav li a:hover, na
 
 nav > a:not(:first-child) {
   position: absolute;
-  right: 6em;
+  right: 3em;
   text-decoration: none; 
   color: inherit;
   padding: 0.2em; 
@@ -74,11 +74,14 @@ nav > a:not(:first-child) {
 nav img {
   height: 3em;
   width: 7.5em;
-  margin-right: 2em;
 }
+nav > a:first-child {
+  margin-right: 1em;
+}
+
 nav img:hover {
-  transform: scale(1.03);
-  transition: 0.2s;
+  transform: scale(1.06);
+  transition: 0.5s;
 }
 
 button:focus, button:hover, nav>a:not(:first-child):hover {
@@ -104,7 +107,12 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 
 
 /*Body, main og andre hoved-elementer*/
-body {
+
+html, body {
+  /*Hindrer side scrolling på lavere oppløsninger*/
+    max-width: 100%;
+    overflow-x: hidden;
+    
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -226,18 +234,17 @@ article {
 
 
 article h3 {
+  margin: 0;
+  font-size: 1.1em;
   margin-top: 0;
   font-size: 1.2rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding-bottom: 10px;
 }
 
 
 article p {
   font-size: 1.2rem;
-  color: #222222;
+  color: #222;
   line-height: 1.8;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -254,7 +261,7 @@ article > section ul {
 }
 
 
-#mat-mod a{
+.studieår a{
   font-weight: 500;
   transition: color 0.3s;
   text-decoration: none;
@@ -324,6 +331,7 @@ article > section ul {
   margin-bottom: 0.5rem;
 }
 
+/*style for symbolene brukt for oblig/valgfag*/
 .ikoner {
   list-style-type: none;
   display: flex;
@@ -372,28 +380,31 @@ article > section ul {
 }
 
 
+/*style for lenkene til andre studier*/
 .flere-studier-section ul li{
-  margin-bottom: 1.3em;
+  margin-bottom: 1em;
   margin-top: 0.5em;
   list-style: none;
-
 }
+
 .flere-studier-section ul{
   padding: 0;
+  margin: 0;
+  margin-bottom: 3em;
+}
+
+.studie-container > ul li{
+  display: inline-block;
+}
+
+.studie-container ul{
+  border-bottom: solid #666 1px;
 }
 
 /*negativ z-index for å unngå overlap problemer med header.*/
 .studie-container {
   z-index: -10;
   position: relative;
-}
-
-.studie-container h4{
-  margin: 0;
-}
-
-.studie-container ul{
-  padding-left: 0.3rem;
 }
 
 /*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
@@ -406,21 +417,15 @@ article > section ul {
   font-size: 2em
 }
 
-.studie-container > ul li{
-  display: inline-block;
+/*dette er for å style listen under studie anbefalingene*/
+.studie-container > ul li:not(:last-child){
+  padding-right: 1em;
+  margin-right: 1em;
+  border-right: 1px solid #222;
 }
 
 
-/*disse er for å style listen under studie anbefalingene*/
-  .studie-container > ul li:not(:last-child){
-    padding-right: 1em;
-    border-right: 1px solid #222;
-  }
-  .studie-container > ul li:not(:first-child){
-    padding-left: 1em;
-  }
-/*******************************************************/
-
+/*Student historier*/
 .historier-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -443,7 +448,9 @@ article > section ul {
 
 .historier-container > div span{
   text-decoration: underline;
+  font-weight: 500;
 }
+
 .historier-container h3{
   margin-top: 1rem;
 }
@@ -549,7 +556,6 @@ footer>ul>li>img {
   width: 2rem;
   margin-right: 0.5rem;
 }
-
 #mat-mod a, footer a{
   color: #111;
   text-decoration: none;
@@ -557,12 +563,8 @@ footer>ul>li>img {
 footer a:hover{
   border-bottom: solid 0.1rem #111;
 }
-#mat-mod a:hover h4{
-  text-decoration: underline;
-  color: #5f5f70;
-}
 
-#mat-mod a:hover{
+.studieår a:hover{
   border-bottom: 0.15rem solid #111;
 }
 
@@ -577,8 +579,8 @@ footer a:hover{
   border-bottom: 1px solid #111;
   border-top: 1px solid #111;
   padding: 0;
-  padding-left: 16%;
-  width: 84%; /* Er 84% siden padding-left tar opp plassen for de resterende 14% */
+  padding-left: 8%;
+  width: 92%; /* Er 88% siden padding-left tar opp plassen for de resterende 12% */
   margin: 0;
   left: 0em;
   top: 5.6em;
@@ -695,6 +697,7 @@ footer a:hover{
 /*Media scaling*/
 
 /*Endrer utseende etter skjermstørrelse fra 1500px bred, 1200px bred eller 768px bred*/
+
 @media(max-width: 1500px){
   footer>div{
     gap: 5vw;
@@ -702,14 +705,7 @@ footer a:hover{
 }
 
 @media (max-width: 1200px) {
-
-  .firstpicture{
-    width: 90vw;
-    justify-content: center;
-    margin-bottom: 1rem;
-
-  }
-  main>h1, main>h2, main>p, #accessibility main>section{
+  main>h1, main>h2, main>p, main>article{
     width: 90vw;
   }
   h1{
@@ -719,27 +715,6 @@ footer a:hover{
 
   h2{
     font-size: 1.7rem;
-  }
-  .studieinfo-div ul{
-    justify-content: center;
-    width: fit-content;
-  }
-
-  section p{
-    font-size: 1.1rem;
-  }
-  
-  .studieår{
-    flex-direction: column;
-  }
-
-  /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
-  .historier-container{
-    grid-template-columns: 1fr;
-  }
-
-  .historier-container h3, p {
-    font-size: 1.3em;
   }
 
   footer button{
@@ -782,6 +757,34 @@ footer a:hover{
     gap: 0;
   }
 
+  .firstpicture{
+    margin-top: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+  }
+  .studieinfo-div ul{
+    justify-content: center;
+    width: fit-content;
+  }
+
+  section p{
+    font-size: 1.1rem;
+  }
+  
+  .studieår{
+    flex-direction: column;
+  }
+
+  /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
+  .historier-container{
+    grid-template-columns: 1fr;
+  }
+
+  .historier-container h3{
+    font-size: 1.3em;
+  }
+
   .container{
     width: 80vw;
     display: flex;
@@ -805,22 +808,19 @@ footer a:hover{
   header nav {
     padding-left: 1em;
   }
-
-
+  nav > a:first-child {
+    margin-right: 0;
+  }
   main>h1 {
     font-size: 1.8rem; 
   }
 
-
-  main>h3, main>p {
-    font-size: 1.2rem;
+  main h3, main p {
+    font-size: 1rem;
   }
 
-  #mat-mod main>section{
-    width: 87vw; 
-  }
-  main>section>section{
-    width: 80vw;
+  table {
+    font-size: 0.7em;
   }
 
   .studie-container > ul li{
@@ -832,12 +832,16 @@ footer a:hover{
     content: '';
   }
 
-  #accessibility img {
-    width: 100%;
+  .historier-container span, .historier-container p{
+    font-size: 0.9em;
   }
 
-  table {
-    font-size: 0.7em;
+  .historier-container h3{
+    font-size: 1.1rem;
+  }
+
+  #accessibility img {
+    width: 100%;
   }
 
   .activity{

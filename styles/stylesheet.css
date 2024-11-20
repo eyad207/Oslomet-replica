@@ -372,15 +372,12 @@ article > section ul {
   font-size: 2em
 }
 
-/*disse er for å style listen under studie anbefalingene*/
+/*dette er for å style listen under studie anbefalingene*/
 .studie-container > ul li:not(:last-child){
   padding-right: 1em;
+  margin-right: 1em;
   border-right: 1px solid #222;
 }
-.studie-container > ul li:not(:first-child){
-  padding-left: 1em;
-}
-/*******************************************************/
 
 
 /*Student historier*/
@@ -656,6 +653,7 @@ footer a:hover{
 /*Media scaling*/
 
 /*Endrer utseende etter skjermstørrelse fra 1500px bred, 1200px bred eller 768px bred*/
+
 @media(max-width: 1500px){
   footer>div{
     gap: 5vw;
@@ -663,14 +661,7 @@ footer a:hover{
 }
 
 @media (max-width: 1200px) {
-
-  .firstpicture{
-    width: 90vw;
-    justify-content: center;
-    margin-bottom: 1rem;
-
-  }
-  main>h1, main>h2, main>p, #accessibility main>section{
+  main>h1, main>h2, main>p, main>article{
     width: 90vw;
   }
   h1{
@@ -680,27 +671,6 @@ footer a:hover{
 
   h2{
     font-size: 1.7rem;
-  }
-  .studieinfo-div ul{
-    justify-content: center;
-    width: fit-content;
-  }
-
-  section p{
-    font-size: 1.1rem;
-  }
-  
-  .studieår{
-    flex-direction: column;
-  }
-
-  /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
-  .historier-container{
-    grid-template-columns: 1fr;
-  }
-
-  .historier-container h3, p {
-    font-size: 1.3em;
   }
 
   footer button{
@@ -743,6 +713,33 @@ footer a:hover{
     gap: 0;
   }
 
+  .firstpicture{
+    justify-content: center;
+    margin-bottom: 1rem;
+
+  }
+  .studieinfo-div ul{
+    justify-content: center;
+    width: fit-content;
+  }
+
+  section p{
+    font-size: 1.1rem;
+  }
+  
+  .studieår{
+    flex-direction: column;
+  }
+
+  /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
+  .historier-container{
+    grid-template-columns: 1fr;
+  }
+
+  .historier-container h3{
+    font-size: 1.3em;
+  }
+
   .container{
     width: 80vw;
     display: flex;
@@ -767,21 +764,16 @@ footer a:hover{
     padding-left: 1em;
   }
 
-
   main>h1 {
     font-size: 1.8rem; 
   }
 
-
-  main>h3, main>p {
-    font-size: 1.2rem;
+  main h3, main p {
+    font-size: 1rem;
   }
 
-  #mat-mod main>section{
-    width: 87vw; 
-  }
-  main>section>section{
-    width: 80vw;
+  table {
+    font-size: 0.7em;
   }
 
   .studie-container > ul li{
@@ -793,12 +785,16 @@ footer a:hover{
     content: '';
   }
 
-  #accessibility img {
-    width: 100%;
+  .historier-container span, .historier-container p{
+    font-size: 0.9em;
   }
 
-  table {
-    font-size: 0.7em;
+  .historier-container h3{
+    font-size: 1.1rem;
+  }
+
+  #accessibility img {
+    width: 100%;
   }
 
   .activity{

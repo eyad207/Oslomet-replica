@@ -227,18 +227,15 @@ article {
 
 
 article h3 {
-  margin-top: 0;
-  font-size: 1rem;
+  margin: 0;
+  font-size: 1.1em;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding-bottom: 10px;
 }
 
 
 article p {
   font-size: 1.2rem;
-  color: #222222;
+  color: #222;
   line-height: 1.8;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -255,7 +252,7 @@ article > section ul {
 }
 
 
-#mat-mod a{
+.studieår a{
   font-weight: 500;
   transition: color 0.3s;
   text-decoration: none;
@@ -324,6 +321,7 @@ article > section ul {
   margin-bottom: 0.5rem;
 }
 
+/*style for symbolene brukt for oblig/valgfag*/
 .ikoner {
   list-style-type: none;
   display: flex;
@@ -337,28 +335,31 @@ article > section ul {
 }
 
 
+/*style for lenkene til andre studier*/
 .flere-studier-section ul li{
-  margin-bottom: 1.3em;
+  margin-bottom: 1em;
   margin-top: 0.5em;
   list-style: none;
-
 }
+
 .flere-studier-section ul{
   padding: 0;
+  margin: 0;
+  margin-bottom: 3em;
+}
+
+.studie-container > ul li{
+  display: inline-block;
+}
+
+.studie-container ul{
+  border-bottom: solid #666 1px;
 }
 
 /*negativ z-index for å unngå overlap problemer med header.*/
 .studie-container {
   z-index: -10;
   position: relative;
-}
-
-.studie-container h4{
-  margin: 0;
-}
-
-.studie-container ul{
-  padding-left: 0.3rem;
 }
 
 /*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
@@ -371,21 +372,18 @@ article > section ul {
   font-size: 2em
 }
 
-.studie-container > ul li{
-  display: inline-block;
-}
-
-
 /*disse er for å style listen under studie anbefalingene*/
-  .studie-container > ul li:not(:last-child){
-    padding-right: 1em;
-    border-right: 1px solid #222;
-  }
-  .studie-container > ul li:not(:first-child){
-    padding-left: 1em;
-  }
+.studie-container > ul li:not(:last-child){
+  padding-right: 1em;
+  border-right: 1px solid #222;
+}
+.studie-container > ul li:not(:first-child){
+  padding-left: 1em;
+}
 /*******************************************************/
 
+
+/*Student historier*/
 .historier-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -408,7 +406,9 @@ article > section ul {
 
 .historier-container > div span{
   text-decoration: underline;
+  font-weight: 500;
 }
+
 .historier-container h3{
   margin-top: 1rem;
 }
@@ -522,12 +522,8 @@ footer>ul>li>img {
 footer a:hover{
   border-bottom: solid 0.1rem #111;
 }
-#mat-mod a:hover h4{
-  text-decoration: underline;
-  color: #5f5f70;
-}
 
-#mat-mod a:hover{
+.studieår a:hover{
   border-bottom: 0.15rem solid #111;
 }
 

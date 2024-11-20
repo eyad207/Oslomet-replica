@@ -118,7 +118,6 @@ main {
 }
 
 .firstpicture{
-  width: 70vw;
   margin-bottom: 3em;
   border-radius: 0.625rem;
 }
@@ -147,26 +146,26 @@ main>p{
   margin-bottom: 3em;
 }
 
-table {
+#accessibility table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   align-self: flex-start;
 }
 
-td, th {
+#accessibilitytd, #accessibility th {
   border: 3px solid #000000;
   text-align: left;
   padding: 8px;
 }
 
-tr:nth-child(even) {
+#accessibility tr:nth-child(even) {
   background-color: #e2dfe3;
 }
-th:nth-child(2), td:nth-child(2) {
+#accessibility th:nth-child(2), #accessibility td:nth-child(2) {
   font-weight: bold;
   color: #bb8600;
 }
-th:nth-child(3), td:nth-child(3) {
+#accessibility th:nth-child(3), #accessibility td:nth-child(3) {
   font-weight: bold;
   color: #9ebd04
 }
@@ -228,7 +227,7 @@ article {
 
 article h3 {
   margin-top: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -265,6 +264,7 @@ article > section ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 70vw;
 }
 
 
@@ -334,6 +334,41 @@ article > section ul {
   color: #444;
   margin-bottom: 1rem;
   padding-left: 0;
+}
+
+#mat-mod table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  align-self: flex-start;
+  height: 100%;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 0.1rem solid #000000;
+  border-radius: 40px;
+}
+#mat-mod table a {
+}
+
+#mat-mod td, #mat-mod th {
+  border: 0.1rem solid #000000;
+  text-align: left;
+  padding: 0.3rem;
+}
+
+.kategori-fag {
+  background-color: #dcdcdc;
+}
+
+
+#mat-mod thead tr:nth-child(1) th {
+  text-align: center;
+  background-color: #e2dfe3;
+}
+
+#mat-mod thead tr th {
+  text-align: center;
+  background-color: var(--maincolor);
 }
 
 

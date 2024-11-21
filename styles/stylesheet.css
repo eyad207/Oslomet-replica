@@ -592,7 +592,7 @@ a:hover {
 #accessibility  p, #accessibility h1, #accessibility h2{
   width: 70vw;
 }
-#accessibility > p, #accessibility > h2{
+#accessibility p, #accessibility h2{
   margin-bottom: 0.5em;
 }
 
@@ -600,7 +600,7 @@ a:hover {
   margin-bottom: 4em;
 }
 #accessibility h2, #accessibility h3{
-  margin-top: 2em;
+  margin-top: 0;
 }
 
 #accessibility p, #accesibility a{

@@ -5,7 +5,7 @@ List of contents:
     -Main body
     -Footer
 
-  CSS spesielt for de andre nettsidene
+  CSS spesifikt for de andre nettsidene
     -Accessibility
     -Git Samarabeid
     -Activity
@@ -24,9 +24,9 @@ header, footer {
 }
 
 header {
+  top: 0;
   width: inherit;
   position: sticky;
-  top: 0;
   z-index: 1;
   border-bottom: solid 0.1rem #111;
 }
@@ -43,9 +43,10 @@ header nav {
   padding-left: 4em;
   padding-right: 1rem;
   background-color: inherit;
-  position: sticky;
   top: 0;
+  position: sticky;
 }
+
 header nav button, header nav > a:not(:first-child) {
   padding: 0.6em;
   background-color: #111;
@@ -142,6 +143,7 @@ main h2 {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   align-self: flex-start;
+  width: 65%;
 }
 
 #accessibilitytd, #accessibility th {
@@ -166,12 +168,6 @@ main h2 {
   width: 65vw;
   margin-top: 1.5rem;
   margin-bottom: 3.5rem;
-}
-.studieinfo-div a{
-  border-bottom: solid 0.15rem #ffd919;
-}
-.studieinfo-div a:hover{
-  border-bottom: solid 0.15rem #111;
 }
 
 
@@ -251,8 +247,6 @@ article > section ul {
 .studieår a{
   font-weight: 500;
   transition: color 0.3s;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #ffd500;
 }
 .studiets-oppbygging{
   display: flex;
@@ -335,7 +329,7 @@ article > section ul {
   padding-left: 0;
 }
 
-#mat-mod table {
+table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   align-self: flex-start;
@@ -347,7 +341,7 @@ article > section ul {
   border-radius: 40px;
 }
 
-#mat-mod td, #mat-mod th {
+td, th {
   border: 0.1rem solid #000000;
   text-align: left;
   padding: 0.3rem;
@@ -358,12 +352,11 @@ article > section ul {
 }
 
 
-#mat-mod thead tr:nth-child(1) th {
+thead tr:nth-child(1) th {
   text-align: center;
   background-color: #e2dfe3;
 }
-
-#mat-mod thead tr th {
+thead tr th {
   text-align: center;
   background-color: var(--maincolor);
 }
@@ -545,15 +538,12 @@ footer>ul>li>img {
   width: 2rem;
   margin-right: 0.5rem;
 }
-#mat-mod a, footer a{
+a{
   color: #111;
   text-decoration: none;
+  border-bottom: solid 0.15rem #ffd919;
 }
-footer a:hover{
-  border-bottom: solid 0.1rem #111;
-}
-
-.studieår a:hover{
+a:hover {
   border-bottom: 0.15rem solid #111;
 }
 
@@ -622,16 +612,6 @@ footer a:hover{
 #accessibility img {
   width: 70%;
   margin-bottom: 2em;
-}
-#accessibility > p >a {
-  color: blue;
-  text-decoration-color: blue;
-  border-bottom: 0; /* Den er default satt pga. "main a" sitt attributt */
-}
-#accessibility > p > a:visited {
-  color: rgb(78, 17, 169);
-  text-decoration-color: rgb(78, 17, 169);
-  border-bottom: 0; /* Den er default satt pga. "main a" sitt attributt */
 }
 
 /*GITHUB SIDE*/
@@ -827,7 +807,7 @@ footer a:hover{
   }
 
   #accessibility img {
-    width: 100%;
+    width: 90%;
   }
 
   .activity{

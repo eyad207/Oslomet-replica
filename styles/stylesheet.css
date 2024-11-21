@@ -78,6 +78,7 @@ nav img {
 }
 nav > a:first-child {
   margin-right: 1em;
+  border-bottom: none;
 }
 
 nav img:hover {
@@ -111,12 +112,11 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 
 html, body {
   /*Hindrer side scrolling på lavere oppløsninger*/
-    max-width: 100%;
-    overflow-x: hidden;
-    
+  max-width: 100%;
+  /* overflow-x: hidden; */
   margin: 0;
   font-family: 'Roboto', sans-serif;
-}
+} 
 
 main {
   margin-top: 1em;

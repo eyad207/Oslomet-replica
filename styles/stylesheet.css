@@ -155,13 +155,14 @@ main h2 {
 #accessibility tr:nth-child(even) {
   background-color: #e2dfe3;
 }
+
 #accessibility th:nth-child(2), #accessibility td:nth-child(2) {
   font-weight: bold;
-  color: #bb8600;
+  color: #7a0000;
 }
 #accessibility th:nth-child(3), #accessibility td:nth-child(3) {
   font-weight: bold;
-  color: #9ebd04
+  color: #296600
 }
 
 .studieinfo-div {

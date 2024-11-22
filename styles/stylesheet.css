@@ -737,11 +737,6 @@ a:hover {
     gap: 0;
   }
 
-  .studieinfo-div ul{
-    justify-content: center;
-    width: fit-content;
-  }
-
   section p{
     font-size: 1.1rem;
   }
@@ -798,12 +793,6 @@ a:hover {
     font-size: 1rem;
   }
 
-  table,  .studieår h3{
-    font-size: 1.1em;
-  }
-  table td{
-    padding: 0.5rem;
-  }
 
   .studie-container > ul li{
     font-size: 0.8rem;

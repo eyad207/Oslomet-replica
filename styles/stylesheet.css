@@ -827,7 +827,23 @@ a:hover {
   #accessibility img {
     width: 90%;
   }
+}
+@media (max-width: 480px) {
+  table {
+    font-size: 0.8rem; /* Enda mindre fontstørrelse */
+    border-radius: 10px; /* Juster radius for liten skjerm */
+  }
 
+  td, th {
+    padding: 0.1rem; /* Minimal padding */
+    font-size: 0.75rem; /* Mindre tekst */
+  }
 
+  thead tr th {
+    font-size: 0.8rem; /* Smalere tekst for overskrifter */
+  }
 
+  .kategori-fag {
+    background-color: #c0c0c0; /* Juster farge for bedre kontrast */
+  }
 }

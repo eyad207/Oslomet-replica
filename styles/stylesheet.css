@@ -683,7 +683,7 @@ a:hover {
 
 @media (max-width: 1200px) {
   main>h1, main>h2, main>p, main>article{
-    width: 90vw;
+    width: 70vw;
   }
   h1{
     font-size: 2.2rem;
@@ -785,6 +785,11 @@ a:hover {
   nav > a:first-child {
     margin-right: 0;
   }
+
+  main>h1, main>h2, main>p, main>article{
+    width: 90vw;
+  }
+
   main>h1 {
     font-size: 1.8rem; 
   }
@@ -821,8 +826,6 @@ a:hover {
     width: 90%;
   }
 
-  .activity{
-    width: 85%;
-  }
+
 
 }

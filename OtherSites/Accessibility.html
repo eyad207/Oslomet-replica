@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,7 @@
             Forhåpentligvis er det da tydelig at vi har tatt flere grep for å gjøre denne nettsiden mer universell utformet, for det har vi gjort! 
         </p>
 
-        <section>
+        <article>
             <h2> Validering </h2>
             <p> Vi validerte koden hos <a href="https://validator.w3.org/#validate_by_upload">W3.org </a>, hos Lighthouse og hos ARC Toolkit:</p>
             <h3> Resultater fra W3.org </h3>
@@ -88,9 +88,9 @@
                 De andre html-sidene hadde ingen/irrelevante problemer fra de samme validitet-nettsidene. 
                 CSS testet vi tillegg og den hadde ingen problemer for W3.org.  
             </p>
-        </section>
+        </article>
 
-        <section>
+        <article>
             <h2> Endringer/valg for nettsiden </h2>
         <p> 
             Først har vi lagt ved alternative tekster for alle bildene i nettsiden slik at man kan finne informasjonen for de tilfellene hvor de ikke kan hente informasjonen fra bildet. 
@@ -110,7 +110,7 @@
             Først reflekterte vi over hvorfor det var feil siden det ikke var åpenbart for oss med det første, men så forstod vi at det generelt er dårlig praksis for nettlesere og brukeropplevelsen å ha en lenke inni en knapp som egentlig ikke gjør noe. 
         </p>
         <p> 
-            Noe valideringen ikke fortalte oss da, var at nettsiden vår ikke var godt tilpasset for tab-indeks. 
+            Noe valideringen ikke fortalte oss da, var at nettsiden vår ikke var godt tilpasset for tab-indeks selv etter å ha fikset på tabindeksene som var større enn 0. 
             Vi hadde originalt satt menyen til display:none med mindre den blir samhandlet med, men da funket det ikke å fokusere på submenyen sine lenker med tab siden de ikke var displayed. 
             Derfor fant vi en litt utradisjonell måte å holde submenyen skjult uten å bruke JavaScript, som var å sette opacity=0 og font-size=0 slik at man ikke kan fokusere på lenkene heller. 
             På denne måten fikk vi beholde nettsiden slik vil ville, og tabindex til å funke bra for nettsiden vår, noe som er viktig for både interaktiviteten og funksjonaliteten for nettsiden. 
@@ -118,9 +118,9 @@
 
         <p> 
             Oppsummert har vi gjort våres beste for å få flest mulig til å kunne bruke nettsiden vår effektivt. 
-            Dette er noen av mange feil vi har rettet opp, og vi har lært masse av de 😊
+            Disse er kun noen av mange feil vi har rettet opp, og vi har lært masse av de 😊
         </p>
-        </section>
+    </article>
      
 
     </main>

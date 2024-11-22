@@ -5,7 +5,7 @@ List of contents:
     -Main body
     -Footer
 
-  CSS spesielt for de andre nettsidene
+  CSS spesifikt for de andre nettsidene
     -Accessibility
     -Git Samarabeid
     -Activity
@@ -24,9 +24,9 @@ header, footer {
 }
 
 header {
+  top: 0;
   width: inherit;
   position: sticky;
-  top: 0;
   z-index: 1;
   border-bottom: solid 0.1rem #111;
 }
@@ -46,9 +46,10 @@ header nav {
   padding-left: 4em;
   padding-right: 1rem;
   background-color: inherit;
-  position: sticky;
   top: 0;
+  position: sticky;
 }
+
 header nav button, header nav > a:not(:first-child) {
   padding: 0.6em;
   background-color: #111;
@@ -80,6 +81,7 @@ nav img {
 }
 nav > a:first-child {
   margin-right: 1em;
+  border-bottom: none;
 }
 
 nav img:hover {
@@ -113,12 +115,11 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 
 html, body {
   /*Hindrer side scrolling på lavere oppløsninger*/
-    max-width: 100%;
-    overflow-x: hidden;
-    
+  max-width: 100%;
+  /* overflow-x: hidden; */
   margin: 0;
   font-family: 'Roboto', sans-serif;
-}
+} 
 
 main {
   margin-top: 1em;
@@ -145,6 +146,7 @@ main h2 {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   align-self: flex-start;
+  width: 65%;
 }
 
 #accessibilitytd, #accessibility th {
@@ -156,25 +158,20 @@ main h2 {
 #accessibility tr:nth-child(even) {
   background-color: #e2dfe3;
 }
+
 #accessibility th:nth-child(2), #accessibility td:nth-child(2) {
   font-weight: bold;
-  color: #bb8600;
+  color: #7a0000;
 }
 #accessibility th:nth-child(3), #accessibility td:nth-child(3) {
   font-weight: bold;
-  color: #9ebd04
+  color: #296600
 }
 
 .studieinfo-div {
   width: 65vw;
   margin-top: 1.5rem;
   margin-bottom: 3.5rem;
-}
-.studieinfo-div a{
-  border-bottom: solid 0.15rem #ffd919;
-}
-.studieinfo-div a:hover{
-  border-bottom: solid 0.15rem #111;
 }
 
 
@@ -254,8 +251,6 @@ article > section ul {
 article a{
   font-weight: 500;
   transition: color 0.3s;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #ffd500;
   transition: border-bottom 0.2s;
 }
 article a:hover{
@@ -344,7 +339,7 @@ article a:hover{
   padding-left: 0;
 }
 
-#mat-mod table {
+table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   align-self: flex-start;
@@ -356,7 +351,7 @@ article a:hover{
   border-radius: 40px;
 }
 
-#mat-mod td, #mat-mod th {
+td, th {
   border: 0.1rem solid #000000;
   text-align: left;
   padding: 0.3rem;
@@ -367,12 +362,11 @@ article a:hover{
 }
 
 
-#mat-mod thead tr:nth-child(1) th {
+thead tr:nth-child(1) th {
   text-align: center;
   background-color: #e2dfe3;
 }
-
-#mat-mod thead tr th {
+thead tr th {
   text-align: center;
   background-color: var(--maincolor);
 }
@@ -554,15 +548,12 @@ footer>ul>li>img {
   width: 2rem;
   margin-right: 0.5rem;
 }
-#mat-mod a, footer a{
+a{
   color: #111;
   text-decoration: none;
+  border-bottom: solid 0.15rem #ffd919;
 }
-footer a:hover{
-  border-bottom: solid 0.1rem #111;
-}
-
-.studieår a:hover{
+a:hover {
   border-bottom: 0.15rem solid #111;
 }
 
@@ -611,7 +602,7 @@ footer a:hover{
 #accessibility  p, #accessibility h1, #accessibility h2{
   width: 70vw;
 }
-#accessibility > p, #accessibility > h2{
+#accessibility p, #accessibility h2{
   margin-bottom: 0.5em;
 }
 
@@ -619,7 +610,7 @@ footer a:hover{
   margin-bottom: 4em;
 }
 #accessibility h2, #accessibility h3{
-  margin-top: 2em;
+  margin-top: 0;
 }
 
 #accessibility p, #accesibility a{
@@ -631,16 +622,6 @@ footer a:hover{
 #accessibility img {
   width: 70%;
   margin-bottom: 2em;
-}
-#accessibility > p >a {
-  color: blue;
-  text-decoration-color: blue;
-  border-bottom: 0; /* Den er default satt pga. "main a" sitt attributt */
-}
-#accessibility > p > a:visited {
-  color: rgb(78, 17, 169);
-  text-decoration-color: rgb(78, 17, 169);
-  border-bottom: 0; /* Den er default satt pga. "main a" sitt attributt */
 }
 
 /*GITHUB SIDE*/
@@ -836,7 +817,7 @@ footer a:hover{
   }
 
   #accessibility img {
-    width: 100%;
+    width: 90%;
   }
 
   .activity{

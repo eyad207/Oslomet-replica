@@ -566,8 +566,8 @@ a:hover {
   border-bottom: 1px solid #111;
   border-top: 1px solid #111;
   padding: 0;
-  padding-left: 8%;
-  width: 92%; /* Er 88% siden padding-left tar opp plassen for de resterende 12% */
+  padding-left: 4%;
+  width: 96%; /* Er 88% siden padding-left tar opp plassen for de resterende 12% */
   margin: 0;
   left: 0em;
   top: 5.6em;
@@ -737,6 +737,11 @@ a:hover {
     gap: 0;
   }
 
+  .studieinfo-div ul{
+    justify-content: center;
+    width: fit-content;
+  }
+
   section p{
     font-size: 1.1rem;
   }
@@ -793,6 +798,12 @@ a:hover {
     font-size: 1rem;
   }
 
+  table,  .studieår h3{
+    font-size: 1.1em;
+  }
+  table td{
+    padding: 0.5rem;
+  }
 
   .studie-container > ul li{
     font-size: 0.8rem;

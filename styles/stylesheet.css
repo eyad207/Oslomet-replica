@@ -176,11 +176,13 @@ table {
   border: 0.1rem solid #333;
 }
 
+
 td, th {
   border: 0.1rem solid #333;
   text-align: left;
-  padding: 0.3rem;
+  padding: 1rem;
 }
+
 
 thead tr:nth-child(1) th {
   text-align: center;
@@ -784,7 +786,7 @@ a:hover {
   .studiets-oppbygging{
     width: 90%;
   }
-  
+
   .studie-container > ul li{
     font-size: 0.8rem;
   }

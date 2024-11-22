@@ -67,15 +67,15 @@ header>nav li a:hover, header>nav li a:focus {
 header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus {
   border-color: black;
   transform: translateY(-0.3rem);
-  transition: 0.3s;
 }
 
-nav > a:not(:first-child) {
+header > nav > a:not(:first-child) {
   border-color: var(--maincolor);
   position: absolute;
   right: 3em;
   text-decoration: none; 
   color: inherit;
+  transition: 0.3s;
 }
 
 nav > a:first-child {
@@ -95,7 +95,6 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
   Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
   opacity: 1;
   font-size: inherit;
-  transition: 0.1s;
 }
 
 
@@ -311,10 +310,10 @@ a:hover {
 .oslomet-logo img {
   height: 3em;
   width: 7.5em;
+  transition: 0.5s;
 }
 .oslomet-logo img:hover {
   transform: scale(1.06);
-  transition: 0.5s;
 }
 .search-icon img{
   margin-bottom: -0.2em;
@@ -323,8 +322,6 @@ a:hover {
 }
 
 .sub-menu:focus-within { 
-  /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
-  man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
   opacity: 1;
   font-size: inherit;
 }
@@ -557,7 +554,6 @@ a:hover {
   background-color: black;
   text-decoration-color: var(--maincolor);
   color: var(--maincolor);
-  transition: 0.5s;
 }
 /*Accessibility*/
 #accessibility table {
@@ -828,4 +824,5 @@ a:hover {
   #accessibility img {
     width: 90%;
   }
+
 }

@@ -30,9 +30,6 @@ header {
   z-index: 1;
   border-bottom: solid 0.1rem #111;
 }
-.firstpicture{
-  width: 100%;
-}
 
 header nav {
   display: flex;
@@ -673,7 +670,7 @@ a:hover {
     margin-top: 2rem;
   }
   .firstpicture{
-    width: 100%;
+    width: 90%;
   }
 
   footer> section, div{

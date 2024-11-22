@@ -358,9 +358,9 @@ a:hover {
   z-index: 2;
 }
 .sub-menu li:hover {
-  background-color: black;
+  background-color: #333;
   text-decoration-color: var(--maincolor);
-  color: var(--maincolor);
+  color: white;
   transition: 0.5s;
 }
 

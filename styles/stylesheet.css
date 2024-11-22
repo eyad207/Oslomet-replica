@@ -216,7 +216,6 @@ article {
   display: flex;
   flex-direction: column;
   width: 65vw;
-  padding: 1.5rem;
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
@@ -796,6 +795,20 @@ a:hover {
 
   main h3, main p {
     font-size: 1rem;
+  }
+  table {
+    font-size: 0.9rem; /* Mindre fontstørrelse */
+    width: 100%; /* Tilpass til skjermbredden */
+    border-radius: 20px; /* Mindre radius */
+  }
+
+  td, th {
+    padding: 0.2rem; /* Reduser padding */
+    font-size: 0.85rem; /* Juster fontstørrelse */
+  }
+
+  thead tr th {
+    font-size: 0.9rem; /* Mindre font for overskrifter */
   }
 
   table,  .studieår h3{

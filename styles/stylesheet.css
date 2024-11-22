@@ -228,7 +228,7 @@ footer>section>button{
   border-width: 0.1rem;
   font-size: 1rem;
   font-weight: 600;
-  transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
+  transition: 0.3s;
 }
 
 footer>section>button:hover{
@@ -809,7 +809,4 @@ a:hover {
   #accessibility img {
     width: 90%;
   }
-
-
-
 }

@@ -262,7 +262,6 @@ article a:hover{
 .studiets-oppbygging{
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 80vw;
 }
 
@@ -289,12 +288,11 @@ article a:hover{
 
 .studieår {
   display: flex;
-  align-items: stretch;
   flex-direction: row;
   gap: 3rem;
   width: 100%;
   margin-bottom: 2rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .studieår section {
@@ -307,7 +305,9 @@ article a:hover{
 }
 .studieår h3{
   background-color: #ffd500;
-  border-radius: 0.5rem;
+  border-top: solid 0.1rem #111;
+  border-right: solid 0.1rem #111;
+  border-left: solid 0.1rem #111;
 }
 
 .studieår section:hover{
@@ -470,7 +470,7 @@ footer>section{
   padding-bottom: 3rem;
 }
 
-section>button{
+footer>section>button{
   padding: 0.8em;
   background-color: #111;
   color: white;
@@ -478,12 +478,10 @@ section>button{
   border-width: 0.1rem;
   font-size: 1rem;
   font-weight: 600;
-  transition: box-shadow 0.3s;
-  transition: background-color 0.3s;
-  transition: color 0.3s;
+  transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
 }
 
-section>button:hover{
+footer>section>button:hover{
   box-shadow: 0 0 0.5rem #111; 
   background-color: white;
   color: #111;
@@ -795,8 +793,11 @@ a:hover {
     font-size: 1rem;
   }
 
-  table {
-    font-size: 0.7em;
+  table,  .studieår h3{
+    font-size: 1.1em;
+  }
+  table td{
+    padding: 0.5rem;
   }
 
   .studie-container > ul li{

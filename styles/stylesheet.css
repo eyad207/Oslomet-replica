@@ -30,6 +30,9 @@ header {
   z-index: 1;
   border-bottom: solid 0.1rem #111;
 }
+.firstpicture{
+  width: 100%;
+}
 
 header nav {
   display: flex;
@@ -49,44 +52,56 @@ header nav {
 
 header nav button, header nav > a:not(:first-child) {
   padding: 0.6em;
-  background-color: #111;
-  color: white;
-  border-radius: 0.4rem;
-  border-width: 0.1rem;
-  border-color: #000;
   font-size: 1.1rem;
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
-header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus, header>nav li a:hover, header>nav li a:focus {
+header nav button {
+  border-radius: 0.4rem;
+  border-width: 0.1rem;
+  border-color: #000;
+  background-color: #111;
+  color: white;
+}
+
+header>nav li a:hover, header>nav li a:focus {
   text-decoration: underline;
+}
+header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus {
+  border-color: black;
+  transform: translateY(-0.3rem);
+  transition: 0.3s;
 }
 
 nav > a:not(:first-child) {
+  border-color: var(--maincolor);
   position: absolute;
   right: 3em;
   text-decoration: none; 
   color: inherit;
-  padding: 0.2em; 
-  border: solid #111 0.1rem;
-  text-decoration-color: #000;
 }
 
-nav img {
+.oslomet-logo img {
   height: 3em;
   width: 7.5em;
 }
-nav > a:first-child {
-  margin-right: 1em;
-  border-bottom: none;
-}
-
-nav img:hover {
+.oslomet-logo img:hover {
   transform: scale(1.06);
   transition: 0.5s;
 }
+.search-icon img{
+  margin-bottom: -0.2em;
+  height: 1.3em;
+  width: 2em;
+}
 
-button:focus, button:hover, nav>a:not(:first-child):hover {
+nav > a:first-child {
+  margin-right: 1em;
+  border: none;
+}
+
+
+button:focus, button:hover{
   background-color: white;
   color: #111;
   cursor: pointer;
@@ -177,29 +192,93 @@ article a:hover{
   border-bottom: solid 0.15rem #111;
 }
 
+.studiets-oppbygging{
+  display: flex;
+  align-items: center;
+  width: 80vw;
+}
+
+.studieår ul {
+  list-style: none;
+  padding-left: 0.5rem;
+  text-align: left;
+}
+
+.studieår ul li {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+
+}
+
+.studieår {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.studieår section {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.studieår section:hover{
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5rem);
+}
+
+
+/*style for symbolene brukt for oblig/valgfag*/
+.ikoner {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #444;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
 table {
+  font-family: arial, sans-serif;
   border-collapse: collapse;
   align-self: flex-start;
   height: 100%;
   width: 100%;
-  font-size: 0.9rem;
-  border: 0.1rem solid #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 0.1rem solid #000000;
   border-radius: 40px;
 }
 
 td, th {
-  border: 0.1rem solid #333;
+  border: 0.1rem solid #000000;
   text-align: left;
   padding: 0.3rem;
 }
 
+.kategori-fag {
+  background-color: #eee;
+}
+
+
 thead tr:nth-child(1) th {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #e2dfe3;
 }
 thead tr th {
   text-align: center;
-  background-color: rgb(255, 234, 113);
+  background-color: var(--maincolor);
 }
 
 /*Footer*/
@@ -627,7 +706,7 @@ a:hover {
 
 /*Activity page*/
 .mainact{
-  background-image: url('../images/pattern.webp'); /*Bilde fra: https://www.istockphoto.com/tr/vektör/kar-taneleri-ile-iskandinav-örme-kazak-vektör-illüstrasyon-gm1288832665-384677676*/
+  background-image: url('../images/pattern.jpg'); /*Bilde fra: https://www.istockphoto.com/tr/vektör/kar-taneleri-ile-iskandinav-örme-kazak-vektör-illüstrasyon-gm1288832665-384677676*/
   background-repeat: repeat;
   margin: 0;
 }
@@ -671,7 +750,7 @@ a:hover {
     margin-top: 2rem;
   }
   .firstpicture{
-    width: 90%;
+    width: 100%;
   }
 
   footer> section, div{
@@ -811,23 +890,7 @@ a:hover {
   #accessibility img {
     width: 90%;
   }
-}
-@media (max-width: 480px) {
-  table {
-    font-size: 0.8rem; /* Enda mindre fontstørrelse */
-    border-radius: 10px; /* Juster radius for liten skjerm */
-  }
 
-  td, th {
-    padding: 0.1rem; /* Minimal padding */
-    font-size: 0.75rem; /* Mindre tekst */
-  }
 
-  thead tr th {
-    font-size: 0.8rem; /* Smalere tekst for overskrifter */
-  }
 
-  .kategori-fag {
-    background-color: #c0c0c0; /* Juster farge for bedre kontrast */
-  }
 }

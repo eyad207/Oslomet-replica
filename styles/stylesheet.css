@@ -30,6 +30,9 @@ header {
   z-index: 1;
   border-bottom: solid 0.1rem #111;
 }
+.firstpicture{
+  width: 100%;
+}
 
 header nav {
   display: flex;
@@ -248,19 +251,25 @@ article > section ul {
 }
 
 
-.studieår a{
+article a{
   font-weight: 500;
   transition: color 0.3s;
   text-decoration: none;
   border-bottom: solid 0.15rem #ffd500;
+  transition: border-bottom 0.2s;
 }
+article a:hover{
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: solid 0.15rem #111;
+}
+
 .studiets-oppbygging{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70vw;
+  width: 80vw;
 }
-
 
 .studieår ul {
   list-style: none;
@@ -710,6 +719,9 @@ footer a:hover{
     margin: 0;
     margin-top: 2rem;
   }
+  .firstpicture{
+    width: 100%;
+  }
 
   footer> section, div{
     max-width: 60rem;
@@ -746,9 +758,6 @@ footer a:hover{
     gap: 0;
   }
 
-  .firstpicture{
-    width: 65vw;
-  }
   .studieinfo-div ul{
     justify-content: center;
     width: fit-content;

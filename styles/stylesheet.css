@@ -30,9 +30,6 @@ header {
   z-index: 1;
   border-bottom: solid 0.1rem #111;
 }
-.firstpicture{
-  width: 100%;
-}
 
 header nav {
   display: flex;
@@ -81,20 +78,6 @@ nav > a:not(:first-child) {
   color: inherit;
 }
 
-.oslomet-logo img {
-  height: 3em;
-  width: 7.5em;
-}
-.oslomet-logo img:hover {
-  transform: scale(1.06);
-  transition: 0.5s;
-}
-.search-icon img{
-  margin-bottom: -0.2em;
-  height: 1.3em;
-  width: 2em;
-}
-
 nav > a:first-child {
   margin-right: 1em;
   border: none;
@@ -113,13 +96,6 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
   opacity: 1;
   font-size: inherit;
   transition: 0.1s;
-}
-
-.sub-menu:focus-within { 
-  /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
-  man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
-  opacity: 1;
-  font-size: inherit;
 }
 
 
@@ -192,62 +168,6 @@ article a:hover{
   border-bottom: solid 0.15rem #111;
 }
 
-.studiets-oppbygging{
-  display: flex;
-  align-items: center;
-  width: 80vw;
-}
-
-.studieår ul {
-  list-style: none;
-  padding-left: 0.5rem;
-  text-align: left;
-}
-
-.studieår ul li {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.1rem;
-  margin-bottom: 0.9rem;
-
-}
-
-.studieår {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  width: 100%;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-
-.studieår section {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.studieår section:hover{
-  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-0.5rem);
-}
-
-
-/*style for symbolene brukt for oblig/valgfag*/
-.ikoner {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  gap: 1.3rem;
-  font-size: 1.1rem;
-  text-align: left;
-  color: #444;
-  margin-bottom: 1rem;
-  padding-left: 0;
-}
 
 table {
   font-family: arial, sans-serif;
@@ -267,15 +187,12 @@ td, th {
   padding: 0.3rem;
 }
 
-.kategori-fag {
-  background-color: #eee;
-}
-
 
 thead tr:nth-child(1) th {
   text-align: center;
   background-color: #e2dfe3;
 }
+
 thead tr th {
   text-align: center;
   background-color: var(--maincolor);
@@ -390,6 +307,28 @@ a:hover {
   border-bottom: 0.15rem solid #111;
 }
 
+/*navbar logos*/
+.oslomet-logo img {
+  height: 3em;
+  width: 7.5em;
+}
+.oslomet-logo img:hover {
+  transform: scale(1.06);
+  transition: 0.5s;
+}
+.search-icon img{
+  margin-bottom: -0.2em;
+  height: 1.3em;
+  width: 2em;
+}
+
+.sub-menu:focus-within { 
+  /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
+  man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
+  opacity: 1;
+  font-size: inherit;
+}
+
 /*gitsamarbeid bilde (endre kommentar)*/
 .firstpicture{
   width: 65vw;
@@ -444,6 +383,7 @@ a:hover {
   align-items: center;
   width: 80vw;
 }
+
 
 .studieår ul {
   list-style: none;
@@ -574,8 +514,6 @@ a:hover {
 .historier-container h3{
   margin-top: 1rem;
 }
-
-
 
 
 

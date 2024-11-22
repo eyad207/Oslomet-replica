@@ -52,44 +52,56 @@ header nav {
 
 header nav button, header nav > a:not(:first-child) {
   padding: 0.6em;
-  background-color: #111;
-  color: white;
-  border-radius: 0.4rem;
-  border-width: 0.1rem;
-  border-color: #000;
   font-size: 1.1rem;
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
-header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus, header>nav li a:hover, header>nav li a:focus {
+header nav button {
+  border-radius: 0.4rem;
+  border-width: 0.1rem;
+  border-color: #000;
+  background-color: #111;
+  color: white;
+}
+
+header>nav li a:hover, header>nav li a:focus {
   text-decoration: underline;
+}
+header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus {
+  border-color: black;
+  transform: translateY(-0.3rem);
+  transition: 0.3s;
 }
 
 nav > a:not(:first-child) {
+  border-color: var(--maincolor);
   position: absolute;
   right: 3em;
   text-decoration: none; 
   color: inherit;
-  padding: 0.2em; 
-  border: solid #111 0.1rem;
-  text-decoration-color: #000;
 }
 
-nav img {
+.oslomet-logo img {
   height: 3em;
   width: 7.5em;
 }
-nav > a:first-child {
-  margin-right: 1em;
-  border-bottom: none;
-}
-
-nav img:hover {
+.oslomet-logo img:hover {
   transform: scale(1.06);
   transition: 0.5s;
 }
+.search-icon img{
+  margin-bottom: -0.2em;
+  height: 1.3em;
+  width: 2em;
+}
 
-button:focus, button:hover, nav>a:not(:first-child):hover {
+nav > a:first-child {
+  margin-right: 1em;
+  border: none;
+}
+
+
+button:focus, button:hover{
   background-color: white;
   color: #111;
   cursor: pointer;

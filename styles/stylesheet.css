@@ -168,32 +168,28 @@ article a:hover{
 
 
 table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   align-self: flex-start;
   height: 100%;
   width: 100%;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: 0.1rem solid #000000;
-  border-radius: 40px;
+  font-size: 0.9rem;
+  border: 0.1rem solid #333;
 }
 
 td, th {
-  border: 0.1rem solid #000000;
+  border: 0.1rem solid #333;
   text-align: left;
   padding: 0.3rem;
 }
 
-
 thead tr:nth-child(1) th {
   text-align: center;
-  background-color: #e2dfe3;
+  background-color: #eee;
 }
 
 thead tr th {
   text-align: center;
-  background-color: var(--maincolor);
+  background-color: #ffee9a;
 }
 
 /*Footer*/
@@ -205,9 +201,12 @@ footer{
   padding-bottom: 2rem;
 }
 
+
+
 footer>section,
 footer>div{
   width: 75vw;
+  gap: 5vw;
 }
 
 footer>section{
@@ -299,7 +298,7 @@ footer>ul>li>img {
 a{
   color: #111;
   text-decoration: none;
-  border-bottom: solid 0.15rem #ffd919;
+  border-bottom: solid 0.1rem #ffd919;
 }
 a:hover {
   border-bottom: 0.15rem solid #111;
@@ -637,16 +636,9 @@ a:hover {
   text-align: center;
 }
 
-
 /*Media scaling*/
 
 /*Endrer utseende etter skjermstørrelse fra 1500px bred, 1200px bred eller 768px bred*/
-
-@media(max-width: 1500px){
-  footer>div{
-    gap: 5vw;
-  }
-}
 
 @media (max-width: 1200px) {
   main>h1, main>h2, main>p, main>article{
@@ -661,14 +653,14 @@ a:hover {
     font-size: 1.7rem;
   }
 
+  section p{
+    font-size: 1.1rem;
+  }
+
   footer button{
     margin: 0;
     margin-top: 2rem;
   }
-  .firstpicture{
-    width: 100%;
-  }
-
   footer> section, div{
     max-width: 60rem;
     justify-content: space-between;
@@ -683,34 +675,39 @@ a:hover {
   footer>ul>li {
     width: 100%;
   }
+
   footer> ul{
     flex-direction: column;
     align-items: center;
     width: fit-content;
     margin-top: 2rem;
   }
+
   footer nav {
     margin-left: 0;
   }
+
   footer div{
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   footer address, footer nav, aside, ul{
     padding: 0;
   }
+
   footer>div{
     gap: 0;
+  }
+
+  .firstpicture{
+    width: 100%;
   }
 
   .studieinfo-div ul{
     justify-content: center;
     width: fit-content;
-  }
-
-  section p{
-    font-size: 1.1rem;
   }
   
   .studieår{
@@ -745,10 +742,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-
   header nav {
     padding-left: 1em;
   }
+
   nav > a:first-child {
     margin-right: 0;
   }
@@ -766,8 +763,6 @@ a:hover {
   }
   table {
     font-size: 0.9rem; /* Mindre fontstørrelse */
-    width: 100%; /* Tilpass til skjermbredden */
-    border-radius: 20px; /* Mindre radius */
   }
 
   td, th {
@@ -807,4 +802,9 @@ a:hover {
     width: 90%;
   }
 
+
+
+  .studiets-oppbygging{
+    width: 90%;
+  }
 }

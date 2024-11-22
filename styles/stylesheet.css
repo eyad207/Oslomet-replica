@@ -111,9 +111,6 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 /*Body, main og andre hoved-elementer*/
 
 html, body {
-  /*Hindrer side scrolling på lavere oppløsninger*/
-  max-width: 100%;
-  /* overflow-x: hidden; */
   margin: 0;
   font-family: 'Roboto', sans-serif;
 } 
@@ -125,10 +122,6 @@ main {
   flex-direction: column;
   align-items: center;
 }
-/*gitsamarbeid bilde*/
-.firstpicture{
-  width: 65vw;
-}
 
 h1 {
   font-size: 2.7rem;
@@ -139,76 +132,6 @@ main h2 {
   font-weight: 500;
 }
 
-#accessibility table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  align-self: flex-start;
-  width: 65%;
-}
-
-#accessibilitytd, #accessibility th {
-  border: 3px solid #000000;
-  text-align: left;
-  padding: 8px;
-}
-
-#accessibility tr:nth-child(even) {
-  background-color: #e2dfe3;
-}
-
-#accessibility th:nth-child(2), #accessibility td:nth-child(2) {
-  font-weight: bold;
-  color: #7a0000;
-}
-#accessibility th:nth-child(3), #accessibility td:nth-child(3) {
-  font-weight: bold;
-  color: #296600
-}
-
-.studieinfo-div {
-  width: 65vw;
-  margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
-}
-
-
-.studieinfo-div ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  gap: 1rem;
-}
-
-
-.studieinfo-div li {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  border-radius: 0.313rem;
-  border-top: solid 0.1rem #111;
-  border-bottom: solid 0.1rem #111;
-  min-width: 10rem;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-.studieinfo-div li span:first-child {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-
-.studieinfo-div li span:last-child {
-  color: #444;
-}
-
-.studieinfo-div span{
-  font-size: 1.2rem;
-}
-
-
 article {
   display: flex;
   flex-direction: column;
@@ -217,7 +140,6 @@ article {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
 }
-
 
 article h3 {
   margin: 0;
@@ -255,63 +177,6 @@ article a:hover{
   border-bottom: solid 0.15rem #111;
 }
 
-.studiets-oppbygging{
-  display: flex;
-  align-items: center;
-  width: 80vw;
-}
-
-.studieår ul {
-  list-style: none;
-  padding-left: 0.5rem;
-  text-align: left;
-}
-
-.studieår ul li {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.1rem;
-  margin-bottom: 0.9rem;
-
-}
-
-.studieår {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  width: 100%;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-
-.studieår section {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.studieår section:hover{
-  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-0.5rem);
-}
-
-
-/*style for symbolene brukt for oblig/valgfag*/
-.ikoner {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  gap: 1.3rem;
-  font-size: 1.1rem;
-  text-align: left;
-  color: #444;
-  margin-bottom: 1rem;
-  padding-left: 0;
-}
-
 table {
   border-collapse: collapse;
   align-self: flex-start;
@@ -328,11 +193,6 @@ td, th {
   padding: 0.3rem;
 }
 
-.kategori-fag {
-  background-color: #eee;
-}
-
-
 thead tr:nth-child(1) th {
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
@@ -340,82 +200,6 @@ thead tr:nth-child(1) th {
 thead tr th {
   text-align: center;
   background-color: rgb(255, 234, 113);
-}
-
-
-/*style for lenkene til andre studier*/
-.flere-studier-section ul li{
-  margin-bottom: 1em;
-  margin-top: 0.5em;
-  list-style: none;
-}
-
-.flere-studier-section ul{
-  padding: 0;
-  margin: 0;
-  margin-bottom: 3em;
-}
-
-.studie-container > ul li{
-  display: inline-block;
-}
-
-.studie-container ul{
-  border-bottom: solid #666 1px;
-}
-
-/*negativ z-index for å unngå overlap problemer med header.*/
-.studie-container {
-  z-index: -10;
-  position: relative;
-}
-
-/*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
-.studie-container::after {
-  content: '\203A';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2em
-}
-
-/*dette er for å style listen under studie anbefalingene*/
-.studie-container > ul li:not(:last-child){
-  padding-right: 1em;
-  margin-right: 1em;
-  border-right: 1px solid #222;
-}
-
-
-/*Student historier*/
-.historier-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.historier-container p{
-  font-weight: 500;
-}
-
-.historier-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.historier-container > div{
-  padding: 2em;
-  background-color: var(--maincolor);
-}
-
-.historier-container > div span{
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.historier-container h3{
-  margin-top: 1rem;
 }
 
 /*Footer*/
@@ -517,6 +301,7 @@ footer>ul>li>img {
   width: 2rem;
   margin-right: 0.5rem;
 }
+
 a{
   color: #111;
   text-decoration: none;
@@ -525,6 +310,195 @@ a{
 a:hover {
   border-bottom: 0.15rem solid #111;
 }
+
+/*gitsamarbeid bilde (endre kommentar)*/
+.firstpicture{
+  width: 65vw;
+}
+
+.studieinfo-div {
+  width: 65vw;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+
+.studieinfo-div ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+
+.studieinfo-div li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 0.313rem;
+  border-top: solid 0.1rem #111;
+  border-bottom: solid 0.1rem #111;
+  min-width: 10rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.studieinfo-div li span:first-child {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+
+.studieinfo-div li span:last-child {
+  color: #444;
+}
+
+.studieinfo-div span{
+  font-size: 1.2rem;
+}
+
+
+.studiets-oppbygging{
+  display: flex;
+  align-items: center;
+  width: 80vw;
+}
+
+.studieår ul {
+  list-style: none;
+  padding-left: 0.5rem;
+  text-align: left;
+}
+
+.studieår ul li {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+
+}
+
+.studieår {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.studieår section {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.studieår section:hover{
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5rem);
+}
+
+/*style for symbolene brukt for oblig/valgfag*/
+.ikoner {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #444;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+
+.kategori-fag { /*endre navn*/
+  background-color: #eee;
+}
+
+/*style for lenkene til andre studier*/
+.flere-studier-section ul li{
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  list-style: none;
+}
+
+.flere-studier-section ul{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3em;
+}
+
+.studie-container > ul li{
+  display: inline-block;
+}
+
+.studie-container ul{
+  border-bottom: solid #666 1px;
+}
+
+/*negativ z-index for å unngå overlap problemer med header.*/
+.studie-container {
+  z-index: -10;
+  position: relative;
+}
+
+/*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
+.studie-container::after {
+  content: '\203A';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em
+}
+
+/*dette er for å style listen under studie anbefalingene*/
+.studie-container > ul li:not(:last-child){
+  padding-right: 1em;
+  margin-right: 1em;
+  border-right: 1px solid #222;
+}
+
+
+/*Student historier*/
+.historier-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.historier-container p{
+  font-weight: 500;
+}
+
+.historier-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.historier-container > div{
+  padding: 2em;
+  background-color: var(--maincolor);
+}
+
+.historier-container > div span{
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.historier-container h3{
+  margin-top: 1rem;
+}
+
+
+
+
 
 .sub-menu {
   display: flex;
@@ -550,6 +524,7 @@ a:hover {
   padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
+
 .sub-menu li a {
   display: block;
   width: 100%;
@@ -568,6 +543,32 @@ a:hover {
   transition: 0.5s;
 }
 /*Accessibility*/
+#accessibility table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  align-self: flex-start;
+  width: 65%;
+}
+
+#accessibilitytd, #accessibility th {
+  border: 3px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+#accessibility tr:nth-child(even) {
+  background-color: #e2dfe3;
+}
+
+#accessibility th:nth-child(2), #accessibility td:nth-child(2) {
+  font-weight: bold;
+  color: #7a0000;
+}
+#accessibility th:nth-child(3), #accessibility td:nth-child(3) {
+  font-weight: bold;
+  color: #296600
+}
+
 #accessibility  p, #accessibility h1, #accessibility h2{
   width: 70vw;
 }

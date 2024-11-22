@@ -216,7 +216,6 @@ article {
   display: flex;
   flex-direction: column;
   width: 65vw;
-  padding: 1.5rem;
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
@@ -608,7 +607,7 @@ a:hover {
   margin-bottom: 4em;
 }
 #accessibility h2, #accessibility h3{
-  margin-top: 0;
+  margin-top: 2em;
 }
 
 #accessibility p, #accesibility a{
@@ -683,7 +682,7 @@ a:hover {
 
 @media (max-width: 1200px) {
   main>h1, main>h2, main>p, main>article{
-    width: 90vw;
+    width: 70vw;
   }
   h1{
     font-size: 2.2rem;
@@ -737,11 +736,6 @@ a:hover {
     gap: 0;
   }
 
-  .studieinfo-div ul{
-    justify-content: center;
-    width: fit-content;
-  }
-
   section p{
     font-size: 1.1rem;
   }
@@ -785,6 +779,11 @@ a:hover {
   nav > a:first-child {
     margin-right: 0;
   }
+
+  main>h1, main>h2, main>p, main>article{
+    width: 90vw;
+  }
+
   main>h1 {
     font-size: 1.8rem; 
   }
@@ -792,13 +791,21 @@ a:hover {
   main h3, main p {
     font-size: 1rem;
   }
+  table {
+    font-size: 0.9rem; /* Mindre fontstørrelse */
+    width: 100%; /* Tilpass til skjermbredden */
+    border-radius: 20px; /* Mindre radius */
+  }
 
-  table,  .studieår h3{
-    font-size: 1.1em;
+  td, th {
+    padding: 0.2rem; /* Reduser padding */
+    font-size: 0.85rem; /* Juster fontstørrelse */
   }
-  table td{
-    padding: 0.5rem;
+
+  thead tr th {
+    font-size: 0.9rem; /* Mindre font for overskrifter */
   }
+
 
   .studie-container > ul li{
     font-size: 0.8rem;
@@ -821,8 +828,6 @@ a:hover {
     width: 90%;
   }
 
-  .activity{
-    width: 85%;
-  }
+
 
 }

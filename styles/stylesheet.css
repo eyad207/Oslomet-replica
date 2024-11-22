@@ -781,6 +781,10 @@ a:hover {
     padding: 0.5rem;
   }
 
+  .studiets-oppbygging{
+    width: 90%;
+  }
+  
   .studie-container > ul li{
     font-size: 0.8rem;
   }
@@ -802,9 +806,4 @@ a:hover {
     width: 90%;
   }
 
-
-
-  .studiets-oppbygging{
-    width: 90%;
-  }
 }

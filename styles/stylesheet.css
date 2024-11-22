@@ -181,6 +181,7 @@ td, th {
   border: 0.1rem solid #333;
   text-align: left;
   padding: 1rem;
+  line-height: 1.5;
 }
 
 

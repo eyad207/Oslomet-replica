@@ -239,12 +239,6 @@ footer>section>button:hover{
   cursor: pointer;
 }
 
-footer>section>h2{
-  margin: 0;
-  font-weight: 600;
-  font-size: 2rem;
-}
-
 footer>div, footer>ul{
   display: flex; /**/
   flex-direction: row; /**/

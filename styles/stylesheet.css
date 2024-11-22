@@ -600,15 +600,13 @@ a:hover {
 
 /*Grid container, endrer utseende på grid og sørger for at alt er plassert riktig og riktig størrelse*/
 .container{
-  width: 70vw;
+  width: 80vw;
   display: grid;
   grid-template-rows: 500px;
   grid-template-columns: 4fr 3fr;
   column-gap: 1em;
-  row-gap: 2em;
   justify-items: start;
   align-items: center;
-  margin: 3em;
 }
 .container img{
   max-width: 100%;
@@ -619,12 +617,15 @@ a:hover {
   flex-direction: row;
   flex: 1 1 auto;
   height: auto;
-  gap: 2em;
+  gap: 1em;
   justify-content: center;
   object-fit: cover;
 }
 .git_bilder img{
-  height: 30vw;
+  height: 35vw;
+}
+.gitside article{
+  width: 80vw;
 }
 
 /*Activity page*/

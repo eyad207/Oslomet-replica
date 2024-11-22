@@ -278,13 +278,6 @@ article a:hover{
 
 }
 
-.studieår ul li strong {
-  font-size: 1.1rem;
-  margin-top: 0.8rem;
-  color: #746301;
-}
-
-
 .studieår {
   display: flex;
   flex-direction: row;
@@ -302,28 +295,12 @@ article a:hover{
   text-align: center;
   transition: box-shadow 0.3s, transform 0.3s;
 }
-.studieår h3{
-  background-color: #ffd500;
-  border-top: solid 0.1rem #111;
-  border-right: solid 0.1rem #111;
-  border-left: solid 0.1rem #111;
-}
 
 .studieår section:hover{
   box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
   transform: translateY(-0.5rem);
 }
 
-.studieår section h4 {
-  text-align: center;
-  font-size: 1.4rem;
-}
-
-.studieår span:first-child{
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 0.5rem;
-}
 
 /*style for symbolene brukt for oblig/valgfag*/
 .ikoner {
@@ -339,35 +316,33 @@ article a:hover{
 }
 
 table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   align-self: flex-start;
   height: 100%;
   width: 100%;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: 0.1rem solid #000000;
+  font-size: 0.9rem;
+  border: 0.1rem solid #333;
   border-radius: 40px;
 }
 
 td, th {
-  border: 0.1rem solid #000000;
+  border: 0.1rem solid #333;
   text-align: left;
   padding: 0.3rem;
 }
 
 .kategori-fag {
-  background-color: #dcdcdc;
+  background-color: #eee;
 }
 
 
 thead tr:nth-child(1) th {
   text-align: center;
-  background-color: #e2dfe3;
+  background-color: rgba(0, 0, 0, 0);
 }
 thead tr th {
   text-align: center;
-  background-color: var(--maincolor);
+  background-color: rgb(255, 234, 113);
 }
 
 

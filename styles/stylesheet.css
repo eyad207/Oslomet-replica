@@ -104,63 +104,22 @@ html, body {
 } 
 /* Hovedseksjonen som holder innholdet og setter opp flex-layout */
 main {
-<<<<<<< HEAD
-=======
   margin-top: 1em;
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-top: 2em;
 }
 
-<<<<<<< HEAD
-.firstpicture{
-  width: 70vw;
-  margin-bottom: 3em;
-  border-radius: 0.625rem;
-}
-
-main>h1, main>h2,
-main>h3, main>p{
-  color: #111;
-  text-align: left; 
-  width: 65vw;                   
-}
-
-p{
-  font-size: 1em;
-  line-height: 1.5em;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-
-=======
 h1 {
   font-size: 2.7rem;
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 }
 
 h2 {
   font-size: 1.7rem;
   font-weight: 500;
-  margin-bottom: 2rem;
-
 }
 
-main h3{
-  font-size: 2rem;
-}
-
-<<<<<<< HEAD
-main>p{
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-bottom: 4rem;
-=======
 
 article {
   display: flex;
@@ -169,7 +128,6 @@ article {
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 }
 
 article h3 {
@@ -196,25 +154,6 @@ article > section ul {
   margin-top: 0.5rem;
 }
 
-<<<<<<< HEAD
-nav>a {
-  position: absolute;
-  right: 6em;
-  text-decoration: none;
-  color: inherit;
-  padding: 0.2em;
-}
-
-nav img {
-  justify-content: flex-end;
-  height: 3em;
-  width: 7.5em;
-  margin-right: 2em;
-}
-
-button:focus, 
-button:hover, nav>a:hover {
-=======
 
 table {
   font-family: arial, sans-serif;
@@ -284,17 +223,11 @@ footer>section>button{
 
 footer>section>button:hover{
   box-shadow: 0 0 0.5rem #111; 
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   background-color: white;
   color: #111;
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-nav button:focus-within .sub-menu,
-.sub-menu:hover,
-nav > button:focus + .sub-menu {
-=======
 footer>div, footer>ul{
   display: flex; /**/
   flex-direction: row; /**/
@@ -378,7 +311,6 @@ a:hover {
 
 /*submenu til navbar*/
 .sub-menu {
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -403,44 +335,6 @@ a:hover {
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
-<<<<<<< HEAD
-
-.studieinfo-div {
-  width: 65vw;
-  margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
-}
-
-
-.studieinfo-div ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  gap: 1rem;
-}
-
-
-.studieinfo-div li {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  border-radius: 0.313rem;
-  border-top: solid 0.1rem #111;
-  border-bottom: solid 0.1rem #111;
-  min-width: 10rem;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-.studieinfo-div li span:first-child {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-
-=======
 .sub-menu li a {
   display: block;
   width: 100%;
@@ -506,70 +400,15 @@ a:hover {
 }
 
 /* Stil for siste span i hvert listeelement */
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 .studieinfo-div li span:last-child {
   color: #444;
 }
 
-<<<<<<< HEAD
-=======
 /* Generell stil for alle span-elementer i .studieinfo-div */
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 .studieinfo-div span{
   font-size: 1.2rem;
 }
 
-<<<<<<< HEAD
-
-main > section {
-  display: flex;
-  flex-direction: column;
-  width: 60vw;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 2rem;
-}
-
-
-main > section h3 {
-  margin-top: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding-bottom: 10px;
-}
-
-
-main > section p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-
-}
-
-
-main > section ul {
-  margin: 0;
-}
-
-main a{
-  font-weight: 500;
-  transition: color 0.3s;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #ffd500;
-}
-.studiets-oppbygging{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-=======
 /*Studiets oppbygning (article)*/
 .studiets-oppbygging{
   display: flex;
@@ -578,7 +417,6 @@ main a{
 }
 
 /*studieår div boksen sin ul*/
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 .studieår ul {
   list-style: none;
   padding-left: 0.5rem;
@@ -592,24 +430,6 @@ main a{
   margin-bottom: 0.9rem;
 }
 
-<<<<<<< HEAD
-
-.studieår ul li strong {
-  font-size: 1rem;
-  margin-top: 0.8rem;
-  color: #CCAA00;
-}
-
-
-.studieår {
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
-  gap: 3rem;
-  width: 100%;
-}
-
-=======
 .studieår {
   display: flex;
   flex-direction: row;
@@ -619,45 +439,21 @@ main a{
   margin-top: 1rem;
 }
 
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 .studieår section {
   width: 100%;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
-<<<<<<< HEAD
-  background-color: rgb(240, 240, 240) ;
-  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: box-shadow 0.3s, transform 0.3s;
-
-}
-=======
   box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 .studieår section:hover{
   box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
   transform: translateY(-0.5rem);
 }
 
-<<<<<<< HEAD
-.studieår section h4 {
-  text-align: center;
-  font-size: 1.4rem;
-}
-
-.studieår span:first-child{
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 0.5rem;
-}
-
-=======
 /*Style for symbolene brukt for oblig/valgfag*/
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 .ikoner {
   list-style-type: none;
   display: flex;
@@ -741,12 +537,7 @@ main a{
   background-color: var(--maincolor);
 }
 
-<<<<<<< HEAD
-.historier-container > div h3{
-  font-size: 1.5rem;
-=======
 .historier-container > div span{
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   text-decoration: underline;
   font-weight: 500;
 }
@@ -766,26 +557,12 @@ main a{
   margin-bottom: 2em;
 }
 
-<<<<<<< HEAD
-section>button{
-  padding: 0.8em;
-  background-color: #111;
-  color: white;
-  border-radius: 0.6rem;
-  border-width: 0.1rem;
-  border-color: #111;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-}
-=======
 /*tabellen om resultater*/
   #accessibility table {
     border-collapse: collapse;
     align-self: flex-start;
     width: 65%;
   }
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 
   #accessibilitytd, #accessibility th {
     border: 3px solid #333;
@@ -797,21 +574,6 @@ section>button{
     background-color: #e2dfe3;
   }
 
-<<<<<<< HEAD
-footer>div, footer>ul{
-  display: flex; /**/
-  flex-direction: row; /**/
-  justify-content: space-between; /**/
-  margin-bottom: 2rem;
-}
-
-footer address>h3{
-  font-size: 1.3rem;
-  margin: 0;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-=======
   #accessibility th:nth-child(2), #accessibility td:nth-child(2) {
     font-weight: bold;
     color: #7a0000;
@@ -822,7 +584,6 @@ footer address>h3{
   }
 
 /*GITHUB SIDE*/
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
 
 /*Grid container, endrer utseende på grid og sørger for at alt er plassert riktig og riktig størrelse*/
 .container{
@@ -836,70 +597,8 @@ footer address>h3{
   align-items: center;
   margin: 3em;
 }
-<<<<<<< HEAD
-
-footer address span{
-  display: flex;
-  flex-direction: column;
-  font-weight: 400;
-}
-
-footer>ul{
-  width: 50vw;
-}
-
-footer li{
-  font-weight: 600;
-  margin-bottom: 1rem;
-  list-style-type: none;
-  align-items: center; /**/
-}
-
-footer>ul>li {
-  display: flex; /**/
-  align-items: center; /**/
-}
-
-footer>ul>li>img {
-  width: 2rem;
-  margin-right: 0.5rem;
-}
-
-main a, footer a{
-  color: #111;
-  text-decoration: none;
-}
-
-main a:hover, footer a:hover{
-  border-bottom: solid #111;
-}
-
-.sub-menu {
-  width: 100%;
-  display: none;
-  position: absolute;
-  background-color: var(--maincolor);
-  border-bottom: 1px solid #111;
-  border-top: 1px solid #111;
-  padding: 0;
-  margin: 0;
-  left: 0em;
-  top: 5.65em;
-  z-index: 2;
-}
-.sub-menu li {
-  list-style-type: none;
-  cursor: pointer;
-  padding: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-}
-.sub-menu li a {
-  display: block;
-  width: 100%;
-=======
 .container img{
   max-width: 100%;
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   height: 100%;
 }
 .git_bilder{
@@ -959,55 +658,17 @@ main a:hover, footer a:hover{
   }
 }
 
-<<<<<<< HEAD
-@media (max-width: 1300px) {
-
-  .firstpicture{
-    width: 80vw;
-    justify-content: center;
-=======
 @media (max-width: 1200px) {
   main>h1, main>h2, main>p, main>article{
     width: 70vw;
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   }
   h1{
     font-size: 2.2rem;
     align-items: center;
-    width: 80vw;
   }
 
   h2{
     font-size: 1.7rem;
-<<<<<<< HEAD
-    width: 80vw;
-  }
-
-
-  section p{
-    font-size: 1.1rem;
-  }
-
-  main>section{
-    width: 60%;
-  }
-
-  .studieår{
-    flex-direction: column;
-  }
-
-  .historier-container{
-    grid-template-columns: 1fr;
-  }
-
-  .historier-info, .historier-container img {
-    width: 100%;
-  }
-
-  .historier-container h3, p {
-    font-size: 1.3em;
-=======
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   }
 
   footer button{
@@ -1029,22 +690,14 @@ main a:hover, footer a:hover{
     text-align: center;
   }
 
-<<<<<<< HEAD
-=======
   footer>ul>li {
     width: 100%;
   }
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   footer> ul{
-    width: fit-content;
     flex-direction: column;
     align-items: center;
     width: fit-content;
     margin-top: 2rem;
-  }
-
-  footer li{
-    width: 100%;
   }
   footer nav {
     margin-left: 0;
@@ -1060,18 +713,6 @@ main a:hover, footer a:hover{
   footer>div{
     gap: 0;
   }
-  
-  main>div{
-    width: 70%;
-  }
-
-  main>div li {
-    padding: 1.1rem;
-}
-.info-section {
-  width: 65%;
-  flex-direction: column;
-}
 
   .studieinfo-div ul{
     justify-content: center;
@@ -1115,21 +756,9 @@ main a:hover, footer a:hover{
 }
 
 @media (max-width: 768px) {
-<<<<<<< HEAD
-  .firstpicture{
-    width: 95%;
-  }
-  main{
-    margin-top: 1rem;
-  }
-  
-  nav > button, nav > a {
-    margin-left: 1em;
-=======
 
   header nav {
     padding-left: 1em;
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   }
   nav > a:first-child {
     margin-right: 0;
@@ -1140,24 +769,14 @@ main a:hover, footer a:hover{
   }
 
   main>h1 {
-    font-size: 1.6rem;
-    width: 90%; 
+    font-size: 1.8rem; 
   }
-<<<<<<< HEAD
-  main>h2{
-    font-size: 1.4rem;
-    width: 90%; 
-  }
-  main>p{
-    width: 90%;
-=======
 
   main h3, main p {
     font-size: 1rem;
   }
   .studiets-oppbygging {
     width: 100%;
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89
   }
 
   table {
@@ -1194,36 +813,6 @@ main a:hover, footer a:hover{
   .studie-container::after {
     content: '';
   }
-  main>div{
-    width: 100%;
-    align-items: center;
-  }
-  main>div ul {
-    justify-content: center;
-    flex-direction: row;
-    padding: 0;
-}
-
-  main>div li {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-}
-
-  main > section {
-    width: 90%;
-    padding: 20px;
-}
-
-  main > section h3 {
-    font-size: 1.8rem;
-  }
-
-  main > section p,
-  main > section ul li {
-    font-size: 1rem;
-  }
 
   .historier-container span, .historier-container p{
     font-size: 0.9em;
@@ -1233,12 +822,8 @@ main a:hover, footer a:hover{
     font-size: 1.1rem;
   }
 
-<<<<<<< HEAD
-
-=======
   #accessibility img {
     width: 90%;
   }
 
 }
->>>>>>> eb0113668a9d67923c3cdbeac14dd74bc7e97c89

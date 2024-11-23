@@ -621,7 +621,7 @@ a:hover {
   margin: 0;
 }
 .activity{
-  background-color: white; 
+  background-color: rgb(210, 222, 235); 
   padding: 15px; 
   margin: 20px auto; 
   border-radius: 10px;
@@ -629,6 +629,10 @@ a:hover {
 }
 .activity h1{
   text-align: center;
+}
+
+.activity-header-footer{ /*endrer farge på header/footer på activity page*/
+  background-color: rgb(180, 193, 206);
 }
 
 

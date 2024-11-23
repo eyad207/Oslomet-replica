@@ -18,6 +18,12 @@ List of contents:
   --maincolor: #ffd500;
 }
 
+/*BODY OG ANDRE HOVUD-ELEMENTER*/
+html, body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+} 
+
 /*HEADER*/
 header, footer {
   background-color: var(--maincolor);
@@ -53,6 +59,12 @@ header nav button, header nav > a:not(:first-child) {
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
+header nav > a:not(:first-child) > img {
+  margin-bottom: -0.2em;
+  height: 1.3em;
+  width: 2em;
+}
+
 header nav button {
   margin-left: 3em;
   border: none;
@@ -61,7 +73,6 @@ header nav button {
   color: inherit;
   transition: 0.3s;
 }
-
 header>nav li a:hover, header>nav li a:focus {
   border-bottom: none;
 }
@@ -86,21 +97,17 @@ nav > a:first-child {
   margin-right: 1em;
   border: none;
 }
-
-
-nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
-  /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
-  Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
-  opacity: 1;
-  font-size: inherit;
+nav > a:first-child > img{
+  height: 3em;
+  width: 7.5em;
+  transition: 0.5s;
+}
+nav > a:first-child > img:hover {
+  transform: scale(1.06);
 }
 
+/* Alt innenfor Main */
 
-/*BODY, MAIN OG ANDRE HOVUD-ELEMENTER*/
-html, body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-} 
 /* Hovedseksjonen som holder innholdet og setter opp flex-layout */
 main {
   margin-top: 1em;
@@ -119,6 +126,17 @@ h2 {
   font-weight: 500;
 }
 
+a{
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  border-bottom: solid 0.15rem #ffd919;
+  transition: color 0.3s;
+  transition: border-bottom 0.2s;
+}
+a:hover {
+  border-bottom: 0.15rem solid #111;
+}
 
 article {
   display: flex;
@@ -135,7 +153,6 @@ article h3 {
   margin-top: 0;
   font-weight: 700;
 }
-
 
 article p {
   font-size: 1.2rem;
@@ -280,34 +297,6 @@ footer>ul>li>img {
   margin-right: 0.5rem;
 }
 
-
-a{
-  font-weight: 500;
-  color: #111;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #ffd919;
-  transition: color 0.3s;
-  transition: border-bottom 0.2s;
-}
-a:hover {
-  border-bottom: 0.15rem solid #111;
-}
-
-/*NAVBAR LOGOS*/
-.oslomet-logo img {
-  height: 3em;
-  width: 7.5em;
-  transition: 0.5s;
-}
-.oslomet-logo img:hover {
-  transform: scale(1.06);
-}
-.search-icon img{
-  margin-bottom: -0.2em;
-  height: 1.3em;
-  width: 2em;
-}
-
 /*submenu til navbar*/
 .sub-menu {
   display: flex;
@@ -356,6 +345,15 @@ a:hover {
   opacity: 1;
   font-size: inherit;
 }
+
+nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
+  /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
+  Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
+  opacity: 1;
+  font-size: inherit;
+}
+
+
 /*Første bilde i hjemmesiden og i git-sammarbeid*/
 .firstpicture{
   width: 65vw;

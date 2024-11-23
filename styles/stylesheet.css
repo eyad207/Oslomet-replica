@@ -1,9 +1,13 @@
 /*
 List of contents:
-  HOVED CSS
+  CSS for elementer (følger rekkefølgen til siden)
+    -Html/body
+
     -Header
     -Main body
     -Footer
+
+  CSS for klasser (følger rekkefølgen til siden)
 
   CSS spesifikt for de andre nettsidene
     -Accessibility
@@ -14,97 +18,90 @@ List of contents:
   
 */
 
+/* Skiller mellom attributter for layout og attributter for utseende med mellomrom */
+
 :root{
   --maincolor: #ffd500;
 }
 
 /*BODY OG ANDRE HOVUD-ELEMENTER*/
-html, body {
+html, body{
   margin: 0;
+
   font-family: 'Roboto', sans-serif;
 } 
 
 /*HEADER*/
-header, footer {
+header, footer{
   background-color: var(--maincolor);
 }
 
-header {
-  top: 0;
-  width: inherit;
+header{
+  top: 0; /* Må sette en top-verdi slik at menyen holdes sticky */
   position: sticky;
   z-index: 1;
+}
+header nav{
+  display: flex;
+  padding: 1.3em 1em 1.3em 4em;
+
+  flex-wrap: wrap;
   border-bottom: solid 0.1rem #111;
 }
 
-header nav {
-  display: flex;
-  width: inherit;
-  align-items: center;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding-bottom: 1.3em;
-  padding-top: 1.3em;
-  padding-left: 4em;
-  padding-right: 1rem;
-  background-color: inherit;
-  top: 0;
-  position: sticky;
+nav>a:first-child{ /*Lenken til OsloMet-logoen */
+  margin-right: 1em;
+
+  border: none;
+}
+nav>a:first-child > img{ /* OsloMet-logoen */
+  height: 3em;
+  width: 7.5em;
+
+  transition: 0.5s;
+}
+nav>a:first-child > img:hover{
+  transform: scale(1.06);
 }
 
-header nav button, header nav > a:not(:first-child) {
+header nav button, header nav>a:nth-of-type(2){ /* Felles for både meny-knappen og søk-lenken */
   padding: 0.6em;
+
   font-size: 1.1rem;
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
-header nav > a:not(:first-child) > img {
-  margin-bottom: -0.2em;
-  height: 1.3em;
-  width: 2em;
-}
 
-header nav button {
+header>nav>button{ /* Meny-knappen */
   margin-left: 3em;
+
   border: none;
   background-color: inherit;
+  transition: 0.1s;
+}
+
+header>nav>a:nth-of-type(2){ /* Søk-lenken */
+  position: absolute;
+  right: 5em;
+
+  border-bottom: none;
   text-decoration: none; 
   color: inherit;
   transition: 0.1s;
 }
-header>nav li a:hover, header>nav li a:focus {
-  border-bottom: none;
+header nav>a:nth-of-type(2)>img{ /* Søke-ikonet */
+  height: 1.3em;
+  width: 2em;
 }
 
-header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus,
-header nav button:hover, header nav button:focus {
+header>nav>a:nth-of-type(2):hover, header>nav>a:nth-of-type(2):focus,
+header nav button:hover, header nav button:focus{
+  /* Når knappen og lenken fokuseres på av enten mus eller tab */
   transform: translateY(-0.3rem);
   cursor: pointer;
   border-bottom: 0.1em solid black;
 }
 
-header > nav > a:not(:first-child) {
-  border-bottom: none;
-  position: absolute;
-  right: 5em;
-  text-decoration: none; 
-  color: inherit;
-  transition: 0.1s;
-}
-
-nav > a:first-child {
-  margin-right: 1em;
-  border: none;
-}
-nav > a:first-child > img{
-  height: 3em;
-  width: 7.5em;
-  transition: 0.5s;
-}
-nav > a:first-child > img:hover {
-  transform: scale(1.06);
-}
 
 /* Alt innenfor Main */
 
@@ -298,55 +295,42 @@ footer>ul>li>img {
 }
 
 /*submenu til navbar*/
-.sub-menu {
+.sub-menu{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  opacity: 0;
-  font-size: 0;
   position: absolute;
+  padding-left: 8%;
+  width: 92%; /* Er 96% siden padding-left tar opp plassen for de resterende 4% */
+  margin: 0; 
+  left: 0em; /* Med position:absolute tillates det at left er satt til noe annet enn 0 som default */
+  top: 5.6em;
+  z-index: 2;
+
+  opacity: 0; /* Opacity og font-size er satt lik 0 for å gjøre sub-menyen "usynlig" men la tab-index funke likevel. 
+  Mer om dette står i accessibility-siden innenfor valg */
+  font-size: 0;
   background-color: var(--maincolor);
   border-bottom: 1px solid #111;
   border-top: 1px solid #111;
-  padding: 0;
-  padding-left: 4%;
-  width: 96%; /* Er 96% siden padding-left tar opp plassen for de resterende 4% */
-  margin: 0;
-  left: 0em;
-  top: 5.6em;
-  z-index: 2;
 }
-.sub-menu li {
+.sub-menu li{
   list-style-type: none;
+  
   cursor: pointer;
-  padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
   transition: 0.3s;
 }
-
-.sub-menu li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
-  padding: 1em;
-  box-sizing: border-box;
-  text-align: center;
-  z-index: 2;
-  border-bottom: none;
-}
-.sub-menu li:hover {
+.sub-menu li:hover{
   background-color: rgb(240, 235, 189);
   text-decoration-color: var(--maincolor);
 }
-
-.sub-menu:focus-within { 
-  opacity: 1;
-  font-size: inherit;
+.sub-menu li a{
+  display: block;
+  padding: 1em;
 }
 
-nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
+nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-within{
   /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
   Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
   opacity: 1;
@@ -548,26 +532,23 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 
 /*ACCESSIBILITY-PAGE*/
 
-#accessibility  p, #accessibility h1, #accessibility h2{
+#accessibility p, #accessibility h1, #accessibility h2{
   width: 70vw;
-}
-
-#accessibility img {
-  width: 70%;
-  margin-bottom: 2em;
 }
 
 /*tabellen om resultater*/
   #accessibility table {
-    border-collapse: collapse;
     align-self: flex-start;
     width: 65%;
+
+    border-collapse: collapse;
   }
 
   #accessibility td, #accessibility th {
-    border: 3px solid #333;
     text-align: left;
     padding: 8px;
+    
+    border: 3px solid #333;
   }
 
   #accessibility tr:nth-child(even) {
@@ -583,9 +564,9 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
     color: #44a900
   }
 
-  #accessibility img{
-    width: 60%;
-  }
+#accessibility img{
+  width: 60%;
+}
 
 /*GITHUB SIDE*/
 

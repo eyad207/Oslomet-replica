@@ -90,7 +90,7 @@ header > nav > a:not(:first-child) {
   right: 5em;
   text-decoration: none; 
   color: inherit;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 nav > a:first-child {

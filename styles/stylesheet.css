@@ -348,7 +348,7 @@ a:hover {
   border-bottom: none;
 }
 .sub-menu li:hover {
-  background-color: #dcdcdc;
+  background-color: rgb(240, 235, 189);
   text-decoration-color: var(--maincolor);
 }
 
@@ -639,7 +639,7 @@ a:hover {
 }
 /*endrer farge på header/footer på activity page*/
 .activity-page header, .activity-page footer, .activity-page .sub-menu{      
-  background-color: rgb(180, 193, 206);
+  background-color: rgb(208, 85, 83);
 }
 
 /*endrer fargene lenker i activity page, for å oppnå bedre kontrast*/

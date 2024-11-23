@@ -486,11 +486,15 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 
 .studie-container ul {
   border-bottom: solid #666 1px;
+  transition: 0.5s;
+}
+.studie-container ul:hover {
+  border-bottom: solid var(--maincolor) 1px;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 /*negativ z-index for å unngå overlap problemer med header.*/
 .studie-container {
-  z-index: -10;
   position: relative;
 }
 

@@ -116,9 +116,19 @@ h1 {
   font-size: 2.7rem;
 }
 
-main h2 {
+h2 {
   font-size: 1.7rem;
   font-weight: 500;
+}
+a{
+  font-weight: 500;
+  transition: color 0.3s;
+  transition: border-bottom 0.2s;
+}
+a:hover{
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: solid 0.15rem #111;
 }
 
 article {
@@ -152,18 +162,6 @@ article > section ul {
   line-height: 1.8;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-}
-
-
-article a{
-  font-weight: 500;
-  transition: color 0.3s;
-  transition: border-bottom 0.2s;
-}
-article a:hover{
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #111;
 }
 
 
@@ -618,7 +616,7 @@ a:hover {
 
 /*Activity page*/
 .mainact{
-  background-image: url('../images/pattern.jpg'); /*Bilde fra: https://www.istockphoto.com/tr/vektör/kar-taneleri-ile-iskandinav-örme-kazak-vektör-illüstrasyon-gm1288832665-384677676*/
+  background-image: url('../images/pattern.webp'); /*Bilde fra: https://www.istockphoto.com/tr/vektör/kar-taneleri-ile-iskandinav-örme-kazak-vektör-illüstrasyon-gm1288832665-384677676*/
   background-repeat: repeat;
   margin: 0;
 }

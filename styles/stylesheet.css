@@ -180,6 +180,8 @@ table {
 
 
 td, th {
+  word-wrap: break-word;        /* Bryter ord som er for lange */
+  hyphens: auto;                /* Legger til bindestreker der det er naturlig */
   border: 0.1rem solid #000000;
   text-align: left;               /* Justerer teksten til venstre */
   padding: 1rem;
@@ -375,7 +377,7 @@ a:hover {
   margin-bottom: 3.5rem;
 }
 
-/* Stil for ul-listen inne i .studieinfo-div */
+/* Stil for ul-listen inne i studieinfo-div */
 .studieinfo-div ul {
   display: flex;      /* Gjør listen til en flex for enkel styring */
   flex-wrap: wrap;    /* Gjør at elementene brytes til neste rad om nødvendig */
@@ -384,47 +386,51 @@ a:hover {
   gap: 1rem;
 }
 
+/* Stil for listeelementer i studieinfo-div */
 .studieinfo-div li {
-  display: flex;
-  flex-direction: column;
+  display: flex;              /* Gjør hvert listeelement til en flex-container */
+  flex-direction: column;     /* Arrangerer innholdet i listeelementet vertikalt */
   padding: 1.5rem;
   border-radius: 0.313rem;
   border-top: solid 0.1rem #111;
   border-bottom: solid 0.1rem #111;
   width: 10rem;
-  text-align: center;
+  text-align: center;          /* Sentraliserer teksten i listeelementet */
   margin-top: 0.5rem;
 }
 
+/* Stil for første span i hvert listeelement */
 .studieinfo-div li span:first-child {
   font-weight: bold;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
+/* Stil for siste span i hvert listeelement */
 .studieinfo-div li span:last-child {
   color: #444;
 }
 
+/* Generell stil for alle span-elementer i .studieinfo-div */
 .studieinfo-div span{
   font-size: 1.2rem;
 }
 
-/*Studiets oppbygning sin article*/
+/*Studiets oppbygning (article)*/
 .studiets-oppbygging{
   display: flex;
   align-items: center;
   width: 80vw;
 }
 
-/*Div boksen rundt tabellene*/
+/*studieår div boksen sin ul*/
 .studieår ul {
   list-style: none;
   padding-left: 0.5rem;
   text-align: left;
 }
 
-.studieår ul li {
+.studieår li {
   display: flex;
   flex-direction: column;
   font-size: 1.1rem;
@@ -710,6 +716,7 @@ a:hover {
   
   .studieår{
     flex-direction: column;
+    align-items: center;
   }
 
   /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
@@ -759,6 +766,10 @@ a:hover {
   main h3, main p {
     font-size: 1rem;
   }
+  .studiets-oppbygging {
+    width: 100%;
+  }
+
   table {
     font-size: 0.9rem; /* Mindre fontstørrelse */
     width: 100%; /* Tilpass til skjermbredden */

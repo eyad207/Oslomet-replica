@@ -56,21 +56,20 @@ header nav button, header nav > a:not(:first-child) {
 header nav button {
   border-radius: 0.4rem;
   border-width: 0.1rem;
-  border-color: #000;
   background-color: #111;
   color: white;
 }
 
 header>nav li a:hover, header>nav li a:focus {
-  text-decoration: underline;
+  border-bottom: none;
 }
+
 header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus {
-  border-color: black;
   transform: translateY(-0.3rem);
 }
 
 header > nav > a:not(:first-child) {
-  border-color: var(--maincolor);
+  border-bottom: none;
   position: absolute;
   right: 3em;
   text-decoration: none; 
@@ -346,6 +345,7 @@ a:hover {
   box-sizing: border-box;
   text-align: center;
   z-index: 2;
+  border-bottom: none;
 }
 .sub-menu li:hover {
   background-color: #333;
@@ -620,6 +620,7 @@ a:hover {
   background-repeat: repeat;
   margin: 0;
 }
+
 .activity{
   background-color: rgb(210, 222, 235); 
   padding: 15px; 
@@ -627,23 +628,27 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
 .activity h1{
   text-align: center;
 }
-
-.activity-header-footer, .activity-header-footer .sub-menu{ /*endrer farge på header/footer på activity page*/
+/*endrer farge på header/footer på activity page*/
+.activity-page header, .activity-page footer, .sub-menu{      
   background-color: rgb(180, 193, 206);
 }
 
-.mainact a, .activity-header-footer a{ /*endrer fargene lenker i activity page, for å oppnå bedre kontrast*/
+/*endrer fargene lenker i activity page, for å oppnå bedre kontrast*/
+.mainact a, .activity-page footer a{        
   border-bottom: solid 0.15rem rgb(80, 80, 212);
+}
+.mainact a:hover, .activity-page footer a:hover{        
+  border-bottom: solid 0.15rem #111;
 }
 
 
-/*Media scaling*/
+/*MEDIA SCALING*/
 
 /*Endrer utseende etter skjermstørrelse fra 1500px bred, 1200px bred eller 768px bred*/
-
 @media(max-width: 1500px){
   footer>div{
     gap: 5vw;

@@ -328,7 +328,7 @@ a:hover {
   border-top: 1px solid #111;
   padding: 0;
   padding-left: 4%;
-  width: 96%; /* Er 88% siden padding-left tar opp plassen for de resterende 12% */
+  width: 96%; /* Er 96% siden padding-left tar opp plassen for de resterende 4% */
   margin: 0;
   left: 0em;
   top: 5.6em;

@@ -120,18 +120,7 @@ h2 {
   font-size: 1.7rem;
   font-weight: 500;
 }
-/* Stil for lenker */
-a{
-  font-weight: 500;
-  transition: color 0.3s;
-  transition: border-bottom 0.2s;
-}
-/* Hover effekter for lenker */
-a:hover{
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #111;
-}
+
 
 article {
   display: flex;
@@ -293,10 +282,14 @@ footer>ul>li>img {
   margin-right: 0.5rem;
 }
 
+
 a{
+  font-weight: 500;
   color: #111;
   text-decoration: none;
   border-bottom: solid 0.15rem #ffd919;
+  transition: color 0.3s;
+  transition: border-bottom 0.2s;
 }
 a:hover {
   border-bottom: 0.15rem solid #111;
@@ -628,7 +621,7 @@ a:hover {
   margin: 0;
 }
 .activity{
-  background-color: white; 
+  background-color: rgb(210, 222, 235); 
   padding: 15px; 
   margin: 20px auto; 
   border-radius: 10px;
@@ -636,6 +629,14 @@ a:hover {
 }
 .activity h1{
   text-align: center;
+}
+
+.activity-header-footer, .activity-header-footer .sub-menu{ /*endrer farge på header/footer på activity page*/
+  background-color: rgb(180, 193, 206);
+}
+
+.mainact a, .activity-header-footer a{ /*endrer fargene lenker i activity page, for å oppnå bedre kontrast*/
+  border-bottom: solid 0.15rem rgb(80, 80, 212);
 }
 
 

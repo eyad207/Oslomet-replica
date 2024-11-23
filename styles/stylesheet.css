@@ -98,12 +98,12 @@ nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
 }
 
 
-/*Body, main og andre hoved-elementer*/
+/*BODY, MAIN OG ANDRE HOVUD-ELEMENTER*/
 html, body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 } 
-
+/* Hovedseksjonen som holder innholdet og setter opp flex-layout */
 main {
   margin-top: 1em;
   display: flex;
@@ -158,8 +158,7 @@ article > section ul {
 
 table {
   font-family: arial, sans-serif;
-  border-collapse: collapse;
-  align-self: flex-start;
+  border-collapse: collapse;        /* Fjerner mellomrom mellom celler */
   height: 100%;
   width: 100%;
   font-size: 1.1rem;
@@ -171,23 +170,23 @@ table {
 
 td, th {
   border: 0.1rem solid #000000;
-  text-align: left;
+  text-align: left;               /* Justerer teksten til venstre */
   padding: 1rem;
   line-height: 1.5;
 }
 
-
+/* Stil for første rad i tabellhodet */
 thead tr:nth-child(1) th {
-  text-align: center;
+  text-align: center;           /* Sentraliserer teksten i første rad */
   background-color: #e2dfe3;
 }
-
+/* Generell stil for alle overskrifter i tabellen */
 thead tr th {
   text-align: center;
   background-color: #ffd500;
 }
 
-/*Footer*/
+/*FOOTER*/
 footer{
   display: flex;
   flex-direction: column;
@@ -294,7 +293,7 @@ a:hover {
   border-bottom: 0.15rem solid #111;
 }
 
-/*navbar logos*/
+/*NAVBAR LOGOS*/
 .oslomet-logo img {
   height: 3em;
   width: 7.5em;
@@ -357,22 +356,22 @@ a:hover {
   opacity: 1;
   font-size: inherit;
 }
-
-/*gitsamarbeid bilde (endre kommentar)*/
+/*Første bilde i hjemmesiden og i git-sammarbeid*/
 .firstpicture{
   width: 65vw;
 }
 
-/*studieinfo på toppen av siden*/
+/*Studieinfo på toppen av siden*/
 .studieinfo-div {
   width: 65vw;
   margin-top: 1.5rem;
   margin-bottom: 3.5rem;
 }
 
+/* Stil for ul-listen inne i .studieinfo-div */
 .studieinfo-div ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;      /* Gjør listen til en flex for enkel styring */
+  flex-wrap: wrap;    /* Gjør at elementene brytes til neste rad om nødvendig */
   padding: 0;
   margin: 0;
   gap: 1rem;
@@ -385,7 +384,7 @@ a:hover {
   border-radius: 0.313rem;
   border-top: solid 0.1rem #111;
   border-bottom: solid 0.1rem #111;
-  min-width: 10rem;
+  width: 10rem;
   text-align: center;
   margin-top: 0.5rem;
 }
@@ -411,7 +410,7 @@ a:hover {
   width: 80vw;
 }
 
-/*div boksen rundt tabellene*/
+/*Div boksen rundt tabellene*/
 .studieår ul {
   list-style: none;
   padding-left: 0.5rem;
@@ -448,7 +447,7 @@ a:hover {
   transform: translateY(-0.5rem);
 }
 
-/*style for symbolene brukt for oblig/valgfag*/
+/*Style for symbolene brukt for oblig/valgfag*/
 .ikoner {
   list-style-type: none;
   display: flex;
@@ -461,12 +460,12 @@ a:hover {
   padding-left: 0;
 }
 
-/*kategori kolonnen i studie tabellen*/
+/*Kategori kolonnen i studie tabellen*/
 .kategori-fag { 
   background-color: #eee;
 }
 
-/*style for lenkene til andre studier*/
+/*Style for lenkene til andre studier*/
 .flere-studier-section ul li{
   margin-bottom: 1em;
   margin-top: 0.5em;
@@ -503,7 +502,7 @@ a:hover {
   font-size: 2em
 }
 
-/*dette er for å style listen under studie anbefalingene*/
+/*Dette er for å style listen under studie anbefalingene*/
 .studie-container > ul li:not(:last-child){
   padding-right: 1em;
   margin-right: 1em;
@@ -541,7 +540,7 @@ a:hover {
   margin-top: 1rem;
 }
 
-/*Accessibility*/
+/*ACCESSIBILITY-PAGE*/
 
 #accessibility  p, #accessibility h1, #accessibility h2{
   width: 70vw;
@@ -609,7 +608,7 @@ a:hover {
   height: 30vw;
 }
 
-/*Activity page*/
+/*ACTIVITY PAGE*/
 .mainact{
   background-image: url('../images/pattern.webp'); /*Bilde fra: https://www.istockphoto.com/tr/vektör/kar-taneleri-ile-iskandinav-örme-kazak-vektör-illüstrasyon-gm1288832665-384677676*/
   background-repeat: repeat;
@@ -663,7 +662,7 @@ a:hover {
     margin-top: 2rem;
   }
   .firstpicture{
-    width: 100%;
+    width: 90%;
   }
 
   footer> section, div{

@@ -564,7 +564,7 @@ a:hover {
     width: 65%;
   }
 
-  #accessibilitytd, #accessibility th {
+  #accessibility td, #accessibility th {
     border: 3px solid #333;
     text-align: left;
     padding: 8px;
@@ -581,6 +581,10 @@ a:hover {
   #accessibility th:nth-child(3), #accessibility td:nth-child(3) {
     font-weight: bold;
     color: #44a900
+  }
+
+  #accessibility img{
+    width: 60%;
   }
 
 /*GITHUB SIDE*/

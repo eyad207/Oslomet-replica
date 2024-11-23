@@ -625,7 +625,7 @@ a:hover {
   text-align: center;
 }
 
-.activity-header-footer{ /*endrer farge på header/footer på activity page*/
+.activity-header-footer, .activity-header-footer .sub-menu{ /*endrer farge på header/footer på activity page*/
   background-color: rgb(180, 193, 206);
 }
 

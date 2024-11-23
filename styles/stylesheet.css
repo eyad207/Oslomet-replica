@@ -54,24 +54,29 @@ header nav button, header nav > a:not(:first-child) {
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 header nav button {
-  border-radius: 0.4rem;
-  border-width: 0.1rem;
-  background-color: #111;
-  color: white;
+  margin-left: 3em;
+  border: none;
+  background-color: inherit;
+  text-decoration: none; 
+  color: inherit;
+  transition: 0.3s;
 }
 
 header>nav li a:hover, header>nav li a:focus {
   border-bottom: none;
 }
 
-header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus {
+header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus,
+header nav button:hover, header nav button:focus {
   transform: translateY(-0.3rem);
+  cursor: pointer;
+  border-bottom: 0.1em solid black;
 }
 
 header > nav > a:not(:first-child) {
   border-bottom: none;
   position: absolute;
-  right: 3em;
+  right: 5em;
   text-decoration: none; 
   color: inherit;
   transition: 0.3s;
@@ -82,12 +87,6 @@ nav > a:first-child {
   border: none;
 }
 
-
-button:focus, button:hover{
-  background-color: white;
-  color: #111;
-  cursor: pointer;
-}
 
 nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
   /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
@@ -333,6 +332,7 @@ a:hover {
   cursor: pointer;
   padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+  transition: 0.3s;
 }
 
 .sub-menu li a {
@@ -348,10 +348,8 @@ a:hover {
   border-bottom: none;
 }
 .sub-menu li:hover {
-  background-color: #333;
+  background-color: #dcdcdc;
   text-decoration-color: var(--maincolor);
-  color: white;
-  transition: 0.5s;
 }
 
 .sub-menu:focus-within { 
@@ -640,7 +638,7 @@ a:hover {
   text-align: center;
 }
 /*endrer farge på header/footer på activity page*/
-.activity-page header, .activity-page footer, .sub-menu{      
+.activity-page header, .activity-page footer, .activity-page .sub-menu{      
   background-color: rgb(180, 193, 206);
 }
 
@@ -766,6 +764,14 @@ a:hover {
   }
   nav > a:first-child {
     margin-right: 0;
+  }
+  header nav > button {
+    margin-left: 1em;
+  }
+  header nav > a:not(:first-child) {
+    position: relative;
+    right: 0;
+    left: 1em;
   }
 
   main>h1, main>h2, main>p, main>article{

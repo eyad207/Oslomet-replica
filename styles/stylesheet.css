@@ -88,11 +88,11 @@ header>nav>button{ /* Meny-knappen */
 header>nav>a:nth-of-type(2){ /* Søk-lenken */
   position: absolute;
   right: 5em;
-
   border-bottom: none;
   text-decoration: none; 
   color: inherit;
 }
+
 header nav>a:nth-of-type(2)>img{ /* Søke-ikonet */
   position: relative;
   top: 6px;
@@ -146,7 +146,6 @@ article {
   flex-direction: column;
   margin-bottom: 2rem;
   width: 65vw;
-
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -200,6 +199,7 @@ thead tr:nth-child(1) th {
   text-align: center;           /* Sentraliserer teksten i første rad */
   background-color: #eee;
 }
+
 /* Generell stil for alle overskrifter i tabellen */
 thead tr th {
   text-align: center;

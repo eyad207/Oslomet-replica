@@ -177,7 +177,6 @@ table {
   width: 100%;
 
   font-size: 1.1rem;
-  font-weight: 600;
   border-collapse: collapse;        /* Fjerner mellomrom mellom celler */
   border: 0.1rem solid #000000;
   border-radius: 40px;
@@ -465,6 +464,8 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 /*Kategori kolonnen i studie tabellen*/
 .kategori-fag { 
   background-color: #eee;
+  font-weight: 600;
+
 }
 
 /*Style for lenkene til andre studier*/

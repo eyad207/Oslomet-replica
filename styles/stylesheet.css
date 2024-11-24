@@ -662,9 +662,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 .activity-page footer ul{
-  justify-content: center; /*bytter footer til justify center, siden innholdet i footer er anderledes fra index*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /*bytter footer til justify center, siden innholdet i footer er anderledes fra index*/
   margin-top: 1em;
-  width: 100%;
+  width: 80%;
   gap: 4rem;
 }
 
@@ -744,6 +746,15 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   footer>div{
     gap: 0;
   }
+  .activity-page footer ul{
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+  }
+  .activity-page footer li{
+    width: fit-content;
+  }
+
 
   .studieinfo-div ul{
     justify-content: center;

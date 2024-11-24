@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outdoor Activities in Norway</title>
+    <title>Activity page</title>
     <link rel="stylesheet" href="../styles/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="activity-page" tabindex="0"> <!--bruker tabindex slik at det er mulig å fokuseres på med ios-->
     <header>
-        <nav>
+        <nav> <!-- Vi har både header og nav pga. de er semantiske elementer og forklarer mye om strukturen på koden vår 
+            til tross for ingen html og lite særeget css-->
             <a href="https://www.oslomet.no/"> <img src="../images/logo.webp" alt="OsloMet logo"> </a>
             <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.webp -->
-            <button> Meny </button>
+            <button tabindex="0"> Meny </button>
             <ul class="sub-menu">
-                <li> <a href="../index.html"> Hjem-side </a></li>
-                <li> <a href="Accessibility.html">Tilgjengelighet </a></li>
-                <li> <a href="GitSamarbeid.html"> Git-samarbeid </a></li>
-                <li> <a href="Activity.html"> Aktivitet </a></li>
+                <li> <a href="../index.html" tabindex="0"> Hjem-side </a></li>
+                <li> <a href="Accessibility.html" tabindex="0">Tilgjengelighet </a></li>
+                <li> <a href="GitSamarbeid.html" tabindex="0"> Git-samarbeid </a></li>
+                <li> <a href="Activity.html" tabindex="0"> Aktivitet </a></li>
             </ul>
             <a href="https://www.oslomet.no/s?q="> <img src="../images/searchIkon.webp" alt="Søk-ikon">
                 Søk </a>

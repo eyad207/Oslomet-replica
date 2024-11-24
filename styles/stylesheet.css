@@ -605,6 +605,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 .activity{
+  background-color: rgb(255, 254, 251);
   padding: 15px; 
   margin: 20px auto; 
   border-radius: 10px;

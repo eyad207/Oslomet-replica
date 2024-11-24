@@ -180,6 +180,9 @@ table {
   border: 0.1rem solid var(--darkgray);
   transition: 0.3s;
 }
+table:hover{
+  box-shadow: 0 0 0.5rem #5e5e5e;
+}
 
 td, th {
   padding: 1rem;
@@ -646,9 +649,13 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 @media (max-width: 1200px) {
-  main>h1, main>h2, main>p, main>article{
+  main>h1, main>h2, main>p{
+    text-align: center;
+  }
+  main>article{
     width: 70vw;
   }
+
   h1{
     font-size: 2.2rem;
     align-items: center;
@@ -766,7 +773,10 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   }
 
   main>h1 {
-    font-size: 1.8rem; 
+    font-size: 1.7rem; 
+  }
+  main h2 {
+    font-size: 1.3rem; 
   }
 
   main h3, main p {
@@ -800,6 +810,12 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
     padding: 0.5rem;
   }
 
+  .studieinfo-div{
+    width: 100%;
+  }
+  .studieinfo-div li{
+    width: 75%;
+  }
   .studiets-oppbygging{
     width: 90%;
   }

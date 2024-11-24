@@ -30,6 +30,8 @@ html, body{
   margin: 0;
 } 
 
+
+
 /*HEADER*/
 header, footer{
   background-color: var(--maincolor);
@@ -128,7 +130,7 @@ article a, footer a{
   font-weight: 500;
   color: #111;
   text-decoration: none;
-  border-bottom: solid 0.15rem #ffd919;
+  border-bottom: solid 0.2rem #ffd500;
   transition: color 0.3s;
   transition: 0.2s;
 }

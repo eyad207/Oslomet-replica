@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nb">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body tabindex="0"> <!--bruker tabindex slik at det er mulig å fokuseres på med ios-->
     <header>
         <nav> <!-- Vi har både header og nav pga. de er semantiske elementer og forklarer mye om strukturen på koden vår 
@@ -30,16 +32,20 @@
     <main id="accessibility">
         <article>
             <h1> Kort om tilgjengelighet for denne siden </h1>
-            <p> 
-                Tilgjengelighet / universell utforming er et viktig konsept som går ut på at flest mulig kan kunne utnytte alt. 
-                På nettsteder er det derfor viktig at personer med hemmede sanser eller funksjoner har muligheten til å navigere og hente informasjon fra nettsiden din. 
-                Forhåpentligvis er det da tydelig at vi har tatt flere grep for å gjøre denne nettsiden mer universell utformet, for det har vi gjort! 
+            <p>
+                Tilgjengelighet / universell utforming er et viktig konsept som går ut på at flest mulig kan kunne
+                utnytte alt.
+                På nettsteder er det derfor viktig at personer med hemmede sanser eller funksjoner har muligheten til å
+                navigere og hente informasjon fra nettsiden din.
+                Forhåpentligvis er det da tydelig at vi har tatt flere grep for å gjøre denne nettsiden mer universell
+                utformet, for det har vi gjort!
             </p>
         </article>
 
         <article>
             <h2> Validering </h2>
-            <p> Vi validerte koden hos <a href="https://validator.w3.org/#validate_by_upload">W3.org </a>, hos Lighthouse og hos ARC Toolkit:</p>
+            <p> Vi validerte koden hos <a href="https://validator.w3.org/#validate_by_upload">W3.org </a>, hos
+                Lighthouse og hos ARC Toolkit:</p>
             <h2> Resultater fra W3.org: </h2>
 
             <section>
@@ -47,7 +53,8 @@
                 <img src="../images/W3orgFirst.webp" alt="Første resultater fra W3org">
                 <p> Siste validation-test: </p>
                 <img src="../images/W3orgLast.webp" alt="Siste resultater fra W3org">
-                <p> Warning-ene ovenfor er lite relevant ettersom det står "consider", og vi har bestemt oss for å gi section-ene en tittel i stedenfor hver article </p>
+                <p> Warning-ene ovenfor er lite relevant ettersom det står "consider", og vi har bestemt oss for å gi
+                    section-ene en tittel i stedenfor hver article </p>
             </section>
 
             <section>
@@ -70,31 +77,31 @@
                 <h3> Oppsummert resultater: </h3>
                 <table>
                     <tr>
-                      <th>Resultater</th>
-                      <th> Første test</th>
-                      <th> Siste test</th>
+                        <th>Resultater</th>
+                        <th> Første test</th>
+                        <th> Siste test</th>
                     </tr>
                     <tr>
-                      <td> W3.org </td>
-                      <td> Errors: 6 </td>
-                      <td> Errors: 0 </td>
+                        <td> W3.org </td>
+                        <td> Errors: 6 </td>
+                        <td> Errors: 0 </td>
                     </tr>
                     <tr>
-                      <td> Lighthouse</td>
-                      <td> Score: 79/100 </td>
-                      <td> Score 98/100 </td>
+                        <td> Lighthouse</td>
+                        <td> Score: 79/100 </td>
+                        <td> Score 98/100 </td>
                     </tr>
                     <tr>
-                      <td>ARC Toolkit</td>
-                      <td>Errors: 5 relevante, Alerts: 1 relevant, Best practices: 11 relevante
-                      </td>
-                      <td>Errors: 0 relevante, Alerts: 0 relevante, Best practices: 3 relevante
-                    </td>
+                        <td>ARC Toolkit</td>
+                        <td>Errors: 5 relevante, Alerts: 1 relevant, Best practices: 11 relevante
+                        </td>
+                        <td>Errors: 0 relevante, Alerts: 0 relevante, Best practices: 3 relevante
+                        </td>
                     </tr>
                 </table>
-                <p> 
-                    De andre html-sidene hadde ingen/irrelevante problemer fra de samme validitet-nettsidene. 
-                    CSS testet vi tillegg og den hadde ingen problemer for W3.org.  
+                <p>
+                    De andre html-sidene hadde ingen/irrelevante problemer fra de samme validitet-nettsidene.
+                    CSS testet vi tillegg og den hadde ingen problemer for W3.org.
                 </p>
             </section>
 
@@ -102,91 +109,58 @@
 
         <article>
             <h2> Endringer/valg for nettsiden </h2>
-            <p> 
-                Først har vi lagt ved alternative tekster for alle bildene i nettsiden slik at man kan finne informasjonen for de tilfellene hvor de ikke kan hente informasjonen fra bildet. 
+            <p>
+                Først har vi lagt ved alternative tekster for alle bildene i nettsiden slik at man kan finne
+                informasjonen for de tilfellene hvor de ikke kan hente informasjonen fra bildet.
             </p>
-            <p> 
-                Et annet viktig område for universell utforming er fargekontraster og fargebruk. 
-                Derfor har vi vært bevist med fargene vi har brukt, at det ikke skal være «dødt» for da virker nettsiden uattraktivt, men også at den ikke skal ha for mange farger, for det kan bli overbelastende. 
-                I tillegg har vi sørget for å vise med farger når noe hoveres eller fokuseres. 
-                Det er også viktig at farger ikke er det eneste som skiller ulike elementer, og derfor har vi implementert tiltak som cursor:pointer, og borders.  
+            <p>
+                Et annet viktig område for universell utforming er fargekontraster og fargebruk.
+                Derfor har vi vært bevist med fargene vi har brukt, at det ikke skal være «dødt» for da virker nettsiden
+                uattraktivt, men også at den ikke skal ha for mange farger, for det kan bli overbelastende.
+                I tillegg har vi sørget for å vise med farger når noe hoveres eller fokuseres.
+                Det er også viktig at farger ikke er det eneste som skiller ulike elementer, og derfor har vi
+                implementert tiltak som cursor:pointer, og borders.
             </p>
-            <p> 
-                For funksjonalitetens skyld holdes nettsiden, men også koden ryddig og strukturert slik at man enkelt kan oppfatte nettsiden, og skjermlesere og andre verktøy for nettsider funker fint. 
-                Blant annet plasserte vi innholdet på midten av nettsiden slik at det er mer behagelig å lese, også holdt vi oss for det meste til kun semantiske elementer for layout foruten om enkelte div-elementer.   
+            <p>
+                For funksjonalitetens skyld holdes nettsiden, men også koden ryddig og strukturert slik at man enkelt
+                kan oppfatte nettsiden, og skjermlesere og andre verktøy for nettsider funker fint.
+                Blant annet plasserte vi innholdet på midten av nettsiden slik at det er mer behagelig å lese, også
+                holdt vi oss for det meste til kun semantiske elementer for layout foruten om enkelte div-elementer.
             </p>
-            <p> 
-                Etter valideringen fikk vi opp en feil under interaktivitet, hvor vi hadde en lenke inni en button i menyen. 
-                Først reflekterte vi over hvorfor det var feil siden det ikke var åpenbart for oss med det første, men så forstod vi at det generelt er dårlig praksis for nettlesere og brukeropplevelsen å ha en lenke inni en knapp som egentlig ikke gjør noe. 
+            <p>
+                Etter valideringen fikk vi opp en feil under interaktivitet, hvor vi hadde en lenke inni en button i
+                menyen.
+                Først reflekterte vi over hvorfor det var feil siden det ikke var åpenbart for oss med det første, men
+                så forstod vi at det generelt er dårlig praksis for nettlesere og brukeropplevelsen å ha en lenke inni
+                en knapp som egentlig ikke gjør noe.
             </p>
-            <p> 
-                Noe valideringen ikke fortalte oss da, var at nettsiden vår ikke var godt tilpasset for tab-indeks selv etter å ha fikset på tabindeksene som var større enn 0. 
-                Vi hadde originalt satt menyen til display:none med mindre den blir samhandlet med, men da funket det ikke å fokusere på submenyen sine lenker med tab siden de ikke var displayed. 
-                Derfor fant vi en litt utradisjonell måte å holde submenyen skjult uten å bruke JavaScript, som var å sette opacity=0 og font-size=0 slik at man ikke kan fokusere på lenkene heller. 
-                På denne måten fikk vi beholde nettsiden slik vil ville, og tabindex til å funke bra for nettsiden vår, noe som er viktig for både interaktiviteten og funksjonaliteten for nettsiden. 
+            <p>
+                Noe valideringen ikke fortalte oss da, var at nettsiden vår ikke var godt tilpasset for tab-indeks selv
+                etter å ha fikset på tabindeksene som var større enn 0.
+                Vi hadde originalt satt menyen til display:none med mindre den blir samhandlet med, men da funket det
+                ikke å fokusere på submenyen sine lenker med tab siden de ikke var displayed.
+                Derfor fant vi en litt utradisjonell måte å holde submenyen skjult uten å bruke JavaScript, som var å
+                sette opacity=0 og font-size=0 slik at man ikke kan fokusere på lenkene heller.
+                På denne måten fikk vi beholde nettsiden slik vil ville, og tabindex til å funke bra for nettsiden vår,
+                noe som er viktig for både interaktiviteten og funksjonaliteten for nettsiden.
             </p>
 
-            <p> 
-                Oppsummert har vi gjort våres beste for å få flest mulig til å kunne bruke nettsiden vår effektivt. 
+            <p>
+                Oppsummert har vi gjort våres beste for å få flest mulig til å kunne bruke nettsiden vår effektivt.
                 Disse er kun noen av mange feil vi har rettet opp, og vi har lært masse av de 😊
             </p>
 
-    </article>
-     
-
+        </article>
     </main>
 
     <footer>
-        <section>
-            <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2>
-            <button>Abonner på vårt nyhetsbrev!</button>
-        </section>
-        <div>
-            <section>
-                <h3>Oslo metropolitioan university<span>storbyuniversitetet</span></h3>
-                <ul>
-                    <li>Postboks 4, St. Olavs plass<br>0130 Oslo</li>
-                    <li>Tlf.: 67 23 50 00</li>
-                    <li><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></li>
-                </ul>
-            </section>
-    
-            <nav>
-                <ul>
-                    <li><a href="https://www.oslomet.no/en">English</a></li>
-                    <li><a href="https://www.oslomet.no/alumni">Alumni</a></li>
-                    <li><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></li>
-                    <li><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li><a href="https://www.oslomet.no/om/for-ansatte">For ansatte</a></li>
-                    <li><a href="https://www.oslomet.no/om/for-studenter">For studenter</a></li>
-                    <li><a href="https://www.oslomet.no/om/ledige-stillinger">Ledige stillinger</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-
-                    <li><a href="https://www.oslomet.no/om/personvernerklering-informasjonskapslar">Personvernerklæring og informasjonskapslar</a></li>
-                    <li><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></li>
-                    <li><a href="https://www.oslomet.no/om/tilgjengelegheitserklering">Tilgjengelegheitserklæring</a></li>
-                    <li><a href="#">Admin</a></li>
-                </ul>
-            </nav>
-        </div>
-            <ul>
-                
-                <li><img src="../images/icon-facebook.webp" alt="Facebook ikon"><a href="https://www.facebook.com/oslomet/">Facebook</a></li>
-                <li><img src="../images/icon-twitter.webp" alt="Twitter ikon"><a href="https://x.com/i/flow/login?redirect_after_login=%2Foslomet">X (Twitter)</a></li>
-                <li><img src="../images/icon-linkedin.webp" alt="LinkedIn ikon"><a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a></li>
-                <li><img src="../images/icon-instagram.webp" alt="Instagram ikon"><a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a></li>
-                <!-- Kilde: https://www.oslomet.no/build/images/icon-facebook.svg --> 
-                <!-- Kilde: https://www.oslomet.no/build/images/icon-twitter.svg -->
-                <!-- Kilde: https://www.oslomet.no/build/images/icon-linkedin.svg -->
-                <!-- Kilde: https://www.oslomet.no/build/images/icon-instagram.svg -->
-            </ul>
+        <h3>Useful Links for Outdoor Enthusiasts</h3>
+        <ul>
+            <li><a href="https://www.ut.no/tips/" target="_blank">Packing List for Outdoor Trips</a></li>
+            <li><a href="https://www.yr.no/" target="_blank">Weather Conditions in Norway</a></li>
+            <li><a href="https://www.norgesnasjonalparker.no/" target="_blank">National Parks in Norway</a></li>
+        </ul>
     </footer>
 </body>
+
 </html>

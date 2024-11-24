@@ -308,7 +308,7 @@ footer>ul>li>img {
   flex-wrap: wrap;
   position: absolute;
   padding-left: 8%;
-  width: 92%; /* Er 96% siden padding-left tar opp plassen for de resterende 4% */
+  width: 92%; /* Er 92% siden padding-left tar opp plassen for de resterende 4% */
   margin: 0; 
   left: 0em; /* Med position:absolute tillates det at left er satt til noe annet enn 0 som default */
   top: 5.6em;

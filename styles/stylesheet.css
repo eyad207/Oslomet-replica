@@ -158,35 +158,28 @@ article p {
   color: #222;
 }
 
-
-article > section ul {
+article > section>ul {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #222222;
   line-height: 1.8;
-
+  padding-left: 1rem;
 }
 
-
 table {
-  height: 100%;
   width: 100%;
-
   font-size: 1.1rem;
   border-collapse: collapse;        /* Fjerner mellomrom mellom celler */
   border: 0.1rem solid #000000;
-  border-radius: 40px;
+  transition: 0.3s;
 }
-
 
 td, th {
   padding: 1rem;
   text-align: left;               /* Justerer teksten til venstre */
-
   word-wrap: break-word;        /* Bryter ord som er for lange */
   hyphens: auto;                /* Legger til bindestreker der det er naturlig */
   border: 0.1rem solid #000000;
@@ -407,43 +400,19 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   width: 80vw;
 }
 
-/*studieår div boksen sin ul*/
-.studieår ul {
-  list-style: none;
-  text-align: left;
-  padding-left: 0.5rem;
-}
-
-.studieår li {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.9rem;
-
-  font-size: 1.1rem;
-}
-
 .studieår {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   gap: 3rem;
   width: 100%;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  transition: 0.3s;
 }
-
-.studieår section {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  text-align: center;
-
-  border-radius: 1rem;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.studieår section:hover{
-  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+.studieår table:hover{
   transform: translateY(-0.5rem);
+  box-shadow: 0 0 0.8rem black;
 }
 
 /*Style for symbolene brukt for oblig/valgfag*/
@@ -454,8 +423,6 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   margin-bottom: 1rem;
   padding-left: 0;
   text-align: left;
-
-
   list-style-type: none;
   font-size: 1.1rem;
   color: #444;
@@ -465,14 +432,12 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 .kategori-fag { 
   background-color: #eee;
   font-weight: 600;
-
 }
 
 /*Style for lenkene til andre studier*/
 .flere-studier-section ul li{
   margin-bottom: 1em;
   margin-top: 0.5em;
-
   list-style: none;
 }
 
@@ -489,13 +454,12 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 .studie-container ul {
-  border-bottom: solid #666 1px;
-  transition: 0.5s;
+  border-bottom: solid var(--maincolor) 2px;
+  transition: 0.3s;
 }
 
 .studie-container ul:hover {
-  border-bottom: solid var(--maincolor) 1px;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  border-bottom: solid #666 2px;
 }
 
 /*negativ z-index for å unngå overlap problemer med header.*/

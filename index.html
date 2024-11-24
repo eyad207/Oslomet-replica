@@ -14,7 +14,7 @@
     <header>
         <nav> <!-- Vi har både header og nav pga. de er semantiske elementer og forklarer mye om strukturen på koden vår 
             til tross for ingen html og lite særeget css-->
-            <a href="https://www.oslomet.no/"> <img src="images/logo.webp" alt="OsloMet logo"  class="oslomet-logo"> </a>
+            <a href="https://www.oslomet.no/"> <img src="images/logo.webp" alt="OsloMet logo" class="oslomet-logo"> </a>
             <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.webp -->
             <button> Meny </button>
             <ul class="sub-menu">
@@ -24,7 +24,7 @@
                 <li> <a href="OtherSites/Activity.html"> Aktivitet </a></li>
 
             </ul>
-            <a href="https://www.oslomet.no/s?q="> <img src="images/searchIkon.webp" alt="Søk-ikon"  class="search-icon">
+            <a href="https://www.oslomet.no/s?q="> <img src="images/searchIkon.webp" alt="Søk-ikon" class="search-icon">
                 Søk </a>
             <!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4He1lsW77_fFmyeBdsAk6V8r0tNX2V8k35A&s -->
         </nav>
@@ -113,75 +113,74 @@
         <article class="studiets-oppbygging">
             <h2>Studiets oppbygging:</h2>
             <h3>1. Studieår</h3>
-            <ul class="ikoner">
-                <li>&#9679; Obligatorisk fag</li>
-                <li>&#9733; Valgfritt fag innenfor et emne</li>
-            </ul>
-            <div class="studieår">
-                <section>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="4">1. Semester</th>
-                            </tr>
-                            <tr>
-                                <th>Kategori</th>
-                                <th>Fag</th>
-                                <th>Kode</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td rowspan="4" class="kategori-fag">Obligatoriske fag</td>
-                                <td><a href="">&#9679; Diskret matematikk</a>, 10 stp.</td>
-                                <td>DAPE1300</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9679; Programmering</a>, 10 stp.</td>
-                                <td>DAPE1400</td>
-                            </tr>
-                            
-                            <tr>
-                                <td><a href="">&#9679; Teknologi og samfunn for programmerere</a>, 10 stp.</td>
-                                <td>DATA1100</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9679; Innføring i modeller og beregninger</a>, 10 stp.</td>
-                                <td>MAMO1100</td>
-                            </tr>
-                        </tbody>
-                    </table>
 
-                </section>
-                <section>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="4">2. Semester</th>
-                            </tr>
-                            <tr>
-                                <th>Kategori</th>
-                                <th>Fag</th>
-                                <th>Kode</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td rowspan="3" class="kategori-fag">Obligatoriske fag</td>
-                                <td><a href="">&#9679; Matte 1000</a>, 10 stp.</td>
-                                <td>DAFE1000</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9679; Fysikk og Kjemi</a>, 10 stp.</td>
-                                <td>DAPE2101</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9679; Databaser</a>, 10 stp.</td>
-                                <td>DATA1500</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+            <!-- Liste over fagkategorier med ikoner -->
+            <ul class="ikoner">
+                <li>&#9679; Obligatorisk fag</li> <!-- Obligatoriske fag (punkt) -->
+                <li>&#9733; Valgfritt fag innenfor et emne</li> <!-- Valgfri fag (stjerne) -->
+            </ul>
+            <!-- Div for å vise semesteroversikt -->
+            <div class="studieår">
+                <!-- Tabell for første semester -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3">1. Semester</th>
+                        </tr>
+                        <tr>
+                            <th>Kategori</th>
+                            <th>Fag</th>
+                            <th>Kode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" class="kategori-fag">Obligatoriske fag</td>
+                            <td><a href="">&#9679; Diskret matematikk</a>, 10 stp.</td>
+                            <td>DAPE1300</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9679; Programmering</a>, 10 stp.</td>
+                            <td>DAPE1400</td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="">&#9679; Teknologi og samfunn for programmerere</a>, 10 stp.</td>
+                            <td>DATA1100</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9679; Innføring i modeller og beregninger</a>, 10 stp.</td>
+                            <td>MAMO1100</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3">2. Semester</th>
+                        </tr>
+                        <tr>
+                            <th>Kategori</th>
+                            <th>Fag</th>
+                            <th>Kode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="kategori-fag">Obligatoriske fag</td>
+                            <td><a href="">&#9679; Matte 1000</a>, 10 stp.</td>
+                            <td>DAFE1000</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9679; Fysikk og Kjemi</a>, 10 stp.</td>
+                            <td>DAPE2101</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9679; Databaser</a>, 10 stp.</td>
+                            <td>DATA1500</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <h3>2. Studieår</h3>
             <ul class="ikoner">
@@ -189,98 +188,94 @@
                 <li>&#9733; Valgfritt fag innenfor et emne</li>
             </ul>
             <div class="studieår">
-                <section>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="4">3. Semester</th>
-                            </tr>
-                            <tr>
-                                <th>Kategori</th>
-                                <th>Fag</th>
-                                <th>Kode</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td rowspan="2" class="kategori-fag">Felles obligatoriske fag</td>
-                                <td><a href="#">&#9679; Matematikk 2000 med statistikk</a>, 10 stp.</td>
-                                <td>DAPE2000</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">&#9679; Moderne fysikk</a>, 10 stp.</td>
-                                <td>MAMO2100</td>
-                            </tr>
-                            <tr>
-                                <td class="kategori-fag">Matematikk og fysikk</td>
-                                <td><a href="#">&#9679; Lineær algebra og introduksjon til gruppeteori</a>, 10 stp.</td>
-                                <td>MAMO2300</td>
-                            </tr>
-                            <tr>
-                                <td class="kategori-fag">Statistiske og datadrevne metoder</td>
-                                <td><a href="#">&#9679; Algoritmer og datastrukturer</a>, 10 stp.</td>
-                                <td>DATS2300</td>
-                            </tr>
-                            <tr>
-                                <td class="kategori-fag">Vitenskapelige beregninger</td>
-                                <td><a href="#">&#9679; Algoritmer og datastrukturer</a>, 10 stp.</td>
-                                <td>DATS2300</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <section>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="4">4. Semester</th>
-                            </tr>
-                            <tr>
-                                <th>Kategori</th>
-                                <th>Fag</th>
-                                <th>Kode</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="kategori-fag">Felles obligatoriske fag</td>
-                                <td><a href="#">&#9679; Matte 4000</a>, 10 stp.</td>
-                                <td>DAVE3705</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2" class="kategori-fag">Matematikk og fysikk</td>
-                                <td><a href="#">&#9679; Termodynamikk og statistisk fysikk</a>, 10 stp.</td>
-                                <td>MAMO2400</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">&#9679; Symmetrier og algebraiske strukturer</a>, 10 stp.</td>
-                                <td>MAMO2500</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3" class="kategori-fag">Statistiske og datadrevne metoder</td>
-                                <td><a href="#">&#9679; Statistisk analyse</a>, 10 stp.</td>
-                                <td>MAMO3100</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">&#9733; Visualisering</a>, 10 stp.</td>
-                                <td>ADSE3200</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">&#9733; Avansert modellering og beregninger</a>, 10 stp.</td>
-                                <td>MAMO2200</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2" class="kategori-fag">Vitenskapelige beregninger</td>
-                                <td><a href="#">&#9679; Ressurseffektive programmer</a>, 10 stp.</td>
-                                <td>DAVE3606</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">&#9679; Avansert modellering og beregninger</a>, 10 stp.</td>
-                                <td>MAMO2200</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3">3. Semester</th>
+                        </tr>
+                        <tr>
+                            <th>Kategori</th>
+                            <th>Fag</th>
+                            <th>Kode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" class="kategori-fag">Felles obligatoriske fag</td>
+                            <td><a href="#">&#9679; Matematikk 2000 med statistikk</a>, 10 stp.</td>
+                            <td>DAPE2000</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">&#9679; Moderne fysikk</a>, 10 stp.</td>
+                            <td>MAMO2100</td>
+                        </tr>
+                        <tr>
+                            <td class="kategori-fag">Matematikk og fysikk</td>
+                            <td><a href="#">&#9679; Lineær algebra og introduksjon til gruppeteori</a>, 10 stp.</td>
+                            <td>MAMO2300</td>
+                        </tr>
+                        <tr>
+                            <td class="kategori-fag">Statistiske og datadrevne metoder</td>
+                            <td><a href="#">&#9679; Algoritmer og datastrukturer</a>, 10 stp.</td>
+                            <td>DATS2300</td>
+                        </tr>
+                        <tr>
+                            <td class="kategori-fag">Vitenskapelige beregninger</td>
+                            <td><a href="#">&#9679; Algoritmer og datastrukturer</a>, 10 stp.</td>
+                            <td>DATS2300</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3">4. Semester</th>
+                        </tr>
+                        <tr>
+                            <th>Kategori</th>
+                            <th>Fag</th>
+                            <th>Kode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="kategori-fag">Felles obligatoriske fag</td>
+                            <td><a href="#">&#9679; Matte 4000</a>, 10 stp.</td>
+                            <td>DAVE3705</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="kategori-fag">Matematikk og fysikk</td>
+                            <td><a href="#">&#9679; Termodynamikk og statistisk fysikk</a>, 10 stp.</td>
+                            <td>MAMO2400</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">&#9679; Symmetrier og algebraiske strukturer</a>, 10 stp.</td>
+                            <td>MAMO2500</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="kategori-fag">Statistiske og datadrevne metoder</td>
+                            <td><a href="#">&#9679; Statistisk analyse</a>, 10 stp.</td>
+                            <td>MAMO3100</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">&#9733; Visualisering</a>, 10 stp.</td>
+                            <td>ADSE3200</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">&#9733; Avansert modellering og beregninger</a>, 10 stp.</td>
+                            <td>MAMO2200</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="kategori-fag">Vitenskapelige beregninger</td>
+                            <td><a href="#">&#9679; Ressurseffektive programmer</a>, 10 stp.</td>
+                            <td>DAVE3606</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">&#9679; Avansert modellering og beregninger</a>, 10 stp.</td>
+                            <td>MAMO2200</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <h3>3. Studieår</h3>
             <ul class="ikoner">
@@ -288,125 +283,122 @@
                 <li>&#9733; Valgfritt fag innenfor et emne</li>
             </ul>
             <div class="studieår">
-                <section>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="4">5. Semester</th>
-                            </tr>
-                            <tr>
-                                <th>Kategori</th>
-                                <th>Fag</th>
-                                <th>Kode</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="kategori-fag">Felles obligatoriske fag</td>
-                                <td><a href="">&#9679; Matematikk 3000</a>, 10 stp.</td>
-                                <td>DAVE3700</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3" class="kategori-fag">Kurs du kan velge innenfor alle emner</td>
-                                <td><a href="">&#9733; Introduksjon til IT-forskning</a>, 10 stp.</td>
-                                <td>DATA3730</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9733; Datasikkerhet</a>, 10 stp.</td>
-                                <td>ITPE3100</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9733; Simulering og visualisering </a>, 10 stp.</td>
-                                <td>MAMO3200</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2" class="kategori-fag">Matematikk og fysikk</td>
-                                <td><a href="">&#9679; Reell analyse</a>, 10 stp.</td>
-                                <td>MAMO3300</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9733; Introduction to Data Science with Scripting</a>, 10 stp.</td>
-                                <td>DATA3800</td>
-                            </tr>
-                    
-                            <tr>
-                                <td rowspan="2" class="kategori-fag">Statistiske og datadrevne metoder</td>
-                                <td><a href="">&#9679; Introduksjon til Kunstig Intelligens</a>, 10 stp.</td>
-                                <td>DAVE3625</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9733;Anvendt kunstig intelligens og data science prosjekt</a>, 10 stp.</td>
-                                <td>DATA3750</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3" class="kategori-fag">Vitenskapelige beregninger</td>
-                                <td><a href="">&#9679; Simulering og visualisering</a>, 10 stp.</td>
-                                <td>MAMO3200</td>
-                            </tr>   
-                            <tr>
-                                <td><a href="">&#9733; Reell analyse</a>, 10 stp.</td>
-                                <td>MAMO3300</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9733; Lineær algebra og introduksjon til gruppeteori</a>, 10 stp.</td>
-                                <td>MAMO2300</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <section>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="4">6. Semester</th>
-                            </tr>
-                            <tr>
-                                <th>Kategori</th>
-                                <th>Fag</th>
-                                <th>Kode</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="kategori-fag">Felles obligatoriske fag</td>
-                                <td><a href="">&#9679; Bacheloroppgave</a>, 10 stp.</td>
-                                <td>DATA3900</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2" class="kategori-fag">Kurs du kan velge innenfor alle emner</td>
-                                <td><a href="">&#9733; Testing av programvare</a>, 10 stp.</td>
-                                <td>ADTS2310</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9733; Datanettverk og skytjenester</a>, 10 stp.</td>
-                                <td>DATA2410</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2" class="kategori-fag">Matematikk og fysikk</td>
-                                <td><a href="">&#9733; Ressurseffektive programmer</a>, 10 stp.</td>
-                                <td>DAVE3606</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9733;Avansert modellering og beregninger </a>, 10 stp.</td>
-                                <td>MAMO2200</td>
-                            </tr>
-                            <tr>
-                                <td class="kategori-fag">Statistiske og datadrevne metoder</td>
-                                <td><a href="">&#9733; Ressurseffektive programmer</a>, 10 stp.</td>
-                                <td>DAVE3606</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2" class="kategori-fag">Vitenskapelige beregninger</td>
-                                <td><a href="">&#9733; Visualisering</a>, 10 stp.</td>
-                                <td>ADSE3200</td>
-                            </tr>
-                            <tr>
-                                <td><a href="">&#9733; Symmetrier og algebraiske strukturer</a>, 10 stp.</td>
-                                <td>MAMO2500</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3">5. Semester</th>
+                        </tr>
+                        <tr>
+                            <th>Kategori</th>
+                            <th>Fag</th>
+                            <th>Kode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="kategori-fag">Felles obligatoriske fag</td>
+                            <td><a href="">&#9679; Matematikk 3000</a>, 10 stp.</td>
+                            <td>DAVE3700</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="kategori-fag">Kurs du kan velge innenfor alle emner</td>
+                            <td><a href="">&#9733; Introduksjon til IT-forskning</a>, 10 stp.</td>
+                            <td>DATA3730</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733; Datasikkerhet</a>, 10 stp.</td>
+                            <td>ITPE3100</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733; Simulering og visualisering </a>, 10 stp.</td>
+                            <td>MAMO3200</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="kategori-fag">Matematikk og fysikk</td>
+                            <td><a href="">&#9679; Reell analyse</a>, 10 stp.</td>
+                            <td>MAMO3300</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733; Introduction to Data Science with Scripting</a>, 10 stp.</td>
+                            <td>DATA3800</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2" class="kategori-fag">Statistiske og datadrevne metoder</td>
+                            <td><a href="">&#9679; Introduksjon til Kunstig Intelligens</a>, 10 stp.</td>
+                            <td>DAVE3625</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733;Anvendt kunstig intelligens og data science prosjekt</a>, 10 stp.
+                            </td>
+                            <td>DATA3750</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="kategori-fag">Vitenskapelige beregninger</td>
+                            <td><a href="">&#9679; Simulering og visualisering</a>, 10 stp.</td>
+                            <td>MAMO3200</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733; Reell analyse</a>, 10 stp.</td>
+                            <td>MAMO3300</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733; Lineær algebra og introduksjon til gruppeteori</a>, 10 stp.</td>
+                            <td>MAMO2300</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3">6. Semester</th>
+                        </tr>
+                        <tr>
+                            <th>Kategori</th>
+                            <th>Fag</th>
+                            <th>Kode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="kategori-fag">Felles obligatoriske fag</td>
+                            <td><a href="">&#9679; Bacheloroppgave</a>, 10 stp.</td>
+                            <td>DATA3900</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="kategori-fag">Kurs du kan velge innenfor alle emner</td>
+                            <td><a href="">&#9733; Testing av programvare</a>, 10 stp.</td>
+                            <td>ADTS2310</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733; Datanettverk og skytjenester</a>, 10 stp.</td>
+                            <td>DATA2410</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="kategori-fag">Matematikk og fysikk</td>
+                            <td><a href="">&#9733; Ressurseffektive programmer</a>, 10 stp.</td>
+                            <td>DAVE3606</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733;Avansert modellering og beregninger </a>, 10 stp.</td>
+                            <td>MAMO2200</td>
+                        </tr>
+                        <tr>
+                            <td class="kategori-fag">Statistiske og datadrevne metoder</td>
+                            <td><a href="">&#9733; Ressurseffektive programmer</a>, 10 stp.</td>
+                            <td>DAVE3606</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="kategori-fag">Vitenskapelige beregninger</td>
+                            <td><a href="">&#9733; Visualisering</a>, 10 stp.</td>
+                            <td>ADSE3200</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#9733; Symmetrier og algebraiske strukturer</a>, 10 stp.</td>
+                            <td>MAMO2500</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </article>
 

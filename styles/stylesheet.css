@@ -825,10 +825,6 @@ article>ul>li{
     width: 50%;
   }
 
-  ul{
-    width: 70%;
-  }
-
   .ansatt-div a{
     flex-direction: column;
   }

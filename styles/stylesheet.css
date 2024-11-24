@@ -526,34 +526,44 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 /*tabellen om resultater*/
-  #accessibility table {
+  #accessibility table{
+    align-self: flex-start;
+    width: 65%;
+
+    border-collapse: collapse;
+  }
+  #accessibility table:hover {
     align-self: flex-start;
     width: 65%;
 
     border-collapse: collapse;
   }
 
-  #accessibility td, #accessibility th {
+  #accessibility td, #accessibility th{
     text-align: left;
     padding: 8px;
     
     border: 3px solid var(--darkgray);
   }
 
-  #accessibility tr:nth-child(even) {
+  #accessibility tr:nth-child(even){
     background-color: #eee;
   }
 
-  #accessibility th:nth-child(2), #accessibility td:nth-child(2) {
+  #accessibility th:nth-child(2), #accessibility td:nth-child(2){
     font-weight: bold;
     color: #7a0000;
   }
-  #accessibility th:nth-child(3), #accessibility td:nth-child(3) {
+  #accessibility th:nth-child(3), #accessibility td:nth-child(3){
     font-weight: bold;
     color: #44a900
   }
 
 #accessibility img{
+  width: 40%;
+  transition: 0.2s;
+}
+#accessibility img:hover{
   width: 60%;
 }
 

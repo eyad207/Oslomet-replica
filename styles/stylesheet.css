@@ -26,8 +26,8 @@ List of contents:
 
 /*BODY OG ANDRE HOVUD-ELEMENTER*/
 html, body{
-  margin: 0;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
 } 
 
 /*HEADER*/
@@ -44,11 +44,13 @@ header nav{
   display: flex;
   padding: 1.3em 1em 1.3em 4em;
   flex-wrap: wrap;
+
   border-bottom: solid 0.1rem #111;
 }
 
 nav>a:first-child{ /*Lenken til OsloMet-logoen */
   margin-right: 1em;
+
   border: none;
 }
 
@@ -64,6 +66,7 @@ nav>a:first-child > img:hover{
 
 header nav button, header nav>a:nth-of-type(2){ /* Felles for både meny-knappen og søk-lenken */
   padding: 0.6em;
+
   font-size: 1.1rem;
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
@@ -80,6 +83,7 @@ header>nav>button{ /* Meny-knappen */
 header>nav>a:nth-of-type(2){ /* Søk-lenken */
   position: absolute;
   right: 5em;
+
   border-bottom: none;
   text-decoration: none; 
   color: inherit;
@@ -134,54 +138,58 @@ a:hover {
 article {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
   width: 65vw;
+
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 2rem;
 }
 
 article h3 {
   margin: 0;
   font-size: 1.4em;
-  margin-top: 0;
   font-weight: 700;
 }
 
 article p {
   font-size: 1.2rem;
-  color: #222;
   line-height: 1.8;
+  color: #222;
 }
 
 
 article > section ul {
-  margin: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
   font-size: 1rem;
   color: #222222;
   line-height: 1.8;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+
 }
 
 
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;        /* Fjerner mellomrom mellom celler */
   height: 100%;
   width: 100%;
+
   font-size: 1.1rem;
   font-weight: 600;
+  border-collapse: collapse;        /* Fjerner mellomrom mellom celler */
   border: 0.1rem solid #000000;
   border-radius: 40px;
 }
 
 
 td, th {
+  padding: 1rem;
+  text-align: left;               /* Justerer teksten til venstre */
+
   word-wrap: break-word;        /* Bryter ord som er for lange */
   hyphens: auto;                /* Legger til bindestreker der det er naturlig */
   border: 0.1rem solid #000000;
-  text-align: left;               /* Justerer teksten til venstre */
-  padding: 1rem;
   line-height: 1.5;
 }
 
@@ -221,6 +229,7 @@ footer>section{
 
 footer>section>button{
   padding: 0.8em;
+
   background-color: #111;
   color: white;
   border-radius: 0.6rem;
@@ -246,9 +255,12 @@ footer>div, footer>ul{
 footer>div>section>h3{
   display: flex;
   flex-direction: column;
-  margin: 0;
-  font-weight: 600;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 1rem;
+
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -274,10 +286,11 @@ footer>ul>li{
 }
 
 footer li{
-  font-weight: 600;
   margin-bottom: 1rem;
-  list-style-type: none;
   align-items: center; 
+
+  list-style-type: none;
+  font-weight: 600;
 }
 
 footer>ul>li {
@@ -360,19 +373,21 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   display: flex;              /* Gjør hvert listeelement til en flex-container */
   flex-direction: column;     /* Arrangerer innholdet i listeelementet vertikalt */
   padding: 1.5rem;
+  margin-top: 0.5rem;
+  width: 10rem;
+  text-align: center;          /* Sentraliserer teksten i listeelementet */
+
   border-radius: 0.313rem;
   border-top: solid 0.1rem #111;
   border-bottom: solid 0.1rem #111;
-  width: 10rem;
-  text-align: center;          /* Sentraliserer teksten i listeelementet */
-  margin-top: 0.5rem;
 }
 
 /* Stil for første span i hvert listeelement */
 .studieinfo-div li span:first-child {
+  margin-bottom: 0.5rem;
+
   font-weight: bold;
   color: #333;
-  margin-bottom: 0.5rem;
 }
 
 /* Stil for siste span i hvert listeelement */
@@ -395,15 +410,16 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 /*studieår div boksen sin ul*/
 .studieår ul {
   list-style: none;
-  padding-left: 0.5rem;
   text-align: left;
+  padding-left: 0.5rem;
 }
 
 .studieår li {
   display: flex;
   flex-direction: column;
-  font-size: 1.1rem;
   margin-bottom: 0.9rem;
+
+  font-size: 1.1rem;
 }
 
 .studieår {
@@ -418,9 +434,10 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 .studieår section {
   width: 100%;
   margin-bottom: 1.5rem;
+  text-align: center;
+
   border-radius: 1rem;
   box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
-  text-align: center;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
@@ -431,15 +448,17 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 
 /*Style for symbolene brukt for oblig/valgfag*/
 .ikoner {
-  list-style-type: none;
   display: flex;
   flex-direction: row;
   gap: 1.3rem;
-  font-size: 1.1rem;
-  text-align: left;
-  color: #444;
   margin-bottom: 1rem;
   padding-left: 0;
+  text-align: left;
+
+
+  list-style-type: none;
+  font-size: 1.1rem;
+  color: #444;
 }
 
 /*Kategori kolonnen i studie tabellen*/
@@ -451,12 +470,15 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 .flere-studier-section ul li{
   margin-bottom: 1em;
   margin-top: 0.5em;
+
   list-style: none;
 }
 
 .flere-studier-section ul{
   padding: 0;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
   margin-bottom: 3em;
 }
 
@@ -468,6 +490,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   border-bottom: solid #666 1px;
   transition: 0.5s;
 }
+
 .studie-container ul:hover {
   border-bottom: solid var(--maincolor) 1px;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
@@ -480,11 +503,12 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 
 /*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
 .studie-container::after {
-  content: '\203A';
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+
+  content: '\203A';
   font-size: 2em
 }
 
@@ -492,6 +516,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 .studie-container > ul li:not(:last-child){
   padding-right: 1em;
   margin-right: 1em;
+
   border-right: 1px solid #222;
 }
 
@@ -509,11 +534,13 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 .historier-container img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
 .historier-container > div{
   padding: 2em;
+
   background-color: var(--maincolor);
 }
 
@@ -606,9 +633,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   background-color: rgb(210, 222, 235); 
   padding: 15px; 
   margin: 20px auto; 
+
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
 .activity:hover{
   transform: translateY(-1rem);
 }
@@ -616,6 +645,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 .activity h1{
   text-align: center;
 }
+
 /*endrer farge på header/footer på activity page*/
 .activity-page header, .activity-page footer, .activity-page .sub-menu{      
   background-color: rgb(194, 200, 209);
@@ -722,6 +752,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
     width: 80vw;
     display: flex;
     flex-wrap: wrap;
+
     font-size: medium;
   }
   .git_bilder{
@@ -747,6 +778,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   header nav > button {
     margin-left: 1em;
   }
+
   header nav > a:not(:first-child) {
     position: relative;
     right: 0;
@@ -769,13 +801,15 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   }
 
   table {
-    font-size: 0.9rem; /* Mindre fontstørrelse */
     width: 100%; /* Tilpass til skjermbredden */
+
+    font-size: 0.9rem; /* Mindre fontstørrelse */
     border-radius: 20px; /* Mindre radius */
   }
 
   td, th {
     padding: 0.2rem; /* Reduser padding */
+
     font-size: 0.85rem; /* Juster fontstørrelse */
   }
 

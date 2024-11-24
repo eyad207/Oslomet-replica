@@ -26,7 +26,7 @@ List of contents:
   --alt-text: #222;
 }
 
-/*BODY OG ANDRE HOVUD-ELEMENTER*/
+/*Body og andre hoved-elementer*/
 html, body{
   margin: 0;
 
@@ -135,7 +135,7 @@ h2 {
   font-weight: 500;
 }
 
-article a, main div a, footer div a, footer ul a{
+article a, main>div a, footer div a, footer ul a{
   font-weight: 500;
   color: var(--darkgray);
   text-decoration: none;
@@ -144,11 +144,11 @@ article a, main div a, footer div a, footer ul a{
   transition: 0.2s;
 }
 
-article a:hover, main div a:hover, footer div a:hover, footer ul a:hover{
+article a:hover, main>div a:hover, footer div a:hover, footer ul a:hover{
   border-bottom: 0.2rem solid var(--darkgray);
 }
 
-article, main div {
+article, main>div {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -165,14 +165,14 @@ article h3 {
   font-weight: 700;
 }
 
-article p, main div p {
+article p, main>div p {
   line-height: 1.8;
 
   font-size: 1.2rem;
   color: var(--alt-text);
 }
 
-article > section>ul, main div > section>ul {
+article > section>ul, main>div > section>ul {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 0.5rem;
@@ -252,6 +252,7 @@ footer button{
   color: white;
   border-radius: 0.6rem;
   border-width: 0.1rem;
+  border: solid 0.05rem #111;
   font-size: 1rem;
   font-weight: 600;
   transition: 0.3s;
@@ -619,15 +620,13 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 
 /*Grid container, setter opp et 2x2 grid og endrer størrelser og utseender til elementene i griden*/
 .container{
-  width: 70vw;
+  width: 80vw;
   display: grid;
   grid-template-rows: 500px;
   grid-template-columns: 4fr 3fr; /*Setter størrelse på griden som sier at den første og andre kolonnen skal ha et forhold på 4/3*/
   column-gap: 1em;
-  row-gap: 2em;
   justify-items: start;
   align-items: center;
-  margin: 3em;
 }
 .container img{
   /*Sørger for at bildene i containeren ikke blir for store*/
@@ -715,13 +714,14 @@ article>ul>li{
     gap: 5vw; /*elementer overlapper ved 1500px uten dette*/
   }
 }
-
+/*Endrer utseende etter skjermstørrelse for iPad eller andre mindre skjermer*/
 @media (max-width: 1200px) {
   main>h1, main>h2, main>p{
     text-align: center;
   }
-  main>article{
-    width: 70vw;
+
+  main>article, main>div{
+    width: 80vw;
   }
 
   h1{
@@ -736,9 +736,6 @@ article>ul>li{
   footer button{
     margin: 0;
     margin-top: 2rem;
-  }
-  .firstpicture{
-    width: 90%;
   }
 
   footer> section, div{
@@ -786,6 +783,7 @@ article>ul>li{
     align-items: center;
     width: 40%;
   }
+
   .activity-page footer li{
     width: fit-content;
   }
@@ -814,13 +812,14 @@ article>ul>li{
     font-size: 1.3em;
   }
 
+  /*Bytter fra grid til flex på mindre skjermer slik at tekst og bilder er lesbare*/
   .container{
     width: 80vw;
     display: flex;
     flex-wrap: wrap;
     font-size: medium;
   }
-
+  /*Gjør gap mindre for å spare plass*/
   .git_bilder{
     gap: 1em;
     flex-wrap:wrap;
@@ -836,14 +835,17 @@ article>ul>li{
   }
 }
 
+/*Media scaling for skjermer på mobil størrelse*/
 @media (max-width: 768px) {
 
   header nav {
     padding-left: 1em;
   }
+
   nav > a:first-child {
     margin-right: 0;
   }
+
   header nav > button {
     margin-left: 1em;
   }
@@ -854,13 +856,22 @@ article>ul>li{
     left: 1em;
   }
 
-  main>h1, main>h2, main>p, main>article{
+  main>article, main>div{
+    width: 87vw;
+  }
+
+  main>h1, main>h2, main>p{
     width: 90vw;
+  }
+
+  .ansatt-div ul li:first-child{
+    font-size: 1.1rem;
   }
 
   main>h1 {
     font-size: 1.7rem; 
   }
+
   main h2 {
     font-size: 1.3rem; 
   }
@@ -868,29 +879,31 @@ article>ul>li{
   main h3, main p {
     font-size: 1rem;
   }
+
   .studiets-oppbygging {
     width: 100%;
   }
 
   table {
-    width: 100%; /* Tilpass til skjermbredden */
-    font-size: 0.9rem; /* Mindre fontstørrelse */
-    border-radius: 20px; /* Mindre radius */
+    width: 100%; 
+    font-size: 0.9rem; 
+    border-radius: 20px; 
   }
 
   td, th {
-    padding: 0.2rem; /* Reduser padding */
+    padding: 0.2rem; 
 
-    font-size: 0.85rem; /* Juster fontstørrelse */
+    font-size: 0.85rem; 
   }
 
   thead tr th {
-    font-size: 0.9rem; /* Mindre font for overskrifter */
+    font-size: 0.9rem; 
   }
 
   table,  .studieår h3{
     font-size: 1.1em;
   }
+
   table td{
     padding: 0.5rem;
   }
@@ -898,9 +911,11 @@ article>ul>li{
   .studieinfo-div{
     width: 100%;
   }
+
   .studieinfo-div li{
     width: 75%;
   }
+
   .studiets-oppbygging{
     width: 90%;
   }

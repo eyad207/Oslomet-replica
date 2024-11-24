@@ -135,7 +135,7 @@ h2 {
   font-weight: 500;
 }
 
-article a, div a, footer div a, footer ul a{
+article a, main>div a, footer div a, footer ul a{
   font-weight: 500;
   color: var(--darkgray);
   text-decoration: none;
@@ -144,11 +144,11 @@ article a, div a, footer div a, footer ul a{
   transition: 0.2s;
 }
 
-article a:hover, div a:hover, footer div a:hover, footer ul a:hover{
+article a:hover, main>div a:hover, footer div a:hover, footer ul a:hover{
   border-bottom: 0.2rem solid var(--darkgray);
 }
 
-article, div {
+article, main>div {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -165,14 +165,14 @@ article h3 {
   font-weight: 700;
 }
 
-article p, div p {
+article p, main>div p {
   line-height: 1.8;
 
   font-size: 1.2rem;
   color: var(--alt-text);
 }
 
-article > section>ul, div > section>ul {
+article > section>ul, main>div > section>ul {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 0.5rem;

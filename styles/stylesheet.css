@@ -828,9 +828,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   header nav {
     padding-left: 1em;
   }
+
   nav > a:first-child {
     margin-right: 0;
   }
+
   header nav > button {
     margin-left: 1em;
   }
@@ -844,6 +846,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   main>h1, main>h2, main>p{
     width: 90vw;
   }
+
   .ansatt-div ul li:first-child{
     font-size: 1.1rem;
   }
@@ -851,6 +854,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   main>h1 {
     font-size: 1.7rem; 
   }
+
   main h2 {
     font-size: 1.3rem; 
   }
@@ -858,6 +862,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   main h3, main p {
     font-size: 1rem;
   }
+
   .studiets-oppbygging {
     width: 100%;
   }
@@ -881,6 +886,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   table,  .studieår h3{
     font-size: 1.1em;
   }
+
   table td{
     padding: 0.5rem;
   }
@@ -888,9 +894,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   .studieinfo-div{
     width: 100%;
   }
+
   .studieinfo-div li{
     width: 75%;
   }
+  
   .studiets-oppbygging{
     width: 90%;
   }

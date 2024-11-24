@@ -296,6 +296,7 @@ footer>ul{
   margin-top: 5rem;
   width: 40vw;
   align-items: center;
+  gap: 3rem;
 }
 
 footer>ul>li{

@@ -274,12 +274,9 @@ footer>div>section span{
 }
 
 footer>ul{
-  display: flex;
-  flex-direction: row;
   margin-top: 5rem;
   width: 40vw;
   align-items: center;
-  justify-content: space-between;
 }
 
 footer>ul>li{
@@ -631,7 +628,6 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   background-image: url('../images/activitybakgrunnsbilde.webp'); /* Bakgrunnsbilde generert med OpenAIs DALL-E-verktøy. */
   background-repeat: repeat;
   background-attachment: fixed;
-  height: 300vh;
 }
 
 .mainact{
@@ -653,7 +649,6 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 
 /*endrer farge på header/footer på activity page*/
 .activity-page header, .activity-page footer, .activity-page .sub-menu{
-  opacity: 0.95;  
   background-color: #f1d6c0;
 }
 

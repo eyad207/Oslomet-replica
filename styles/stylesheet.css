@@ -27,7 +27,6 @@ List of contents:
 /*BODY OG ANDRE HOVUD-ELEMENTER*/
 html, body{
   margin: 0;
-
   font-family: 'Roboto', sans-serif;
 } 
 
@@ -44,29 +43,27 @@ header{
 header nav{
   display: flex;
   padding: 1.3em 1em 1.3em 4em;
-
   flex-wrap: wrap;
   border-bottom: solid 0.1rem #111;
 }
 
 nav>a:first-child{ /*Lenken til OsloMet-logoen */
   margin-right: 1em;
-
   border: none;
 }
+
 nav>a:first-child > img{ /* OsloMet-logoen */
   height: 3em;
   width: 7.5em;
-
   transition: 0.5s;
 }
+
 nav>a:first-child > img:hover{
   transform: scale(1.06);
 }
 
 header nav button, header nav>a:nth-of-type(2){ /* Felles for både meny-knappen og søk-lenken */
   padding: 0.6em;
-
   font-size: 1.1rem;
   font-weight: 600;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
@@ -83,7 +80,6 @@ header>nav>button{ /* Meny-knappen */
 header>nav>a:nth-of-type(2){ /* Søk-lenken */
   position: absolute;
   right: 5em;
-
   border-bottom: none;
   text-decoration: none; 
   color: inherit;

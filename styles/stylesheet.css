@@ -592,17 +592,18 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 /*ACTIVITY PAGE*/
-.activity-page{
-  /*Setter et bilde som bakgrunn i siden*/
-  background-image: url('../images/activitybakgrunnsbilde.webp'); /* Bakgrunnsbilde generert med OpenAIs DALL-E-verktøy. */
-  background-repeat: repeat;
-  background-attachment: fixed;
-  height: 300vh;
-}
+
 
 .mainact{
   margin: 0;
 }
+
+.landing{
+  width: 100%;
+  height: 100vh;
+  background: url(../images/trolltunga.webp) ;
+  background-size: cover;
+} 
 
 .activity{
   background-color: rgb(255, 254, 251);
@@ -619,8 +620,9 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 
 /*endrer farge på header/footer på activity page*/
 .activity-page header, .activity-page footer, .activity-page .sub-menu{
-  opacity: 0.95;  
+  opacity: 0.55;  
   background-color: #f1d6c0;
+  position: ;
 }
 
 /*endrer fargene lenker i activity page, for å oppnå bedre kontrast*/

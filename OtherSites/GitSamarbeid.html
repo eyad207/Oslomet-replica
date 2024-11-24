@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="nb">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex-boxes</title>
+    <title>Github samarbeid</title>
     <link rel="stylesheet" href="../styles/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
-<body class = "gitside">
+
+<body tabindex="0"> <!--bruker tabindex slik at det er mulig å fokuseres på med ios-->
     <header>
-        <nav>
-            <a href="https://www.oslomet.no/"> <img src="../images/logo.webp" alt="OsloMet logo"> </a>  <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.svg --> 
-            <button> Meny </button>
+        <nav> <!-- Vi har både header og nav pga. de er semantiske elementer og forklarer mye om strukturen på koden vår 
+            til tross for ingen html og lite særeget css-->
+            <a href="https://www.oslomet.no/"> <img src="../images/logo.webp" alt="OsloMet logo"> </a>
+            <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.webp -->
+            <button tabindex="0"> Meny </button>
             <ul class="sub-menu">
-                <li> <a href="../index.html"> Hjem-side </a></li>
-                <li> <a href="Accessibility.html"> Tilgjengelighet </a></li>
-                <li> <a href="Activity.html"> Aktivitet </a></li>
-                <li> <a href="https://www.oslomet.no/studier"> - Flere studier </a></li> <!-- Har streker foran de lenkene som tar deg ut av våre html-filer og eksternt -->
-                <li> <a href="https://www.oslomet.no/forskning"> - Forskningen vår </a></li>
-                <li> <a href="https://www.oslomet.no/om/samarbeid"> - Samarbeid </a></li>
-                <li> <a href="https://www.oslomet.no/ub"> - Universitetsbiblioteket </a></li>
-                <li> <a href="https://www.oslomet.no/om"> - Om OsloMet </a></li>
-                <li> <a href="https://www.oslomet.no/om/kontakt"> - Kontakt </a></li>
-                <li> <a href="https://www.oslomet.no/om/for-studenter"> - For studenter </a></li>
-            </ul>   
-            <a href="https://www.oslomet.no/s?q=" class="search-icon"> <img src="../images/searchIkon.png" alt="Søk-ikon"> Søk </a>
+                <li> <a href="../index.html" tabindex="0"> Hjem-side </a></li>
+                <li> <a href="Accessibility.html" tabindex="0">Tilgjengelighet </a></li>
+                <li> <a href="GitSamarbeid.html" tabindex="0"> Git-samarbeid </a></li>
+                <li> <a href="Activity.html" tabindex="0"> Aktivitet </a></li>
+            </ul>
+            <a href="https://www.oslomet.no/s?q="> <img src="../images/searchIkon.webp" alt="Søk-ikon">
+                Søk </a>
+            <!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4He1lsW77_fFmyeBdsAk6V8r0tNX2V8k35A&s -->
         </nav>
     </header>
 
     <main>
-        <img src="../images/github1.webp" width ="80%" alt="first image">
+        <img class="firstpicture" src="../images/github1.webp" alt="første bilde">
         <h1>
             Slik har vi brukt GitHub for å samarbeide
         </h1>
 
-        <article class ="container">
-            <div>
-                <img src="../images/gitbranches.webp" alt="våre git-branch">
-            </div>
-
-            <div>
-                <p>
-                    Alle gruppemedlemmene har sin egen branch hvor de gjør sine egne endringer. Oppgaver ble fordelt mellom de forskjellige medlemene. f,eks. Fylle main, lage header og footer, lage de de andre nettsidene, som denne siden for eksempel. Når en person følte at de hadde lagt til en god endring viste de den fram til resten av gruppa, og gruppa som en helhet godkjente den. Små endringer trengte ikke bli godkjent.
-                </p>
-            </div>
-
-            <img src="../images/commitEks.webp" alt="Kommit eksempel">
-
-            <div>
-                <p>
-                    Alle gruppemedlemmene har sin egen branch hvor de gjør sine egne endringer. Oppgaver ble fordelt mellom de forskjellige medlemene. f,eks. Fylle main, lage header og footer, lage de de andre nettsidene, som denne siden for eksempel. Når en person følte at de hadde lagt til en god endring viste de den fram til resten av gruppa, og gruppa som en helhet godkjente den. Små endringer trengte ikke bli godkjent.
-                </p>
-            </div>
-        </article>
-
-        <h2>
-            Fordeler med GitHub
-        </h2>
-        <article>
+        <div class="container">
+            <img src="../images/gitbranches.webp" alt="våre git-branch">
             <p>
-                GitHub gir oss muligheten til å danne, redigere og oppdatere et prosjekt sammen på kun en fil. Vi kan gjøre regelmessige endrigner uten å frykte for at noe går galt med opplastning eller nedlastningen av filen som fører til at vi mister arbeid. Det er også veldig mye enklere å synkronisere prosjektet med github enn det hadde vært å måtte gjøre det manuelt. I bildene under kan du se eksempler på hvordan vi har brukt GitHub til å gjøre felles endringer
+                Alle gruppemedlemmene har sin egen branch hvor de gjør sine egne endringer. Oppgaver ble fordelt mellom
+                de forskjellige medlemene. f,eks. Fylle main, lage header og footer, lage de de andre nettsidene, som
+                denne siden for eksempel. Når en person følte at de hadde lagt til en god endring viste de den fram til
+                resten av gruppa, og gruppa som en helhet godkjente den. Små endringer trengte ikke bli godkjent.
             </p>
-            <div class ="git_bilder">
+            <img src="../images/commitEks.webp" alt="Kommit eksempel">
+            <p>
+                Alle gruppemedlemmene har sin egen branch hvor de gjør sine egne endringer. Oppgaver ble fordelt mellom
+                de forskjellige medlemene. f,eks. Fylle main, lage header og footer, lage de de andre nettsidene, som
+                denne siden for eksempel. Når en person følte at de hadde lagt til en god endring viste de den fram til
+                resten av gruppa, og gruppa som en helhet godkjente den. Små endringer trengte ikke bli godkjent.
+            </p>
+        </div>
+
+        <div>
+            <h2>
+                Fordeler med GitHub
+            </h2>
+            <p>
+                GitHub gir oss muligheten til å danne, redigere og oppdatere et prosjekt sammen på kun en fil. Vi kan
+                gjøre regelmessige endrigner uten å frykte for at noe går galt med opplastning eller nedlastningen av
+                filen som fører til at vi mister arbeid. Det er også veldig mye enklere å synkronisere prosjektet med
+                github enn det hadde vært å måtte gjøre det manuelt. I bildene under kan du se eksempler på hvordan vi
+                har brukt GitHub til å gjøre felles endringer
+            </p>
+            <div class="git_bilder">
                 <img src="../images/commithistorie.webp" alt="Kommit historien">
                 <img src="../images/Eksempler2.webp" alt="Eksempler (nummer 2)">
             </div>
-        </article>
+        </div>
 
     </main>
 
@@ -84,13 +85,14 @@
                     <li><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></li>
                 </ul>
             </section>
-    
+
             <nav>
                 <ul>
                     <li><a href="https://www.oslomet.no/en">English</a></li>
                     <li><a href="https://www.oslomet.no/alumni">Alumni</a></li>
                     <li><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></li>
-                    <li><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a></li>
+                    <li><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a>
+                    </li>
                 </ul>
             </nav>
             <nav>
@@ -101,16 +103,21 @@
                 </ul>
             </nav>
         </div>
-            <ul>
-                <li><img src="../images/icon-facebook.webp" alt="Facebook icon"><a href="https://www.facebook.com/oslomet/">Facebook</a></li>
-                <li><img src="../images/icon-twitter.webp" alt="Twitter icon"><a href="https://x.com/i/flow/login?redirect_after_login=%2Foslomet">X (Twitter)</a></li>
-                <li><img src="../images/icon-linkedin.webp" alt="LinkedIn icon"><a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a></li>
-                <li><img src="../images/icon-instagram.webp" alt="Instagram icon"><a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a></li>
-                <!-- Kilde: https://www.oslomet.no/build/images/icon-facebook.svg --> 
-                <!-- Kilde: https://www.oslomet.no/build/images/icon-twitter.svg -->
-                <!-- Kilde: https://www.oslomet.no/build/images/icon-linkedin.svg -->
-                <!-- Kilde: https://www.oslomet.no/build/images/icon-instagram.svg -->
-            </ul>
+        <ul>
+            <li><img src="../images/icon-facebook.webp" alt="Facebook icon"><a
+                    href="https://www.facebook.com/oslomet/">Facebook</a></li>
+            <li><img src="../images/icon-twitter.webp" alt="Twitter icon"><a
+                    href="https://x.com/i/flow/login?redirect_after_login=%2Foslomet">X (Twitter)</a></li>
+            <li><img src="../images/icon-linkedin.webp" alt="LinkedIn icon"><a
+                    href="https://no.linkedin.com/school/oslomet/">LinkedIn</a></li>
+            <li><img src="../images/icon-instagram.webp" alt="Instagram icon"><a
+                    href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a></li>
+            <!-- Kilde: https://www.oslomet.no/build/images/icon-facebook.webp -->
+            <!-- Kilde: https://www.oslomet.no/build/images/icon-twitter.webp -->
+            <!-- Kilde: https://www.oslomet.no/build/images/icon-linkedin.webp -->
+            <!-- Kilde: https://www.oslomet.no/build/images/icon-instagram.webp -->
+        </ul>
     </footer>
 </body>
+
 </html>

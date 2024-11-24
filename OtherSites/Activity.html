@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outdoor Activities in Norway</title>
+    <title>Activity page</title>
     <link rel="stylesheet" href="../styles/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="activity-page" tabindex="0"> <!--bruker tabindex slik at det er mulig å fokuseres på med ios-->
     <header>
-        <nav>
-            <a href="https://www.oslomet.no/" class="oslomet-logo"> <img src="../images/logo.jpg" alt="OsloMet logo"> </a> <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.svg --> 
-            <button> Meny </button>
+        <nav> <!-- Vi har både header og nav pga. de er semantiske elementer og forklarer mye om strukturen på koden vår 
+            til tross for ingen html og lite særeget css-->
+            <a href="https://www.oslomet.no/"> <img src="../images/logo.webp" alt="OsloMet logo"> </a>
+            <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.webp -->
+            <button tabindex="0"> Meny </button>
             <ul class="sub-menu">
-                <li> <a href="../index.html"> Hjem-side </a></li>
-                <li> <a href="Accessibility.html"> Tilgjengelighet </a></li>
-                <li> <a href="GitSamarbeid.html"> Git-samarbeid </a></li>
-                <li> <a href="https://www.oslomet.no/studier"> - Flere studier </a></li> <!-- Har streker foran de lenkene som tar deg ut av våre html-filer og eksternt -->
-                <li> <a href="https://www.oslomet.no/forskning"> - Forskningen vår </a></li>
-                <li> <a href="https://www.oslomet.no/om/samarbeid"> - Samarbeid </a></li>
-                <li> <a href="https://www.oslomet.no/ub"> - Universitetsbiblioteket </a></li>
-                <li> <a href="https://www.oslomet.no/om"> - Om OsloMet </a></li>
-                <li> <a href="https://www.oslomet.no/om/kontakt"> - Kontakt </a></li>
-                <li> <a href="https://www.oslomet.no/om/for-studenter"> - For studenter </a></li>
-            </ul>   
-            <a href="https://www.oslomet.no/s?q=" class="search-icon"> <img src="../images/searchIkon.png" alt="Søk-ikon"> Søk </a>
+                <li> <a href="../index.html" tabindex="0"> Hjem-side </a></li>
+                <li> <a href="Accessibility.html" tabindex="0">Tilgjengelighet </a></li>
+                <li> <a href="GitSamarbeid.html" tabindex="0"> Git-samarbeid </a></li>
+                <li> <a href="Activity.html" tabindex="0"> Aktivitet </a></li>
+            </ul>
+            <a href="https://www.oslomet.no/s?q="> <img src="../images/searchIkon.webp" alt="Søk-ikon">
+                Søk </a>
+            <!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4He1lsW77_fFmyeBdsAk6V8r0tNX2V8k35A&s -->
         </nav>
     </header>
 
@@ -37,31 +36,30 @@
             <h2>1. Hiking Adventures 🥾</h2>
             <p>Norway is a hiker’s paradise with endless trails for all levels. Popular destinations include the iconic <strong>Trolltunga</strong> and <strong>Preikestolen</strong>.</p>
             <p><a href="https://www.ut.no/" target="_blank">Find trails here</a> | <a href="https://english.dnt.no/" target="_blank">Norwegian Trekking Association</a></p>
-            <img src="../images/trolltunga.jpg" alt="Hiking in Norway"> <!--Bilde fra: https://www.visitnorway.com/things-to-do/outdoor-activities/hiking/national-hiking-trails/-->
+            <img src="../images/trolltunga.webp" alt="Bilde av trolltunga"> <!--Bilde fra: https://www.visitnorway.com/things-to-do/outdoor-activities/hiking/national-hiking-trails/-->
         </article>
 
         <article class="activity">
             <h2>2. Cycling Tours 🚴‍♀️</h2>
             <p>Cycling is a fantastic way to see Norway’s majestic landscapes. From gentle coastal rides to challenging mountain paths, you'll find a trail that suits you.</p>
             <p><a href="https://www.visitnorway.com/things-to-do/outdoor-activities/biking/" target="_blank">Discover cycling trails</a></p>
-            <img src="../images/cycling.jpg" alt="Cycling in Fjords"> <!--Bilde fra: https://www.visitnorway.com/things-to-do/outdoor-activities/cycling/-->
+            <img src="../images/cycling.webp" alt="Cycling in Fjords"> <!--Bilde fra: https://www.visitnorway.com/things-to-do/outdoor-activities/cycling/-->
         </article>
 
         <article class="activity">
             <h2>3. Skiing and Snowboarding 🎿</h2>
             <p>Winter in Norway is perfect for skiing enthusiasts. Whether you prefer alpine skiing or cross-country, places like <strong>Geilo</strong> and <strong>Trysil</strong> await you.</p>
             <p><a href="https://www.skiresort.info/" target="_blank">Book your ski pass</a> | <a href="https://www.visitnorway.com/plan-your-trip/safety-first/" target="_blank">Winter safety guide</a></p>
-            <img src="../images/skiing.jpg" alt="Norwegian Skiing"> <!--Bilde fra: https://www.visitnorway.com/things-to-do/outdoor-activities/skiing/alpine-skiing/-->
+            <img src="../images/skiing.webp" alt="Skitur i Norge"> <!--Bilde fra: https://www.visitnorway.com/things-to-do/outdoor-activities/skiing/alpine-skiing/-->
         </article>
 
         <article class="activity">
             <h2>4. Kayaking and Water Sports 🛶</h2>
             <p>For water lovers, kayaking in the fjords or rafting in thrilling rivers is a must.</p>
             <p><a href="https://www.norwaykayak.com/" target="_blank">Rent equipment</a> | <a href="https://www.experiencenorway.com/" target="_blank">Guided tours</a></p>
-            <img src="../images/kayak.jpg" alt="Kayaking in Fjords"> <!--Bilde fra: https://www.visitnorway.com/things-to-do/outdoor-activities/canoeing-kayaking/-->
+            <img src="../images/kayak.webp" alt="Kajakkpadling i fjordene"> <!--Bilde fra: https://www.visitnorway.com/things-to-do/outdoor-activities/canoeing-kayaking/-->
         </article>
     </main>
-
     <footer>
         <h3>Useful Links for Outdoor Enthusiasts</h3>
         <ul>

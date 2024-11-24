@@ -1,9 +1,13 @@
 /*
 List of contents:
-  HOVED CSS
+  CSS for elementer (følger rekkefølgen til siden)
+    -Html/body
+
     -Header
     -Main body
     -Footer
+
+  CSS for klasser (følger rekkefølgen til siden)
 
   CSS spesifikt for de andre nettsidene
     -Accessibility
@@ -14,125 +18,106 @@ List of contents:
   
 */
 
+/* Skiller mellom attributter for layout og attributter for utseende med mellomrom */
+
 :root{
   --maincolor: #ffd500;
+  --darkgray: #111;
+  --alt-text: #222;
 }
 
+/*BODY OG ANDRE HOVUD-ELEMENTER*/
+html, body{
+  margin: 0;
+
+  font-family: 'Roboto', sans-serif;
+} 
+
+
+
 /*HEADER*/
-header, footer {
+header, footer{
   background-color: var(--maincolor);
 }
 
-header {
-  top: 0;
-  width: inherit;
+header{
+  top: 0; /* Må sette en top-verdi slik at menyen holdes sticky */
   position: sticky;
   z-index: 1;
-  border-bottom: solid 0.1rem #111;
-}
-.firstpicture{
-  width: 100%;
 }
 
-header nav {
+header nav{
   display: flex;
-  width: inherit;
-  align-items: center;
+  padding: 1.3em 1em 1.3em 4em;
   flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding-bottom: 1.3em;
-  padding-top: 1.3em;
-  padding-left: 4em;
-  padding-right: 1rem;
-  background-color: inherit;
-  top: 0;
-  position: sticky;
+
+  border-bottom: solid 0.1rem var(--darkgray);
 }
 
-header nav button, header nav > a:not(:first-child) {
+nav>a:first-child{ /*Lenken til OsloMet-logoen */
+  margin-right: 1em;
+
+  border: none;
+}
+
+nav>a:first-child > img{ /* OsloMet-logoen */
+  height: 3em;
+  width: 7.5em;
+  transition: 0.5s;
+}
+
+nav>a:first-child > img:hover{
+  transform: scale(1.06);
+}
+
+header nav button, header nav>a:nth-of-type(2){ /* Felles for både meny-knappen og søk-lenken */
   padding: 0.6em;
+
   font-size: 1.1rem;
   font-weight: 600;
-  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
-}
-header nav button {
-  border-radius: 0.4rem;
-  border-width: 0.1rem;
-  border-color: #000;
-  background-color: #111;
-  color: white;
+  transition: 0.1s;
 }
 
-header>nav li a:hover, header>nav li a:focus {
-  text-decoration: underline;
-}
-header>nav>a:not(:first-child):hover, header>nav>a:not(:first-child):focus {
-  border-color: black;
-  transform: translateY(-0.3rem);
-  transition: 0.3s;
+header nav a{
+  text-decoration: none;
+  color: var(--darkgray);
 }
 
-nav > a:not(:first-child) {
-  border-color: var(--maincolor);
+header>nav>button{ /* Meny-knappen */
+  position: relative;
+  
+  border: none;
+  background-color: inherit;
+  color: var(--darkgray)
+}
+
+header>nav>a:nth-of-type(2){ /* Søk-lenken */
   position: absolute;
-  right: 3em;
+  right: 5em;
+
+  border-bottom: none;
   text-decoration: none; 
   color: inherit;
 }
 
-.oslomet-logo img {
-  height: 3em;
-  width: 7.5em;
-}
-.oslomet-logo img:hover {
-  transform: scale(1.06);
-  transition: 0.5s;
-}
-.search-icon img{
-  margin-bottom: -0.2em;
+header nav>a:nth-of-type(2)>img{ /* Søke-ikonet */
+  position: relative;
+  top: 6px;
+
   height: 1.3em;
-  width: 2em;
+  width: 1.7em;
 }
 
-nav > a:first-child {
-  margin-right: 1em;
-  border: none;
-}
-
-
-button:focus, button:hover{
-  background-color: white;
-  color: #111;
+header>nav>a:nth-of-type(2):hover, header>nav>a:nth-of-type(2):focus,
+header nav button:hover, header nav button:focus{
+  /* Når knappen og lenken fokuseres på av enten mus eller tab */
   cursor: pointer;
+  box-shadow: 0 0.05rem 0 black;
 }
 
-nav button:focus-within + .sub-menu, nav > button:focus + .sub-menu{
-  /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
-  Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
-  opacity: 1;
-  font-size: inherit;
-  transition: 0.1s;
-}
+/* Alt innenfor Main */
 
-.sub-menu:focus-within { 
-  /* Splittet denne fra de over siden denne ikke skal ha en transition-timer, for da ser vil menyen "reåpne" seg når 
-  man trykker på et av lenkene i sub-menyen og hindre nettsideovergangen */
-  opacity: 1;
-  font-size: inherit;
-}
-
-
-/*Body, main og andre hoved-elementer*/
-
-html, body {
-  /*Hindrer side scrolling på lavere oppløsninger*/
-  max-width: 100%;
-  /* overflow-x: hidden; */
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-} 
-
+/* Hovedseksjonen som holder innholdet og setter opp flex-layout */
 main {
   margin-top: 1em;
   display: flex;
@@ -140,325 +125,103 @@ main {
   flex-direction: column;
   align-items: center;
 }
-/*gitsamarbeid bilde*/
-.firstpicture{
-  width: 65vw;
-}
 
 h1 {
   font-size: 2.7rem;
 }
 
-main h2 {
+h2 {
   font-size: 1.7rem;
   font-weight: 500;
 }
 
-#accessibility table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  align-self: flex-start;
-  width: 65%;
+article a, main div a, footer div a, footer ul a{
+  font-weight: 500;
+  color: var(--darkgray);
+  text-decoration: none;
+  border-bottom: solid 0.2rem var(--maincolor);
+  transition: color 0.3s;
+  transition: 0.2s;
 }
 
-#accessibilitytd, #accessibility th {
-  border: 3px solid #000000;
-  text-align: left;
-  padding: 8px;
+article a:hover, main div a:hover, footer div a:hover, footer ul a:hover{
+  border-bottom: 0.2rem solid var(--darkgray);
 }
 
-#accessibility tr:nth-child(even) {
-  background-color: #e2dfe3;
-}
-
-#accessibility th:nth-child(2), #accessibility td:nth-child(2) {
-  font-weight: bold;
-  color: #7a0000;
-}
-#accessibility th:nth-child(3), #accessibility td:nth-child(3) {
-  font-weight: bold;
-  color: #296600
-}
-
-.studieinfo-div {
-  width: 65vw;
-  margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
-}
-
-
-.studieinfo-div ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  gap: 1rem;
-}
-
-
-.studieinfo-div li {
+article, main div {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
-  border-radius: 0.313rem;
-  border-top: solid 0.1rem #111;
-  border-bottom: solid 0.1rem #111;
-  min-width: 10rem;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-.studieinfo-div li span:first-child {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-
-.studieinfo-div li span:last-child {
-  color: #444;
-}
-
-.studieinfo-div span{
-  font-size: 1.2rem;
-}
-
-
-article {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 2rem;
   width: 65vw;
+
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 2rem;
 }
-
 
 article h3 {
   margin: 0;
+
   font-size: 1.4em;
-  margin-top: 0;
   font-weight: 700;
 }
 
-
-article p {
-  font-size: 1.2rem;
-  color: #222;
+article p, main div p {
   line-height: 1.8;
+
+  font-size: 1.2rem;
+  color: var(--alt-text);
 }
 
-
-article > section ul {
-  margin: 0;
-  font-size: 1rem;
-  color: #222222;
-  line-height: 1.8;
+article > section>ul, main div > section>ul {
+  margin-right: 0;
+  margin-left: 0;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-}
 
-
-article a{
-  font-weight: 500;
-  transition: color 0.3s;
-  transition: border-bottom 0.2s;
-}
-article a:hover{
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #111;
-}
-
-.studiets-oppbygging{
-  display: flex;
-  align-items: center;
-  width: 80vw;
-}
-
-.studieår ul {
-  list-style: none;
-  padding-left: 0.5rem;
-  text-align: left;
-}
-
-.studieår ul li {
-  display: flex;
-  flex-direction: column;
+  line-height: 1.8;
+  padding-left: 1rem;
   font-size: 1.1rem;
-  margin-bottom: 0.9rem;
-
-}
-
-.studieår ul li strong {
-  font-size: 1.1rem;
-  margin-top: 0.8rem;
-  color: #746301;
-}
-
-
-.studieår {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  width: 100%;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-
-.studieår section {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.studieår h3{
-  background-color: #ffd500;
-  border-top: solid 0.1rem #111;
-  border-right: solid 0.1rem #111;
-  border-left: solid 0.1rem #111;
-}
-
-.studieår section:hover{
-  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-0.5rem);
-}
-
-.studieår section h4 {
-  text-align: center;
-  font-size: 1.4rem;
-}
-
-.studieår span:first-child{
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 0.5rem;
-}
-
-/*style for symbolene brukt for oblig/valgfag*/
-.ikoner {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  gap: 1.3rem;
-  font-size: 1.1rem;
-  text-align: left;
-  color: #444;
-  margin-bottom: 1rem;
-  padding-left: 0;
+  color: var(--alt-text);
 }
 
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  align-self: flex-start;
-  height: 100%;
   width: 100%;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: 0.1rem solid #000000;
-  border-radius: 40px;
+
+  font-size: 1rem;
+  border-collapse: collapse;        /* Fjerner mellomrom mellom celler */
+  border: 0.1rem solid var(--darkgray);
+  transition: 0.3s;
+}
+
+table:hover{
+  box-shadow: 0 0 0.5rem #5e5e5e;
 }
 
 td, th {
-  border: 0.1rem solid #000000;
-  text-align: left;
-  padding: 0.3rem;
+  padding: 1rem;
+  text-align: left;               /* Justerer teksten til venstre */
+  word-wrap: break-word;        /* Bryter ord som er for lange */
+  hyphens: auto;                /* Legger til bindestreker der det er naturlig */
+  line-height: 1.5;
+
+  border: 0.1rem solid var(--darkgray);
 }
 
-.kategori-fag {
-  background-color: #dcdcdc;
-}
-
-
+/* Stil for første rad i tabellhodet */
 thead tr:nth-child(1) th {
-  text-align: center;
-  background-color: #e2dfe3;
+  text-align: center;           /* Sentraliserer teksten i første rad */
+
+  background-color: #eee;
 }
+
+/* Generell stil for alle overskrifter i tabellen */
 thead tr th {
   text-align: center;
+
   background-color: var(--maincolor);
 }
 
-
-/*style for lenkene til andre studier*/
-.flere-studier-section ul li{
-  margin-bottom: 1em;
-  margin-top: 0.5em;
-  list-style: none;
-}
-
-.flere-studier-section ul{
-  padding: 0;
-  margin: 0;
-  margin-bottom: 3em;
-}
-
-.studie-container > ul li{
-  display: inline-block;
-}
-
-.studie-container ul{
-  border-bottom: solid #666 1px;
-}
-
-/*negativ z-index for å unngå overlap problemer med header.*/
-.studie-container {
-  z-index: -10;
-  position: relative;
-}
-
-/*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
-.studie-container::after {
-  content: '\203A';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2em
-}
-
-/*dette er for å style listen under studie anbefalingene*/
-.studie-container > ul li:not(:last-child){
-  padding-right: 1em;
-  margin-right: 1em;
-  border-right: 1px solid #222;
-}
-
-
-/*Student historier*/
-.historier-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.historier-container p{
-  font-weight: 500;
-}
-
-.historier-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.historier-container > div{
-  padding: 2em;
-  background-color: var(--maincolor);
-}
-
-.historier-container > div span{
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.historier-container h3{
-  margin-top: 1rem;
-}
-
-/*Footer*/
+/*FOOTER*/
 footer{
   display: flex;
   flex-direction: column;
@@ -477,32 +240,28 @@ footer>section{
   align-items: center; 
   justify-content: space-between;
   margin-bottom: 1.25rem;
-  border-bottom: 2px solid #000;
   padding-bottom: 3rem;
+
+  border-bottom: 2px solid var(--darkgray);
 }
 
-footer>section>button{
+footer button{
   padding: 0.8em;
-  background-color: #111;
+
+  background-color: var(--darkgray);
   color: white;
   border-radius: 0.6rem;
   border-width: 0.1rem;
   font-size: 1rem;
   font-weight: 600;
-  transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
+  transition: 0.3s;
 }
 
-footer>section>button:hover{
-  box-shadow: 0 0 0.5rem #111; 
+footer button:hover{
+  box-shadow: 0 0 0.5rem var(--darkgray); 
   background-color: white;
-  color: #111;
+  color: var(--darkgray);
   cursor: pointer;
-}
-
-footer>section>h2{
-  margin: 0;
-  font-weight: 600;
-  font-size: 2rem;
 }
 
 footer>div, footer>ul{
@@ -514,9 +273,12 @@ footer>div, footer>ul{
 footer>div>section>h3{
   display: flex;
   flex-direction: column;
-  margin: 0;
-  font-weight: 600;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 1rem;
+
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -533,19 +295,18 @@ footer>ul{
   margin-top: 5rem;
   width: 40vw;
   align-items: center;
-  justify-content: space-between;
 }
 
 footer>ul>li{
   margin-right: 0;
-
 }
 
 footer li{
-  font-weight: 600;
   margin-bottom: 1rem;
-  list-style-type: none;
   align-items: center; 
+
+  list-style-type: none;
+  font-weight: 600;
 }
 
 footer>ul>li {
@@ -557,146 +318,405 @@ footer>ul>li>img {
   width: 2rem;
   margin-right: 0.5rem;
 }
-a{
-  color: #111;
-  text-decoration: none;
-  border-bottom: solid 0.15rem #ffd919;
-}
-a:hover {
-  border-bottom: 0.15rem solid #111;
-}
 
-.sub-menu {
+/*submenu til navbar*/
+.sub-menu{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  opacity: 0;
-  font-size: 0;
   position: absolute;
-  background-color: var(--maincolor);
-  border-bottom: 1px solid #111;
-  border-top: 1px solid #111;
-  padding: 0;
-  padding-left: 4%;
-  width: 96%; /* Er 88% siden padding-left tar opp plassen for de resterende 12% */
-  margin: 0;
-  left: 0em;
+  padding-left: 8%;
+  width: 92%; /* Er 92% siden padding-left tar opp plassen for de resterende 4% */
+  margin: 0; 
+  left: 0em; /* Med position:absolute tillates det at left er satt til noe annet enn 0 som default */
   top: 5.6em;
   z-index: 2;
+
+  opacity: 0; /* Opacity og font-size er satt lik 0 for å gjøre sub-menyen "usynlig" men la tab-index funke likevel. 
+  Mer om dette står i accessibility-siden innenfor valg */
+  font-size: 0;
+  background-color: var(--maincolor);
+  border-bottom: 1px solid var(--darkgray);
+  border-top: 1px solid var(--darkgray);
 }
-.sub-menu li {
+
+.sub-menu li{
   list-style-type: none;
   cursor: pointer;
-  padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+  transition: 0.3s;
 }
-.sub-menu li a {
+
+.sub-menu li:hover{
+  background-color: rgb(240, 235, 189);
+  text-decoration-color: var(--maincolor);
+}
+
+.sub-menu li a{
   display: block;
+  padding: 1em;
+}
+
+nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-within{
+  /* Denne gjør at sub-menyen først "vises" (altså blir den synlig og skriften vil synes) når man samhandler med den
+  Hadde det originalt satt med display:none, eller visibility:hidden, men da ble det ikke tilrettelagt for tabindex */
+  opacity: 1;
+  font-size: inherit;
+}
+
+
+/*Første bilde i hjemmesiden og i git-sammarbeid*/
+.firstpicture{
+  width: 65vw;
+}
+
+/*Studieinfo på toppen av siden*/
+.studieinfo-div {
+  width: 65vw;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Stil for ul-listen inne i studieinfo-div */
+.studieinfo-div ul {
+  display: flex;      /* Gjør listen til en flex for enkel styring */
+  flex-wrap: wrap;    /* Gjør at elementene brytes til neste rad om nødvendig */
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+/* Stil for listeelementer i studieinfo-div */
+.studieinfo-div li {
+  display: flex;              /* Gjør hvert listeelement til en flex-container */
+  flex-direction: column;     /* Arrangerer innholdet i listeelementet vertikalt */
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+  width: 10rem;
+  text-align: center;          /* Sentraliserer teksten i listeelementet */
+
+  border-radius: 0.313rem;
+  border-top: solid 0.1rem var(--darkgray);
+  border-bottom: solid 0.1rem var(--darkgray);
+}
+
+/* Stil for første span i hvert listeelement */
+.studieinfo-div li span:first-child {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Stil for siste span i hvert listeelement */
+.studieinfo-div li span:last-child {
+  color: #444;
+}
+
+/* Generell stil for alle span-elementer i .studieinfo-div */
+.studieinfo-div span{
+  font-size: 1.2rem;
+}
+
+/*Studiets oppbygning (article)*/
+.studiets-oppbygging{
+  display: flex;
+  align-items: center;
+  width: 80vw;
+}
+
+.studieår {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+
+  transition: 0.3s;
+}
+
+/*Style for symbolene brukt for oblig/valgfag*/
+.ikoner {
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+  text-align: left;
+
+  list-style-type: none;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.ansatt-div{
+  display: flex;
+  width: 65vw;
+}
+
+.ansatt-div ul{
+  list-style: none;
+}
+
+.ansatt-div ul li{
+  margin-bottom: 1rem;
+}
+
+.ansatt-div ul li:first-child{
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.ansatt-div a{
+  display: flex;
+  flex-direction: row;
+}
+
+.ansatt-div img {
+  width: 7rem;
+
+  border-radius: 1rem;
+}
+
+/*Kategori kolonnen i studie tabellen*/
+.kategori-fag { 
+  background-color: #eee;
+  font-weight: 600;
+}
+
+/*Style for lenkene til andre studier*/
+.flere-studier-section ul li{
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  list-style: none;
+}
+
+.flere-studier-section ul{
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 3em;
+}
+
+.studie-container > ul li{
+  display: inline-block;
+}
+
+.studie-container ul {
+  border-bottom: solid var(--maincolor) 0.2rem;
+  transition: 0.3s;
+}
+
+.studie-container ul:hover {
+  border-bottom: solid var(--darkgray) 0.2rem;
+}
+
+/*negativ z-index for å unngå overlap problemer med header.*/
+.studie-container {
+  position: relative;
+}
+
+/*Posisjon og implementasjon av pilene på slutten av studie anbefalingene*/
+.studie-container::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  content: '\203A';
+  font-size: 2em
+}
+
+/*Dette er for å style listen under studie anbefalingene*/
+.studie-container > ul li:not(:last-child){
+  padding-right: 1em;
+  margin-right: 1em;
+  border-right: 1px solid var(--darkgray);
+}
+
+
+/*Student historier*/
+.historier-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.historier-container p{
+  font-weight: 500;
+}
+
+.historier-container img {
+  object-fit: cover;
+
   width: 100%;
   height: 100%;
-  text-decoration: none;
-  color: inherit;
-  padding: 1em;
-  box-sizing: border-box;
-  text-align: center;
-  z-index: 2;
 }
-.sub-menu li:hover {
-  background-color: black;
-  text-decoration-color: var(--maincolor);
-  color: var(--maincolor);
-  transition: 0.5s;
+
+.historier-container > div{
+  padding: 2em;
+
+  background-color: var(--maincolor);
 }
-/*Accessibility*/
-#accessibility  p, #accessibility h1, #accessibility h2{
+
+.historier-container > div span{
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.historier-container h3{
+  margin-top: 1rem;
+}
+
+/*ACCESSIBILITY-PAGE*/
+
+#accessibility p, #accessibility h1, #accessibility h2{
   width: 70vw;
 }
-#accessibility p, #accessibility h2{
-  margin-bottom: 0.5em;
-}
 
-#accessibility p:last-child{
-  margin-bottom: 4em;
-}
-#accessibility h2, #accessibility h3{
-  margin-top: 2em;
-}
+/*tabellen om resultater*/
+  #accessibility table{
+    align-self: flex-start;
+    width: 65%;
 
-#accessibility p, #accesibility a{
-  font-size: 1.1em;
-} 
-#accessibility h3 {
-  font-size: medium;
+    border-collapse: collapse;
+  }
+  #accessibility table:hover {
+    align-self: flex-start;
+    width: 65%;
+    border-collapse: collapse;
+  }
+
+  #accessibility td, #accessibility th{
+    text-align: left;
+    padding: 8px;
+    border: 3px solid var(--darkgray);
+  }
+
+  #accessibility tr:nth-child(even){
+    background-color: #eee;
+  }
+
+  #accessibility th:nth-child(2), #accessibility td:nth-child(2){
+    font-weight: bold;
+    color: #7a0000;
+  }
+  #accessibility th:nth-child(3), #accessibility td:nth-child(3){
+    font-weight: bold;
+    color: #44a900
+  }
+
+#accessibility img{
+  width: 50%;
+  transition: 0.2s;
 }
-#accessibility img {
-  width: 70%;
-  margin-bottom: 2em;
+#accessibility img:hover{
+  width: 60%;
 }
 
 /*GITHUB SIDE*/
 
-/*Grid container, endrer utseende på grid og sørger for at alt er plassert riktig og riktig størrelse*/
+/*Grid container, setter opp et 2x2 grid og endrer størrelser og utseender til elementene i griden*/
 .container{
   width: 80vw;
   display: grid;
   grid-template-rows: 500px;
-  grid-template-columns: 4fr 3fr;
+  grid-template-columns: 4fr 3fr; /*Setter størrelse på griden som sier at den første og andre kolonnen skal ha et forhold på 4/3*/
   column-gap: 1em;
   justify-items: start;
   align-items: center;
 }
 .container img{
+  /*Sørger for at bildene i containeren ikke blir for store*/
   max-width: 100%;
   height: 100%;
 }
 .git_bilder{
+  /*Setter bildene i artikkelen ved siden av hverandre og sørger for at de er relativ lik størrelse*/
   display: flex;
   flex-direction: row;
   flex: 1 1 auto;
-  height: auto;
-  gap: 1em;
+  gap: 2em;
   justify-content: center;
+
+  height: auto;
   object-fit: cover;
 }
 .git_bilder img{
-  height: 35vw;
-}
-.gitside article{
-  width: 80vw;
+  /*Passer på at bildene er like høye*/
+  height: 30vw;
 }
 
-/*Activity page*/
-.mainact{
-  background-image: url('../images/pattern.jpg'); /*Bilde fra: https://www.istockphoto.com/tr/vektör/kar-taneleri-ile-iskandinav-örme-kazak-vektör-illüstrasyon-gm1288832665-384677676*/
+/*ACTIVITY PAGE*/
+.activity-page{
+  /*Setter et bilde som bakgrunn i siden*/
+  background-image: url('../images/activitybakgrunnsbilde.webp'); /* Bakgrunnsbilde generert med OpenAIs DALL-E-verktøy. */
   background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.mainact{
   margin: 0;
 }
+
 .activity{
-  background-color: white; 
   padding: 15px; 
   margin: 20px auto; 
+  background-color: rgb(255, 254, 251);
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #5b3f2a; 
 }
+
 .activity h1{
   text-align: center;
 }
 
+/*endrer farge på header/footer på activity page*/
+.activity-page header, .activity-page footer, .activity-page .sub-menu{
+  background-color: #f1d6c0;
+}
 
-/*Media scaling*/
+/*endrer fargene lenker i activity page, for å oppnå bedre kontrast*/
+.mainact a, .activity-page footer a{       
+  text-decoration: none; 
+  color: #432915;
+  border-bottom: solid 0.2rem #c2a78a;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.activity-page footer ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /*bytter footer til justify center, siden innholdet i footer er anderledes fra index*/
+  margin-top: 1em;
+  width: 80%;
+  gap: 4rem;
+}
+
+.mainact a:hover, .activity-page footer a:hover{        
+  border-bottom: solid 0.2rem #6c391c;
+}
+
+/*MEDIA SCALING*/
 
 /*Endrer utseende etter skjermstørrelse fra 1500px bred, 1200px bred eller 768px bred*/
-
 @media(max-width: 1500px){
   footer>div{
-    gap: 5vw;
+    gap: 5vw; /*elementer overlapper ved 1500px uten dette*/
   }
 }
 
 @media (max-width: 1200px) {
-  main>h1, main>h2, main>p, main>article{
+  main>h1, main>h2, main>p{
+    text-align: center;
+  }
+  main>article{
     width: 70vw;
   }
+
   h1{
     font-size: 2.2rem;
     align-items: center;
@@ -711,7 +731,7 @@ a:hover {
     margin-top: 2rem;
   }
   .firstpicture{
-    width: 100%;
+    width: 90%;
   }
 
   footer> section, div{
@@ -749,6 +769,16 @@ a:hover {
     gap: 0;
   }
 
+  .activity-page footer ul{
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+  }
+  .activity-page footer li{
+    width: fit-content;
+  }
+
+
   .studieinfo-div ul{
     justify-content: center;
     width: fit-content;
@@ -760,6 +790,7 @@ a:hover {
   
   .studieår{
     flex-direction: column;
+    align-items: center;
   }
 
   /*lar bilde collapse under teksten, slik at teksten får nok plass på siden, når den blir mindre.*/
@@ -777,6 +808,7 @@ a:hover {
     flex-wrap: wrap;
     font-size: medium;
   }
+
   .git_bilder{
     gap: 1em;
     flex-wrap:wrap;
@@ -786,7 +818,9 @@ a:hover {
     height: 60vw;
   }
 
-
+  .ansatt-div a{
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
@@ -797,26 +831,43 @@ a:hover {
   nav > a:first-child {
     margin-right: 0;
   }
+  header nav > button {
+    margin-left: 1em;
+  }
+
+  header nav > a:not(:first-child) {
+    position: relative;
+    right: 0;
+    left: 1em;
+  }
 
   main>h1, main>h2, main>p, main>article{
     width: 90vw;
   }
 
   main>h1 {
-    font-size: 1.8rem; 
+    font-size: 1.7rem; 
+  }
+  main h2 {
+    font-size: 1.3rem; 
   }
 
   main h3, main p {
     font-size: 1rem;
   }
+  .studiets-oppbygging {
+    width: 100%;
+  }
+
   table {
-    font-size: 0.9rem; /* Mindre fontstørrelse */
     width: 100%; /* Tilpass til skjermbredden */
+    font-size: 0.9rem; /* Mindre fontstørrelse */
     border-radius: 20px; /* Mindre radius */
   }
 
   td, th {
     padding: 0.2rem; /* Reduser padding */
+
     font-size: 0.85rem; /* Juster fontstørrelse */
   }
 
@@ -829,6 +880,16 @@ a:hover {
   }
   table td{
     padding: 0.5rem;
+  }
+
+  .studieinfo-div{
+    width: 100%;
+  }
+  .studieinfo-div li{
+    width: 75%;
+  }
+  .studiets-oppbygging{
+    width: 90%;
   }
 
   .studie-container > ul li{
@@ -851,7 +912,5 @@ a:hover {
   #accessibility img {
     width: 90%;
   }
-
-
 
 }

@@ -22,6 +22,8 @@ List of contents:
 
 :root{
   --maincolor: #ffd500;
+  --darkgray: #111;
+  --alt-text: #222;
 }
 
 /*BODY OG ANDRE HOVUD-ELEMENTER*/
@@ -47,7 +49,7 @@ header nav{
   padding: 1.3em 1em 1.3em 4em;
   flex-wrap: wrap;
 
-  border-bottom: solid 0.1rem #111;
+  border-bottom: solid 0.1rem var(--darkgray);
 }
 
 nav>a:first-child{ /*Lenken til OsloMet-logoen */
@@ -76,7 +78,7 @@ header nav button, header nav>a:nth-of-type(2){ /* Felles for både meny-knappen
 
 header nav a{
   text-decoration: none;
-  color: #111;
+  color: var(--darkgray);
 }
 
 header>nav>button{ /* Meny-knappen */
@@ -128,14 +130,14 @@ h2 {
 
 article a, footer a{
   font-weight: 500;
-  color: #111;
+  color: var(--darkgray);
   text-decoration: none;
-  border-bottom: solid 0.2rem #ffd500;
+  border-bottom: solid 0.2rem var(--maincolor);
   transition: color 0.3s;
   transition: 0.2s;
 }
 article a:hover, footer a:hover {
-  border-bottom: 0.2rem solid #111;
+  border-bottom: 0.2rem solid var(--darkgray);
 }
 
 article {
@@ -157,7 +159,7 @@ article h3 {
 article p {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #222;
+  color: var(--alt-text);
 }
 
 article > section>ul {
@@ -166,7 +168,7 @@ article > section>ul {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   font-size: 1.1rem;
-  color: #222222;
+  color: var(--alt-text);
   line-height: 1.8;
   padding-left: 1rem;
 }
@@ -175,7 +177,7 @@ table {
   width: 100%;
   font-size: 1.1rem;
   border-collapse: collapse;        /* Fjerner mellomrom mellom celler */
-  border: 0.1rem solid #000000;
+  border: 0.1rem solid var(--darkgray);
   transition: 0.3s;
 }
 
@@ -184,19 +186,19 @@ td, th {
   text-align: left;               /* Justerer teksten til venstre */
   word-wrap: break-word;        /* Bryter ord som er for lange */
   hyphens: auto;                /* Legger til bindestreker der det er naturlig */
-  border: 0.1rem solid #000000;
+  border: 0.1rem solid var(--darkgray);
   line-height: 1.5;
 }
 
 /* Stil for første rad i tabellhodet */
 thead tr:nth-child(1) th {
   text-align: center;           /* Sentraliserer teksten i første rad */
-  background-color: #e2dfe3;
+  background-color: #eee;
 }
 /* Generell stil for alle overskrifter i tabellen */
 thead tr th {
   text-align: center;
-  background-color: #ffd500;
+  background-color: var(--maincolor);
 }
 
 /*FOOTER*/
@@ -218,14 +220,14 @@ footer>section{
   align-items: center; 
   justify-content: space-between;
   margin-bottom: 1.25rem;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--darkgray);
   padding-bottom: 3rem;
 }
 
 footer>section>button{
   padding: 0.8em;
 
-  background-color: #111;
+  background-color: var(--darkgray);
   color: white;
   border-radius: 0.6rem;
   border-width: 0.1rem;
@@ -235,9 +237,9 @@ footer>section>button{
 }
 
 footer>section>button:hover{
-  box-shadow: 0 0 0.5rem #111; 
+  box-shadow: 0 0 0.5rem var(--darkgray); 
   background-color: white;
-  color: #111;
+  color: var(--darkgray);
   cursor: pointer;
 }
 
@@ -315,8 +317,8 @@ footer>ul>li>img {
   Mer om dette står i accessibility-siden innenfor valg */
   font-size: 0;
   background-color: var(--maincolor);
-  border-bottom: 1px solid #111;
-  border-top: 1px solid #111;
+  border-bottom: 1px solid var(--darkgray);
+  border-top: 1px solid var(--darkgray);
 }
 .sub-menu li{
   list-style-type: none;
@@ -373,8 +375,8 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   text-align: center;          /* Sentraliserer teksten i listeelementet */
 
   border-radius: 0.313rem;
-  border-top: solid 0.1rem #111;
-  border-bottom: solid 0.1rem #111;
+  border-top: solid 0.1rem var(--darkgray);
+  border-bottom: solid 0.1rem var(--darkgray);
 }
 
 /* Stil for første span i hvert listeelement */
@@ -457,7 +459,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 .studie-container ul:hover {
-  border-bottom: solid #666 0.2rem;
+  border-bottom: solid var(--darkgray) 0.2rem;
 }
 
 /*negativ z-index for å unngå overlap problemer med header.*/
@@ -481,7 +483,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   padding-right: 1em;
   margin-right: 1em;
 
-  border-right: 1px solid #222;
+  border-right: 1px solid var(--darkgray);
 }
 
 
@@ -535,11 +537,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
     text-align: left;
     padding: 8px;
     
-    border: 3px solid #333;
+    border: 3px solid var(--darkgray);
   }
 
   #accessibility tr:nth-child(even) {
-    background-color: #e2dfe3;
+    background-color: #eee;
   }
 
   #accessibility th:nth-child(2), #accessibility td:nth-child(2) {
@@ -593,7 +595,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 .activity-page{
   /*Setter et bilde som bakgrunn i siden*/
   background-image: url('../images/activitybakgrunnsbilde.webp'); /* Bakgrunnsbilde generert med OpenAIs DALL-E-verktøy. */
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   background-attachment: fixed;
   height: 300vh;
 }
@@ -603,16 +605,12 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 .activity{
-  background-color: #f8f4ef; 
+  background-color: rgb(255, 254, 251);
   padding: 15px; 
   margin: 20px auto; 
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: #5b3f2a; 
-}
-
-.activity:hover{
-  transform: translateY(-0.5rem);
 }
 
 .activity h1{

@@ -9,15 +9,16 @@
 </head>
 <body class="activity-page" tabindex="0"> <!--bruker tabindex slik at det er mulig å fokuseres på med ios-->
     <header>
-        <nav>
+        <nav> <!-- Vi har både header og nav pga. de er semantiske elementer og forklarer mye om strukturen på koden vår 
+            til tross for ingen html og lite særeget css-->
             <a href="https://www.oslomet.no/"> <img src="../images/logo.webp" alt="OsloMet logo"> </a>
             <!-- Kilde: https://no.m.wikipedia.org/wiki/Fil:Logo_of_Oslo_Metropolitan_University.webp -->
             <button tabindex="0"> Meny </button>
             <ul class="sub-menu">
-                <li> <a href="../index.html"> Hjem-side </a></li>
-                <li> <a href="Accessibility.html">Tilgjengelighet </a></li>
-                <li> <a href="GitSamarbeid.html"> Git-samarbeid </a></li>
-                <li> <a href="Activity.html"> Aktivitet </a></li>
+                <li tabindex="0"> <a href="../index.html"> Hjem-side </a></li>
+                <li tabindex="0"> <a href="Accessibility.html">Tilgjengelighet </a></li>
+                <li tabindex="0"> <a href="GitSamarbeid.html"> Git-samarbeid </a></li>
+                <li tabindex="0"> <a href="Activity.html"> Aktivitet </a></li>
             </ul>
             <a href="https://www.oslomet.no/s?q="> <img src="../images/searchIkon.webp" alt="Søk-ikon">
                 Søk </a>

@@ -97,7 +97,7 @@ header nav>a:nth-of-type(2)>img{ /* Søke-ikonet */
   position: relative;
   top: 6px;
   height: 1.3em;
-  width: 2em;
+  width: 1.7em;
 }
 
 header>nav>a:nth-of-type(2):hover, header>nav>a:nth-of-type(2):focus,
@@ -106,7 +106,6 @@ header nav button:hover, header nav button:focus{
   cursor: pointer;
   box-shadow: 0 0.05rem 0 black;
 }
-
 
 /* Alt innenfor Main */
 

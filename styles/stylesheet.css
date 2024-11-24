@@ -83,6 +83,7 @@ header>nav>button{ /* Meny-knappen */
   position: relative;
   border: none;
   background-color: inherit;
+  color:#111;
 }
 
 header>nav>a:nth-of-type(2){ /* Søk-lenken */
@@ -97,7 +98,7 @@ header nav>a:nth-of-type(2)>img{ /* Søke-ikonet */
   position: relative;
   top: 6px;
   height: 1.3em;
-  width: 2em;
+  width: 1.7em;
 }
 
 header>nav>a:nth-of-type(2):hover, header>nav>a:nth-of-type(2):focus,
@@ -106,7 +107,6 @@ header nav button:hover, header nav button:focus{
   cursor: pointer;
   box-shadow: 0 0.05rem 0 black;
 }
-
 
 /* Alt innenfor Main */
 
@@ -260,7 +260,6 @@ footer>div>section>h3{
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 1rem;
-
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -278,12 +277,10 @@ footer>ul{
   margin-top: 5rem;
   width: 40vw;
   align-items: center;
-  justify-content: space-between;
 }
 
 footer>ul>li{
   margin-right: 0;
-
 }
 
 footer li{
@@ -663,6 +660,18 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   transition: 0.3s;
   font-weight: 700;
 }
+
+.activity-page footer ul{
+  justify-content: center;
+  margin-top: 1em;
+}
+.activity-page footer li{
+  margin-left: 1em;
+  margin-right: 1em;
+
+}
+
+
 .mainact a:hover, .activity-page footer a:hover{        
   border-bottom: solid 0.2rem #6c391c;
 }

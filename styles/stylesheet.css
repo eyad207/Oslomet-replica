@@ -80,7 +80,7 @@ header nav a{
 }
 
 header>nav>button{ /* Meny-knappen */
-  margin-left: 3em;
+  position: relative;
   border: none;
   background-color: inherit;
 }
@@ -94,6 +94,8 @@ header>nav>a:nth-of-type(2){ /* Søk-lenken */
   color: inherit;
 }
 header nav>a:nth-of-type(2)>img{ /* Søke-ikonet */
+  position: relative;
+  top: 6px;
   height: 1.3em;
   width: 2em;
 }

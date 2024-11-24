@@ -135,7 +135,7 @@ h2 {
   font-weight: 500;
 }
 
-article a, main div a, footer div a, footer ul a{
+article a, main>div a, footer div a, footer ul a{
   font-weight: 500;
   color: var(--darkgray);
   text-decoration: none;
@@ -144,11 +144,11 @@ article a, main div a, footer div a, footer ul a{
   transition: 0.2s;
 }
 
-article a:hover, main div a:hover, footer div a:hover, footer ul a:hover{
+article a:hover, main>div a:hover, footer div a:hover, footer ul a:hover{
   border-bottom: 0.2rem solid var(--darkgray);
 }
 
-article, main div {
+article, main>div {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -165,14 +165,14 @@ article h3 {
   font-weight: 700;
 }
 
-article p, main div p {
+article p, main>div p {
   line-height: 1.8;
 
   font-size: 1.2rem;
   color: var(--alt-text);
 }
 
-article > section>ul, main div > section>ul {
+article > section>ul, main>div > section>ul {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 0.5rem;
@@ -714,7 +714,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
     text-align: center;
   }
   main>article{
-    width: 70vw;
+    width: 65vw;
   }
 
   h1{
@@ -831,9 +831,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   header nav {
     padding-left: 1em;
   }
+
   nav > a:first-child {
     margin-right: 0;
   }
+
   header nav > button {
     margin-left: 1em;
   }
@@ -844,13 +846,18 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
     left: 1em;
   }
 
-  main>h1, main>h2, main>p, main>article{
+  main>h1, main>h2, main>p{
     width: 90vw;
+  }
+
+  .ansatt-div ul li:first-child{
+    font-size: 1.1rem;
   }
 
   main>h1 {
     font-size: 1.7rem; 
   }
+
   main h2 {
     font-size: 1.3rem; 
   }
@@ -858,6 +865,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   main h3, main p {
     font-size: 1rem;
   }
+
   .studiets-oppbygging {
     width: 100%;
   }
@@ -881,6 +889,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   table,  .studieår h3{
     font-size: 1.1em;
   }
+
   table td{
     padding: 0.5rem;
   }
@@ -888,9 +897,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   .studieinfo-div{
     width: 100%;
   }
+
   .studieinfo-div li{
     width: 75%;
   }
+  
   .studiets-oppbygging{
     width: 90%;
   }

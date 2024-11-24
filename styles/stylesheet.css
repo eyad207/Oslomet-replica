@@ -619,10 +619,21 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 /*Grid container, setter opp et 2x2 grid og endrer størrelser og utseender til elementene i griden*/
 .container{
   width:70vw;
-  display: grid;
-  grid-template-rows: 350px;
-  grid-template-columns: 2fr 2fr; /*Setter størrelse på griden som sier at den første og andre kolonnen skal ha et forhold på 4/3*/
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+}
+.container div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.container div img{
+  display: flex;
+  width: 50%;
+  flex-direction: row;
   gap: 1rem;
 }
 

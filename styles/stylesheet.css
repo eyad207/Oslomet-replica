@@ -274,12 +274,9 @@ footer>div>section span{
 }
 
 footer>ul{
-  display: flex;
-  flex-direction: row;
   margin-top: 5rem;
   width: 40vw;
   align-items: center;
-  justify-content: space-between;
 }
 
 footer>ul>li{

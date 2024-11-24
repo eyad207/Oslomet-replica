@@ -80,7 +80,7 @@ header nav a{
 }
 
 header>nav>button{ /* Meny-knappen */
-  margin-left: 3em;
+  position: relative;
   border: none;
   background-color: inherit;
 }
@@ -94,6 +94,8 @@ header>nav>a:nth-of-type(2){ /* Søk-lenken */
   color: inherit;
 }
 header nav>a:nth-of-type(2)>img{ /* Søke-ikonet */
+  position: relative;
+  top: 6px;
   height: 1.3em;
   width: 2em;
 }
@@ -126,7 +128,7 @@ h2 {
   font-weight: 500;
 }
 
-article a, footer a{
+article a, footer div a, footer ul a{
   font-weight: 500;
   color: var(--darkgray);
   text-decoration: none;
@@ -134,7 +136,8 @@ article a, footer a{
   transition: color 0.3s;
   transition: 0.2s;
 }
-article a:hover, footer a:hover {
+
+article a:hover, footer div a:hover, footer ul a:hover{
   border-bottom: 0.2rem solid var(--darkgray);
 }
 
@@ -226,9 +229,8 @@ footer>section{
   padding-bottom: 3rem;
 }
 
-footer>section>button{
+footer button{
   padding: 0.8em;
-
   background-color: var(--darkgray);
   color: white;
   border-radius: 0.6rem;
@@ -238,7 +240,7 @@ footer>section>button{
   transition: 0.3s;
 }
 
-footer>section>button:hover{
+footer button:hover{
   box-shadow: 0 0 0.5rem var(--darkgray); 
   background-color: white;
   color: var(--darkgray);

@@ -126,7 +126,7 @@ h2 {
   font-weight: 500;
 }
 
-article a, footer a{
+article a, footer div a, footer ul a{
   font-weight: 500;
   color: var(--darkgray);
   text-decoration: none;
@@ -134,7 +134,8 @@ article a, footer a{
   transition: color 0.3s;
   transition: 0.2s;
 }
-article a:hover, footer a:hover {
+
+article a:hover, footer div a:hover, footer ul a:hover{
   border-bottom: 0.2rem solid var(--darkgray);
 }
 
@@ -226,9 +227,8 @@ footer>section{
   padding-bottom: 3rem;
 }
 
-footer>section>button{
+footer button{
   padding: 0.8em;
-
   background-color: var(--darkgray);
   color: white;
   border-radius: 0.6rem;
@@ -238,7 +238,7 @@ footer>section>button{
   transition: 0.3s;
 }
 
-footer>section>button:hover{
+footer button:hover{
   box-shadow: 0 0 0.5rem var(--darkgray); 
   background-color: white;
   color: var(--darkgray);

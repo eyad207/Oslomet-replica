@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body tabindex="0"> <!--bruker tabindex slik at det er mulig å fokuseres på med ios-->
+<body class="github-page" tabindex="0"> <!--bruker tabindex slik at det er mulig å fokuseres på med ios-->
     <header>
         <nav> <!-- Vi har både header og nav pga. de er semantiske elementer og forklarer mye om strukturen på koden vår 
             til tross for ingen html og lite særeget css-->
@@ -22,9 +22,7 @@
                 <li> <a href="GitSamarbeid.html" tabindex="0"> Git-samarbeid </a></li>
                 <li> <a href="Activity.html" tabindex="0"> Aktivitet </a></li>
             </ul>
-            <a href="https://www.oslomet.no/s?q="> <img src="../images/searchIkon.webp" alt="Søk-ikon">
-                Søk </a>
-            <!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4He1lsW77_fFmyeBdsAk6V8r0tNX2V8k35A&s -->
+
         </nav>
     </header>
 
@@ -46,24 +44,28 @@
                 Når en person følte at de hadde lagt til en god endring viste de den fram til
                 resten av gruppa, og gruppa som en helhet godkjente den. Små endringer trengte ikke bli godkjent.
             </p>
+            <img src="../images/commitEks.webp" alt="Kommit eksempel">
+            <p>
+                Det hendte også iblant at endringene våre førte til konflikter når vi prøvde å merge den med main branch.
+                Da satte vi opp endringene på måten vist i bildet (vi kaller det for «diff-visning»), også diskuterer vi rundt hvilken av versjonene som skal beholdes på innenfor ulike seksjoner av koden. 
+                Deretter løste vi de konfliktene og merga de med main, og syncet de med github slik at de andre kunne se dem. 
+            </p>
         </div>
 
-        <div>
+        <article>
             <h2>
                 Fordeler med GitHub
             </h2>
-            <p>
-                GitHub gir oss muligheten til å danne, redigere og oppdatere et prosjekt sammen på kun en fil. Vi kan
-                gjøre regelmessige endrigner uten å frykte for at noe går galt med opplastning eller nedlastningen av
-                filen som fører til at vi mister arbeid. Det er også veldig mye enklere å synkronisere prosjektet med
-                github enn det hadde vært å måtte gjøre det manuelt. I bildene under kan du se eksempler på hvordan vi
-                har brukt GitHub til å gjøre felles endringer
-            </p>
+            <ul>
+                <li>GitHub gir oss muligheten til å danne, redigere og oppdatere et prosjekt sammen på kun en fil </li>
+                <li>Ved hjelp av branches, kan vi gjøre regelmessige endringer uten å grykte for at noe går galt med opplasting eller endlastingen av filen som fører til at vi mister arbeid</li>
+                <li>Det er også veldig mye enklere å synkronisere prosjektet med github enn det hadde vært å måtte gjøre det manuelt med konseptet merging av branches kombinert med at man synkronisere github med VS-code</li>
+            </ul>
             <div class="git_bilder">
                 <img src="../images/commithistorie.webp" alt="Kommit historien">
                 <img src="../images/Eksempler2.webp" alt="Eksempler (nummer 2)">
             </div>
-        </div>
+        </article>
 
     </main>
 

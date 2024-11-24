@@ -296,6 +296,7 @@ footer>ul{
   margin-top: 5rem;
   width: 40vw;
   align-items: center;
+  gap: 3rem;
 }
 
 footer>ul>li{
@@ -645,6 +646,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   height: auto;
   object-fit: cover;
 }
+article>ul>li{
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
 .git_bilder img{
   /*Passer på at bildene er like høye*/
   height: 30vw;
@@ -689,10 +695,10 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   font-weight: 700;
 }
 
-.activity-page footer ul{
+.activity-page footer ul, .accessibility-page footer ul, .github-page footer ul{
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /*bytter footer til justify center, siden innholdet i footer er anderledes fra index*/
+  justify-content: center; /*bytter footer til justify center, siden innholdet i footer er anderledes fra index*/
   margin-top: 1em;
   width: 80%;
   gap: 4rem;
@@ -715,8 +721,9 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   main>h1, main>h2, main>p{
     text-align: center;
   }
+
   main>article, main>div{
-    width: 87vw;
+    width: 80vw;
   }
 
   h1{
@@ -768,6 +775,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
     gap: 0;
   }
 
+  .git_bilder img{
+    margin-left: 10em;
+    height: 60vw;
+  }
+
   .activity-page footer ul{
     flex-direction: column;
     align-items: center;
@@ -813,10 +825,11 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   .git_bilder{
     gap: 1em;
     flex-wrap:wrap;
+    width: 50%;
   }
 
-  .git_bilder img{
-    height: 60vw;
+  ul{
+    width: 70%;
   }
 
   .ansatt-div a{
@@ -843,6 +856,10 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
     position: relative;
     right: 0;
     left: 1em;
+  }
+
+  main>article, main>div{
+    width: 87vw;
   }
 
   main>h1, main>h2, main>p{

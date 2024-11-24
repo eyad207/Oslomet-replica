@@ -175,7 +175,7 @@ article > section>ul {
 
 table {
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-collapse: collapse;        /* Fjerner mellomrom mellom celler */
   border: 0.1rem solid var(--darkgray);
   transition: 0.3s;

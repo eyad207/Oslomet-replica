@@ -66,24 +66,24 @@ header nav button, header nav>a:nth-of-type(2){ /* Felles for både meny-knappen
   padding: 0.6em;
   font-size: 1.1rem;
   font-weight: 600;
-  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  transition: 0.1s;
+}
+
+header nav a{
+  text-decoration: none;
+  color: #111;
 }
 
 header>nav>button{ /* Meny-knappen */
   margin-left: 3em;
-
   border: none;
   background-color: inherit;
-  transition: 0.1s;
 }
 
 header>nav>a:nth-of-type(2){ /* Søk-lenken */
   position: absolute;
   right: 5em;
-  border-bottom: none;
-  text-decoration: none; 
   color: inherit;
-  transition: 0.1s;
 }
 header nav>a:nth-of-type(2)>img{ /* Søke-ikonet */
   height: 1.3em;
@@ -119,7 +119,7 @@ h2 {
   font-weight: 500;
 }
 
-a{
+article a{
   font-weight: 500;
   color: #111;
   text-decoration: none;
@@ -127,7 +127,7 @@ a{
   transition: color 0.3s;
   transition: border-bottom 0.2s;
 }
-a:hover {
+article a:hover {
   border-bottom: 0.15rem solid #111;
 }
 
@@ -596,21 +596,24 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 /*ACTIVITY PAGE*/
+.activity-page{
+  background-image: url('../images/activitybakgrunnsbilde.webp'); /* Bakgrunnsbilde generert med OpenAIs DALL-E-verktøy. */
+}
+
 .mainact{
-  background-image: url('../images/pattern.webp'); /*Bilde fra: https://www.istockphoto.com/tr/vektör/kar-taneleri-ile-iskandinav-örme-kazak-vektör-illüstrasyon-gm1288832665-384677676*/
-  background-repeat: repeat;
   margin: 0;
 }
 
 .activity{
-  background-color: rgb(210, 222, 235); 
+  background-color: #f8f4ef; 
   padding: 15px; 
   margin: 20px auto; 
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #5b3f2a; 
 }
 .activity:hover{
-  transform: translateY(-1rem);
+  transform: translateY(-0.5rem);
 }
 
 .activity h1{
@@ -618,15 +621,19 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 /*endrer farge på header/footer på activity page*/
 .activity-page header, .activity-page footer, .activity-page .sub-menu{      
-  background-color: rgb(208, 85, 83);
+  background-color: #f1d6c0;
+  color: #5b3f2a;
 }
 
 /*endrer fargene lenker i activity page, for å oppnå bedre kontrast*/
-.mainact a, .activity-page footer a{        
-  border-bottom: solid 0.15rem rgb(80, 80, 212);
+.mainact a, .activity-page footer a{       
+  text-decoration: none; 
+  color: #8c5a3c;
+  border-bottom: solid 0.15rem #c2a78a;
+  transition: 0.3s;
 }
 .mainact a:hover, .activity-page footer a:hover{        
-  border-bottom: solid 0.15rem #111;
+  border-bottom: solid 0.15rem #b5734c;
 }
 
 

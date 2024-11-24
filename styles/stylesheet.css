@@ -651,13 +651,6 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   text-align: center;
 }
 
-.activity-page footer>ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
 /*endrer farge på header/footer på activity page*/
 .activity-page header, .activity-page footer, .activity-page .sub-menu{
   opacity: 0.95;  

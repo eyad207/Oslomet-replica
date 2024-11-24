@@ -135,7 +135,7 @@ article a, footer a{
   transition: 0.2s;
 }
 article a:hover, footer a:hover {
-  border-bottom: 0.15rem solid #111;
+  border-bottom: 0.2rem solid #111;
 }
 
 article {
@@ -456,12 +456,12 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 }
 
 .studie-container ul {
-  border-bottom: solid var(--maincolor) 2px;
+  border-bottom: solid var(--maincolor) 0.2rem;
   transition: 0.3s;
 }
 
 .studie-container ul:hover {
-  border-bottom: solid #666 2px;
+  border-bottom: solid #666 0.2rem;
 }
 
 /*negativ z-index for å unngå overlap problemer med header.*/
@@ -633,12 +633,12 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 .mainact a, .activity-page footer a{       
   text-decoration: none; 
   color: #432915;
-  border-bottom: solid 0.15rem #c2a78a;
+  border-bottom: solid 0.2rem #c2a78a;
   transition: 0.3s;
   font-weight: 700;
 }
 .mainact a:hover, .activity-page footer a:hover{        
-  border-bottom: solid 0.15rem #6c391c;
+  border-bottom: solid 0.2rem #6c391c;
 }
 
 

@@ -626,12 +626,14 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
   gap: 1rem;
 }
 
+.github-page h1{
+  margin-bottom: 5vw;
+}
 
 .container img{
   /*Sørger for at bildene i containeren ikke blir for store*/
   max-width: 100%;
   max-height: 100%;
-  display: inline-block;
 }
 
 .fordeler-med-git{

@@ -752,12 +752,19 @@ article>ul>li{
     max-width: 60rem;
     justify-content: space-between;
   }
+  
   footer section{
     flex-direction: column;
   }
+
   footer> section> h3{
     text-align: center;
   }
+
+  .firstpicture{
+    width: 90%;
+  }
+
   .ikoner {
     font-size: 0.8rem;
   }

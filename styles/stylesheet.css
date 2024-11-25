@@ -370,6 +370,7 @@ nav button:focus-within+.sub-menu, nav>button:focus+.sub-menu, .sub-menu:focus-w
 /*Første bilde i hjemmesiden og i git-sammarbeid*/
 .firstpicture{
   width: 65vw;
+  margin-top: 10px;
 }
 
 /*Studieinfo på toppen av siden*/
